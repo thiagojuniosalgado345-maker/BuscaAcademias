@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -15,219 +16,354 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#fff;
-    color:#222;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#071a36;
+    color:white;
 }
 
-/* CABEÇALHO */
+
+/* TOPO */
 
 header{
-    height:70px;
+    height:90px;
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:0 40px;
-    border-bottom:1px solid #ddd;
+    padding:0 60px;
 }
 
-.logo-texto{
-    font-size:24px;
-    font-weight:bold;
-    color:#00b85c;
+header img{
+    width:170px;
 }
 
-nav a{
-    margin-left:25px;
+.menu a{
+    color:white;
     text-decoration:none;
-    color:#333;
+    margin-left:35px;
+    font-size:17px;
 }
 
 
-/* LOGO CENTRAL */
+/* ÁREA PRINCIPAL */
 
-.logo-area{
+.principal{
+
+    min-height:650px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
     text-align:center;
-    padding:50px 20px 20px;
-}
+    padding:30px;
 
-.logo-area img{
-    width:180px;
 }
 
 
-/* PRINCIPAL */
+.logo-central img{
 
-.hero{
-    text-align:center;
-    padding:20px;
-}
-
-.hero h1{
-    font-size:38px;
-    margin-bottom:15px;
-}
-
-.hero p{
-    font-size:20px;
-    color:#555;
+    width:260px;
     margin-bottom:35px;
+
+}
+
+
+h1{
+
+    font-size:46px;
+    line-height:1.15;
+    max-width:800px;
+    margin-bottom:20px;
+
+}
+
+
+.subtitulo{
+
+    font-size:21px;
+    color:#cbd5e1;
+    margin-bottom:45px;
+
 }
 
 
 /* BUSCA */
 
-.busca{
-    max-width:450px;
-    margin:auto;
-    border:1px solid #ccc;
-    border-radius:12px;
-    padding:15px;
+.caixa-busca{
+
+    background:white;
+    width:450px;
+    max-width:90%;
+    padding:8px;
+    border-radius:16px;
     display:flex;
-    justify-content:space-between;
+
 }
 
-.busca select{
-    border:none;
-    font-size:16px;
+
+.caixa-busca select{
+
     flex:1;
+    border:none;
+    padding:15px;
+    font-size:17px;
+    color:#333;
     outline:none;
+
 }
+
 
 
 .botao{
+
     margin-top:25px;
+
 }
 
+
 .botao button{
-    background:#00b85c;
-    color:white;
+
+    background:#2563eb;
     border:none;
-    padding:15px 40px;
-    border-radius:10px;
-    font-size:16px;
+    color:white;
+    padding:17px 55px;
+    border-radius:14px;
+    font-size:18px;
     font-weight:bold;
     cursor:pointer;
+
 }
 
 
 /* BENEFÍCIOS */
 
 .beneficios{
-    margin-top:60px;
-    border-top:1px solid #ddd;
-    border-bottom:1px solid #ddd;
-    padding:30px;
+
+    background:#0d2347;
+    padding:50px 30px;
     display:flex;
     justify-content:center;
-    gap:35px;
+    gap:25px;
     flex-wrap:wrap;
+
 }
 
-.beneficio{
+
+.item{
+
+    background:#132d57;
+    width:220px;
+    padding:30px 20px;
+    border-radius:18px;
+    text-align:center;
     font-size:17px;
+
 }
+
+
+.item span{
+
+    font-size:35px;
+
+}
+
 
 
 /* RODAPÉ */
 
 footer{
+
     text-align:center;
     padding:25px;
-    color:#555;
+    color:#b8c5db;
+
+}
+
+
+
+@media(max-width:600px){
+
+header{
+
+    padding:0 20px;
+
+}
+
+
+.menu a{
+
+    margin-left:10px;
+    font-size:14px;
+
+}
+
+
+h1{
+
+    font-size:32px;
+
+}
+
 }
 
 </style>
 
 </head>
 
+
 <body>
 
 
 <header>
 
-<div class="logo-texto">
-BuscaAcademias
+<img src="logo.png">
+
+
+<div class="menu">
+
+<a href="#">Sobre</a>
+
+<a href="#">Contato</a>
+
 </div>
 
-<nav>
-<a href="#">Sobre</a>
-<a href="#">Contato</a>
-</nav>
 
 </header>
 
 
 
-<section class="logo-area">
 
-<!-- COLOQUE SUA LOGO AQUI -->
+<section class="principal">
+
+
+<div class="logo-central">
+
 <img src="logo.png">
 
-</section>
+</div>
 
 
-
-<section class="hero">
 
 <h1>
 Encontre a academia ideal<br>
 na sua cidade
 </h1>
 
-<p>
+
+
+<p class="subtitulo">
 O maior portal de academias do Brasil.
 </p>
 
 
-<div class="busca">
 
-<select>
-<option>📍 Escolha uma cidade</option>
-<option>São Paulo</option>
-<option>Rio de Janeiro</option>
-<option>Belo Horizonte</option>
+
+<div class="caixa-busca">
+
+<select onchange="abrirCidade(this.value)">
+
+<option value="">
+📍 Escolha uma cidade
+</option>
+
+
+<option value="montes-claros.html">
+Montes Claros
+</option>
+
+
 </select>
 
 </div>
 
 
+
+
 <div class="botao">
 
-<button>
+<button onclick="abrirCidade('montes-claros.html')">
+
 VER ACADEMIAS
+
 </button>
 
 </div>
 
 
+
 </section>
+
+
 
 
 
 <section class="beneficios">
 
-<div class="beneficio">
-🏋️ Academias verificadas
+
+<div class="item">
+
+<span>🏋️</span>
+
+<br><br>
+
+Academias verificadas
+
 </div>
 
-<div class="beneficio">
-📍 Localização exata
+
+
+<div class="item">
+
+<span>📍</span>
+
+<br><br>
+
+Localização exata
+
 </div>
 
-<div class="beneficio">
-🕒 Horários atualizados
+
+
+
+<div class="item">
+
+<span>🕒</span>
+
+<br><br>
+
+Horários atualizados
+
 </div>
 
-<div class="beneficio">
-📞 Telefones e WhatsApp
+
+
+
+<div class="item">
+
+<span>📞</span>
+
+<br><br>
+
+Telefones e WhatsApp
+
 </div>
 
-<div class="beneficio">
-⭐ Avaliações
+
+
+
+<div class="item">
+
+<span>⭐</span>
+
+<br><br>
+
+Avaliações
+
 </div>
+
+
 
 </section>
+
 
 
 
@@ -236,6 +372,24 @@ VER ACADEMIAS
 © BuscaAcademias 2026
 
 </footer>
+
+
+
+
+<script>
+
+function abrirCidade(pagina){
+
+if(pagina){
+
+window.location.href = pagina;
+
+}
+
+}
+
+</script>
+
 
 
 </body>
