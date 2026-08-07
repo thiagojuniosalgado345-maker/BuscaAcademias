@@ -173,9 +173,15 @@ Busca<span>Academias</span>
 <li><a href="#">Início</a></li>
 
 <li>
-    <select id="cidade">
-        <option>📍 Montes Claros - MG</option>
-    </select>
+   <select id="cidade" onchange="trocarCidade()">
+    <option value="montes-claros.html">
+        📍 Montes Claros - MG
+    </option>
+
+    <option value="belo-horizonte.html">
+        Belo Horizonte - MG
+    </option>
+</select>
 </li>
 
 <li><a href="#">Academias</a></li>
@@ -261,6 +267,14 @@ let nome=academias[i].innerText.toLowerCase();
 academias[i].style.display=nome.includes(texto)?"block":"none";
 
 }
+
+}
+
+function trocarCidade(){
+
+    let cidade = document.getElementById("cidade").value;
+
+    window.location.href = cidade;
 
 }
 
