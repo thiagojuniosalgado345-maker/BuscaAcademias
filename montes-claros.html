@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BuscaAcademias</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f5f5f5;
+}
+
+/* MENU */
+
+.menu{
+    background:#031128;
+    height:60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 40px;
+}
+
+.logoMenu{
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logoMenu span{
+    color:#f4b400;
+}
+
+.menu ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.menu a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.menu a:hover{
+    color:#f4b400;
+}
+#cidade{
+    background:#031128;
+    color:white;
+    border:none;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    outline:none;
+}
+
+#cidade option{
+    color:black;
+}
+/* CABEÇALHO */
+
+.cabecalho{
+    background:#003ea8;
+    text-align:center;
+    padding:8px 20px 12px;
+}
+
+.logotipo{
+    width:72%;
+    max-width:760px;
+    display:block;
+    margin:0 auto 5px;
+}
+
+.cabecalho h1{
+    color:white;
+    font-size:36px;
+    margin-bottom:5px;
+}
+
+.cabecalho p{
+    color:white;
+    font-size:18px;
+    margin-top:0;
+}
+
+/* BUSCA */
+
+.container{
+    width:90%;
+    max-width:900px;
+    margin:30px auto;
+}
+
+.barraBusca{
+    display:flex;
+    gap:10px;
+}
+
+.busca{
+    flex:1;
+    padding:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+}
+
+.botao{
+    background:#0a3b95;
+    color:white;
+    border:none;
+    border-radius:8px;
+    padding:15px 28px;
+    cursor:pointer;
+}
+
+/* CARDS */
+
+h2{
+    margin:30px 0 20px;
+}
+
+.academia{
+    background:white;
+    border-radius:10px;
+    padding:20px;
+    margin-bottom:15px;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+.academia h3{
+    margin-bottom:10px;
+}
+
+.academia p{
+    margin:6px 0;
+}
+
+footer{
+    background:#081a45;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<nav class="menu">
+
+<div class="logoMenu">
+Busca<span>Academias</span>
+</div>
+
+<ul>
+
+<li><a href="#">Início</a></li>
+
+<li>
+   <select id="cidade" onchange="trocarCidade()">
+    <option value="montes-claros.html">
+        📍 Montes Claros - MG
+    </option>
+
+    <option value="belo-horizonte.html">
+        Belo Horizonte - MG
+    </option>
+</select>
+</li>
+
+<li><a href="#">Academias</a></li>
+
+<li><a href="#">Sobre</a></li>
+
+<li><a href="#">Contato</a></li>
+
+</ul>
+
+</nav>
+
+<header class="cabecalho">
+
+<img src="3b6a1c52-f088-4290-8cb8-1467f526b368.png" class="logotipo">
+
+<h1>Academias de Montes Claros</h1>
+
+<p>Encontre academias, locais de treino e informações da cidade.</p>
+
+</header>
+
+<div class="container">
+
+<div class="barraBusca">
+
+<input
+type="text"
+id="campoBusca"
+class="busca"
+placeholder="🔎 Pesquise uma academia..."
+onkeyup="buscarAcademia()">
+
+<button class="botao">
+Buscar
+</button>
+
+</div>
+
+<h2>Academias cadastradas</h2>
+
+<div class="academia">
+<h3>Academia Vida Ativa</h3>
+<p>📍 Av. Dep. Esteves Rodrigues - Montes Claros</p>
+<p>🕐 06:00 às 22:00</p>
+<p>📞 (38) 99999-9999</p>
+</div>
+
+<div class="academia">
+<h3>Top Fitness</h3>
+<p>📍 Rua dos Esportes - Montes Claros</p>
+<p>🕐 05:30 às 23:00</p>
+<p>📞 (38) 98888-8888</p>
+</div>
+
+<div class="academia">
+<h3>Academia Power</h3>
+<p>📍 Centro - Montes Claros</p>
+<p>🕐 06:00 às 21:30</p>
+<p>📞 (38) 97777-7777</p>
+</div>
+
+</div>
+
+<footer>
+
+BuscaAcademias © 2026
+
+</footer>
+
+<script>
+
+function buscarAcademia(){
+
+let texto=document.getElementById("campoBusca").value.toLowerCase();
+
+let academias=document.getElementsByClassName("academia");
+
+for(let i=0;i<academias.length;i++){
+
+let nome=academias[i].innerText.toLowerCase();
+
+academias[i].style.display=nome.includes(texto)?"block":"none";
+
+}
+
+}
+
+function trocarCidade(){
+
+    let cidade = document.getElementById("cidade").value;
+
+    window.location.href = cidade;
+
+}
+
+</script>
+
+</body>
+
+</html>
