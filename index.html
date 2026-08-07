@@ -1,173 +1,188 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Academias de Montes Claros</title>
+<title>Academias de Montes Claros</title>
 
-    <style>
-.logotipo {
+<style>
 
-    width: 90%;
-
-    max-width: 1000px;
-
-    height: auto;
-
-    display: block;
-
-    margin: 0 auto 20px;
-
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f4f4f4;
-            color: #222;
-        }
-.cabecalho {
-    background: #1c2340;
-    text-align: center;
-    padding: 40px 20px;
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f4f4;
+    color:#222;
 }
-        header {
-            background-color: #111;
-            color: white;
-            padding: 40px 20px;
-            text-align: center;
-        }
 
-        header h1 {
-            margin: 0 0 10px;
-            font-size: 36px;
-        }
+.cabecalho{
+    background:linear-gradient(180deg,#245fd8,#1c2340);
+    color:white;
+    text-align:center;
+    padding:20px;
+}
 
-        header p {
-            margin: 0;
-            font-size: 18px;
-        }
+.logotipo{
+    width:100%;
+    max-width:700px;
+    display:block;
+    margin:0 auto 10px;
+}
 
-        .container {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
+header h1{
+    font-size:42px;
+    margin:10px 0 5px;
+}
 
-        .busca {
-            width: 100%;
-            padding: 15px;
-            font-size: 16px;
-            border: 1px solid #ccc;
-            border-radius: 8px;
-            box-sizing: border-box;
-            margin-bottom: 30px;
-        }
+header p{
+    font-size:18px;
+    opacity:.95;
+}
 
-        h2 {
-            margin-bottom: 20px;
-        }
+.container{
+    max-width:1000px;
+    margin:30px auto;
+    padding:20px;
+}
 
-        .academia {
-            background: white;
-            padding: 20px;
-            margin-bottom: 15px;
-            border-radius: 10px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-        }
+.busca{
+    width:100%;
+    padding:16px;
+    font-size:17px;
+    border-radius:10px;
+    border:1px solid #ccc;
+    outline:none;
+    margin-bottom:30px;
+}
 
-        .academia h3 {
-            margin-top: 0;
-            font-size: 22px;
-        }
+.busca:focus{
+    border-color:#245fd8;
+}
 
-        .academia p {
-            margin: 8px 0;
-        }
+h2{
+    margin-bottom:20px;
+    color:#1c2340;
+}
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            margin-top: 40px;
-            background-color: #111;
-            color: white;
-        }
-    </style>
+.academia{
+    background:white;
+    border-radius:12px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,.12);
+    transition:.3s;
+}
+
+.academia:hover{
+    transform:translateY(-4px);
+}
+
+.academia h3{
+    color:#245fd8;
+    margin-bottom:10px;
+}
+
+.academia p{
+    margin:8px 0;
+}
+
+footer{
+    background:#1c2340;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:40px;
+}
+
+</style>
+
 </head>
 
 <body>
 
-    <header class="cabecalho">
-       <img src="ChatGPT Image 7 de ago. de 2026, 11_05_19.png" alt="Logo BuscaAcademias" class="logotipo">
-        <h1>Academias de Montes Claros</h1>
-        <p>Encontre academias, locais de treino e informações da cidade.</p>
-    </header>
+<header class="cabecalho">
 
-    <div class="container">
+<img src="ChatGPT Image 7 de ago. de 2026, 11_05_19.png" alt="Logo BuscaAcademias" class="logotipo">
 
-        <input
-            type="text"
-            id="campoBusca"
-            class="busca"
-            placeholder="🔎 Pesquise uma academia..."
-            onkeyup="buscarAcademia()"
-        >
+<h1>Academias de Montes Claros</h1>
 
-        <h2>Academias cadastradas</h2>
+<p>Encontre academias, locais de treino e informações da cidade.</p>
 
-        <div id="listaAcademias">
+</header>
 
-            <div class="academia">
-                <h3>Academia Exemplo 1</h3>
-                <p>📍 Montes Claros - MG</p>
-                <p>🕐 Segunda a sexta: 06:00 às 22:00</p>
-                <p>📞 (38) 00000-0000</p>
-            </div>
+<div class="container">
 
-            <div class="academia">
-                <h3>Academia Exemplo 2</h3>
-                <p>📍 Montes Claros - MG</p>
-                <p>🕐 Segunda a sexta: 06:00 às 22:00</p>
-                <p>📞 (38) 00000-0000</p>
-            </div>
+<input
+type="text"
+id="campoBusca"
+class="busca"
+placeholder="🔎 Pesquise uma academia..."
+onkeyup="buscarAcademia()">
 
-            <div class="academia">
-                <h3>Academia Exemplo 3</h3>
-                <p>📍 Montes Claros - MG</p>
-                <p>🕐 Segunda a sexta: 06:00 às 22:00</p>
-                <p>📞 (38) 00000-0000</p>
-            </div>
+<h2>Academias cadastradas</h2>
 
-        </div>
+<div id="listaAcademias">
 
-    </div>
+<div class="academia">
+<h3>Academia Vida Ativa</h3>
+<p>📍 Av. Deputado Esteves Rodrigues - Montes Claros</p>
+<p>🕐 Segunda a Sexta • 05:30 às 22:00</p>
+<p>📞 (38) 99999-1111</p>
+</div>
 
-    <footer>
-        Academias de Montes Claros © 2026
-    </footer>
+<div class="academia">
+<h3>Top Fitness</h3>
+<p>📍 Centro - Montes Claros</p>
+<p>🕐 Segunda a Sexta • 06:00 às 23:00</p>
+<p>📞 (38) 99999-2222</p>
+</div>
 
-    <script>
-        function buscarAcademia() {
+<div class="academia">
+<h3>Power Gym</h3>
+<p>📍 Bairro Todos os Santos</p>
+<p>🕐 Segunda a Sábado • 05:00 às 22:00</p>
+<p>📞 (38) 99999-3333</p>
+</div>
 
-            let campo = document.getElementById("campoBusca");
-            let texto = campo.value.toLowerCase();
+</div>
 
-            let academias = document.getElementsByClassName("academia");
+</div>
 
-            for (let i = 0; i < academias.length; i++) {
+<footer>
 
-                let nome = academias[i].innerText.toLowerCase();
+Academias de Montes Claros © 2026
 
-                if (nome.includes(texto)) {
-                    academias[i].style.display = "block";
-                } else {
-                    academias[i].style.display = "none";
-                }
-            }
-        }
-    </script>
+</footer>
+
+<script>
+
+function buscarAcademia(){
+
+let campo=document.getElementById("campoBusca");
+let texto=campo.value.toLowerCase();
+
+let academias=document.getElementsByClassName("academia");
+
+for(let i=0;i<academias.length;i++){
+
+let nome=academias[i].innerText.toLowerCase();
+
+if(nome.includes(texto)){
+academias[i].style.display="block";
+}else{
+academias[i].style.display="none";
+}
+
+}
+
+}
+
+</script>
 
 </body>
-
 </html>
