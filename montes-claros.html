@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BuscaAcademias</title>
+<title>BuscaAcademias - Montes Claros</title>
 <style>
 *{
     margin:0;
@@ -35,6 +35,7 @@ body{
     list-style:none;
     display:flex;
     gap:30px;
+    align-items:center;
 }
 .menu a{
     color:#fff;
@@ -56,6 +57,7 @@ body{
 }
 #cidade option{
     color:black;
+    background:white;
 }
 /* CABEÇALHO */
 .cabecalho{
@@ -121,6 +123,7 @@ h2{
 .academia p{
     margin:6px 0;
 }
+/* RODAPÉ */
 footer{
     background:#081a45;
     color:white;
@@ -128,88 +131,180 @@ footer{
     padding:25px;
     margin-top:40px;
 }
+/* CELULAR */
+@media(max-width:600px){
+    .menu{
+        flex-direction:column;
+        height:auto;
+        padding:15px 20px;
+        gap:15px;
+    }
+    .menu ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+    .cabecalho h1{
+        font-size:28px;
+    }
+    .barraBusca{
+        flex-direction:column;
+    }
+}
 </style>
 </head>
 <body>
+<!-- MENU -->
 <nav class="menu">
 <div class="logoMenu">
 Busca<span>Academias</span>
 </div>
 <ul>
 <li>
-    <a href="index.html" onclick="irParaInicio(event)">Início</a>
+<a href="index.html" onclick="irParaInicio(event)">
+Início
+</a>
 </li>
 <li>
-    <select id="cidade" onchange="trocarCidade()">
-        <option value="montes-claros.html">
-            Montes Claros - MG
-        </option>
-        <option value="janauba.html">
-            Janaúba - MG
-        </option>
-    </select>
+<select id="cidade" onchange="trocarCidade()">
+<option value="montes-claros.html">
+Montes Claros - MG
+</option>
+<option value="janauba.html">
+Janaúba - MG
+</option>
+</select>
 </li>
-<li><a href="#">Academias</a></li>
-<li><a href="#">Sobre</a></li>
-<li><a href="#">Contato</a></li>
+<li>
+<a href="#">
+Academias
+</a>
+</li>
+<li>
+<a href="#">
+Sobre
+</a>
+</li>
+<li>
+<a href="#">
+Contato
+</a>
+</li>
 </ul>
 </nav>
+<!-- CABEÇALHO -->
 <header class="cabecalho">
-<img src="3b6a1c52-f088-4290-8cb8-1467f526b368.png" class="logotipo">
-<h1>Academias de Montes Claros</h1>
-<p>Encontre academias, locais de treino e informações da cidade.</p>
+
+<img
+src=“3b6a1c52-f088-4290-8cb8-1467f526b368.png”
+class=“logotipo”
+
+<h1>
+Academias de Montes Claros
+</h1>
+<p>
+Encontre academias, locais de treino e informações da cidade.
+</p>
 </header>
+<!-- CONTEÚDO -->
 <div class="container">
 <div class="barraBusca">
+
 <input
-type="text"
-id="campoBusca"
-class="busca"
-placeholder="🔎 Pesquise uma academia..."
-onkeyup="buscarAcademia()">
+type=“text”
+id=“campoBusca”
+class=“busca”
+placeholder=“🔎 Pesquise uma academia…”
+onkeyup=“buscarAcademia()”
+
 <button class="botao">
 Buscar
 </button>
 </div>
-<h2>Academias cadastradas</h2>
+<h2>
+Academias cadastradas
+</h2>
 <div class="academia">
-<h3>Academia Vida Ativa</h3>
-<p>📍 Av. Dep. Esteves Rodrigues - Montes Claros</p>
-<p>🕐 06:00 às 22:00</p>
-<p>📞 (38) 99999-9999</p>
+<h3>
+Academia Vida Ativa
+</h3>
+<p>
+📍 Av. Dep. Esteves Rodrigues - Montes Claros
+</p>
+<p>
+🕐 06:00 às 22:00
+</p>
+<p>
+📞 (38) 99999-9999
+</p>
 </div>
 <div class="academia">
-<h3>Top Fitness</h3>
-<p>📍 Rua dos Esportes - Montes Claros</p>
-<p>🕐 05:30 às 23:00</p>
-<p>📞 (38) 98888-8888</p>
+<h3>
+Top Fitness
+</h3>
+<p>
+📍 Rua dos Esportes - Montes Claros
+</p>
+<p>
+🕐 05:30 às 23:00
+</p>
+<p>
+📞 (38) 98888-8888
+</p>
 </div>
 <div class="academia">
-<h3>Academia Power</h3>
-<p>📍 Centro - Montes Claros</p>
-<p>🕐 06:00 às 21:30</p>
-<p>📞 (38) 97777-7777</p>
+<h3>
+Academia Power
+</h3>
+<p>
+📍 Centro - Montes Claros
+</p>
+<p>
+🕐 06:00 às 21:30
+</p>
+<p>
+📞 (38) 97777-7777
+</p>
 </div>
 </div>
+<!-- RODAPÉ -->
 <footer>
 BuscaAcademias ©️ 2026
 </footer>
 <script>
+/* INÍCIO */
 function irParaInicio(event){
     event.preventDefault();
     window.location.replace("index.html");
 }
+/* BUSCA */
 function buscarAcademia(){
-let texto=document.getElementById("campoBusca").value.toLowerCase();
-let academias=document.getElementsByClassName("academia");
-for(let i=0;i<academias.length;i++){
-let nome=academias[i].innerText.toLowerCase();
-academias[i].style.display=nome.includes(texto)?"block":"none";
+    let texto =
+        document
+        .getElementById("campoBusca")
+        .value
+        .toLowerCase();
+    let academias =
+        document.getElementsByClassName("academia");
+    for(let i = 0; i < academias.length; i++){
+        let nome =
+            academias[i]
+            .innerText
+            .toLowerCase();
+        academias[i].style.display =
+            nome.includes(texto)
+            ? "block"
+            : "none";
+    }
 }
-}
+/* TROCAR DE CIDADE */
 function trocarCidade(){
-    let cidade = document.getElementById("cidade").value;
-    window.location.href = cidade;
+    let cidade =
+        document.getElementById("cidade").value;
+    if(cidade === "montes-claros.html"){
+        return;
+    }
+    window.location.replace(cidade);
 }
 </script>
 </body>
