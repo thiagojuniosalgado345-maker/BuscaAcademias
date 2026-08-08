@@ -169,9 +169,7 @@ Busca<span>Academias</span>
 </div>
 <ul>
 <li>
-<a href="index.html" onclick="irParaInicio(event)">
-Início
-</a>
+    <a href="index.html">Início</a>
 </li>
 <li>
 <select id="cidade" onchange="abrirCidade(this.value)">
@@ -196,6 +194,7 @@ Janaúba - MG
 </nav>
 <section class="principal">
 <div class="logo-central">
+<img src="logo.png" style="width:600px !important; max-width:none !important; height:auto !important; margin-bottom:-80px;">
 </div>
 <h1>
 Encontre a academia ideal<br>
@@ -258,10 +257,6 @@ function abrirCidade(pagina){
     if(pagina){
         window.location.replace(pagina);
     }
-}
-function irParaInicio(event){
-    event.preventDefault();
-    window.location.replace("index.html");
 }
 </script>
 </body>
