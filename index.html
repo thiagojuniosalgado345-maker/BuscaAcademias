@@ -4,20 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="Encontre academias na sua cidade. Compare opções, localização, horários e informações para escolher onde treinar.">
+content="Encontre academias na sua cidade. Compare localização, horários, contatos e avaliações.">
 
 <title>BuscaAcademias | Encontre sua academia</title>
 
-
 <style>
-
-/* ================================
-   RESET
-================================ */
 
 *{
     margin:0;
@@ -47,17 +41,13 @@ a{
 }
 
 
-/* ================================
+/* ========================================
    MENU
-================================ */
+======================================== */
 
 .menu{
 
-    position:sticky;
-    top:0;
-    z-index:1000;
-
-    height:72px;
+    height:68px;
 
     display:flex;
     align-items:center;
@@ -65,19 +55,15 @@ a{
 
     padding:0 6%;
 
-    background:rgba(3,17,40,.94);
+    background:#031128;
 
     border-bottom:1px solid rgba(255,255,255,.07);
 
-    backdrop-filter:blur(15px);
 }
-
-
-/* LOGO */
 
 .logoMenu{
 
-    font-size:25px;
+    font-size:24px;
     font-weight:800;
     letter-spacing:-1px;
 
@@ -87,9 +73,6 @@ a{
     color:#f4b400;
 }
 
-
-/* LINKS */
-
 .menu ul{
 
     list-style:none;
@@ -97,13 +80,13 @@ a{
     display:flex;
     align-items:center;
 
-    gap:30px;
+    gap:28px;
 
 }
 
 .menu a{
 
-    color:#d8e4f5;
+    color:#dbe6f5;
 
     font-size:15px;
     font-weight:600;
@@ -116,9 +99,6 @@ a{
     color:#f4b400;
 }
 
-
-/* SELECT DO MENU */
-
 #cidade{
 
     background:transparent;
@@ -126,7 +106,7 @@ a{
     border:none;
     outline:none;
 
-    color:#d8e4f5;
+    color:#dbe6f5;
 
     font-size:15px;
     font-weight:600;
@@ -143,30 +123,33 @@ a{
 }
 
 
-/* ================================
-   HERO
-================================ */
+/* ========================================
+   PRIMEIRA TELA
+======================================== */
 
 .principal{
 
     position:relative;
 
-    min-height:690px;
+    min-height:calc(100vh - 68px);
 
     display:flex;
+    align-items:flex-start;
     justify-content:center;
-    align-items:center;
 
     text-align:center;
 
-    padding:55px 20px 80px;
+    padding:
+        28px
+        20px
+        55px;
 
     overflow:hidden;
 
 }
 
 
-/* LUZES DE FUNDO */
+/* luz azul */
 
 .principal::before{
 
@@ -177,16 +160,19 @@ a{
     width:600px;
     height:600px;
 
-    top:-250px;
-    left:-200px;
+    top:-280px;
+    left:-220px;
 
-    background:rgba(37,99,235,.16);
+    background:rgba(37,99,235,.17);
 
     border-radius:50%;
 
     filter:blur(100px);
 
 }
+
+
+/* luz amarela */
 
 .principal::after{
 
@@ -194,13 +180,13 @@ a{
 
     position:absolute;
 
-    width:500px;
-    height:500px;
+    width:450px;
+    height:450px;
 
     right:-220px;
     bottom:-250px;
 
-    background:rgba(244,180,0,.07);
+    background:rgba(244,180,0,.06);
 
     border-radius:50%;
 
@@ -209,173 +195,184 @@ a{
 }
 
 
-/* CONTEÚDO */
+/* conteúdo */
 
 .heroConteudo{
 
     position:relative;
+
     z-index:2;
 
     width:100%;
-    max-width:1050px;
+
+    max-width:900px;
 
 }
 
 
-/* ================================
-   LOGO CENTRAL
-================================ */
+/* ========================================
+   LOGO
+======================================== */
 
 .logo-central img{
 
-    width:460px;
+    width:350px;
 
-    max-width:80vw;
+    max-width:68vw;
 
     height:auto;
 
     display:block;
 
-    margin:0 auto 12px;
+    margin:
+        0
+        auto
+        4px;
 
 }
 
 
-/* ================================
+/* ========================================
    TAG
-================================ */
+======================================== */
 
 .tag{
 
     display:inline-flex;
 
     align-items:center;
-    justify-content:center;
 
-    gap:8px;
+    padding:
+        6px
+        14px;
 
-    padding:8px 16px;
-
-    margin-bottom:20px;
+    margin-bottom:13px;
 
     border-radius:50px;
 
-    background:rgba(37,99,235,.12);
+    background:rgba(37,99,235,.13);
 
-    border:1px solid rgba(96,165,250,.20);
+    border:1px solid rgba(96,165,250,.18);
 
-    color:#8fc1ff;
+    color:#91c3ff;
 
-    font-size:13px;
+    font-size:12px;
 
-    font-weight:bold;
+    font-weight:700;
 
 }
 
 
-/* ================================
+/* ========================================
    TÍTULO
-================================ */
+======================================== */
 
 h1{
 
-    max-width:900px;
+    max-width:800px;
 
-    margin:0 auto 18px;
+    margin:
+        0
+        auto
+        12px;
 
-    font-size:clamp(42px,6vw,68px);
+    font-size:clamp(38px,5vw,55px);
 
-    line-height:1.02;
+    line-height:1.03;
 
-    letter-spacing:-3px;
+    letter-spacing:-2.5px;
 
 }
 
 h1 span{
-
     color:#f4b400;
-
 }
 
 
-/* ================================
+/* ========================================
    SUBTÍTULO
-================================ */
+======================================== */
 
 .subtitulo{
 
-    max-width:690px;
+    max-width:650px;
 
-    margin:0 auto 35px;
+    margin:
+        0
+        auto
+        23px;
 
     color:#aebed4;
 
-    font-size:19px;
+    font-size:17px;
 
-    line-height:1.6;
+    line-height:1.5;
 
 }
 
 
-/* ================================
-   BUSCA PRINCIPAL
-================================ */
+/* ========================================
+   BUSCA
+======================================== */
 
 .buscaPrincipal{
 
     width:100%;
-    max-width:800px;
 
-    margin:0 auto;
+    max-width:720px;
 
-    padding:8px;
+    margin:
+        0
+        auto;
+
+    padding:7px;
 
     display:flex;
+
     align-items:center;
 
     background:white;
 
-    border-radius:19px;
+    border-radius:16px;
 
     box-shadow:
-        0 20px 60px rgba(0,0,0,.35);
+        0 18px 50px rgba(0,0,0,.35);
 
 }
 
 
-/* ÍCONE */
+/* ícone */
 
 .iconeBusca{
 
-    width:55px;
+    width:50px;
 
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
 
-    font-size:22px;
-
-    color:#64748b;
+    font-size:21px;
 
 }
 
 
-/* SELECT */
+/* campo */
 
 .buscaPrincipal select{
 
     flex:1;
 
-    height:60px;
+    height:52px;
 
     border:none;
+
     outline:none;
 
     background:white;
 
     color:#1e293b;
 
-    font-size:17px;
+    font-size:16px;
 
     font-weight:600;
 
@@ -384,23 +381,25 @@ h1 span{
 }
 
 
-/* BOTÃO */
+/* botão */
 
 .botaoBusca{
 
-    height:60px;
+    height:52px;
 
-    padding:0 30px;
+    padding:
+        0
+        24px;
 
     border:none;
 
-    border-radius:14px;
+    border-radius:11px;
 
     background:#2563eb;
 
     color:white;
 
-    font-size:16px;
+    font-size:15px;
 
     font-weight:800;
 
@@ -408,51 +407,38 @@ h1 span{
 
     transition:.25s;
 
-    box-shadow:0 7px 20px rgba(37,99,235,.25);
-
 }
 
 .botaoBusca:hover{
 
     background:#3b82f6;
 
-    transform:translateY(-2px);
-
-    box-shadow:0 10px 25px rgba(37,99,235,.35);
+    transform:translateY(-1px);
 
 }
 
 
-/* ================================
-   BENEFÍCIOS ABAIXO DA BUSCA
-================================ */
+/* ========================================
+   MINI BENEFÍCIOS
+======================================== */
 
 .miniBeneficios{
-
-    margin-top:28px;
 
     display:flex;
 
     justify-content:center;
+
     align-items:center;
 
     flex-wrap:wrap;
 
-    gap:28px;
+    gap:22px;
 
-    color:#a9bad0;
+    margin-top:17px;
 
-    font-size:14px;
+    color:#9fb1c8;
 
-}
-
-.miniBeneficios div{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:7px;
+    font-size:13px;
 
 }
 
@@ -462,34 +448,37 @@ h1 span{
 
     font-weight:bold;
 
+    margin-right:4px;
+
 }
 
 
-/* ================================
-   SEÇÃO DE BENEFÍCIOS
-================================ */
+/* ========================================
+   BENEFÍCIOS
+======================================== */
 
 .secao{
 
-    padding:85px 6%;
+    padding:
+        80px
+        6%;
 
 }
 
 .secaoEscura{
-
     background:#0a2041;
-
 }
-
 
 .secaoTitulo{
 
     max-width:1100px;
 
-    margin:0 auto 45px;
+    margin:
+        0
+        auto
+        40px;
 
 }
-
 
 .secaoTitulo small{
 
@@ -505,34 +494,26 @@ h1 span{
 
 }
 
-
 .secaoTitulo h2{
 
     margin-top:8px;
 
-    font-size:38px;
+    font-size:36px;
 
     line-height:1.15;
 
-    letter-spacing:-1px;
-
 }
-
 
 .secaoTitulo p{
 
-    margin-top:12px;
+    margin-top:10px;
 
-    max-width:620px;
+    max-width:600px;
 
     color:#9fb0c7;
 
 }
 
-
-/* ================================
-   CARDS
-================================ */
 
 .beneficios{
 
@@ -542,7 +523,8 @@ h1 span{
 
     display:grid;
 
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:
+        repeat(5,1fr);
 
     gap:18px;
 
@@ -551,46 +533,44 @@ h1 span{
 
 .item{
 
-    padding:27px 20px;
+    padding:25px 20px;
 
     background:#102b54;
 
     border:1px solid rgba(255,255,255,.06);
 
-    border-radius:20px;
+    border-radius:19px;
 
     transition:.3s;
 
 }
 
-
 .item:hover{
 
-    transform:translateY(-6px);
+    transform:translateY(-5px);
 
     background:#14355f;
-
-    border-color:rgba(96,165,250,.25);
 
 }
 
 
 .itemIcon{
 
-    width:50px;
-    height:50px;
+    width:48px;
+    height:48px;
 
     display:flex;
+
     justify-content:center;
     align-items:center;
 
-    margin-bottom:18px;
+    margin-bottom:17px;
 
-    border-radius:14px;
+    border-radius:13px;
 
     background:rgba(37,99,235,.15);
 
-    font-size:24px;
+    font-size:23px;
 
 }
 
@@ -599,7 +579,7 @@ h1 span{
 
     font-size:17px;
 
-    margin-bottom:7px;
+    margin-bottom:6px;
 
 }
 
@@ -613,9 +593,9 @@ h1 span{
 }
 
 
-/* ================================
+/* ========================================
    CIDADES
-================================ */
+======================================== */
 
 .cidades{
 
@@ -625,16 +605,17 @@ h1 span{
 
     display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:
+        repeat(2,1fr);
 
-    gap:22px;
+    gap:20px;
 
 }
 
 
 .cidadeCard{
 
-    padding:30px;
+    padding:27px;
 
     display:flex;
 
@@ -646,18 +627,7 @@ h1 span{
 
     border:1px solid rgba(255,255,255,.07);
 
-    border-radius:22px;
-
-    transition:.3s;
-
-}
-
-
-.cidadeCard:hover{
-
-    transform:translateY(-5px);
-
-    border-color:rgba(96,165,250,.25);
+    border-radius:20px;
 
 }
 
@@ -668,34 +638,33 @@ h1 span{
 
     align-items:center;
 
-    gap:18px;
+    gap:17px;
 
 }
 
 
 .cidadeIcon{
 
-    width:62px;
-    height:62px;
+    width:58px;
+    height:58px;
 
     display:flex;
-    justify-content:center;
+
     align-items:center;
+    justify-content:center;
 
     background:#173965;
 
-    border-radius:17px;
+    border-radius:16px;
 
-    font-size:29px;
+    font-size:27px;
 
 }
 
 
 .cidadeInfo h3{
 
-    font-size:20px;
-
-    margin-bottom:3px;
+    font-size:19px;
 
 }
 
@@ -711,32 +680,24 @@ h1 span{
 
 .botaoCidade{
 
-    padding:12px 18px;
-
-    border-radius:11px;
+    padding:
+        11px
+        17px;
 
     background:#2563eb;
 
-    color:white;
+    border-radius:10px;
 
     font-size:13px;
 
     font-weight:800;
 
-    transition:.25s;
-
-}
-
-.botaoCidade:hover{
-
-    background:#3b82f6;
-
 }
 
 
-/* ================================
+/* ========================================
    COMO FUNCIONA
-================================ */
+======================================== */
 
 .comoFunciona{
 
@@ -746,7 +707,8 @@ h1 span{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:
+        repeat(3,1fr);
 
     gap:25px;
 
@@ -757,27 +719,31 @@ h1 span{
 
     text-align:center;
 
-    padding:25px;
+    padding:20px;
 
 }
 
 
 .numero{
 
-    width:58px;
-    height:58px;
+    width:55px;
+    height:55px;
+
+    margin:
+        0
+        auto
+        17px;
 
     display:flex;
-    justify-content:center;
-    align-items:center;
 
-    margin:0 auto 18px;
+    align-items:center;
+    justify-content:center;
 
     border-radius:50%;
 
     background:#2563eb;
 
-    font-size:20px;
+    font-size:19px;
 
     font-weight:800;
 
@@ -786,9 +752,9 @@ h1 span{
 
 .passo h3{
 
-    font-size:19px;
+    margin-bottom:7px;
 
-    margin-bottom:8px;
+    font-size:18px;
 
 }
 
@@ -797,18 +763,20 @@ h1 span{
 
     color:#94a8c1;
 
-    font-size:15px;
+    font-size:14px;
 
 }
 
 
-/* ================================
+/* ========================================
    CTA
-================================ */
+======================================== */
 
 .cta{
 
-    padding:80px 20px;
+    padding:
+        70px
+        20px;
 
     text-align:center;
 
@@ -824,9 +792,9 @@ h1 span{
 
 .cta h2{
 
-    font-size:40px;
+    font-size:38px;
 
-    margin-bottom:12px;
+    margin-bottom:10px;
 
 }
 
@@ -835,20 +803,22 @@ h1 span{
 
     max-width:600px;
 
-    margin:0 auto 25px;
+    margin:
+        0
+        auto;
 
     color:#aebed4;
 
 }
 
 
-/* ================================
+/* ========================================
    FOOTER
-================================ */
+======================================== */
 
 footer{
 
-    padding:40px 20px;
+    padding:35px 20px;
 
     background:#031128;
 
@@ -861,21 +831,20 @@ footer{
 }
 
 footer strong{
-
     color:#dce7f5;
-
 }
 
 
-/* ================================
-   CELULAR
-================================ */
+/* ========================================
+   RESPONSIVO
+======================================== */
 
 @media(max-width:900px){
 
     .beneficios{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:
+            repeat(2,1fr);
 
     }
 
@@ -894,22 +863,24 @@ footer strong{
 
         height:auto;
 
-        padding:17px 20px;
+        padding:
+            16px
+            18px;
 
         flex-direction:column;
 
-        gap:16px;
+        gap:15px;
 
     }
 
 
     .menu ul{
 
-        gap:14px;
-
         flex-wrap:wrap;
 
         justify-content:center;
+
+        gap:13px;
 
     }
 
@@ -918,32 +889,35 @@ footer strong{
 
         min-height:auto;
 
-        padding:40px 18px 70px;
+        padding:
+            28px
+            17px
+            60px;
 
     }
 
 
     .logo-central img{
 
-        width:350px;
+        width:300px;
 
-        max-width:90vw;
+        max-width:82vw;
 
     }
 
 
     h1{
 
-        font-size:42px;
+        font-size:39px;
 
-        letter-spacing:-2px;
+        letter-spacing:-1.8px;
 
     }
 
 
     .subtitulo{
 
-        font-size:17px;
+        font-size:16px;
 
     }
 
@@ -952,7 +926,7 @@ footer strong{
 
         flex-direction:column;
 
-        padding:10px;
+        padding:9px;
 
     }
 
@@ -968,7 +942,7 @@ footer strong{
 
         width:100%;
 
-        height:55px;
+        height:50px;
 
         text-align:center;
 
@@ -986,21 +960,23 @@ footer strong{
 
         flex-direction:column;
 
-        gap:11px;
+        gap:9px;
 
     }
 
 
     .secao{
 
-        padding:65px 20px;
+        padding:
+            60px
+            20px;
 
     }
 
 
     .secaoTitulo h2{
 
-        font-size:31px;
+        font-size:30px;
 
     }
 
@@ -1018,7 +994,7 @@ footer strong{
 
         align-items:flex-start;
 
-        gap:20px;
+        gap:18px;
 
     }
 
@@ -1041,7 +1017,56 @@ footer strong{
 
     .cta h2{
 
-        font-size:31px;
+        font-size:30px;
+
+    }
+
+}
+
+
+/* ========================================
+   NOTEBOOKS COM ALTURA MENOR
+======================================== */
+
+@media(
+    max-height:750px
+) and (
+    min-width:651px
+){
+
+    .principal{
+
+        padding-top:18px;
+
+        padding-bottom:35px;
+
+    }
+
+
+    .logo-central img{
+
+        width:300px;
+
+    }
+
+
+    h1{
+
+        font-size:45px;
+
+    }
+
+
+    .subtitulo{
+
+        margin-bottom:17px;
+
+    }
+
+
+    .miniBeneficios{
+
+        margin-top:13px;
 
     }
 
@@ -1055,9 +1080,9 @@ footer strong{
 <body>
 
 
-<!-- ================================
+<!-- ========================================
      MENU
-================================ -->
+======================================== -->
 
 <nav class="menu">
 
@@ -1086,7 +1111,6 @@ footer strong{
             <select
                 id="cidade"
                 onchange="abrirCidade(this.value)"
-                aria-label="Escolha uma cidade"
             >
 
                 <option value="">
@@ -1130,9 +1154,9 @@ footer strong{
 
 
 
-<!-- ================================
+<!-- ========================================
      HERO
-================================ -->
+======================================== -->
 
 <section class="principal">
 
@@ -1225,43 +1249,47 @@ footer strong{
         </div>
 
 
-        <!-- MINI BENEFÍCIOS -->
+        <!-- BENEFÍCIOS -->
 
         <div class="miniBeneficios">
+
 
             <div>
                 <span class="check">✓</span>
                 Localização
             </div>
 
+
             <div>
                 <span class="check">✓</span>
                 Horários
             </div>
+
 
             <div>
                 <span class="check">✓</span>
                 Contatos
             </div>
 
+
             <div>
                 <span class="check">✓</span>
                 Avaliações
             </div>
+
 
         </div>
 
 
     </div>
 
-
 </section>
 
 
 
-<!-- ================================
+<!-- ========================================
      BENEFÍCIOS
-================================ -->
+======================================== -->
 
 <section class="secao secaoEscura">
 
@@ -1300,8 +1328,7 @@ footer strong{
             </h3>
 
             <p>
-                Encontre opções para diferentes
-                objetivos.
+                Encontre opções para diferentes objetivos.
             </p>
 
         </div>
@@ -1318,8 +1345,7 @@ footer strong{
             </h3>
 
             <p>
-                Descubra opções próximas
-                de você.
+                Descubra opções próximas de você.
             </p>
 
         </div>
@@ -1336,8 +1362,7 @@ footer strong{
             </h3>
 
             <p>
-                Consulte os horários de
-                funcionamento.
+                Consulte os horários de funcionamento.
             </p>
 
         </div>
@@ -1354,8 +1379,7 @@ footer strong{
             </h3>
 
             <p>
-                Encontre telefone e WhatsApp
-                quando disponíveis.
+                Encontre telefone e WhatsApp quando disponíveis.
             </p>
 
         </div>
@@ -1372,8 +1396,7 @@ footer strong{
             </h3>
 
             <p>
-                Tenha mais informações para
-                decidir.
+                Tenha mais informações para decidir.
             </p>
 
         </div>
@@ -1385,9 +1408,9 @@ footer strong{
 
 
 
-<!-- ================================
+<!-- ========================================
      CIDADES
-================================ -->
+======================================== -->
 
 <section class="secao">
 
@@ -1400,14 +1423,12 @@ footer strong{
 
 
         <h2>
-            Encontre academias
-            na sua cidade.
+            Encontre academias na sua cidade.
         </h2>
 
 
         <p>
-            Selecione uma cidade para
-            começar sua busca.
+            Selecione uma cidade para começar sua busca.
         </p>
 
     </div>
@@ -1420,7 +1441,6 @@ footer strong{
 
 
             <div class="cidadeInfo">
-
 
                 <div class="cidadeIcon">
                     📍
@@ -1438,7 +1458,6 @@ footer strong{
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -1460,7 +1479,6 @@ footer strong{
 
             <div class="cidadeInfo">
 
-
                 <div class="cidadeIcon">
                     📍
                 </div>
@@ -1477,7 +1495,6 @@ footer strong{
                     </p>
 
                 </div>
-
 
             </div>
 
@@ -1499,9 +1516,9 @@ footer strong{
 
 
 
-<!-- ================================
+<!-- ========================================
      COMO FUNCIONA
-================================ -->
+======================================== -->
 
 <section
     class="secao secaoEscura"
@@ -1537,8 +1554,7 @@ footer strong{
             </h3>
 
             <p>
-                Selecione onde você quer
-                encontrar uma academia.
+                Selecione onde você quer encontrar uma academia.
             </p>
 
         </div>
@@ -1555,8 +1571,7 @@ footer strong{
             </h3>
 
             <p>
-                Veja as academias disponíveis
-                e suas informações.
+                Veja as academias disponíveis e suas informações.
             </p>
 
         </div>
@@ -1573,8 +1588,7 @@ footer strong{
             </h3>
 
             <p>
-                Encontre a opção que mais
-                combina com você.
+                Encontre a opção que mais combina com você.
             </p>
 
         </div>
@@ -1586,15 +1600,14 @@ footer strong{
 
 
 
-<!-- ================================
-     CONTATO
-================================ -->
+<!-- ========================================
+     CTA
+======================================== -->
 
 <section
     class="cta"
     id="contato"
 >
-
 
     <h2>
         Encontre sua próxima academia.
@@ -1603,18 +1616,16 @@ footer strong{
 
     <p>
         O BuscaAcademias está começando.
-        Nossa missão é facilitar a escolha
-        de onde você vai treinar.
+        Nossa missão é facilitar a escolha de onde você vai treinar.
     </p>
-
 
 </section>
 
 
 
-<!-- ================================
-     FOOTER
-================================ -->
+<!-- ========================================
+     RODAPÉ
+======================================== -->
 
 <footer>
 
@@ -1636,11 +1647,6 @@ footer strong{
 
 <script>
 
-
-/* ================================
-   ABRIR CIDADE
-================================ */
-
 function abrirCidade(pagina){
 
     if(pagina){
@@ -1651,10 +1657,6 @@ function abrirCidade(pagina){
 
 }
 
-
-/* ================================
-   BUSCA PRINCIPAL
-================================ */
 
 function buscarAcademias(){
 
