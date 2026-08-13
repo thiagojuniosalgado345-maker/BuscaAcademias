@@ -82,16 +82,17 @@ body{
     align-items:center;
     justify-content:flex-start;
     text-align:center;
-    padding:35px 30px 50px;
+    padding:25px 30px 50px;
 }
 
 /* LOGO CENTRAL */
 
 .logo-central img{
-    width:600px !important;
-    height:auto !important;
-    max-width:none !important;
+    width:500px;
+    height:auto;
+    max-width:80vw;
     margin-bottom:10px;
+    display:block;
 }
 
 /* FRASE PRINCIPAL */
@@ -115,9 +116,11 @@ h1{
     background:white;
     width:450px;
     max-width:90%;
+    min-height:58px;
     padding:8px;
     border-radius:16px;
     display:flex;
+    box-shadow:0 8px 25px rgba(0,0,0,.18);
 }
 
 .caixa-busca select{
@@ -128,6 +131,8 @@ h1{
     color:#333;
     outline:none;
     background:white;
+    border-radius:10px;
+    cursor:pointer;
 }
 
 /* BOTÃO */
@@ -145,6 +150,18 @@ h1{
     font-size:18px;
     font-weight:bold;
     cursor:pointer;
+    transition:.25s;
+    box-shadow:0 6px 18px rgba(37,99,235,.25);
+}
+
+.botao button:hover{
+    background:#3b82f6;
+    transform:translateY(-2px);
+    box-shadow:0 9px 22px rgba(37,99,235,.35);
+}
+
+.botao button:active{
+    transform:translateY(0);
 }
 
 /* BENEFÍCIOS */
@@ -165,6 +182,13 @@ h1{
     border-radius:18px;
     text-align:center;
     font-size:17px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+    transition:.25s;
+}
+
+.item:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.20);
 }
 
 .item span{
@@ -201,8 +225,8 @@ footer{
     }
 
     .logo-central img{
-        width:90% !important;
-        max-width:500px !important;
+        width:90%;
+        max-width:450px;
     }
 
     h1{
@@ -218,6 +242,10 @@ footer{
         max-width:90%;
     }
 
+    .botao button{
+        padding:16px 45px;
+    }
+
 }
 
 /* TELAS MENORES */
@@ -229,7 +257,7 @@ footer{
     }
 
     .logo-central img{
-        width:500px !important;
+        width:450px;
     }
 
     h1{
@@ -327,7 +355,10 @@ footer{
 
     <div class="caixa-busca">
 
-        <select onchange="abrirCidade(this.value)">
+        <select
+            aria-label="Escolha uma cidade"
+            onchange="abrirCidade(this.value)"
+        >
 
             <option value="">
                 📍 Escolha uma cidade
