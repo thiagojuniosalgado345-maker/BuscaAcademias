@@ -3,50 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>BuscaAcademias</title>
+
 <style>
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial, Helvetica, sans-serif;
-    background:#071a36;
-    color:white;
+    background:#f5f7fb;
+    color:#172033;
 }
-/* MENU */
+
+
+/* =========================
+   MENU
+========================= */
+
 .menu{
     background:#031128;
-    height:60px;
+    min-height:64px;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:0 40px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
 }
+
 .logoMenu{
     color:#fff;
     font-size:28px;
     font-weight:bold;
+    white-space:nowrap;
 }
+
 .logoMenu span{
     color:#f4b400;
 }
+
 .menu ul{
     list-style:none;
     display:flex;
-    gap:30px;
     align-items:center;
+    gap:30px;
 }
+
 .menu a{
     color:#fff;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
 }
+
 .menu a:hover{
     color:#f4b400;
 }
+
 #cidade{
     background:#031128;
     color:white;
@@ -56,208 +81,743 @@ body{
     cursor:pointer;
     outline:none;
 }
+
 #cidade option{
     color:black;
-    background:white;
 }
-/* ÁREA PRINCIPAL */
-.principal{
-    min-height:650px;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
+
+
+/* =========================
+   CABEÇALHO / HERO
+========================= */
+
+.cabecalho{
+    background:linear-gradient(135deg,#003ea8,#0755c7);
     text-align:center;
-    padding:30px;
+    padding:25px 20px 45px;
+    position:relative;
+    overflow:hidden;
 }
-.logo-central img{
-    width:600px !important;
-    height:auto !important;
-    max-width:none !important;
-    margin-bottom:35px;
-}
-h1{
-    font-size:46px;
-    line-height:1.15;
-    max-width:800px;
-    margin-bottom:20px;
-}
-.subtitulo{
-    font-size:21px;
-    color:#cbd5e1;
-    margin-bottom:45px;
-}
-/* BUSCA */
-.caixa-busca{
-    background:white;
+
+.cabecalho::after{
+    content:"";
+    position:absolute;
     width:450px;
-    max-width:90%;
-    padding:8px;
-    border-radius:16px;
-    display:flex;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,255,255,.04);
+    right:-180px;
+    top:-180px;
 }
-.caixa-busca select{
-    flex:1;
-    border:none;
-    padding:15px;
-    font-size:17px;
-    color:#333;
-    outline:none;
+
+.cabecalho::before{
+    content:"";
+    position:absolute;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:rgba(255,255,255,.035);
+    left:-130px;
+    bottom:-170px;
 }
-.botao{
-    margin-top:25px;
+
+.logotipo{
+    width:72%;
+    max-width:760px;
+    display:block;
+    margin:0 auto 8px;
+    position:relative;
+    z-index:1;
 }
-.botao button{
-    background:#2563eb;
-    border:none;
+
+.cabecalho h1{
     color:white;
-    padding:17px 55px;
-    border-radius:14px;
+    font-size:38px;
+    margin-bottom:10px;
+    position:relative;
+    z-index:1;
+}
+
+.cabecalho p{
+    color:rgba(255,255,255,.92);
     font-size:18px;
-    font-weight:bold;
-    cursor:pointer;
+    line-height:1.5;
+    position:relative;
+    z-index:1;
 }
-/* BENEFÍCIOS */
-.beneficios{
-    background:#0d2347;
-    padding:50px 30px;
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    flex-wrap:wrap;
+
+
+/* =========================
+   ÁREA DE BUSCA
+========================= */
+
+.container{
+    width:90%;
+    max-width:1000px;
+    margin:-25px auto 0;
+    position:relative;
+    z-index:5;
 }
-.item{
-    background:#132d57;
-    width:220px;
-    padding:30px 20px;
-    border-radius:18px;
-    text-align:center;
-    font-size:17px;
-}
-.item span{
-    font-size:35px;
-}
-/* RODAPÉ */
-footer{
-    text-align:center;
+
+
+/* Caixa principal */
+
+.caixaBusca{
+    background:white;
     padding:25px;
-    color:#b8c5db;
+    border-radius:16px;
+    box-shadow:0 8px 30px rgba(0,0,0,.12);
 }
-@media(max-width:600px){
-.menu{
-    flex-direction:column;
-    height:auto;
-    padding:15px 20px;
+
+.tituloBusca{
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:15px;
+    color:#172033;
+}
+
+.barraBusca{
+    display:flex;
+    gap:10px;
+}
+
+.busca{
+    flex:1;
+    padding:16px;
+    border:1px solid #d9deea;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+    transition:.3s;
+}
+
+.busca:focus{
+    border-color:#0755c7;
+    box-shadow:0 0 0 3px rgba(7,85,199,.10);
+}
+
+.botao{
+    background:#0a3b95;
+    color:white;
+    border:none;
+    border-radius:10px;
+    padding:15px 30px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.botao:hover{
+    background:#062d76;
+    transform:translateY(-1px);
+}
+
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios{
+    display:grid;
+    grid-template-columns:repeat(5,1fr);
     gap:15px;
+    margin:30px 0 45px;
 }
-.menu ul{
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:15px;
+
+.beneficio{
+    background:white;
+    padding:22px 15px;
+    border-radius:14px;
+    text-align:center;
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+    transition:.3s;
 }
-h1{
-    font-size:32px;
+
+.beneficio:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
 }
+
+.icone{
+    font-size:30px;
+    margin-bottom:10px;
 }
+
+.beneficio h3{
+    font-size:15px;
+    margin-bottom:6px;
+    color:#172033;
+}
+
+.beneficio p{
+    font-size:13px;
+    color:#667085;
+    line-height:1.4;
+}
+
+
+/* =========================
+   SEÇÃO EXPLICATIVA
+========================= */
+
+.sobreBusca{
+    background:white;
+    border-radius:16px;
+    padding:35px;
+    margin-bottom:45px;
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+    text-align:center;
+}
+
+.sobreBusca h2{
+    margin:0 0 12px;
+    color:#172033;
+    font-size:28px;
+}
+
+.sobreBusca p{
+    max-width:700px;
+    margin:0 auto;
+    color:#667085;
+    line-height:1.7;
+    font-size:16px;
+}
+
+
+/* =========================
+   TÍTULO DAS ACADEMIAS
+========================= */
+
+h2{
+    margin:0 0 20px;
+    font-size:27px;
+    color:#172033;
+}
+
+.subtitulo{
+    color:#667085;
+    margin-top:-10px;
+    margin-bottom:25px;
+}
+
+
+/* =========================
+   CARDS DAS ACADEMIAS
+========================= */
+
+.academia{
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    margin-bottom:18px;
+    box-shadow:0 4px 18px rgba(0,0,0,.06);
+    border:1px solid #edf0f5;
+    transition:.3s;
+}
+
+.academia:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+
+.academia h3{
+    margin-bottom:14px;
+    color:#0a3b95;
+    font-size:20px;
+}
+
+.academia p{
+    margin:8px 0;
+    color:#4b5565;
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+footer{
+    background:#081a45;
+    color:white;
+    text-align:center;
+    padding:30px 20px;
+    margin-top:60px;
+}
+
+footer p{
+    opacity:.85;
+    margin-top:7px;
+    font-size:14px;
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media(max-width:900px){
+
+    .menu{
+        padding:0 20px;
+    }
+
+    .menu ul{
+        gap:15px;
+    }
+
+    .beneficios{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
+@media(max-width:650px){
+
+    .menu{
+        flex-direction:column;
+        gap:15px;
+        padding:15px;
+    }
+
+    .menu ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .cabecalho{
+        padding:20px 15px 40px;
+    }
+
+    .cabecalho h1{
+        font-size:29px;
+    }
+
+    .cabecalho p{
+        font-size:16px;
+    }
+
+    .logotipo{
+        width:90%;
+    }
+
+    .barraBusca{
+        flex-direction:column;
+    }
+
+    .botao{
+        width:100%;
+    }
+
+    .beneficios{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .sobreBusca{
+        padding:25px 20px;
+    }
+
+}
+
+@media(max-width:400px){
+
+    .beneficios{
+        grid-template-columns:1fr;
+    }
+
+    .logoMenu{
+        font-size:24px;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
-<!-- MENU -->
+
+
+<!-- =========================
+     MENU
+========================= -->
+
 <nav class="menu">
-<div class="logoMenu">
-Busca<span>Academias</span>
-</div>
-<ul>
-<li>
-    <a href="index.html">Início</a>
-</li>
-<li>
-<select id="cidade" onchange="abrirCidade(this.value)">
-<option value="">
-📍 Escolha uma cidade
-</option>
-<option value="montes-claros.html">
-Montes Claros - MG
-</option>
-<option value="janauba.html">
-Janaúba - MG
-</option>
-</select>
-</li>
-<li>
-<a href="#">Sobre</a>
-</li>
-<li>
-<a href="#">Contato</a>
-</li>
-</ul>
+
+    <div class="logoMenu">
+        Busca<span>Academias</span>
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="index.html" onclick="irParaInicio(event)">
+                Início
+            </a>
+        </li>
+
+        <li>
+
+            <select id="cidade" onchange="trocarCidade()">
+
+                <option value="montes-claros.html">
+                    📍 Montes Claros - MG
+                </option>
+
+                <option value="janauba.html">
+                    📍 Janaúba - MG
+                </option>
+
+            </select>
+
+        </li>
+
+        <li>
+            <a href="#academias">
+                Academias
+            </a>
+        </li>
+
+        <li>
+            <a href="#sobre">
+                Sobre
+            </a>
+        </li>
+
+        <li>
+            <a href="#contato">
+                Contato
+            </a>
+        </li>
+
+    </ul>
+
 </nav>
-<section class="principal">
-<div class="logo-central">
-<img src="logo.png" style="width:600px !important; max-width:none !important; height:auto !important; margin-bottom:-80px;">
+
+
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
+
+<header class="cabecalho">
+
+    <img
+        src="3b6a1c52-f088-4290-8cb8-1467f526b368.png"
+        class="logotipo"
+        alt="BuscaAcademias"
+    >
+
+    <h1>
+        Encontre a academia ideal na sua cidade
+    </h1>
+
+    <p>
+        Encontre academias, locais de treino e informações em um só lugar.
+    </p>
+
+</header>
+
+
+
+<!-- =========================
+     CONTEÚDO
+========================= -->
+
+<div class="container">
+
+
+    <!-- BUSCA -->
+
+    <div class="caixaBusca">
+
+        <div class="tituloBusca">
+            🔎 Encontre uma academia
+        </div>
+
+        <div class="barraBusca">
+
+            <input
+                type="text"
+                id="campoBusca"
+                class="busca"
+                placeholder="Digite o nome da academia..."
+                onkeyup="buscarAcademia()"
+            >
+
+            <button
+                class="botao"
+                onclick="buscarAcademia()"
+            >
+                Buscar
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- BENEFÍCIOS -->
+
+    <div class="beneficios">
+
+        <div class="beneficio">
+
+            <div class="icone">🏋️</div>
+
+            <h3>
+                Academias verificadas
+            </h3>
+
+            <p>
+                Informações organizadas para você.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <div class="icone">📍</div>
+
+            <h3>
+                Localização exata
+            </h3>
+
+            <p>
+                Saiba onde encontrar cada academia.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <div class="icone">🕒</div>
+
+            <h3>
+                Horários atualizados
+            </h3>
+
+            <p>
+                Consulte os horários de funcionamento.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <div class="icone">📞</div>
+
+            <h3>
+                Telefone e WhatsApp
+            </h3>
+
+            <p>
+                Entre em contato facilmente.
+            </p>
+
+        </div>
+
+
+        <div class="beneficio">
+
+            <div class="icone">⭐</div>
+
+            <h3>
+                Avaliações
+            </h3>
+
+            <p>
+                Compare experiências e opiniões.
+            </p>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- SOBRE O SITE -->
+
+    <section class="sobreBusca" id="sobre">
+
+        <h2>
+            Encontre a academia certa para você
+        </h2>
+
+        <p>
+            O BuscaAcademias reúne informações de academias
+            para facilitar sua escolha. Pesquise, compare opções
+            e encontre um local de treino que combine com você.
+        </p>
+
+    </section>
+
+
+
+    <!-- ACADEMIAS -->
+
+    <section id="academias">
+
+        <h2>
+            Academias cadastradas
+        </h2>
+
+        <p class="subtitulo">
+            Confira algumas academias disponíveis em Montes Claros.
+        </p>
+
+
+        <div class="academia">
+
+            <h3>
+                Academia Vida Ativa
+            </h3>
+
+            <p>
+                📍 Av. Dep. Esteves Rodrigues - Montes Claros
+            </p>
+
+            <p>
+                🕐 06:00 às 22:00
+            </p>
+
+            <p>
+                📞 (38) 99999-9999
+            </p>
+
+        </div>
+
+
+
+        <div class="academia">
+
+            <h3>
+                Top Fitness
+            </h3>
+
+            <p>
+                📍 Rua dos Esportes - Montes Claros
+            </p>
+
+            <p>
+                🕐 05:30 às 23:00
+            </p>
+
+            <p>
+                📞 (38) 98888-8888
+            </p>
+
+        </div>
+
+
+
+        <div class="academia">
+
+            <h3>
+                Academia Power
+            </h3>
+
+            <p>
+                📍 Centro - Montes Claros
+            </p>
+
+            <p>
+                🕐 06:00 às 21:30
+            </p>
+
+            <p>
+                📞 (38) 97777-7777
+            </p>
+
+        </div>
+
+    </section>
+
 </div>
-<h1>
-Encontre a academia ideal<br>
-na sua cidade
-</h1>
-<p class="subtitulo">
-O maior portal de academias do Brasil.
-</p>
-<div class="caixa-busca">
-<select onchange="abrirCidade(this.value)">
-<option value="">
-📍 Escolha uma cidade
-</option>
-<option value="montes-claros.html">
-Montes Claros
-</option>
-<option value="janauba.html">
-Janaúba
-</option>
-</select>
-</div>
-<div class="botao">
-<button onclick="abrirCidade('montes-claros.html')">
-VER ACADEMIAS
-</button>
-</div>
-</section>
-<section class="beneficios">
-<div class="item">
-<span>🏋️</span>
-<br><br>
-Academias verificadas
-</div>
-<div class="item">
-<span>📍</span>
-<br><br>
-Localização exata
-</div>
-<div class="item">
-<span>🕒</span>
-<br><br>
-Horários atualizados
-</div>
-<div class="item">
-<span>📞</span>
-<br><br>
-Telefones e WhatsApp
-</div>
-<div class="item">
-<span>⭐</span>
-<br><br>
-Avaliações
-</div>
-</section>
-<footer>
-©️ BuscaAcademias 2026
+
+
+
+<!-- =========================
+     RODAPÉ
+========================= -->
+
+<footer id="contato">
+
+    <strong>
+        BuscaAcademias ©️ 2026
+    </strong>
+
+    <p>
+        Encontre. Compare. Escolha.
+    </p>
+
 </footer>
+
+
+
+<!-- =========================
+     JAVASCRIPT
+========================= -->
+
 <script>
-function abrirCidade(pagina){
-    if(pagina){
-        window.location.replace(pagina);
-    }
+
+function irParaInicio(event){
+
+    event.preventDefault();
+
+    window.location.replace("index.html");
+
 }
+
+
+function buscarAcademia(){
+
+    let campo =
+        document.getElementById("campoBusca");
+
+    let texto =
+        campo.value.toLowerCase().trim();
+
+    let academias =
+        document.getElementsByClassName("academia");
+
+
+    for(let i = 0; i < academias.length; i++){
+
+        let nome =
+            academias[i].innerText.toLowerCase();
+
+        if(nome.includes(texto)){
+
+            academias[i].style.display = "block";
+
+        }else{
+
+            academias[i].style.display = "none";
+
+        }
+
+    }
+
+}
+
+
+function trocarCidade(){
+
+    let cidade =
+        document.getElementById("cidade").value;
+
+    window.location.replace(cidade);
+
+}
+
 </script>
+
+
 </body>
 </html>
