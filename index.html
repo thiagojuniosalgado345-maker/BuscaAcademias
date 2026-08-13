@@ -4,23 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>BuscaAcademias</title>
-
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
-
 body{
     font-family:Arial, Helvetica, sans-serif;
     background:#071a36;
     color:white;
 }
-
 /* MENU */
-
 .menu{
     background:#031128;
     height:60px;
@@ -29,35 +24,29 @@ body{
     align-items:center;
     padding:0 40px;
 }
-
 .logoMenu{
     color:#fff;
     font-size:28px;
     font-weight:bold;
 }
-
 .logoMenu span{
     color:#f4b400;
 }
-
 .menu ul{
     list-style:none;
     display:flex;
     gap:30px;
     align-items:center;
 }
-
 .menu a{
     color:#fff;
     text-decoration:none;
     font-weight:bold;
     transition:.3s;
 }
-
 .menu a:hover{
     color:#f4b400;
 }
-
 #cidade{
     background:#031128;
     color:white;
@@ -67,14 +56,11 @@ body{
     cursor:pointer;
     outline:none;
 }
-
 #cidade option{
     color:black;
     background:white;
 }
-
 /* ÁREA PRINCIPAL */
-
 .principal{
     min-height:650px;
     display:flex;
@@ -84,31 +70,24 @@ body{
     text-align:center;
     padding:30px;
 }
-
-/* LOGO CENTRAL */
-
 .logo-central img{
     width:600px !important;
     height:auto !important;
     max-width:none !important;
     margin-bottom:35px;
 }
-
 h1{
     font-size:46px;
     line-height:1.15;
     max-width:800px;
     margin-bottom:20px;
 }
-
 .subtitulo{
     font-size:21px;
     color:#cbd5e1;
     margin-bottom:45px;
 }
-
 /* BUSCA */
-
 .caixa-busca{
     background:white;
     width:450px;
@@ -117,7 +96,6 @@ h1{
     border-radius:16px;
     display:flex;
 }
-
 .caixa-busca select{
     flex:1;
     border:none;
@@ -126,11 +104,9 @@ h1{
     color:#333;
     outline:none;
 }
-
 .botao{
     margin-top:25px;
 }
-
 .botao button{
     background:#2563eb;
     border:none;
@@ -141,9 +117,7 @@ h1{
     font-weight:bold;
     cursor:pointer;
 }
-
 /* BENEFÍCIOS */
-
 .beneficios{
     background:#0d2347;
     padding:50px 30px;
@@ -152,7 +126,6 @@ h1{
     gap:25px;
     flex-wrap:wrap;
 }
-
 .item{
     background:#132d57;
     width:220px;
@@ -161,244 +134,135 @@ h1{
     text-align:center;
     font-size:17px;
 }
-
 .item span{
     font-size:35px;
 }
-
 /* RODAPÉ */
-
 footer{
     text-align:center;
     padding:25px;
     color:#b8c5db;
 }
-
 @media(max-width:600px){
-
-    .menu{
-        flex-direction:column;
-        height:auto;
-        padding:15px 20px;
-        gap:15px;
-    }
-
-    .menu ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:15px;
-    }
-
-    h1{
-        font-size:32px;
-    }
-
+.menu{
+    flex-direction:column;
+    height:auto;
+    padding:15px 20px;
+    gap:15px;
 }
-
+.menu ul{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+h1{
+    font-size:32px;
+}
+}
 </style>
 </head>
-
 <body>
-
 <!-- MENU -->
-
 <nav class="menu">
-
-    <div class="logoMenu">
-        Busca<span>Academias</span>
-    </div>
-
-    <ul>
-
-        <li>
-            <a href="index.html" onclick="irParaInicio(event)">
-                Início
-            </a>
-        </li>
-
-        <li>
-
-            <select id="cidade" onchange="abrirCidade(this.value)">
-
-                <option value="">
-                    📍 Escolha uma cidade
-                </option>
-
-                <option value="montes-claros.html">
-                    Montes Claros - MG
-                </option>
-
-                <option value="janauba.html">
-                    Janaúba - MG
-                </option>
-
-            </select>
-
-        </li>
-
-        <li>
-            <a href="#">Sobre</a>
-        </li>
-
-        <li>
-            <a href="#">Contato</a>
-        </li>
-
-    </ul>
-
+<div class="logoMenu">
+Busca<span>Academias</span>
+</div>
+<ul>
+<li>
+<a href="index.html" onclick="irParaInicio(event)">
+Início
+</a>
+</li>
+<li>
+<select id="cidade" onchange="abrirCidade(this.value)">
+<option value="">
+📍 Escolha uma cidade
+</option>
+<option value="montes-claros.html">
+Montes Claros - MG
+</option>
+<option value="janauba.html">
+Janaúba - MG
+</option>
+</select>
+</li>
+<li>
+<a href="#">Sobre</a>
+</li>
+<li>
+<a href="#">Contato</a>
+</li>
+</ul>
 </nav>
-
-
-<!-- ÁREA PRINCIPAL -->
-
 <section class="principal">
-
-    <div class="logo-central">
-
-        <img
-            src="3b6a1c52-f088-4290-8cb8-1467f526b368.png"
-            alt="BuscaAcademias"
-        >
-
-    </div>
-
-    <h1>
-        Encontre a academia ideal<br>
-        na sua cidade
-    </h1>
-
-    <p class="subtitulo">
-        O maior portal de academias do Brasil.
-    </p>
-
-
-    <!-- BUSCA DE CIDADE -->
-
-    <div class="caixa-busca">
-
-        <select onchange="abrirCidade(this.value)">
-
-            <option value="">
-                📍 Escolha uma cidade
-            </option>
-
-            <option value="montes-claros.html">
-                Montes Claros
-            </option>
-
-            <option value="janauba.html">
-                Janaúba
-            </option>
-
-        </select>
-
-    </div>
-
-
-    <!-- BOTÃO -->
-
-    <div class="botao">
-
-        <button onclick="abrirCidade('montes-claros.html')">
-            VER ACADEMIAS
-        </button>
-
-    </div>
-
+<div class="logo-central">
+</div>
+<h1>
+Encontre a academia ideal<br>
+na sua cidade
+</h1>
+<p class="subtitulo">
+O maior portal de academias do Brasil.
+</p>
+<div class="caixa-busca">
+<select onchange="abrirCidade(this.value)">
+<option value="">
+📍 Escolha uma cidade
+</option>
+<option value="montes-claros.html">
+Montes Claros
+</option>
+<option value="janauba.html">
+Janaúba
+</option>
+</select>
+</div>
+<div class="botao">
+<button onclick="abrirCidade('montes-claros.html')">
+VER ACADEMIAS
+</button>
+</div>
 </section>
-
-
-<!-- BENEFÍCIOS -->
-
 <section class="beneficios">
-
-    <div class="item">
-
-        <span>🏋️</span>
-
-        <br><br>
-
-        Academias verificadas
-
-    </div>
-
-
-    <div class="item">
-
-        <span>📍</span>
-
-        <br><br>
-
-        Localização exata
-
-    </div>
-
-
-    <div class="item">
-
-        <span>🕒</span>
-
-        <br><br>
-
-        Horários atualizados
-
-    </div>
-
-
-    <div class="item">
-
-        <span>📞</span>
-
-        <br><br>
-
-        Telefones e WhatsApp
-
-    </div>
-
-
-    <div class="item">
-
-        <span>⭐</span>
-
-        <br><br>
-
-        Avaliações
-
-    </div>
-
+<div class="item">
+<span>🏋️</span>
+<br><br>
+Academias verificadas
+</div>
+<div class="item">
+<span>📍</span>
+<br><br>
+Localização exata
+</div>
+<div class="item">
+<span>🕒</span>
+<br><br>
+Horários atualizados
+</div>
+<div class="item">
+<span>📞</span>
+<br><br>
+Telefones e WhatsApp
+</div>
+<div class="item">
+<span>⭐</span>
+<br><br>
+Avaliações
+</div>
 </section>
-
-
-<!-- RODAPÉ -->
-
 <footer>
-
-    ©️ BuscaAcademias 2026
-
+©️ BuscaAcademias 2026
 </footer>
-
-
 <script>
-
 function abrirCidade(pagina){
-
     if(pagina){
-
         window.location.replace(pagina);
-
     }
-
 }
-
 function irParaInicio(event){
-
     event.preventDefault();
-
     window.location.replace("index.html");
-
 }
-
 </script>
-
 </body>
 </html>
