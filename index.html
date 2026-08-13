@@ -80,9 +80,9 @@ body{
     display:flex;
     flex-direction:column;
     align-items:center;
-    justify-content:center;
+    justify-content:flex-start;
     text-align:center;
-    padding:30px;
+    padding:35px 30px 50px;
 }
 
 /* LOGO CENTRAL */
@@ -106,7 +106,7 @@ h1{
 .subtitulo{
     font-size:21px;
     color:#cbd5e1;
-    margin-bottom:45px;
+    margin-bottom:25px;
 }
 
 /* BUSCA */
@@ -127,10 +127,13 @@ h1{
     font-size:17px;
     color:#333;
     outline:none;
+    background:white;
 }
 
+/* BOTÃO */
+
 .botao{
-    margin-top:25px;
+    margin-top:20px;
 }
 
 .botao button{
@@ -176,6 +179,8 @@ footer{
     color:#b8c5db;
 }
 
+/* CELULAR */
+
 @media(max-width:600px){
 
     .menu{
@@ -191,8 +196,52 @@ footer{
         gap:15px;
     }
 
+    .principal{
+        padding-top:30px;
+    }
+
+    .logo-central img{
+        width:90% !important;
+        max-width:500px !important;
+    }
+
     h1{
         font-size:32px;
+    }
+
+    .subtitulo{
+        font-size:18px;
+    }
+
+    .caixa-busca{
+        width:450px;
+        max-width:90%;
+    }
+
+}
+
+/* TELAS MENORES */
+
+@media(max-height:750px) and (min-width:601px){
+
+    .principal{
+        padding-top:15px;
+    }
+
+    .logo-central img{
+        width:500px !important;
+    }
+
+    h1{
+        font-size:38px;
+    }
+
+    .subtitulo{
+        margin-bottom:20px;
+    }
+
+    .botao{
+        margin-top:15px;
     }
 
 }
@@ -274,7 +323,7 @@ footer{
     </p>
 
 
-    <!-- BUSCA DE CIDADE -->
+    <!-- BARRA DE PESQUISA -->
 
     <div class="caixa-busca">
 
