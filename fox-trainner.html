@@ -1,0 +1,2314 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Encontre e compare academias em Montes Claros. Veja localização, horários, contatos e avaliações."
+>
+
+<title>
+    Academias em Montes Claros | BuscaAcademias
+</title>
+
+
+<style>
+
+/* ========================================
+   VARIÁVEIS
+======================================== */
+
+:root{
+
+    --nav:#031128;
+
+    --bg:#06162f;
+
+    --bg2:#0a2041;
+
+    --card:#0d264b;
+
+    --card2:#102d55;
+
+    --blue:#2563eb;
+
+    --blue2:#3b82f6;
+
+    --yellow:#f4b400;
+
+    --white:#f8fbff;
+
+    --muted:#9fb1c8;
+
+    --line:rgba(255,255,255,.08);
+
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+
+body{
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background:var(--bg);
+
+    color:var(--white);
+
+    overflow-x:hidden;
+
+}
+
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+
+button,
+input,
+select{
+
+    font:inherit;
+
+}
+
+
+button,
+select{
+
+    cursor:pointer;
+
+}
+
+
+/* ========================================
+   MENU
+======================================== */
+
+.menu{
+
+    position:sticky;
+
+    top:0;
+
+    z-index:50;
+
+    min-height:68px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(3,17,40,.9);
+
+    backdrop-filter:blur(16px);
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+}
+
+
+.logoMenu{
+
+    font-size:23px;
+
+    font-weight:900;
+
+    letter-spacing:-1px;
+
+}
+
+
+.logoMenu span{
+
+    color:var(--yellow);
+
+}
+
+
+.menu ul{
+
+    list-style:none;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:27px;
+
+}
+
+
+.menu a,
+.menu select{
+
+    color:#dbe6f5;
+
+    font-size:14px;
+
+    font-weight:700;
+
+    transition:.2s;
+
+    background:transparent;
+
+    border:0;
+
+    outline:0;
+
+}
+
+
+.menu a:hover{
+
+    color:var(--yellow);
+
+}
+
+
+.menu select option{
+
+    background:#fff;
+
+    color:#111;
+
+}
+
+
+.menuCta{
+
+    padding:
+        10px
+        14px;
+
+    background:
+        var(--blue)!important;
+
+    border-radius:10px;
+
+    color:#fff!important;
+
+}
+
+
+.menuCta:hover{
+
+    background:
+        var(--blue2)!important;
+
+}
+
+
+/* ========================================
+   HERO DA CIDADE
+======================================== */
+
+.cityHero{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:
+        62px
+        20px
+        56px;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(37,99,235,.25),
+            transparent 34%
+        ),
+
+        radial-gradient(
+            circle at 90% 100%,
+            rgba(244,180,0,.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #061832,
+            #0a2346
+        );
+
+}
+
+
+.cityHero:before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,.025)
+            1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,.025)
+            1px,
+            transparent 1px
+        );
+
+    background-size:
+        54px
+        54px;
+
+    opacity:.5;
+
+}
+
+
+.cityHeroContent{
+
+    position:relative;
+
+    z-index:1;
+
+    width:min(
+        1100px,
+        100%
+    );
+
+    margin:auto;
+
+}
+
+
+.breadcrumb{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    color:#91a6c0;
+
+    font-size:12px;
+
+    margin-bottom:22px;
+
+}
+
+
+.breadcrumb a:hover{
+
+    color:#fff;
+
+}
+
+
+.cityTag{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:7px;
+
+    padding:
+        7px
+        12px;
+
+    border-radius:999px;
+
+    background:
+        rgba(37,99,235,.13);
+
+    border:
+        1px solid
+        rgba(96,165,250,.2);
+
+    color:#a8ccff;
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+
+.cityHero h1{
+
+    max-width:850px;
+
+    margin:
+        15px
+        auto
+        10px;
+
+    font-size:
+        clamp(
+            36px,
+            5vw,
+            58px
+        );
+
+    line-height:1.02;
+
+    letter-spacing:-2.8px;
+
+}
+
+
+.cityHero h1 span{
+
+    color:var(--yellow);
+
+}
+
+
+.cityHero p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    color:#aebed3;
+
+    line-height:1.55;
+
+    font-size:16px;
+
+}
+
+
+/* ========================================
+   CONTEÚDO
+======================================== */
+
+.main{
+
+    width:min(
+        1120px,
+        90%
+    );
+
+    margin:auto;
+
+    padding:
+        42px
+        0
+        80px;
+
+}
+
+
+/* ========================================
+   BUSCA
+======================================== */
+
+.searchPanel{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    padding:8px;
+
+    background:#fff;
+
+    border-radius:16px;
+
+    box-shadow:
+        0 18px 55px
+        rgba(0,0,0,.28);
+
+    margin-bottom:27px;
+
+}
+
+
+.searchIcon{
+
+    width:45px;
+
+    display:grid;
+
+    place-items:center;
+
+    color:#64748b;
+
+    font-size:19px;
+
+}
+
+
+.searchInput{
+
+    flex:1;
+
+    min-width:0;
+
+    height:48px;
+
+    border:0;
+
+    outline:0;
+
+    color:#172033;
+
+    font-size:15px;
+
+    font-weight:600;
+
+}
+
+
+.searchButton{
+
+    height:48px;
+
+    padding:
+        0
+        20px;
+
+    border:0;
+
+    border-radius:11px;
+
+    background:var(--blue);
+
+    color:#fff;
+
+    font-weight:800;
+
+    transition:.2s;
+
+}
+
+
+.searchButton:hover{
+
+    background:var(--blue2);
+
+    transform:
+        translateY(-1px);
+
+}
+
+
+/* ========================================
+   BARRA DE RESULTADOS
+======================================== */
+
+.toolbar{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-bottom:24px;
+
+}
+
+
+.resultTitle h2{
+
+    font-size:27px;
+
+    letter-spacing:-1px;
+
+}
+
+
+.resultTitle p{
+
+    margin-top:5px;
+
+    color:var(--muted);
+
+    font-size:13px;
+
+}
+
+
+.filters{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:8px;
+
+}
+
+
+.filter{
+
+    border:
+        1px solid
+        var(--line);
+
+    background:#0b2244;
+
+    color:#b8c8da;
+
+    border-radius:999px;
+
+    padding:
+        9px
+        13px;
+
+    font-size:12px;
+
+    font-weight:750;
+
+    transition:.2s;
+
+}
+
+
+.filter:hover,
+.filter.active{
+
+    background:
+        rgba(37,99,235,.18);
+
+    border-color:
+        rgba(96,165,250,.28);
+
+    color:#fff;
+
+}
+
+
+/* ========================================
+   CARDS
+======================================== */
+
+.academias{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(2,1fr);
+
+    gap:17px;
+
+}
+
+
+.academia{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:23px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #0d294f,
+            #0b2345
+        );
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:20px;
+
+    transition:.25s;
+
+}
+
+
+.academia:hover{
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(96,165,250,.27);
+
+    box-shadow:
+        0 18px 50px
+        rgba(0,0,0,.18);
+
+}
+
+
+.academiaTop{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+}
+
+
+.academiaIcon{
+
+    width:53px;
+
+    height:53px;
+
+    display:grid;
+
+    place-items:center;
+
+    border-radius:15px;
+
+    background:
+        rgba(37,99,235,.16);
+
+    color:#79b6ff;
+
+    font-size:24px;
+
+}
+
+
+.academia h3{
+
+    margin-top:1px;
+
+    font-size:19px;
+
+}
+
+
+.meta{
+
+    margin-top:6px;
+
+    color:#90a6c1;
+
+    font-size:12px;
+
+}
+
+
+.rating{
+
+    white-space:nowrap;
+
+    padding:
+        7px
+        9px;
+
+    border-radius:9px;
+
+    background:
+        rgba(244,180,0,.1);
+
+    color:#ffd34d;
+
+    font-size:12px;
+
+    font-weight:800;
+
+}
+
+
+.info{
+
+    margin-top:20px;
+
+    display:grid;
+
+    gap:10px;
+
+}
+
+
+.infoLine{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:9px;
+
+    color:#b5c5d8;
+
+    font-size:13px;
+
+    line-height:1.4;
+
+}
+
+
+.infoLine b{
+
+    color:#75b2ff;
+
+}
+
+
+.status{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:6px;
+
+    color:#7ee2a8;
+
+    font-size:12px;
+
+    font-weight:750;
+
+}
+
+
+.status i{
+
+    width:7px;
+
+    height:7px;
+
+    border-radius:50%;
+
+    background:#36c878;
+
+    box-shadow:
+        0 0 10px
+        rgba(54,200,120,.5);
+
+}
+
+
+.cardBottom{
+
+    display:flex;
+
+    gap:9px;
+
+    margin-top:21px;
+
+}
+
+
+.primaryBtn,
+.secondaryBtn{
+
+    flex:1;
+
+    min-height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:10px;
+
+    font-size:12px;
+
+    font-weight:850;
+
+    transition:.2s;
+
+}
+
+
+.primaryBtn{
+
+    background:var(--blue);
+
+    color:#fff;
+
+}
+
+
+.primaryBtn:hover{
+
+    background:var(--blue2);
+
+}
+
+
+.secondaryBtn{
+
+    border:
+        1px solid
+        rgba(255,255,255,.1);
+
+    color:#d8e5f3;
+
+    background:
+        rgba(255,255,255,.035);
+
+}
+
+
+.secondaryBtn:hover{
+
+    background:
+        rgba(255,255,255,.07);
+
+}
+
+
+/* ========================================
+   SEM RESULTADOS
+======================================== */
+
+.noResults{
+
+    display:none;
+
+    padding:
+        40px
+        20px;
+
+    text-align:center;
+
+    background:#0b2345;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius:18px;
+
+    color:var(--muted);
+
+}
+
+
+.noResults strong{
+
+    display:block;
+
+    color:#fff;
+
+    font-size:18px;
+
+    margin-bottom:7px;
+
+}
+
+
+/* ========================================
+   CTA
+======================================== */
+
+.cta{
+
+    text-align:center;
+
+    padding:
+        72px
+        20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0d2c5b,
+            #071c3b
+        );
+
+}
+
+
+.cta h2{
+
+    font-size:
+        clamp(
+            28px,
+            4vw,
+            40px
+        );
+
+    letter-spacing:-1.5px;
+
+}
+
+
+.cta p{
+
+    max-width:600px;
+
+    margin:
+        10px
+        auto
+        22px;
+
+    color:#aebed4;
+
+    line-height:1.5;
+
+}
+
+
+.cta a{
+
+    display:inline-flex;
+
+    padding:
+        13px
+        18px;
+
+    border-radius:11px;
+
+    background:#fff;
+
+    color:#10203a;
+
+    font-size:13px;
+
+    font-weight:850;
+
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer{
+
+    padding:
+        34px
+        20px;
+
+    background:#031128;
+
+    text-align:center;
+
+    color:#71849d;
+
+    font-size:13px;
+
+    line-height:1.8;
+
+}
+
+
+footer strong{
+
+    color:#dce7f5;
+
+}
+
+
+/* ========================================
+   ACESSIBILIDADE
+======================================== */
+
+button:focus-visible,
+a:focus-visible,
+select:focus-visible,
+input:focus-visible{
+
+    outline:
+        3px solid
+        rgba(96,165,250,.55);
+
+    outline-offset:3px;
+
+}
+
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+
+        scroll-behavior:auto!important;
+
+        transition:none!important;
+
+    }
+
+}
+
+
+/* ========================================
+   RESPONSIVO
+======================================== */
+
+@media(max-width:800px){
+
+    .menu{
+
+        height:auto;
+
+        padding:
+            15px
+            18px;
+
+        flex-direction:column;
+
+        gap:14px;
+
+    }
+
+
+    .menu ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:
+            12px
+            17px;
+
+    }
+
+
+    .menuCta{
+
+        display:none;
+
+    }
+
+
+    .cityHero{
+
+        padding:
+            43px
+            18px
+            45px;
+
+    }
+
+
+    .cityHero h1{
+
+        letter-spacing:-2px;
+
+    }
+
+
+    .main{
+
+        width:92%;
+
+        padding-top:30px;
+
+    }
+
+
+    .toolbar{
+
+        align-items:flex-start;
+
+        flex-direction:column;
+
+    }
+
+
+    .filters{
+
+        width:100%;
+
+    }
+
+
+    .academias{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+
+@media(max-width:560px){
+
+    .searchPanel{
+
+        flex-direction:column;
+
+        padding:9px;
+
+    }
+
+
+    .searchIcon{
+
+        display:none;
+
+    }
+
+
+    .searchInput{
+
+        width:100%;
+
+        text-align:center;
+
+        height:46px;
+
+    }
+
+
+    .searchButton{
+
+        width:100%;
+
+    }
+
+
+    .academia{
+
+        padding:19px;
+
+    }
+
+
+    .cardBottom{
+
+        flex-direction:column;
+
+    }
+
+
+    .primaryBtn,
+    .secondaryBtn{
+
+        width:100%;
+
+    }
+
+
+    .cityHero p{
+
+        font-size:15px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- ========================================
+     MENU
+======================================== -->
+
+<nav class="menu">
+
+
+    <a
+        class="logoMenu"
+        href="index.html"
+    >
+
+        Busca<span>Academias</span>
+
+    </a>
+
+
+    <ul>
+
+
+        <li>
+
+            <a href="index.html">
+
+                Início
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <select
+                id="cidade"
+                onchange="trocarCidade()"
+                aria-label="Escolha uma cidade"
+            >
+
+                <option value="montes-claros.html">
+
+                    Montes Claros - MG
+
+                </option>
+
+
+                <option value="janauba.html">
+
+                    Janaúba - MG
+
+                </option>
+
+            </select>
+
+        </li>
+
+
+        <li>
+
+            <a href="#academias">
+
+                Academias
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a href="#contato">
+
+                Contato
+
+            </a>
+
+        </li>
+
+
+        <li>
+
+            <a
+                class="menuCta"
+                href="#academias"
+            >
+
+                Encontrar academia
+
+            </a>
+
+        </li>
+
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ========================================
+     HERO
+======================================== -->
+
+<header class="cityHero">
+
+
+    <div class="cityHeroContent">
+
+
+        <div class="breadcrumb">
+
+            <a href="index.html">
+
+                Início
+
+            </a>
+
+            <span>›</span>
+
+            <span>
+
+                Montes Claros
+
+            </span>
+
+        </div>
+
+
+        <div class="cityTag">
+
+            📍 Montes Claros · MG
+
+        </div>
+
+
+        <h1>
+
+            Academias em
+
+            <span>
+
+                Montes Claros.
+
+            </span>
+
+        </h1>
+
+
+        <p>
+
+            Encontre academias, compare informações
+            e descubra o lugar certo para começar
+            ou continuar seu treino.
+
+        </p>
+
+
+    </div>
+
+</header>
+
+
+
+<!-- ========================================
+     CONTEÚDO
+======================================== -->
+
+<main
+    class="main"
+    id="academias"
+>
+
+
+    <!-- BUSCA -->
+
+    <div class="searchPanel">
+
+
+        <div class="searchIcon">
+
+            ⌕
+
+        </div>
+
+
+        <input
+            type="search"
+            id="campoBusca"
+            class="searchInput"
+            placeholder="Buscar pelo nome da academia..."
+            aria-label="Buscar academia"
+            oninput="buscarAcademia()"
+        >
+
+
+        <button
+            class="searchButton"
+            onclick="buscarAcademia()"
+        >
+
+            Buscar
+
+        </button>
+
+
+    </div>
+
+
+
+    <!-- FILTROS -->
+
+    <div class="toolbar">
+
+
+        <div class="resultTitle">
+
+            <h2>
+
+                Academias cadastradas
+
+            </h2>
+
+
+            <p id="contador">
+
+                3 academias encontradas
+
+            </p>
+
+        </div>
+
+
+        <div class="filters">
+
+
+            <button
+                class="filter active"
+                onclick="filtrar('todas',this)"
+            >
+
+                Todas
+
+            </button>
+
+
+            <button
+                class="filter"
+                onclick="filtrar('avaliadas',this)"
+            >
+
+                ⭐ Mais avaliadas
+
+            </button>
+
+
+            <button
+                class="filter"
+                onclick="filtrar('abertas',this)"
+            >
+
+                🟢 Abertas agora
+
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- ACADEMIAS -->
+
+    <section class="academias">
+
+
+
+        <!-- ACADEMIA 1 -->
+
+        <article
+            class="academia"
+            data-rating="4.8"
+            data-open="true"
+        >
+
+
+            <div class="academiaTop">
+
+
+                <div
+                    style="
+                        display:flex;
+                        gap:13px;
+                        align-items:center
+                    "
+                >
+
+
+                    <div class="academiaIcon">
+
+                        🏋️
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Academia Vida Ativa
+
+                        </h3>
+
+
+                        <p class="meta">
+
+                            Musculação · Fitness
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="rating">
+
+                    ★ 4,8
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="info">
+
+
+                <div class="infoLine">
+
+                    <b>📍</b>
+
+                    <span>
+
+                        Av. Dep. Esteves Rodrigues
+                        — Montes Claros
+
+                    </span>
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>🕐</b>
+
+                    <span>
+
+                        06:00 às 22:00
+
+                    </span>
+
+                </div>
+
+
+                <div class="status">
+
+                    <i></i>
+
+                    Aberta agora
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>📞</b>
+
+                    <span>
+
+                        (38) 99999-9999
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="cardBottom">
+
+
+                <a
+                    class="primaryBtn"
+                    href="#"
+                >
+
+                    Ver academia
+
+                </a>
+
+
+                <a
+                    class="secondaryBtn"
+                    href="tel:+5538999999999"
+                >
+
+                    📞 Contato
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- ACADEMIA 2 -->
+
+        <article
+            class="academia"
+            data-rating="4.7"
+            data-open="true"
+        >
+
+
+            <div class="academiaTop">
+
+
+                <div
+                    style="
+                        display:flex;
+                        gap:13px;
+                        align-items:center
+                    "
+                >
+
+
+                    <div class="academiaIcon">
+
+                        💪
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Top Fitness
+
+                        </h3>
+
+
+                        <p class="meta">
+
+                            Musculação · Funcional
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="rating">
+
+                    ★ 4,7
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="info">
+
+
+                <div class="infoLine">
+
+                    <b>📍</b>
+
+                    <span>
+
+                        Rua dos Esportes
+                        — Montes Claros
+
+                    </span>
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>🕐</b>
+
+                    <span>
+
+                        05:30 às 23:00
+
+                    </span>
+
+                </div>
+
+
+                <div class="status">
+
+                    <i></i>
+
+                    Aberta agora
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>📞</b>
+
+                    <span>
+
+                        (38) 98888-8888
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="cardBottom">
+
+
+                <a
+                    class="primaryBtn"
+                    href="#"
+                >
+
+                    Ver academia
+
+                </a>
+
+
+                <a
+                    class="secondaryBtn"
+                    href="tel:+5538988888888"
+                >
+
+                    📞 Contato
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+
+        <!-- ACADEMIA 3 -->
+
+        <article
+            class="academia"
+            data-rating="4.6"
+            data-open="false"
+        >
+
+
+            <div class="academiaTop">
+
+
+                <div
+                    style="
+                        display:flex;
+                        gap:13px;
+                        align-items:center
+                    "
+                >
+
+
+                    <div class="academiaIcon">
+
+                        🏆
+
+                    </div>
+
+
+                    <div>
+
+                        <h3>
+
+                            Academia Power
+
+                        </h3>
+
+
+                        <p class="meta">
+
+                            Musculação · Treino
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+
+                <div class="rating">
+
+                    ★ 4,6
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="info">
+
+
+                <div class="infoLine">
+
+                    <b>📍</b>
+
+                    <span>
+
+                        Centro
+                        — Montes Claros
+
+                    </span>
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>🕐</b>
+
+                    <span>
+
+                        06:00 às 21:30
+
+                    </span>
+
+                </div>
+
+
+                <div
+                    class="status"
+                    style="color:#f0a6a6"
+                >
+
+                    <i
+                        style="
+                            background:#e35b5b;
+                            box-shadow:none
+                        "
+                    ></i>
+
+                    Fechada agora
+
+                </div>
+
+
+                <div class="infoLine">
+
+                    <b>📞</b>
+
+                    <span>
+
+                        (38) 97777-7777
+
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+
+            <div class="cardBottom">
+
+
+                <a
+                    class="primaryBtn"
+                    href="#"
+                >
+
+                    Ver academia
+
+                </a>
+
+
+                <a
+                    class="secondaryBtn"
+                    href="tel:+5538977777777"
+                >
+
+                    📞 Contato
+
+                </a>
+
+
+            </div>
+
+
+        </article>
+
+
+    </section>
+
+
+
+    <!-- SEM RESULTADOS -->
+
+    <div
+        class="noResults"
+        id="semResultados"
+    >
+
+        <strong>
+
+            Nenhuma academia encontrada.
+
+        </strong>
+
+        Tente outro nome ou remova os filtros.
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ========================================
+     CTA
+======================================== -->
+
+<section
+    class="cta"
+    id="contato"
+>
+
+
+    <h2>
+
+        Encontre o lugar certo para treinar.
+
+    </h2>
+
+
+    <p>
+
+        Compare as opções disponíveis em
+        Montes Claros e escolha a academia
+        que mais combina com você.
+
+    </p>
+
+
+    <a href="index.html">
+
+        ← Voltar para a página inicial
+
+    </a>
+
+
+</section>
+
+
+
+<!-- ========================================
+     FOOTER
+======================================== -->
+
+<footer>
+
+
+    <strong>
+
+        BuscaAcademias
+
+    </strong>
+
+
+    <br>
+
+
+    Encontre. Compare. Escolha.
+
+
+    <br><br>
+
+
+    © BuscaAcademias 2026
+
+
+</footer>
+
+
+
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
+<script>
+
+
+/* ========================================
+   TROCAR CIDADE
+======================================== */
+
+function trocarCidade(){
+
+    const cidade =
+        document
+        .getElementById("cidade")
+        .value;
+
+
+    if(cidade){
+
+        window.location.href = cidade;
+
+    }
+
+}
+
+
+
+/* ========================================
+   BUSCAR ACADEMIA
+======================================== */
+
+function buscarAcademia(){
+
+    const texto =
+        document
+        .getElementById("campoBusca")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    const cards =
+        document
+        .getElementsByClassName("academia");
+
+
+    let encontrados = 0;
+
+
+    for(
+        let i = 0;
+        i < cards.length;
+        i++
+    ){
+
+        const nome =
+            cards[i]
+            .innerText
+            .toLowerCase();
+
+
+        const visivel =
+            nome.includes(texto);
+
+
+        cards[i].style.display =
+            visivel
+            ? "block"
+            : "none";
+
+
+        if(visivel){
+
+            encontrados++;
+
+        }
+
+    }
+
+
+    atualizarContador(
+        encontrados
+    );
+
+
+    document
+        .getElementById("semResultados")
+        .style.display =
+            encontrados === 0
+            ? "block"
+            : "none";
+
+}
+
+
+
+/* ========================================
+   FILTROS
+======================================== */
+
+function filtrar(
+    tipo,
+    botao
+){
+
+    const botoes =
+        document
+        .getElementsByClassName("filter");
+
+
+    for(
+        let i = 0;
+        i < botoes.length;
+        i++
+    ){
+
+        botoes[i]
+            .classList
+            .remove("active");
+
+    }
+
+
+    botao
+        .classList
+        .add("active");
+
+
+    const cards =
+        document
+        .getElementsByClassName("academia");
+
+
+    const texto =
+        document
+        .getElementById("campoBusca")
+        .value
+        .toLowerCase()
+        .trim();
+
+
+    let encontrados = 0;
+
+
+    for(
+        let i = 0;
+        i < cards.length;
+        i++
+    ){
+
+        const nome =
+            cards[i]
+            .innerText
+            .toLowerCase();
+
+
+        let mostrar =
+            nome.includes(texto);
+
+
+        if(
+            tipo === "avaliadas"
+        ){
+
+            mostrar =
+                mostrar &&
+                parseFloat(
+                    cards[i]
+                    .dataset
+                    .rating
+                ) >= 4.7;
+
+        }
+
+
+        if(
+            tipo === "abertas"
+        ){
+
+            mostrar =
+                mostrar &&
+                cards[i]
+                .dataset
+                .open === "true";
+
+        }
+
+
+        cards[i].style.display =
+            mostrar
+            ? "block"
+            : "none";
+
+
+        if(mostrar){
+
+            encontrados++;
+
+        }
+
+    }
+
+
+    atualizarContador(
+        encontrados
+    );
+
+
+    document
+        .getElementById("semResultados")
+        .style.display =
+            encontrados === 0
+            ? "block"
+            : "none";
+
+}
+
+
+
+/* ========================================
+   CONTADOR
+======================================== */
+
+function atualizarContador(
+    numero
+){
+
+    document
+        .getElementById("contador")
+        .innerText =
+
+        numero === 1
+
+        ? "1 academia encontrada"
+
+        : numero +
+          " academias encontradas";
+
+}
+
+</script>
+
+
+</body>
+
+</html>
