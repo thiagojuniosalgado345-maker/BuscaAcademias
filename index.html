@@ -1,56 +1,121 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Encontre academias na sua cidade. Compare localização, horários, contatos e avaliações.">
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+  name="description"
+  content="Encontre academias na sua cidade. Compare localização, horários, contatos e avaliações."
+>
+
 <title>BuscaAcademias | Encontre onde treinar</title>
 
+
 <style>
+
+/* ========================================
+   VARIÁVEIS
+======================================== */
+
 :root{
+
   --bg:#06152d;
+
   --bg2:#081d3b;
+
   --panel:#0c2549;
+
   --panel2:#102f59;
+
   --text:#f8fbff;
+
   --muted:#9db0c9;
+
   --blue:#2563eb;
+
   --blue2:#3b82f6;
+
   --yellow:#f4b400;
+
   --line:rgba(255,255,255,.09);
+
   --shadow:0 24px 80px rgba(0,0,0,.34);
+
 }
+
+
+/* ========================================
+   RESET
+======================================== */
 
 *{
+
   margin:0;
+
   padding:0;
+
   box-sizing:border-box;
+
 }
+
 
 html{
+
   scroll-behavior:smooth;
+
 }
+
 
 body{
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   background:var(--bg);
+
   color:var(--text);
+
   overflow-x:hidden;
+
 }
 
+
 a{
+
   text-decoration:none;
+
   color:inherit;
+
 }
+
 
 button,
 select,
 input{
+
   font:inherit;
+
 }
 
+
 button{
+
   cursor:pointer;
+
 }
 
 
@@ -59,77 +124,198 @@ button{
 ======================================== */
 
 .menu{
+
   position:sticky;
+
   top:0;
+
   z-index:50;
 
   height:72px;
 
   display:flex;
+
   align-items:center;
+
   justify-content:space-between;
 
-  padding:0 clamp(20px,6vw,88px);
+  padding:
+    0
+    clamp(20px,6vw,88px);
 
-  background:rgba(3,17,40,.78);
+  background:
+    rgba(3,17,40,.88);
 
   backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(255,255,255,.07);
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
+
 }
+
+
+/* ========================================
+   LOGO DO MENU
+======================================== */
 
 .logoMenu{
-  font-size:23px;
-  font-weight:900;
-  letter-spacing:-1.2px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  color:#fff;
+
+  line-height:1;
+
 }
 
-.logoMenu span{
-  color:var(--yellow);
+
+.logoMark{
+
+  width:36px;
+
+  height:36px;
+
+  display:grid;
+
+  place-items:center;
+
+  flex-shrink:0;
+
+  border-radius:50%;
+
+  background:var(--yellow);
+
+  color:#06152d;
+
+  font-size:22px;
+
+  font-weight:900;
+
 }
+
+
+.logoText{
+
+  display:flex;
+
+  flex-direction:column;
+
+  line-height:.9;
+
+}
+
+
+.logoText strong{
+
+  color:#fff;
+
+  font-size:18px;
+
+  font-weight:900;
+
+  letter-spacing:-.5px;
+
+}
+
+
+.logoText small{
+
+  margin-top:4px;
+
+  color:var(--yellow);
+
+  font-size:11px;
+
+  font-weight:900;
+
+  letter-spacing:.2px;
+
+}
+
+
+/* ========================================
+   LINKS DO MENU
+======================================== */
 
 .menu ul{
+
   display:flex;
+
   align-items:center;
+
   gap:30px;
+
   list-style:none;
+
 }
+
 
 .menu a,
 .menu select{
+
   color:#dce7f5;
 
   font-size:14px;
+
   font-weight:700;
 
   transition:.2s;
 
   background:transparent;
+
   border:0;
+
   outline:0;
+
 }
+
 
 .menu a:hover{
+
   color:var(--yellow);
+
 }
+
 
 .menu select option{
+
   background:#fff;
+
   color:#111;
+
 }
 
+
 .menuCta{
-  padding:11px 16px!important;
+
+  padding:
+    11px
+    16px
+    !important;
 
   border-radius:11px;
 
-  background:var(--blue)!important;
+  background:
+    var(--blue)
+    !important;
 
-  color:white!important;
+  color:white
+    !important;
+
 }
 
+
 .menuCta:hover{
-  background:var(--blue2)!important;
+
+  background:
+    var(--blue2)
+    !important;
+
 }
 
 
@@ -138,23 +324,33 @@ button{
 ======================================== */
 
 .hero{
+
   position:relative;
 
-  min-height:calc(100vh - 72px);
+  min-height:
+    calc(100vh - 72px);
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
-  padding:70px 20px 90px;
+  padding:
+    70px
+    20px
+    90px;
 
   text-align:center;
 
   overflow:hidden;
+
 }
+
 
 .hero:before,
 .hero:after{
+
   content:"";
 
   position:absolute;
@@ -164,42 +360,62 @@ button{
   pointer-events:none;
 
   filter:blur(90px);
+
 }
 
+
 .hero:before{
+
   width:620px;
+
   height:620px;
 
   left:-250px;
+
   top:-250px;
 
-  background:rgba(37,99,235,.22);
+  background:
+    rgba(37,99,235,.22);
+
 }
 
+
 .hero:after{
+
   width:520px;
+
   height:520px;
 
   right:-260px;
+
   bottom:-270px;
 
-  background:rgba(244,180,0,.09);
+  background:
+    rgba(244,180,0,.09);
+
 }
 
+
 .gridGlow{
+
   position:absolute;
+
   inset:0;
 
   opacity:.32;
 
   background-image:
+
     linear-gradient(
-      rgba(255,255,255,.025) 1px,
+      rgba(255,255,255,.025)
+      1px,
       transparent 1px
     ),
+
     linear-gradient(
       90deg,
-      rgba(255,255,255,.025) 1px,
+      rgba(255,255,255,.025)
+      1px,
       transparent 1px
     );
 
@@ -211,22 +427,27 @@ button{
       black,
       transparent 78%
     );
+
 }
 
+
 .heroContent{
+
   position:relative;
 
   z-index:2;
 
   width:min(980px,100%);
+
 }
 
 
 /* ========================================
-   LOGO
+   LOGO CENTRAL
 ======================================== */
 
 .logoCentral img{
+
   width:290px;
 
   max-width:70vw;
@@ -235,12 +456,17 @@ button{
 
   display:block;
 
-  margin:0 auto 20px;
+  margin:
+    0
+    auto
+    20px;
 
   filter:
     drop-shadow(
-      0 14px 30px rgba(0,0,0,.25)
+      0 14px 30px
+      rgba(0,0,0,.25)
     );
+
 }
 
 
@@ -249,17 +475,23 @@ button{
 ======================================== */
 
 .badge{
+
   display:inline-flex;
 
   align-items:center;
 
   gap:8px;
 
-  padding:7px 13px;
+  padding:
+    7px
+    13px;
 
-  border:1px solid rgba(96,165,250,.22);
+  border:
+    1px solid
+    rgba(96,165,250,.22);
 
-  background:rgba(37,99,235,.12);
+  background:
+    rgba(37,99,235,.12);
 
   border-radius:999px;
 
@@ -270,10 +502,14 @@ button{
   font-weight:800;
 
   margin-bottom:17px;
+
 }
 
+
 .badge i{
+
   width:6px;
+
   height:6px;
 
   border-radius:50%;
@@ -281,7 +517,9 @@ button{
   background:#60a5fa;
 
   box-shadow:
-    0 0 12px #60a5fa;
+    0 0 12px
+    #60a5fa;
+
 }
 
 
@@ -290,6 +528,7 @@ button{
 ======================================== */
 
 h1{
+
   max-width:900px;
 
   margin:0 auto;
@@ -306,9 +545,12 @@ h1{
   letter-spacing:-4px;
 
   font-weight:900;
+
 }
 
+
 h1 span{
+
   color:var(--yellow);
 
   background:
@@ -323,23 +565,29 @@ h1 span{
   background-clip:text;
 
   color:transparent;
+
 }
 
 
 /* ========================================
-   TEXTO
+   TEXTO HERO
 ======================================== */
 
 .heroText{
+
   max-width:650px;
 
-  margin:22px auto 30px;
+  margin:
+    22px
+    auto
+    30px;
 
   color:#aebed3;
 
   font-size:17px;
 
   line-height:1.65;
+
 }
 
 
@@ -348,6 +596,7 @@ h1 span{
 ======================================== */
 
 .searchBox{
+
   width:min(760px,100%);
 
   margin:auto;
@@ -367,29 +616,41 @@ h1 span{
   box-shadow:var(--shadow);
 
   transition:.25s;
+
 }
+
 
 .searchBox:focus-within{
-  transform:translateY(-2px);
+
+  transform:
+    translateY(-2px);
 
   box-shadow:
-    0 28px 90px rgba(0,0,0,.44);
+    0 28px 90px
+    rgba(0,0,0,.44);
+
 }
 
+
 .searchIcon{
+
   width:52px;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   color:#64748b;
 
   font-size:21px;
+
 }
 
+
 .searchBox select{
+
   flex:1;
 
   min-width:0;
@@ -413,17 +674,25 @@ h1 span{
   padding-right:42px;
 
   background-image:
+
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
 
   background-repeat:no-repeat;
 
-  background-position:right 14px center;
+  background-position:
+    right 14px
+    center;
+
 }
 
+
 .searchBtn{
+
   height:54px;
 
-  padding:0 24px;
+  padding:
+    0
+    24px;
 
   border:0;
 
@@ -440,13 +709,19 @@ h1 span{
   transition:.2s;
 
   box-shadow:
-    0 8px 20px rgba(37,99,235,.25);
+    0 8px 20px
+    rgba(37,99,235,.25);
+
 }
 
+
 .searchBtn:hover{
+
   background:var(--blue2);
 
-  transform:translateY(-1px);
+  transform:
+    translateY(-1px);
+
 }
 
 
@@ -455,6 +730,7 @@ h1 span{
 ======================================== */
 
 .trust{
+
   margin-top:18px;
 
   display:flex;
@@ -463,27 +739,36 @@ h1 span{
 
   flex-wrap:wrap;
 
-  gap:18px 26px;
+  gap:
+    18px
+    26px;
 
   color:#8fa5c1;
 
   font-size:12px;
 
   font-weight:650;
+
 }
 
+
 .trust span{
+
   display:inline-flex;
 
   align-items:center;
 
   gap:6px;
+
 }
 
+
 .trust b{
+
   color:#65a8ff;
 
   font-size:14px;
+
 }
 
 
@@ -492,25 +777,40 @@ h1 span{
 ======================================== */
 
 .section{
-  padding:92px 6%;
+
+  padding:
+    92px
+    6%;
+
 }
 
+
 .section.dark{
+
   background:
     linear-gradient(
       180deg,
       #091e3c,
       #0a2244
     );
+
 }
+
 
 .sectionHead{
+
   max-width:1120px;
 
-  margin:0 auto 38px;
+  margin:
+    0
+    auto
+    38px;
+
 }
 
+
 .kicker{
+
   color:var(--yellow);
 
   text-transform:uppercase;
@@ -520,9 +820,12 @@ h1 span{
   font-size:11px;
 
   font-weight:900;
+
 }
 
+
 .sectionHead h2{
+
   margin-top:9px;
 
   font-size:
@@ -533,9 +836,12 @@ h1 span{
     );
 
   letter-spacing:-1.8px;
+
 }
 
+
 .sectionHead p{
+
   margin-top:10px;
 
   max-width:650px;
@@ -543,6 +849,7 @@ h1 span{
   color:var(--muted);
 
   line-height:1.6;
+
 }
 
 
@@ -551,6 +858,7 @@ h1 span{
 ======================================== */
 
 .features{
+
   max-width:1120px;
 
   margin:auto;
@@ -561,34 +869,50 @@ h1 span{
     repeat(5,1fr);
 
   gap:15px;
+
 }
 
+
 .feature{
-  padding:23px 19px;
 
-  background:rgba(255,255,255,.035);
+  padding:
+    23px
+    19px;
 
-  border:1px solid var(--line);
+  background:
+    rgba(255,255,255,.035);
+
+  border:
+    1px solid
+    var(--line);
 
   border-radius:19px;
 
   transition:.25s;
 
   min-height:185px;
+
 }
 
+
 .feature:hover{
-  transform:translateY(-6px);
+
+  transform:
+    translateY(-6px);
 
   border-color:
     rgba(96,165,250,.25);
 
   background:
     rgba(255,255,255,.055);
+
 }
 
+
 .icon{
+
   width:45px;
+
   height:45px;
 
   border-radius:13px;
@@ -605,12 +929,16 @@ h1 span{
   margin-bottom:18px;
 
   font-size:20px;
+
 }
+
 
 .icon svg,
 .cityIcon svg,
 .searchIcon svg{
+
   width:22px;
+
   height:22px;
 
   stroke:currentColor;
@@ -622,30 +950,45 @@ h1 span{
   stroke-linecap:round;
 
   stroke-linejoin:round;
+
 }
+
 
 .cityIcon svg{
+
   width:23px;
+
   height:23px;
+
 }
+
 
 .searchIcon svg{
+
   width:22px;
+
   height:22px;
+
 }
 
+
 .feature h3{
+
   font-size:16px;
 
   margin-bottom:7px;
+
 }
 
+
 .feature p{
+
   color:#8fa4be;
 
   font-size:13px;
 
   line-height:1.5;
+
 }
 
 
@@ -654,6 +997,7 @@ h1 span{
 ======================================== */
 
 .cities{
+
   max-width:1120px;
 
   margin:auto;
@@ -664,9 +1008,12 @@ h1 span{
     repeat(2,1fr);
 
   gap:18px;
+
 }
 
+
 .city{
+
   display:flex;
 
   align-items:center;
@@ -684,30 +1031,43 @@ h1 span{
       #0b2345
     );
 
-  border:1px solid var(--line);
+  border:
+    1px solid
+    var(--line);
 
   border-radius:20px;
 
   transition:.25s;
+
 }
 
+
 .city:hover{
-  transform:translateY(-4px);
+
+  transform:
+    translateY(-4px);
 
   border-color:
     rgba(96,165,250,.25);
+
 }
 
+
 .cityInfo{
+
   display:flex;
 
   align-items:center;
 
   gap:15px;
+
 }
 
+
 .cityIcon{
+
   width:55px;
+
   height:55px;
 
   display:grid;
@@ -719,22 +1079,33 @@ h1 span{
   background:#173861;
 
   font-size:21px;
+
 }
+
 
 .city h3{
+
   font-size:18px;
+
 }
 
+
 .city p{
+
   margin-top:3px;
 
   color:#8fa5c0;
 
   font-size:13px;
+
 }
 
+
 .cityBtn{
-  padding:11px 15px;
+
+  padding:
+    11px
+    15px;
 
   background:var(--blue);
 
@@ -745,6 +1116,7 @@ h1 span{
   font-weight:850;
 
   white-space:nowrap;
+
 }
 
 
@@ -753,6 +1125,7 @@ h1 span{
 ======================================== */
 
 .steps{
+
   max-width:1000px;
 
   margin:auto;
@@ -763,16 +1136,25 @@ h1 span{
     repeat(3,1fr);
 
   gap:20px;
+
 }
+
 
 .step{
+
   text-align:center;
 
-  padding:20px 15px;
+  padding:
+    20px
+    15px;
+
 }
 
+
 .number{
+
   width:58px;
+
   height:58px;
 
   margin:
@@ -798,20 +1180,27 @@ h1 span{
   box-shadow:
     0 12px 28px
     rgba(37,99,235,.22);
+
 }
 
+
 .step h3{
+
   font-size:17px;
 
   margin-bottom:7px;
+
 }
 
+
 .step p{
+
   color:#8fa4bd;
 
   font-size:13px;
 
   line-height:1.55;
+
 }
 
 
@@ -820,24 +1209,32 @@ h1 span{
 ======================================== */
 
 .cta{
+
   position:relative;
 
   overflow:hidden;
 
   text-align:center;
 
-  padding:90px 20px;
+  padding:
+    90px
+    20px;
 
   background:
+
     radial-gradient(
       circle at 50% 0,
       rgba(37,99,235,.25),
       transparent 52%
     ),
+
     #071a36;
+
 }
 
+
 .cta h2{
+
   font-size:
     clamp(
       30px,
@@ -846,9 +1243,12 @@ h1 span{
     );
 
   letter-spacing:-1.8px;
+
 }
 
+
 .cta p{
+
   max-width:600px;
 
   margin:
@@ -859,12 +1259,17 @@ h1 span{
   color:#a9b9cf;
 
   line-height:1.6;
+
 }
 
+
 .ctaBtn{
+
   display:inline-flex;
 
-  padding:14px 20px;
+  padding:
+    14px
+    20px;
 
   border-radius:12px;
 
@@ -877,14 +1282,19 @@ h1 span{
   font-size:13px;
 
   transition:.2s;
+
 }
 
+
 .ctaBtn:hover{
-  transform:translateY(-2px);
+
+  transform:
+    translateY(-2px);
 
   box-shadow:
     0 15px 35px
     rgba(0,0,0,.25);
+
 }
 
 
@@ -893,7 +1303,10 @@ h1 span{
 ======================================== */
 
 footer{
-  padding:35px 20px;
+
+  padding:
+    35px
+    20px;
 
   text-align:center;
 
@@ -904,10 +1317,14 @@ footer{
   font-size:13px;
 
   line-height:1.8;
+
 }
 
+
 footer strong{
+
   color:#dce7f5;
+
 }
 
 
@@ -918,43 +1335,69 @@ footer strong{
 @keyframes heroIn{
 
   from{
+
     opacity:0;
-    transform:translateY(14px);
+
+    transform:
+      translateY(14px);
+
   }
 
   to{
+
     opacity:1;
-    transform:translateY(0);
+
+    transform:
+      translateY(0);
+
   }
 
 }
 
+
 .heroContent > *{
+
   animation:
     heroIn
     .7s
     ease
     both;
+
 }
+
 
 .heroContent > *:nth-child(2){
+
   animation-delay:.06s;
+
 }
+
 
 .heroContent > *:nth-child(3){
+
   animation-delay:.12s;
+
 }
+
 
 .heroContent > *:nth-child(4){
+
   animation-delay:.18s;
+
 }
+
 
 .heroContent > *:nth-child(5){
+
   animation-delay:.24s;
+
 }
 
+
 .heroContent > *:nth-child(6){
+
   animation-delay:.30s;
+
 }
 
 
@@ -974,12 +1417,16 @@ footer strong{
     rgba(96,165,250,.55);
 
   outline-offset:3px;
+
 }
+
 
 @media(prefers-reduced-motion:reduce){
 
   html{
+
     scroll-behavior:auto;
+
   }
 
   *,
@@ -1042,7 +1489,9 @@ footer strong{
 
 
   .menuCta{
+
     display:none;
+
   }
 
 
@@ -1068,7 +1517,9 @@ footer strong{
 
 
   .badge{
+
     margin-bottom:14px;
+
   }
 
 
@@ -1100,7 +1551,9 @@ footer strong{
 
 
   .searchIcon{
+
     display:none;
+
   }
 
 
@@ -1182,6 +1635,31 @@ footer strong{
 
   }
 
+
+  .logoText strong{
+
+    font-size:17px;
+
+  }
+
+
+  .logoText small{
+
+    font-size:10px;
+
+  }
+
+
+  .logoMark{
+
+    width:34px;
+
+    height:34px;
+
+    font-size:20px;
+
+  }
+
 }
 
 
@@ -1228,6 +1706,7 @@ footer strong{
 }
 
 </style>
+
 </head>
 
 
@@ -1240,20 +1719,44 @@ footer strong{
 
 <nav class="menu">
 
+
   <a
     class="logoMenu"
     href="index.html"
+    aria-label="Busca Academias - início"
   >
-    Busca<span>Academias</span>
+
+    <span class="logoMark">
+
+      ⌖
+
+    </span>
+
+
+    <span class="logoText">
+
+      <strong>
+        BUSCA
+      </strong>
+
+      <small>
+        ACADEMIAS
+      </small>
+
+    </span>
+
   </a>
 
 
   <ul>
 
+
     <li>
 
       <a href="index.html">
+
         Início
+
       </a>
 
     </li>
@@ -1268,15 +1771,23 @@ footer strong{
       >
 
         <option value="">
+
           📍 Cidades
+
         </option>
+
 
         <option value="montes-claros.html">
+
           Montes Claros - MG
+
         </option>
 
+
         <option value="janauba.html">
+
           Janaúba - MG
+
         </option>
 
       </select>
@@ -1287,7 +1798,9 @@ footer strong{
     <li>
 
       <a href="#como-funciona">
+
         Como funciona
+
       </a>
 
     </li>
@@ -1296,7 +1809,9 @@ footer strong{
     <li>
 
       <a href="#contato">
+
         Contato
+
       </a>
 
     </li>
@@ -1308,12 +1823,16 @@ footer strong{
         class="menuCta"
         href="#buscar"
       >
+
         Encontrar academia
+
       </a>
 
     </li>
 
+
   </ul>
+
 
 </nav>
 
@@ -1335,6 +1854,7 @@ footer strong{
   id="buscar"
 >
 
+
   <div class="gridGlow"></div>
 
 
@@ -1343,40 +1863,52 @@ footer strong{
 
     <div class="logoCentral">
 
+
       <img
         src="logo.png"
         alt="BuscaAcademias"
       >
+
 
     </div>
 
 
     <div class="badge">
 
+
       <i></i>
 
+
       Encontre. Compare. Escolha.
+
 
     </div>
 
 
     <h1>
 
+
       Encontre o lugar
 
+
       <span>
+
         certo para treinar.
+
       </span>
+
 
     </h1>
 
 
     <p class="heroText">
 
+
       Compare academias da sua cidade,
       veja horários, localização e contatos
       e escolha com mais confiança onde
       começar sua evolução.
+
 
     </p>
 
@@ -1389,11 +1921,14 @@ footer strong{
         aria-hidden="true"
       >
 
+
         <svg viewBox="0 0 24 24">
+
 
           <path
             d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
           />
+
 
           <circle
             cx="12"
@@ -1401,7 +1936,9 @@ footer strong{
             r="2.5"
           />
 
+
         </svg>
+
 
       </div>
 
@@ -1411,17 +1948,33 @@ footer strong{
         aria-label="Escolha sua cidade"
       >
 
+
         <option value="">
+
+
           Em qual cidade você quer treinar?
+
+
         </option>
+
 
         <option value="montes-claros.html">
+
+
           Montes Claros - MG
+
+
         </option>
 
+
         <option value="janauba.html">
+
+
           Janaúba - MG
+
+
         </option>
+
 
       </select>
 
@@ -1431,7 +1984,9 @@ footer strong{
         onclick="buscarAcademias()"
       >
 
+
         Buscar academias →
+
 
       </button>
 
@@ -1444,36 +1999,48 @@ footer strong{
 
       <span>
 
+
         <b>✓</b>
+
 
         Localização
 
+
       </span>
 
 
       <span>
 
+
         <b>✓</b>
+
 
         Horários
 
+
       </span>
 
 
       <span>
 
+
         <b>✓</b>
+
 
         Contatos
 
+
       </span>
 
 
       <span>
 
+
         <b>✓</b>
 
+
         Avaliações
+
 
       </span>
 
@@ -1482,6 +2049,7 @@ footer strong{
 
 
   </div>
+
 
 </section>
 
@@ -1528,37 +2096,56 @@ footer strong{
 
     <article class="feature">
 
+
       <div class="icon">
+
 
         <svg viewBox="0 0 24 24">
 
-          <path d="M4 20V9l4-3v14M12 20V5l4-3v18M20 20V8"/>
+
+          <path
+            d="M4 20V9l4-3v14M12 20V5l4-3v18M20 20V8"
+          />
+
 
         </svg>
 
+
       </div>
 
+
       <h3>
+
         Academias
+
       </h3>
 
+
       <p>
+
         Descubra opções para diferentes
         objetivos e estilos de treino.
+
       </p>
+
 
     </article>
 
 
+
     <article class="feature">
+
 
       <div class="icon">
 
+
         <svg viewBox="0 0 24 24">
+
 
           <path
             d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
           />
+
 
           <circle
             cx="12"
@@ -1566,27 +2153,40 @@ footer strong{
             r="2.5"
           />
 
+
         </svg>
+
 
       </div>
 
+
       <h3>
+
         Localização
+
       </h3>
 
+
       <p>
+
         Encontre academias e descubra
         quais ficam mais convenientes.
+
       </p>
+
 
     </article>
 
 
+
     <article class="feature">
+
 
       <div class="icon">
 
+
         <svg viewBox="0 0 24 24">
+
 
           <circle
             cx="12"
@@ -1594,83 +2194,121 @@ footer strong{
             r="8.5"
           />
 
+
           <path
             d="M12 7v5l3 2"
           />
 
+
         </svg>
+
 
       </div>
 
+
       <h3>
+
         Horários
+
       </h3>
 
+
       <p>
+
         Consulte os horários de funcionamento
         antes de sair de casa.
+
       </p>
+
 
     </article>
 
 
+
     <article class="feature">
+
 
       <div class="icon">
 
+
         <svg viewBox="0 0 24 24">
+
 
           <path
             d="M7 10a5 5 0 0 1 10 0v5a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3v-5Z"
           />
 
+
           <path
             d="M9 18v2M15 18v2"
           />
 
+
         </svg>
+
 
       </div>
 
+
       <h3>
+
         Contato
+
       </h3>
 
+
       <p>
+
         Tenha acesso a telefone e WhatsApp
         quando disponíveis.
+
       </p>
+
 
     </article>
 
 
+
     <article class="feature">
+
 
       <div class="icon">
 
+
         <svg viewBox="0 0 24 24">
+
 
           <path
             d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"
           />
 
+
         </svg>
+
 
       </div>
 
+
       <h3>
+
         Avaliações
+
       </h3>
 
+
       <p>
+
         Tenha mais informações para escolher
         com segurança.
+
       </p>
+
 
     </article>
 
 
   </div>
+
 
 </section>
 
@@ -1687,18 +2325,24 @@ footer strong{
 
 
     <div class="kicker">
+
       Explore
+
     </div>
 
 
     <h2>
+
       Encontre academias na sua cidade.
+
     </h2>
 
 
     <p>
+
       Escolha uma cidade e veja
       as opções disponíveis.
+
     </p>
 
 
@@ -1716,11 +2360,14 @@ footer strong{
 
         <div class="cityIcon">
 
+
           <svg viewBox="0 0 24 24">
+
 
             <path
               d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
             />
+
 
             <circle
               cx="12"
@@ -1728,20 +2375,29 @@ footer strong{
               r="2.5"
             />
 
+
           </svg>
+
 
         </div>
 
 
         <div>
 
+
           <h3>
+
             Montes Claros
+
           </h3>
 
+
           <p>
+
             Minas Gerais
+
           </p>
+
 
         </div>
 
@@ -1771,11 +2427,14 @@ footer strong{
 
         <div class="cityIcon">
 
+
           <svg viewBox="0 0 24 24">
+
 
             <path
               d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
             />
+
 
             <circle
               cx="12"
@@ -1783,20 +2442,29 @@ footer strong{
               r="2.5"
             />
 
+
           </svg>
+
 
         </div>
 
 
         <div>
 
+
           <h3>
+
             Janaúba
+
           </h3>
 
+
           <p>
+
             Minas Gerais
+
           </p>
+
 
         </div>
 
@@ -1819,6 +2487,7 @@ footer strong{
 
   </div>
 
+
 </section>
 
 
@@ -1837,12 +2506,16 @@ footer strong{
 
 
     <div class="kicker">
+
       Simples e rápido
+
     </div>
 
 
     <h2>
+
       Como funciona?
+
     </h2>
 
 
@@ -1856,18 +2529,24 @@ footer strong{
 
 
       <div class="number">
+
         1
+
       </div>
 
 
       <h3>
+
         Escolha sua cidade
+
       </h3>
 
 
       <p>
+
         Selecione onde você quer
         encontrar uma academia.
+
       </p>
 
 
@@ -1879,18 +2558,24 @@ footer strong{
 
 
       <div class="number">
+
         2
+
       </div>
 
 
       <h3>
+
         Explore as opções
+
       </h3>
 
 
       <p>
+
         Compare academias e veja
         as informações disponíveis.
+
       </p>
 
 
@@ -1902,18 +2587,24 @@ footer strong{
 
 
       <div class="number">
+
         3
+
       </div>
 
 
       <h3>
+
         Escolha onde treinar
+
       </h3>
 
 
       <p>
+
         Encontre a opção que mais
         combina com você.
+
       </p>
 
 
@@ -1921,6 +2612,7 @@ footer strong{
 
 
   </div>
+
 
 </section>
 
@@ -1977,7 +2669,9 @@ footer strong{
 
 
   <strong>
+
     BuscaAcademias
+
   </strong>
 
 
@@ -1990,14 +2684,19 @@ footer strong{
   <br><br>
 
 
-  © BuscaAcademias 2026
+  ©️ BuscaAcademias 2026
 
 
 </footer>
 
 
 
+<!-- ========================================
+     JAVASCRIPT
+======================================== -->
+
 <script>
+
 
 function abrirCidade(pagina){
 
@@ -2040,8 +2739,10 @@ function buscarAcademias(){
 
 }
 
+
 </script>
 
 
 </body>
+
 </html>
