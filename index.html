@@ -23,80 +23,33 @@
 <style>
 
 /* ========================================
-   CORES
-======================================== */
-
-:root{
-
-    --bg:#06152d;
-
-    --bg2:#081d3b;
-
-    --panel:#0c2549;
-
-    --panel2:#102f59;
-
-    --text:#f8fbff;
-
-    --muted:#9db0c9;
-
-    --blue:#2563eb;
-
-    --blue2:#3b82f6;
-
-    --yellow:#f4b400;
-
-    --line:rgba(255,255,255,.09);
-
-    --shadow:
-        0 24px 80px
-        rgba(0,0,0,.34);
-
-}
-
-
-/* ========================================
    RESET
 ======================================== */
 
 *{
-
     margin:0;
-
     padding:0;
-
     box-sizing:border-box;
-
 }
-
 
 html{
-
     scroll-behavior:smooth;
-
 }
-
 
 body{
 
     font-family:
-        Inter,
-        ui-sans-serif,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
         Arial,
+        Helvetica,
         sans-serif;
 
-    background:var(--bg);
+    background:#06162f;
 
-    color:var(--text);
+    color:#fff;
 
     overflow-x:hidden;
 
 }
-
 
 a{
 
@@ -106,25 +59,17 @@ a{
 
 }
 
-
 button,
 select,
 input{
 
-    font:inherit;
-
-}
-
-
-button{
-
-    cursor:pointer;
+    font-family:inherit;
 
 }
 
 
 /* ========================================
-   MENU
+   MENU — PADRÃO BUSCAACADEMIAS
 ======================================== */
 
 .menu{
@@ -177,7 +122,20 @@ button{
 }
 
 
-.menu ul{
+/* ÁREA CENTRAL */
+
+.menuCentro{
+
+    position:absolute;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+}
+
+
+.menuCentro ul{
 
     list-style:none;
 
@@ -190,7 +148,8 @@ button{
 }
 
 
-.menu a{
+.menuCentro a,
+.menuCentro select{
 
     color:#dbe6f5;
 
@@ -203,7 +162,7 @@ button{
 }
 
 
-.menu a:hover{
+.menuCentro a:hover{
 
     color:#f4b400;
 
@@ -238,38 +197,63 @@ button{
 }
 
 
-/* ========================================
-   CADASTRAR ACADEMIA
-======================================== */
+/* ÁREA DIREITA */
 
-.cadastrarBtn{
+.menuDireita{
 
     display:flex;
 
     align-items:center;
 
-    gap:6px;
+    gap:18px;
 
-    padding:
-        10px
-        14px;
+}
 
-    border-radius:9px;
 
-    background:#f4b400;
+.coracao{
 
-    color:#06152d !important;
+    color:#fff;
 
-    font-size:12px !important;
+    font-size:23px;
 
-    font-weight:900 !important;
+    line-height:1;
 
     transition:.2s;
 
 }
 
 
-.cadastrarBtn:hover{
+.coracao:hover{
+
+    color:#f4b400;
+
+    transform:scale(1.08);
+
+}
+
+
+.cadastrar{
+
+    padding:
+        11px
+        16px;
+
+    border-radius:10px;
+
+    background:#f4b400;
+
+    color:#071a36;
+
+    font-size:13px;
+
+    font-weight:900;
+
+    transition:.2s;
+
+}
+
+
+.cadastrar:hover{
 
     background:#ffd34d;
 
@@ -400,38 +384,7 @@ button{
     z-index:2;
 
     width:
-        min(
-            980px,
-            100%
-        );
-
-}
-
-
-/* ========================================
-   LOGO CENTRAL
-======================================== */
-
-.logoCentral img{
-
-    width:290px;
-
-    max-width:70vw;
-
-    height:auto;
-
-    display:block;
-
-    margin:
-        0
-        auto
-        20px;
-
-    filter:
-        drop-shadow(
-            0 14px 30px
-            rgba(0,0,0,.25)
-        );
+        min(980px,100%);
 
 }
 
@@ -483,8 +436,7 @@ button{
     background:#60a5fa;
 
     box-shadow:
-        0 0 12px
-        #60a5fa;
+        0 0 12px #60a5fa;
 
 }
 
@@ -497,9 +449,7 @@ h1{
 
     max-width:900px;
 
-    margin:
-        0
-        auto;
+    margin:0 auto;
 
     font-size:
         clamp(
@@ -519,13 +469,13 @@ h1{
 
 h1 span{
 
-    color:var(--yellow);
+    color:#f4b400;
 
     background:
         linear-gradient(
             90deg,
             #ffd34d,
-            var(--yellow)
+            #f4b400
         );
 
     -webkit-background-clip:text;
@@ -566,10 +516,7 @@ h1 span{
 .searchBox{
 
     width:
-        min(
-            760px,
-            100%
-        );
+        min(760px,100%);
 
     margin:auto;
 
@@ -585,7 +532,9 @@ h1 span{
 
     border-radius:18px;
 
-    box-shadow:var(--shadow);
+    box-shadow:
+        0 24px 80px
+        rgba(0,0,0,.34);
 
     transition:.25s;
 
@@ -641,18 +590,7 @@ h1 span{
 
     font-weight:750;
 
-    appearance:none;
-
-    padding-right:42px;
-
-    background-image:
-
-        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%2364758b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-
-    background-repeat:no-repeat;
-
-    background-position:
-        right 14px center;
+    padding-right:20px;
 
 }
 
@@ -669,7 +607,7 @@ h1 span{
 
     border-radius:12px;
 
-    background:var(--blue);
+    background:#2563eb;
 
     color:#fff;
 
@@ -679,16 +617,12 @@ h1 span{
 
     transition:.2s;
 
-    box-shadow:
-        0 8px 20px
-        rgba(37,99,235,.25);
-
 }
 
 
 .searchBtn:hover{
 
-    background:var(--blue2);
+    background:#3b82f6;
 
     transform:
         translateY(-1px);
@@ -697,7 +631,7 @@ h1 span{
 
 
 /* ========================================
-   BENEFÍCIOS MINI
+   TRUST
 ======================================== */
 
 .trust{
@@ -782,7 +716,7 @@ h1 span{
 
 .kicker{
 
-    color:var(--yellow);
+    color:#f4b400;
 
     text-transform:uppercase;
 
@@ -817,7 +751,7 @@ h1 span{
 
     max-width:650px;
 
-    color:var(--muted);
+    color:#9db0c9;
 
     line-height:1.6;
 
@@ -855,7 +789,7 @@ h1 span{
 
     border:
         1px solid
-        var(--line);
+        rgba(255,255,255,.09);
 
     border-radius:19px;
 
@@ -900,45 +834,6 @@ h1 span{
     margin-bottom:18px;
 
     font-size:20px;
-
-}
-
-
-.icon svg,
-.cityIcon svg,
-.searchIcon svg{
-
-    width:22px;
-
-    height:22px;
-
-    stroke:currentColor;
-
-    fill:none;
-
-    stroke-width:1.9;
-
-    stroke-linecap:round;
-
-    stroke-linejoin:round;
-
-}
-
-
-.cityIcon svg{
-
-    width:23px;
-
-    height:23px;
-
-}
-
-
-.searchIcon svg{
-
-    width:22px;
-
-    height:22px;
 
 }
 
@@ -1004,7 +899,7 @@ h1 span{
 
     border:
         1px solid
-        var(--line);
+        rgba(255,255,255,.09);
 
     border-radius:20px;
 
@@ -1078,7 +973,7 @@ h1 span{
         11px
         15px;
 
-    background:var(--blue);
+    background:#2563eb;
 
     border-radius:10px;
 
@@ -1148,10 +1043,6 @@ h1 span{
 
     font-weight:900;
 
-    box-shadow:
-        0 12px 28px
-        rgba(37,99,235,.22);
-
 }
 
 
@@ -1192,13 +1083,11 @@ h1 span{
         20px;
 
     background:
-
         radial-gradient(
             circle at 50% 0,
             rgba(37,99,235,.25),
             transparent 52%
         ),
-
         #071a36;
 
 }
@@ -1252,20 +1141,6 @@ h1 span{
 
     font-size:13px;
 
-    transition:.2s;
-
-}
-
-
-.ctaBtn:hover{
-
-    transform:
-        translateY(-2px);
-
-    box-shadow:
-        0 15px 35px
-        rgba(0,0,0,.25);
-
 }
 
 
@@ -1300,121 +1175,6 @@ footer strong{
 
 
 /* ========================================
-   ANIMAÇÕES
-======================================== */
-
-@keyframes heroIn{
-
-    from{
-
-        opacity:0;
-
-        transform:
-            translateY(14px);
-
-    }
-
-    to{
-
-        opacity:1;
-
-        transform:
-            translateY(0);
-
-    }
-
-}
-
-
-.heroContent > *{
-
-    animation:
-        heroIn
-        .7s
-        ease
-        both;
-
-}
-
-
-.heroContent > *:nth-child(2){
-
-    animation-delay:.06s;
-
-}
-
-
-.heroContent > *:nth-child(3){
-
-    animation-delay:.12s;
-
-}
-
-
-.heroContent > *:nth-child(4){
-
-    animation-delay:.18s;
-
-}
-
-
-.heroContent > *:nth-child(5){
-
-    animation-delay:.24s;
-
-}
-
-
-.heroContent > *:nth-child(6){
-
-    animation-delay:.30s;
-
-}
-
-
-/* ========================================
-   ACESSIBILIDADE
-======================================== */
-
-.searchBtn:focus-visible,
-.menu a:focus-visible,
-.cityBtn:focus-visible,
-.ctaBtn:focus-visible,
-.menu select:focus-visible,
-.searchBox select:focus-visible{
-
-    outline:
-        3px solid
-        rgba(96,165,250,.55);
-
-    outline-offset:3px;
-
-}
-
-
-@media(prefers-reduced-motion:reduce){
-
-    html{
-
-        scroll-behavior:auto;
-
-    }
-
-
-    *,
-    *::before,
-    *::after{
-
-        animation:none!important;
-
-        transition:none!important;
-
-    }
-
-}
-
-
-/* ========================================
    RESPONSIVO
 ======================================== */
 
@@ -1430,7 +1190,7 @@ footer strong{
 }
 
 
-@media(max-width:700px){
+@media(max-width:850px){
 
     .menu{
 
@@ -1447,9 +1207,16 @@ footer strong{
     }
 
 
-    .menu ul{
+    .menuCentro{
 
-        width:100%;
+        position:static;
+
+        transform:none;
+
+    }
+
+
+    .menuCentro ul{
 
         flex-wrap:wrap;
 
@@ -1462,14 +1229,20 @@ footer strong{
     }
 
 
-    .cadastrarBtn{
+    .menuDireita{
 
-        padding:
-            9px
-            12px;
+        position:absolute;
 
-        font-size:
-            11px !important;
+        right:18px;
+
+        top:15px;
+
+    }
+
+
+    .cadastrar{
+
+        display:none;
 
     }
 
@@ -1479,41 +1252,9 @@ footer strong{
         min-height:auto;
 
         padding:
-            54px
+            55px
             17px
             70px;
-
-    }
-
-
-    .logoCentral img{
-
-        width:255px;
-
-        margin-bottom:16px;
-
-    }
-
-
-    .badge{
-
-        margin-bottom:14px;
-
-    }
-
-
-    h1{
-
-        letter-spacing:-2.5px;
-
-    }
-
-
-    .heroText{
-
-        font-size:15px;
-
-        line-height:1.55;
 
     }
 
@@ -1574,13 +1315,6 @@ footer strong{
     }
 
 
-    .sectionHead{
-
-        margin-bottom:28px;
-
-    }
-
-
     .features,
     .cities,
     .steps{
@@ -1617,47 +1351,18 @@ footer strong{
 }
 
 
-/* ========================================
-   NOTEBOOKS COM ALTURA MENOR
-======================================== */
+@media(max-width:600px){
 
-@media(max-height:750px) and (min-width:701px){
+    .menuCentro ul{
 
-    .hero{
-
-        padding-top:38px;
-
-        padding-bottom:55px;
-
-    }
-
-
-    .logoCentral img{
-
-        width:235px;
-
-        margin-bottom:12px;
-
-    }
-
-
-    h1{
-
-        font-size:54px;
-
-    }
-
-
-    .heroText{
-
-        margin:
-            14px
-            auto
-            22px;
+        gap:
+            10px
+            14px;
 
     }
 
 }
+
 
 </style>
 
@@ -1668,11 +1373,13 @@ footer strong{
 
 
 <!-- ========================================
-     MENU
+     CABEÇALHO PADRONIZADO
 ======================================== -->
 
 <nav class="menu">
 
+
+    <!-- ESQUERDA -->
 
     <a
         href="index.html"
@@ -1684,105 +1391,125 @@ footer strong{
     </a>
 
 
-    <ul>
+
+    <!-- CENTRO -->
+
+    <div class="menuCentro">
+
+        <ul>
 
 
-        <li>
+            <li>
 
-            <a href="index.html">
+                <a href="index.html">
 
-                Início
+                    Início
 
-            </a>
+                </a>
 
-        </li>
-
-
-        <li>
-
-            <select
-                id="cidade"
-                onchange="abrirCidade(this.value)"
-                aria-label="Escolha uma cidade"
-            >
-
-                <option value="">
-
-                    Cidades
-
-                </option>
+            </li>
 
 
-                <option value="montes-claros.html">
+            <li>
 
-                    Montes Claros - MG
+                <select
+                    id="cidade"
+                    onchange="trocarCidade()"
+                    aria-label="Escolher cidade"
+                >
 
-                </option>
+                    <option value="">
 
+                        Cidades
 
-                <option value="janauba.html">
-
-                    Janaúba - MG
-
-                </option>
-
-            </select>
-
-        </li>
+                    </option>
 
 
-        <li>
+                    <option value="montes-claros.html">
 
-            <a href="#academias">
+                        Montes Claros - MG
 
-                Academias
-
-            </a>
-
-        </li>
+                    </option>
 
 
-        <li>
+                    <option value="janauba.html">
 
-            <a href="#contato">
+                        Janaúba - MG
 
-                Contato
+                    </option>
 
-            </a>
+                </select>
 
-        </li>
-
-
-        <li>
-
-            <a
-                href="#cadastrar"
-                class="cadastrarBtn"
-            >
-
-                ♡ Cadastrar minha academia
-
-            </a>
-
-        </li>
+            </li>
 
 
-    </ul>
+            <li>
+
+                <a href="#academias">
+
+                    Academias
+
+                </a>
+
+            </li>
+
+
+            <li>
+
+                <a href="#contato">
+
+                    Contato
+
+                </a>
+
+            </li>
+
+
+        </ul>
+
+    </div>
+
+
+
+    <!-- DIREITA -->
+
+    <div class="menuDireita">
+
+
+        <a
+            href="#favoritos"
+            class="coracao"
+            aria-label="Favoritos"
+        >
+
+            ♡
+
+        </a>
+
+
+        <a
+            href="#cadastrar"
+            class="cadastrar"
+        >
+
+            Cadastrar minha academia
+
+        </a>
+
+
+    </div>
+
 
 </nav>
 
 
 
 <!-- ========================================
-     CONTEÚDO
+     HERO
 ======================================== -->
 
 <main>
 
-
-<!-- ========================================
-     HERO
-======================================== -->
 
 <section
     class="hero"
@@ -1796,35 +1523,18 @@ footer strong{
     <div class="heroContent">
 
 
-        <div class="logoCentral">
-
-
-            <img
-                src="logo.png"
-                alt="BuscaAcademias"
-            >
-
-
-        </div>
-
-
         <div class="badge">
-
 
             <i></i>
 
-
             Encontre. Compare. Escolha.
-
 
         </div>
 
 
         <h1>
 
-
             Encontre o lugar
-
 
             <span>
 
@@ -1832,18 +1542,15 @@ footer strong{
 
             </span>
 
-
         </h1>
 
 
         <p class="heroText">
 
-
             Compare academias da sua cidade,
             veja horários, localização e contatos
             e escolha com mais confiança onde
             começar sua evolução.
-
 
         </p>
 
@@ -1856,24 +1563,7 @@ footer strong{
                 aria-hidden="true"
             >
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <path
-                        d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
-                    />
-
-
-                    <circle
-                        cx="12"
-                        cy="9"
-                        r="2.5"
-                    />
-
-
-                </svg>
-
+                📍
 
             </div>
 
@@ -1882,7 +1572,6 @@ footer strong{
                 id="cidadePrincipal"
                 aria-label="Escolha sua cidade"
             >
-
 
                 <option value="">
 
@@ -1904,7 +1593,6 @@ footer strong{
 
                 </option>
 
-
             </select>
 
 
@@ -1913,9 +1601,7 @@ footer strong{
                 onclick="buscarAcademias()"
             >
 
-
                 Buscar academias →
-
 
             </button>
 
@@ -1967,6 +1653,7 @@ footer strong{
 
     </div>
 
+
 </section>
 
 
@@ -2012,30 +1699,17 @@ footer strong{
 
         <article class="feature">
 
-
             <div class="icon">
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <path
-                        d="M4 20V9l4-3v14M12 20V5l4-3v18M20 20V8"
-                    />
-
-
-                </svg>
-
+                🏋️
 
             </div>
-
 
             <h3>
 
                 Academias
 
             </h3>
-
 
             <p>
 
@@ -2044,44 +1718,22 @@ footer strong{
 
             </p>
 
-
         </article>
-
 
 
         <article class="feature">
 
-
             <div class="icon">
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <path
-                        d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
-                    />
-
-
-                    <circle
-                        cx="12"
-                        cy="9"
-                        r="2.5"
-                    />
-
-
-                </svg>
-
+                📍
 
             </div>
-
 
             <h3>
 
                 Localização
 
             </h3>
-
 
             <p>
 
@@ -2090,44 +1742,22 @@ footer strong{
 
             </p>
 
-
         </article>
-
 
 
         <article class="feature">
 
-
             <div class="icon">
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <circle
-                        cx="12"
-                        cy="12"
-                        r="8.5"
-                    />
-
-
-                    <path
-                        d="M12 7v5l3 2"
-                    />
-
-
-                </svg>
-
+                🕐
 
             </div>
-
 
             <h3>
 
                 Horários
 
             </h3>
-
 
             <p>
 
@@ -2136,42 +1766,22 @@ footer strong{
 
             </p>
 
-
         </article>
-
 
 
         <article class="feature">
 
-
             <div class="icon">
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <path
-                        d="M7 10a5 5 0 0 1 10 0v5a3 3 0 0 1-3 3H10a3 3 0 0 1-3-3v-5Z"
-                    />
-
-
-                    <path
-                        d="M9 18v2M15 18v2"
-                    />
-
-
-                </svg>
-
+                📞
 
             </div>
-
 
             <h3>
 
                 Contato
 
             </h3>
-
 
             <p>
 
@@ -2180,37 +1790,22 @@ footer strong{
 
             </p>
 
-
         </article>
-
 
 
         <article class="feature">
 
-
             <div class="icon">
 
-
-                <svg viewBox="0 0 24 24">
-
-
-                    <path
-                        d="m12 3 2.8 5.7 6.2.9-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z"
-                    />
-
-
-                </svg>
-
+                ⭐
 
             </div>
-
 
             <h3>
 
                 Avaliações
 
             </h3>
-
 
             <p>
 
@@ -2219,11 +1814,11 @@ footer strong{
 
             </p>
 
-
         </article>
 
 
     </div>
+
 
 </section>
 
@@ -2233,7 +1828,10 @@ footer strong{
      CIDADES
 ======================================== -->
 
-<section class="section">
+<section
+    class="section"
+    id="academias"
+>
 
 
     <div class="sectionHead">
@@ -2275,30 +1873,12 @@ footer strong{
 
                 <div class="cityIcon">
 
-
-                    <svg viewBox="0 0 24 24">
-
-
-                        <path
-                            d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
-                        />
-
-
-                        <circle
-                            cx="12"
-                            cy="9"
-                            r="2.5"
-                        />
-
-
-                    </svg>
-
+                    📍
 
                 </div>
 
 
                 <div>
-
 
                     <h3>
 
@@ -2312,7 +1892,6 @@ footer strong{
                         Minas Gerais
 
                     </p>
-
 
                 </div>
 
@@ -2342,30 +1921,12 @@ footer strong{
 
                 <div class="cityIcon">
 
-
-                    <svg viewBox="0 0 24 24">
-
-
-                        <path
-                            d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"
-                        />
-
-
-                        <circle
-                            cx="12"
-                            cy="9"
-                            r="2.5"
-                        />
-
-
-                    </svg>
-
+                    📍
 
                 </div>
 
 
                 <div>
-
 
                     <h3>
 
@@ -2379,7 +1940,6 @@ footer strong{
                         Minas Gerais
 
                     </p>
-
 
                 </div>
 
@@ -2401,6 +1961,7 @@ footer strong{
 
 
     </div>
+
 
 </section>
 
@@ -2527,6 +2088,7 @@ footer strong{
 
     </div>
 
+
 </section>
 
 
@@ -2604,19 +2166,21 @@ footer strong{
 
 
 
-<!-- ========================================
-     JAVASCRIPT
-======================================== -->
-
 <script>
 
 
-function abrirCidade(pagina){
+function trocarCidade(){
 
-    if(pagina){
+    const cidade =
+        document
+        .getElementById("cidade")
+        .value;
+
+
+    if(cidade){
 
         window.location.href =
-            pagina;
+            cidade;
 
     }
 
@@ -2640,16 +2204,6 @@ function buscarAcademias(){
 
     }else{
 
-        const select =
-            document
-            .getElementById(
-                "cidadePrincipal"
-            );
-
-
-        select.focus();
-
-
         alert(
             "Escolha uma cidade para continuar."
         );
@@ -2657,6 +2211,7 @@ function buscarAcademias(){
     }
 
 }
+
 
 </script>
 
