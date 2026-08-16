@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Encontre academias na sua cidade. Compare localização, horários, contatos e avaliações.">
+
+<meta
+  name="description"
+  content="Encontre academias na sua cidade. Compare localização, horários, contatos e avaliações."
+>
+
 <title>BuscaAcademias | Encontre onde treinar</title>
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
 :root{
   --bg:#06152d;
   --bg2:#081d3b;
@@ -14,10 +27,15 @@
   --panel2:#102f59;
   --text:#f8fbff;
   --muted:#9db0c9;
+
   --blue:#2563eb;
   --blue2:#3b82f6;
+
   --yellow:#f4b400;
+  --yellow2:#ffc928;
+
   --line:rgba(255,255,255,.09);
+
   --shadow:0 24px 80px rgba(0,0,0,.34);
 }
 
@@ -32,9 +50,20 @@ html{
 }
 
 body{
-  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
   background:var(--bg);
+
   color:var(--text);
+
   overflow-x:hidden;
 }
 
@@ -54,35 +83,52 @@ button{
 }
 
 
-/* ========================================
-   CABEÇALHO — PADRONIZADO COM MONTES CLAROS
-======================================== */
+/* =====================================================
+   MENU — PADRONIZADO COM MONTES CLAROS
+===================================================== */
 
 .menu{
-  position:sticky;
-  top:0;
-  z-index:50;
 
-  height:72px;
+  position:sticky;
+
+  top:0;
+
+  z-index:1000;
+
+  min-height:68px;
+
+  padding:0 5%;
 
   display:flex;
+
   align-items:center;
 
-  padding:0 clamp(20px,6vw,88px);
+  justify-content:space-between;
 
-  background:rgba(3,17,40,.88);
+  background:rgba(3,17,40,.94);
 
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(16px);
 
-  border-bottom:1px solid rgba(255,255,255,.07);
+  border-bottom:
+    1px solid
+    rgba(255,255,255,.07);
 }
 
 
-/* BuscaAcademias — MESMO tamanho/formato */
+/* LOGO DO CABEÇALHO */
 
 .logoMenu{
-  font-size:23px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+  font-size:26px;
+
   font-weight:900;
+
   letter-spacing:-1.2px;
 
   white-space:nowrap;
@@ -93,146 +139,147 @@ button{
 }
 
 
-/* Menu centralizado */
+/* MENU CENTRAL */
 
 .menu ul{
-  position:absolute;
-  left:50%;
-  transform:translateX(-50%);
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  gap:30px;
 
   list-style:none;
 
-  white-space:nowrap;
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  gap:25px;
 }
 
 .menu a,
-.menu select{
-  color:#dce7f5;
+#cidade{
+
+  color:#dbe6f5;
 
   font-size:14px;
+
   font-weight:700;
 
   transition:.2s;
-
-  background:transparent;
-  border:0;
-  outline:0;
 }
 
-.menu a:hover,
-.menu select:hover{
+.menu a:hover{
   color:var(--yellow);
 }
 
-.menu select{
-  appearance:none;
+.menu a.ativo{
+  color:var(--yellow);
+}
 
-  padding-right:18px;
+#cidade{
+
+  background:transparent;
+
+  border:none;
+
+  outline:none;
 
   cursor:pointer;
 
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23dce7f5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-
-  background-repeat:no-repeat;
-  background-position:right center;
+  appearance:auto;
 }
 
-.menu select option{
-  background:#fff;
+#cidade option{
+
   color:#111;
+
+  background:#fff;
 }
 
 
-/* Área direita */
+/* DIREITA */
 
-.menuRight{
-  margin-left:auto;
+.menuDireita{
 
   display:flex;
+
   align-items:center;
 
-  gap:12px;
+  gap:10px;
 }
 
 
-/* Coração */
+/* CORAÇÃO */
 
-.favoriteBtn{
+.favoritoMenu{
+
   width:42px;
+
   height:42px;
 
   display:grid;
+
   place-items:center;
 
-  border:1px solid rgba(255,255,255,.16);
+  border:
+    1px solid
+    rgba(255,255,255,.14);
 
   border-radius:10px;
 
-  background:rgba(255,255,255,.02);
+  font-size:21px;
 
   color:#fff;
-
-  font-size:23px;
-
-  line-height:1;
 
   transition:.2s;
 }
 
-.favoriteBtn:hover{
+.favoritoMenu:hover{
+
   border-color:var(--yellow);
+
   color:var(--yellow);
-  transform:translateY(-1px);
 }
 
 
-/* Cadastrar minha academia */
+/* CADASTRAR */
 
-.menuCta{
-  padding:11px 17px;
+.cadastrar{
+
+  padding:12px 18px;
 
   border-radius:9px;
 
   background:var(--yellow);
 
-  color:#111!important;
+  color:#07162e !important;
 
-  font-size:13px!important;
+  font-size:12px !important;
 
-  font-weight:850!important;
+  font-weight:900 !important;
 
   white-space:nowrap;
 
   transition:.2s;
 }
 
-.menuCta:hover{
-  background:#ffc928;
-
-  color:#111!important;
-
-  transform:translateY(-1px);
+.cadastrar:hover{
+  background:var(--yellow2);
 }
 
 
-/* ========================================
+/* =====================================================
    HERO
-======================================== */
+===================================================== */
 
 .hero{
+
   position:relative;
 
-  min-height:calc(100vh - 72px);
+  min-height:calc(100vh - 68px);
 
   display:flex;
+
   align-items:center;
+
   justify-content:center;
 
   padding:70px 20px 90px;
@@ -244,6 +291,7 @@ button{
 
 .hero:before,
 .hero:after{
+
   content:"";
 
   position:absolute;
@@ -256,36 +304,48 @@ button{
 }
 
 .hero:before{
+
   width:620px;
+
   height:620px;
 
   left:-250px;
+
   top:-250px;
 
-  background:rgba(37,99,235,.22);
+  background:
+    rgba(37,99,235,.22);
 }
 
 .hero:after{
+
   width:520px;
+
   height:520px;
 
   right:-260px;
+
   bottom:-270px;
 
-  background:rgba(244,180,0,.09);
+  background:
+    rgba(244,180,0,.09);
 }
 
 .gridGlow{
+
   position:absolute;
+
   inset:0;
 
   opacity:.32;
 
   background-image:
+
     linear-gradient(
       rgba(255,255,255,.025) 1px,
       transparent 1px
     ),
+
     linear-gradient(
       90deg,
       rgba(255,255,255,.025) 1px,
@@ -303,6 +363,7 @@ button{
 }
 
 .heroContent{
+
   position:relative;
 
   z-index:2;
@@ -311,11 +372,12 @@ button{
 }
 
 
-/* ========================================
-   LOGO CENTRAL — NÃO ALTERADO
-======================================== */
+/* =====================================================
+   LOGO CENTRAL — MANTIDA
+===================================================== */
 
 .logoCentral img{
+
   width:290px;
 
   max-width:70vw;
@@ -333,11 +395,12 @@ button{
 }
 
 
-/* ========================================
+/* =====================================================
    BADGE
-======================================== */
+===================================================== */
 
 .badge{
+
   display:inline-flex;
 
   align-items:center;
@@ -346,9 +409,12 @@ button{
 
   padding:7px 13px;
 
-  border:1px solid rgba(96,165,250,.22);
+  border:
+    1px solid
+    rgba(96,165,250,.22);
 
-  background:rgba(37,99,235,.12);
+  background:
+    rgba(37,99,235,.12);
 
   border-radius:999px;
 
@@ -362,7 +428,9 @@ button{
 }
 
 .badge i{
+
   width:6px;
+
   height:6px;
 
   border-radius:50%;
@@ -374,11 +442,12 @@ button{
 }
 
 
-/* ========================================
+/* =====================================================
    TÍTULO
-======================================== */
+===================================================== */
 
 h1{
+
   max-width:900px;
 
   margin:0 auto;
@@ -398,6 +467,7 @@ h1{
 }
 
 h1 span{
+
   color:var(--yellow);
 
   background:
@@ -415,11 +485,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    TEXTO
-======================================== */
+===================================================== */
 
 .heroText{
+
   max-width:650px;
 
   margin:22px auto 30px;
@@ -432,11 +503,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    BUSCA
-======================================== */
+===================================================== */
 
 .searchBox{
+
   width:min(760px,100%);
 
   margin:auto;
@@ -459,6 +531,7 @@ h1 span{
 }
 
 .searchBox:focus-within{
+
   transform:translateY(-2px);
 
   box-shadow:
@@ -466,11 +539,13 @@ h1 span{
 }
 
 .searchIcon{
+
   width:52px;
 
   display:flex;
 
   align-items:center;
+
   justify-content:center;
 
   color:#64748b;
@@ -479,6 +554,7 @@ h1 span{
 }
 
 .searchBox select{
+
   flex:1;
 
   min-width:0;
@@ -510,6 +586,7 @@ h1 span{
 }
 
 .searchBtn{
+
   height:54px;
 
   padding:0 24px;
@@ -529,21 +606,24 @@ h1 span{
   transition:.2s;
 
   box-shadow:
-    0 8px 20px rgba(37,99,235,.25);
+    0 8px 20px
+    rgba(37,99,235,.25);
 }
 
 .searchBtn:hover{
+
   background:var(--blue2);
 
   transform:translateY(-1px);
 }
 
 
-/* ========================================
+/* =====================================================
    BENEFÍCIOS MINI
-======================================== */
+===================================================== */
 
 .trust{
+
   margin-top:18px;
 
   display:flex;
@@ -562,6 +642,7 @@ h1 span{
 }
 
 .trust span{
+
   display:inline-flex;
 
   align-items:center;
@@ -570,21 +651,24 @@ h1 span{
 }
 
 .trust b{
+
   color:#65a8ff;
 
   font-size:14px;
 }
 
 
-/* ========================================
+/* =====================================================
    SEÇÕES
-======================================== */
+===================================================== */
 
 .section{
+
   padding:92px 6%;
 }
 
 .section.dark{
+
   background:
     linear-gradient(
       180deg,
@@ -594,12 +678,14 @@ h1 span{
 }
 
 .sectionHead{
+
   max-width:1120px;
 
   margin:0 auto 38px;
 }
 
 .kicker{
+
   color:var(--yellow);
 
   text-transform:uppercase;
@@ -612,6 +698,7 @@ h1 span{
 }
 
 .sectionHead h2{
+
   margin-top:9px;
 
   font-size:
@@ -625,6 +712,7 @@ h1 span{
 }
 
 .sectionHead p{
+
   margin-top:10px;
 
   max-width:650px;
@@ -635,11 +723,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    BENEFÍCIOS
-======================================== */
+===================================================== */
 
 .features{
+
   max-width:1120px;
 
   margin:auto;
@@ -653,11 +742,15 @@ h1 span{
 }
 
 .feature{
+
   padding:23px 19px;
 
-  background:rgba(255,255,255,.035);
+  background:
+    rgba(255,255,255,.035);
 
-  border:1px solid var(--line);
+  border:
+    1px solid
+    var(--line);
 
   border-radius:19px;
 
@@ -667,6 +760,7 @@ h1 span{
 }
 
 .feature:hover{
+
   transform:translateY(-6px);
 
   border-color:
@@ -677,7 +771,9 @@ h1 span{
 }
 
 .icon{
+
   width:45px;
+
   height:45px;
 
   border-radius:13px;
@@ -699,7 +795,9 @@ h1 span{
 .icon svg,
 .cityIcon svg,
 .searchIcon svg{
+
   width:22px;
+
   height:22px;
 
   stroke:currentColor;
@@ -714,22 +812,28 @@ h1 span{
 }
 
 .cityIcon svg{
+
   width:23px;
+
   height:23px;
 }
 
 .searchIcon svg{
+
   width:22px;
+
   height:22px;
 }
 
 .feature h3{
+
   font-size:16px;
 
   margin-bottom:7px;
 }
 
 .feature p{
+
   color:#8fa4be;
 
   font-size:13px;
@@ -738,11 +842,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    CIDADES
-======================================== */
+===================================================== */
 
 .cities{
+
   max-width:1120px;
 
   margin:auto;
@@ -756,6 +861,7 @@ h1 span{
 }
 
 .city{
+
   display:flex;
 
   align-items:center;
@@ -773,7 +879,9 @@ h1 span{
       #0b2345
     );
 
-  border:1px solid var(--line);
+  border:
+    1px solid
+    var(--line);
 
   border-radius:20px;
 
@@ -781,6 +889,7 @@ h1 span{
 }
 
 .city:hover{
+
   transform:translateY(-4px);
 
   border-color:
@@ -788,6 +897,7 @@ h1 span{
 }
 
 .cityInfo{
+
   display:flex;
 
   align-items:center;
@@ -796,7 +906,9 @@ h1 span{
 }
 
 .cityIcon{
+
   width:55px;
+
   height:55px;
 
   display:grid;
@@ -811,10 +923,12 @@ h1 span{
 }
 
 .city h3{
+
   font-size:18px;
 }
 
 .city p{
+
   margin-top:3px;
 
   color:#8fa5c0;
@@ -823,6 +937,7 @@ h1 span{
 }
 
 .cityBtn{
+
   padding:11px 15px;
 
   background:var(--blue);
@@ -837,11 +952,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    COMO FUNCIONA
-======================================== */
+===================================================== */
 
 .steps{
+
   max-width:1000px;
 
   margin:auto;
@@ -855,13 +971,16 @@ h1 span{
 }
 
 .step{
+
   text-align:center;
 
   padding:20px 15px;
 }
 
 .number{
+
   width:58px;
+
   height:58px;
 
   margin:
@@ -890,12 +1009,14 @@ h1 span{
 }
 
 .step h3{
+
   font-size:17px;
 
   margin-bottom:7px;
 }
 
 .step p{
+
   color:#8fa4bd;
 
   font-size:13px;
@@ -904,11 +1025,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    CTA
-======================================== */
+===================================================== */
 
 .cta{
+
   position:relative;
 
   overflow:hidden;
@@ -927,6 +1049,7 @@ h1 span{
 }
 
 .cta h2{
+
   font-size:
     clamp(
       30px,
@@ -938,6 +1061,7 @@ h1 span{
 }
 
 .cta p{
+
   max-width:600px;
 
   margin:
@@ -951,6 +1075,7 @@ h1 span{
 }
 
 .ctaBtn{
+
   display:inline-flex;
 
   padding:14px 20px;
@@ -969,6 +1094,7 @@ h1 span{
 }
 
 .ctaBtn:hover{
+
   transform:translateY(-2px);
 
   box-shadow:
@@ -977,11 +1103,12 @@ h1 span{
 }
 
 
-/* ========================================
+/* =====================================================
    FOOTER
-======================================== */
+===================================================== */
 
 footer{
+
   padding:35px 20px;
 
   text-align:center;
@@ -1000,9 +1127,9 @@ footer strong{
 }
 
 
-/* ========================================
+/* =====================================================
    ANIMAÇÕES
-======================================== */
+===================================================== */
 
 @keyframes heroIn{
 
@@ -1019,6 +1146,7 @@ footer strong{
 }
 
 .heroContent > *{
+
   animation:
     heroIn
     .7s
@@ -1047,26 +1175,17 @@ footer strong{
 }
 
 
-/* ========================================
+/* =====================================================
    ACESSIBILIDADE
-======================================== */
+===================================================== */
 
 .searchBtn:focus-visible,
 .menu a:focus-visible,
 .cityBtn:focus-visible,
 .ctaBtn:focus-visible,
 .menu select:focus-visible,
-.searchBox select:focus-visible{
-
-  outline:
-    3px solid
-    rgba(96,165,250,.55);
-
-  outline-offset:3px;
-}
-
-.favoriteBtn:focus-visible,
-.menuCta:focus-visible{
+.searchBox select:focus-visible,
+.favoritoMenu:focus-visible{
 
   outline:
     3px solid
@@ -1088,15 +1207,14 @@ footer strong{
     animation:none!important;
 
     transition:none!important;
-
   }
 
 }
 
 
-/* ========================================
+/* =====================================================
    RESPONSIVO
-======================================== */
+===================================================== */
 
 @media(max-width:950px){
 
@@ -1104,39 +1222,38 @@ footer strong{
 
     grid-template-columns:
       repeat(2,1fr);
-
   }
 
 }
 
 
-@media(max-width:850px){
+@media(max-width:900px){
 
   .menu{
-    padding-left:25px;
-    padding-right:25px;
+
+    padding:
+      14px
+      20px;
+
+    flex-wrap:wrap;
+
+    gap:14px;
   }
 
   .menu ul{
-    gap:18px;
+
+    order:3;
+
+    width:100%;
+
+    justify-content:center;
+
+    gap:15px;
   }
 
-  .logoMenu{
-    font-size:21px;
-  }
+  .menuDireita{
 
-  .menu a,
-  .menu select{
-    font-size:13px;
-  }
-
-  .favoriteBtn{
-    width:38px;
-    height:38px;
-  }
-
-  .menuCta{
-    padding:10px 13px;
+    margin-left:auto;
   }
 
 }
@@ -1146,65 +1263,61 @@ footer strong{
 
   .menu{
 
-    height:auto;
-
-    min-height:68px;
+    min-height:auto;
 
     padding:
-      13px
+      14px
       18px;
 
-    gap:12px;
+    gap:13px;
 
     flex-wrap:wrap;
-
   }
-
 
   .logoMenu{
-    font-size:21px;
+
+    font-size:22px;
   }
 
-
   .menu ul{
-
-    position:static;
-
-    transform:none;
-
-    order:3;
 
     width:100%;
 
     justify-content:center;
 
     gap:
-      13px
+      11px
       18px;
-
-    overflow-x:auto;
-
-    padding-bottom:2px;
-
   }
 
+  .menu a,
+  #cidade{
 
-  .menuRight{
-    gap:7px;
+    font-size:12px;
   }
 
+  .menuDireita{
 
-  .favoriteBtn{
+    margin-left:auto;
+  }
+
+  .cadastrar{
+
+    padding:
+      10px
+      13px;
+
+    font-size:10px !important;
+  }
+
+  .favoritoMenu{
+
     width:38px;
+
     height:38px;
+
+    font-size:19px;
   }
-
-
-  .menuCta{
-    padding:10px 12px!important;
-    font-size:11px!important;
-  }
-
 
   .hero{
 
@@ -1214,39 +1327,31 @@ footer strong{
       54px
       17px
       70px;
-
   }
-
 
   .logoCentral img{
 
     width:255px;
 
     margin-bottom:16px;
-
   }
-
 
   .badge{
+
     margin-bottom:14px;
   }
-
 
   h1{
 
     letter-spacing:-2.5px;
-
   }
-
 
   .heroText{
 
     font-size:15px;
 
     line-height:1.55;
-
   }
-
 
   .searchBox{
 
@@ -1255,14 +1360,12 @@ footer strong{
     padding:9px;
 
     gap:7px;
-
   }
-
 
   .searchIcon{
+
     display:none;
   }
-
 
   .searchBox select{
 
@@ -1271,83 +1374,76 @@ footer strong{
     height:48px;
 
     text-align:center;
-
   }
-
 
   .searchBtn{
 
     width:100%;
 
     height:50px;
-
   }
-
 
   .trust{
 
     flex-direction:column;
 
     gap:8px;
-
   }
-
 
   .section{
 
     padding:
       65px
       20px;
-
   }
-
 
   .sectionHead{
 
     margin-bottom:28px;
-
   }
-
 
   .features,
   .cities,
   .steps{
 
     grid-template-columns:1fr;
-
   }
-
 
   .feature{
 
     min-height:auto;
-
   }
-
 
   .city{
 
     align-items:flex-start;
 
     flex-direction:column;
-
   }
-
 
   .cityBtn{
 
     width:100%;
 
     text-align:center;
-
   }
 
 }
 
 
-/* ========================================
+@media(max-width:600px){
+
+  .cadastrar{
+
+    display:none;
+  }
+
+}
+
+
+/* =====================================================
    NOTEBOOKS COM ALTURA MENOR
-======================================== */
+===================================================== */
 
 @media(max-height:750px) and (min-width:701px){
 
@@ -1356,25 +1452,19 @@ footer strong{
     padding-top:38px;
 
     padding-bottom:55px;
-
   }
-
 
   .logoCentral img{
 
     width:235px;
 
     margin-bottom:12px;
-
   }
-
 
   h1{
 
     font-size:54px;
-
   }
-
 
   .heroText{
 
@@ -1382,7 +1472,6 @@ footer strong{
       14px
       auto
       22px;
-
   }
 
 }
@@ -1394,22 +1483,26 @@ footer strong{
 <body>
 
 
-<!-- ========================================
-     CABEÇALHO
-======================================== -->
+<!-- =====================================================
+     CABEÇALHO / MENU
+     IGUAL AO DE MONTES CLAROS
+===================================================== -->
 
 <nav class="menu">
 
-  <!-- MESMO BuscaAcademias que você pediu para manter -->
+
+  <!-- BUSCA ACADEMIAS
+       MANTIDO MAIOR, COMO PEDIDO -->
 
   <a
-    class="logoMenu"
     href="index.html"
+    class="logoMenu"
   >
 
-    Busca<span>Academias</span>
+    BUSCA<span>ACADEMIAS</span>
 
   </a>
+
 
 
   <!-- MENU CENTRAL -->
@@ -1418,7 +1511,10 @@ footer strong{
 
     <li>
 
-      <a href="index.html">
+      <a
+        href="index.html"
+        class="ativo"
+      >
         Início
       </a>
 
@@ -1434,7 +1530,7 @@ footer strong{
       >
 
         <option value="">
-          📍 Cidades
+          Cidades
         </option>
 
         <option value="montes-claros.html">
@@ -1452,10 +1548,8 @@ footer strong{
 
     <li>
 
-      <a href="montes-claros.html">
-
+      <a href="#academias">
         Academias
-
       </a>
 
     </li>
@@ -1472,58 +1566,64 @@ footer strong{
   </ul>
 
 
-  <!-- DIREITA: CORAÇÃO + CADASTRAR -->
 
-  <div class="menuRight">
+  <!-- DIREITA -->
+
+  <div class="menuDireita">
+
+
+    <!-- CORAÇÃO -->
 
     <a
-      class="favoriteBtn"
-      href="favoritos.html"
+      href="#"
+      class="favoritoMenu"
       aria-label="Favoritos"
-      title="Favoritos"
     >
-
       ♡
-
     </a>
 
+
+    <!-- CADASTRAR -->
 
     <a
-      class="menuCta"
-      href="cadastrar.html"
+      href="#contato"
+      class="cadastrar"
     >
-
       Cadastrar minha academia
-
     </a>
+
 
   </div>
+
 
 </nav>
 
 
 
-<!-- ========================================
+<!-- =====================================================
      CONTEÚDO
-======================================== -->
+===================================================== -->
 
 <main>
 
 
-<!-- ========================================
+<!-- =====================================================
      HERO
-======================================== -->
+===================================================== -->
 
 <section
   class="hero"
   id="buscar"
 >
 
+
   <div class="gridGlow"></div>
 
 
   <div class="heroContent">
 
+
+    <!-- LOGO CENTRAL ORIGINAL DO HOME -->
 
     <div class="logoCentral">
 
@@ -1671,9 +1771,9 @@ footer strong{
 
 
 
-<!-- ========================================
+<!-- =====================================================
      BENEFÍCIOS
-======================================== -->
+===================================================== -->
 
 <section class="section dark">
 
@@ -1860,9 +1960,9 @@ footer strong{
 
 
 
-<!-- ========================================
+<!-- =====================================================
      CIDADES
-======================================== -->
+===================================================== -->
 
 <section class="section">
 
@@ -2007,9 +2107,9 @@ footer strong{
 
 
 
-<!-- ========================================
+<!-- =====================================================
      COMO FUNCIONA
-======================================== -->
+===================================================== -->
 
 <section
   class="section dark"
@@ -2038,68 +2138,54 @@ footer strong{
 
     <article class="step">
 
-
       <div class="number">
         1
       </div>
 
-
       <h3>
         Escolha sua cidade
       </h3>
-
 
       <p>
         Selecione onde você quer
         encontrar uma academia.
       </p>
 
-
     </article>
 
 
-
     <article class="step">
-
 
       <div class="number">
         2
       </div>
 
-
       <h3>
         Explore as opções
       </h3>
-
 
       <p>
         Compare academias e veja
         as informações disponíveis.
       </p>
 
-
     </article>
 
 
-
     <article class="step">
-
 
       <div class="number">
         3
       </div>
 
-
       <h3>
         Escolha onde treinar
       </h3>
-
 
       <p>
         Encontre a opção que mais
         combina com você.
       </p>
-
 
     </article>
 
@@ -2110,9 +2196,9 @@ footer strong{
 
 
 
-<!-- ========================================
+<!-- =====================================================
      CTA
-======================================== -->
+===================================================== -->
 
 <section
   class="cta"
@@ -2153,35 +2239,33 @@ footer strong{
 
 
 
-<!-- ========================================
+<!-- =====================================================
      FOOTER
-======================================== -->
+===================================================== -->
 
 <footer>
-
 
   <strong>
     BuscaAcademias
   </strong>
 
-
   <br>
-
 
   Encontre. Compare. Escolha.
 
-
   <br><br>
 
-
   ©️ BuscaAcademias 2026
-
 
 </footer>
 
 
 
 <script>
+
+/* =====================================================
+   TROCAR CIDADE
+===================================================== */
 
 function abrirCidade(pagina){
 
@@ -2193,6 +2277,10 @@ function abrirCidade(pagina){
 
 }
 
+
+/* =====================================================
+   BUSCAR ACADEMIAS
+===================================================== */
 
 function buscarAcademias(){
 
