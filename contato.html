@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06152d">
+
+<meta
+    name="description"
+    content="Cadastre sua academia ou fale com o BuscaAcademias."
+>
+
+<title>Contato e Cadastro | BuscaAcademias</title>
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style>
+  .formCard{
+    max-width:640px;
+    margin:0 auto;
+    background:rgba(255,255,255,.035);
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:32px;
+  }
+
+  .formGroup{
+    margin-bottom:18px;
+    text-align:left;
+  }
+
+  .formGroup label{
+    display:block;
+    margin-bottom:6px;
+    font-size:13px;
+    font-weight:700;
+    color:#c7d4e8;
+  }
+
+  .formGroup input,
+  .formGroup textarea,
+  .formGroup select{
+    width:100%;
+    padding:12px 14px;
+    border-radius:10px;
+    border:1px solid rgba(255,255,255,.14);
+    background:rgba(255,255,255,.04);
+    color:var(--text);
+    font-size:14px;
+  }
+
+  .formGroup select{
+    appearance:none;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%239db0c9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat:no-repeat;
+    background-position:right 14px center;
+  }
+
+  .formGroup select option{
+    color:#111;
+    background:#fff;
+  }
+
+  .formGroup textarea{
+    min-height:110px;
+    resize:vertical;
+    font-family:inherit;
+  }
+
+  .formGroup input:focus,
+  .formGroup textarea:focus,
+  .formGroup select:focus{
+    outline:2px solid rgba(96,165,250,.55);
+    outline-offset:1px;
+  }
+
+  .formSubmitBtn{
+    width:100%;
+    height:50px;
+    border:0;
+    border-radius:12px;
+    background:var(--blue);
+    color:#fff;
+    font-weight:850;
+    font-size:14px;
+    transition:.2s;
+  }
+
+  .formSubmitBtn:hover{
+    background:var(--blue2);
+  }
+
+  .formSubmitBtn:disabled{
+    opacity:.6;
+    cursor:default;
+  }
+
+  .formFeedback{
+    margin-top:14px;
+    font-size:13px;
+    font-weight:700;
+    min-height:18px;
+  }
+
+  .formFeedback.enviando{
+    color:#8fa5c1;
+  }
+
+  .formFeedback.sucesso{
+    color:#4ade80;
+  }
+
+  .formFeedback.erro{
+    color:#f87171;
+  }
+
+  .formasSeparador{
+    max-width:640px;
+    margin:60px auto;
+    border:none;
+    border-top:1px solid var(--line);
+  }
+</style>
+</head>
+
+
+<body>
+
+
+<nav class="menu">
+
+  <a href="index.html" class="logoMenu">
+    <span class="logoIcon">⌖</span>
+    BUSCA<span>ACADEMIAS</span>
+  </a>
+
+  <ul>
+
+    <li>
+      <a href="index.html">Início</a>
+    </li>
+
+    <li>
+      <select id="cidade" onchange="abrirCidade(this.value)" aria-label="Escolha uma cidade">
+      </select>
+    </li>
+
+    <li>
+      <a href="index.html#academias">Academias</a>
+    </li>
+
+    <li>
+      <a href="contato.html">Contato</a>
+    </li>
+
+  </ul>
+
+  <div class="menuDireita">
+
+    <button
+      type="button"
+      class="favoritoMenu"
+      aria-label="Favoritar esta página"
+      onclick="alternarFavorito()"
+    >
+      ♡
+    </button>
+
+    <a href="contato.html#cadastro" class="cadastrar">
+      Cadastrar minha academia
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<main>
+
+
+<section class="section" id="cadastro">
+
+  <div class="sectionHead">
+    <div class="kicker">Dono de academia?</div>
+    <h2>Cadastre sua academia gratuitamente.</h2>
+    <p>Preencha os dados abaixo — assim que aprovarmos, sua academia aparece na busca da sua cidade.</p>
+  </div>
+
+  <form
+    class="formCard"
+    data-formspree-endpoint="https://formspree.io/f/xnpqzegp"
+    onsubmit="handleFormSubmit(event, this)"
+  >
+
+    <div class="formGroup">
+      <label for="nomeAcademia">Nome da academia</label>
+      <input type="text" id="nomeAcademia" name="Nome da academia" required>
+    </div>
+
+    <div class="formGroup">
+      <label for="cidadeCadastro">Cidade</label>
+      <select id="cidadeCadastro" name="Cidade" required>
+      </select>
+    </div>
+
+    <div class="formGroup">
+      <label for="enderecoAcademia">Endereço</label>
+      <input type="text" id="enderecoAcademia" name="Endereço" required>
+    </div>
+
+    <div class="formGroup">
+      <label for="whatsappAcademia">WhatsApp / telefone</label>
+      <input type="tel" id="whatsappAcademia" name="WhatsApp" required>
+    </div>
+
+    <div class="formGroup">
+      <label for="horarioAcademia">Horário de funcionamento</label>
+      <input type="text" id="horarioAcademia" name="Horário" placeholder="Ex: Seg a Sex 6h-22h, Sáb 8h-12h">
+    </div>
+
+    <div class="formGroup">
+      <label for="descricaoAcademia">Conte um pouco sobre a academia</label>
+      <textarea id="descricaoAcademia" name="Descrição" placeholder="Modalidades, diferenciais, estrutura..."></textarea>
+    </div>
+
+    <button type="submit" class="formSubmitBtn">Enviar cadastro</button>
+
+    <p class="formFeedback"></p>
+
+  </form>
+
+</section>
+
+
+<hr class="formasSeparador">
+
+
+<section class="section" id="fale-conosco">
+
+  <div class="sectionHead">
+    <div class="kicker">Dúvidas, sugestões ou problemas?</div>
+    <h2>Fale conosco.</h2>
+    <p>Responde rápido — sua mensagem chega direto pra gente.</p>
+  </div>
+
+  <form
+    class="formCard"
+    data-formspree-endpoint="https://formspree.io/f/mljelqpp"
+    onsubmit="handleFormSubmit(event, this)"
+  >
+
+    <div class="formGroup">
+      <label for="nomeContato">Seu nome</label>
+      <input type="text" id="nomeContato" name="Nome" required>
+    </div>
+
+    <div class="formGroup">
+      <label for="emailContato">Seu e-mail</label>
+      <input type="email" id="emailContato" name="E-mail" required>
+    </div>
+
+    <div class="formGroup">
+      <label for="mensagemContato">Mensagem</label>
+      <textarea id="mensagemContato" name="Mensagem" required></textarea>
+    </div>
+
+    <button type="submit" class="formSubmitBtn">Enviar mensagem</button>
+
+    <p class="formFeedback"></p>
+
+  </form>
+
+</section>
+
+
+</main>
+
+
+
+<footer>
+
+  <strong>BuscaAcademias</strong>
+  <br>
+  Encontre. Compare. Escolha.
+
+  <nav aria-label="Links do rodapé">
+    <a href="index.html">Início</a>
+    <a href="index.html#academias">Academias</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <br>
+  © BuscaAcademias 2026
+
+</footer>
+
+
+<script src="assets/js/cidades-data.js"></script>
+<script src="assets/js/site.js"></script>
+
+</body>
+</html>
