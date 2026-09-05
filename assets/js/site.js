@@ -1,3 +1,8 @@
+/*
+  site.js — lógica compartilhada de TODAS as páginas do BuscaAcademias.
+  Depende de cidades-data.js estar carregado antes (define window.CIDADES).
+*/
+
 const ICONE_LOCALIZACAO = `
   <svg viewBox="0 0 24 24">
     <path d="M12 21s7-6.2 7-12A7 7 0 0 0 5 9c0 5.8 7 12 7 12Z"/>
@@ -12,10 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
   restaurarEstadoFavorito();
 });
 
+/* =====================================================
+   POPULA TODOS OS DROPDOWNS DE CIDADE DA PÁGINA
+   A PARTIR DA MESMA LISTA — nunca ficam fora de sincronia.
+   Novos selects de cidade em outras páginas só precisam
+   ser adicionados nesta lista (id + placeholder).
+===================================================== */
 function popularSelectsDeCidade() {
   const selects = [
     { el: document.getElementById("cidade"), placeholder: "Cidades" },
-    { el: document.getElementById("cidadePrincipal"), placeholder: "Em qual cidade você quer treinar?" }
+    { el: document.getElementById("cidadePrincipal"), placeholder: "Em qual cidade você quer treinar?" },
+    { el: document.getElementById("cidadeCadastro"), placeholder: "Selecione a cidade" }
   ];
 
   selects.forEach(({ el, placeholder }) => {
@@ -37,6 +49,10 @@ function popularSelectsDeCidade() {
   });
 }
 
+/* =====================================================
+   GERA OS CARDS DA SEÇÃO "ACADEMIAS" A PARTIR DA
+   MESMA LISTA DE CIDADES
+===================================================== */
 function popularGradeDeCidades() {
   const grid = document.getElementById("citiesGrid");
   if (!grid) return;
@@ -55,6 +71,9 @@ function popularGradeDeCidades() {
   `).join("");
 }
 
+/* =====================================================
+   NAVEGAÇÃO
+===================================================== */
 function abrirCidade(pagina) {
   if (pagina) {
     window.location.href = pagina;
@@ -73,6 +92,9 @@ function buscarAcademias() {
   }
 }
 
+/* =====================================================
+   DESTACA O LINK DA PÁGINA ATUAL NO MENU
+===================================================== */
 function marcarLinkAtivo() {
   const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
 
@@ -86,6 +108,9 @@ function marcarLinkAtivo() {
   });
 }
 
+/* =====================================================
+   FAVORITOS (localStorage — funciona sem backend)
+===================================================== */
 function alternarFavorito() {
   const paginaAtual = window.location.pathname.split("/").pop() || "index.html";
   const favoritos = JSON.parse(localStorage.getItem("favoritos") || "[]");
@@ -109,4 +134,62 @@ function restaurarEstadoFavorito() {
   const favoritos = JSON.parse(localStorage.getItem("favoritos") || "[]");
 
   botao.classList.toggle("ativo", favoritos.includes(paginaAtual));
+}
+
+/* =====================================================
+   ENVIO DE FORMULÁRIOS (Formspree)
+   Usado pelos formulários de "Cadastrar minha academia"
+   e "Fale conosco" em contato.html.
+
+   Como usar num form:
+   <form data-formspree-endpoint="https://formspree.io/f/XXXX"
+         onsubmit="handleFormSubmit(event, this)">
+     ...campos...
+     <p class="formFeedback"></p>
+   </form>
+===================================================== */
+function handleFormSubmit(event, formEl) {
+  const feedbackEl = formEl.querySelector(".formFeedback");
+  enviarFormularioFormspree(event, formEl, feedbackEl);
+}
+
+async function enviarFormularioFormspree(event, formEl, feedbackEl) {
+  event.preventDefault();
+
+  const endpoint = formEl.getAttribute("data-formspree-endpoint");
+  const botao = formEl.querySelector("button[type=submit]");
+
+  if (feedbackEl) {
+    feedbackEl.textContent = "Enviando...";
+    feedbackEl.className = "formFeedback enviando";
+  }
+  if (botao) botao.disabled = true;
+
+  try {
+    const resposta = await fetch(endpoint, {
+      method: "POST",
+      body: new FormData(formEl),
+      headers: { Accept: "application/json" }
+    });
+
+    if (resposta.ok) {
+      formEl.reset();
+      if (feedbackEl) {
+        feedbackEl.textContent = "Enviado! Vamos entrar em contato em breve.";
+        feedbackEl.className = "formFeedback sucesso";
+      }
+    } else {
+      if (feedbackEl) {
+        feedbackEl.textContent = "Não foi possível enviar. Tenta de novo em instantes.";
+        feedbackEl.className = "formFeedback erro";
+      }
+    }
+  } catch (erro) {
+    if (feedbackEl) {
+      feedbackEl.textContent = "Não foi possível enviar. Verifica sua internet e tenta de novo.";
+      feedbackEl.className = "formFeedback erro";
+    }
+  } finally {
+    if (botao) botao.disabled = false;
+  }
 }
