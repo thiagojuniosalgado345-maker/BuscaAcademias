@@ -15,7 +15,7 @@ let academiaEmExibicao = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const cidadeSlug = document.body.dataset.cidade;
-  academiasDaCidade = (window.ACADEMIAS_POR_CIDADE && ACADEMIAS_POR_CIDADE[cidadeSlug]) || [];
+  academiasDaCidade = ACADEMIAS_POR_CIDADE[cidadeSlug] || [];
   academiaEmExibicao = academiasDaCidade.slice();
 
   renderizarLista(academiaEmExibicao);
