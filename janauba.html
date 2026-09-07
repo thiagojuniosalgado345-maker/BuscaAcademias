@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06152d">
+
+<meta
+    name="description"
+    content="Encontre e compare academias em Janaúba. Veja avaliações, horários, localização e modalidades."
+>
+
+<title>Academias em Janaúba | BuscaAcademias</title>
+
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Academias em Janaúba | BuscaAcademias">
+<meta property="og:description" content="Encontre e compare academias em Janaúba. Veja avaliações, horários, localização e modalidades.">
+<meta property="og:image" content="https://thiagojuniosalgado345-maker.github.io/BuscaAcademias/og-image.png">
+<meta property="og:url" content="https://thiagojuniosalgado345-maker.github.io/BuscaAcademias/janauba.html">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/academias.css">
+</head>
+
+
+<body data-cidade="janauba">
+
+
+<nav class="menu">
+
+  <a href="index.html" class="logoMenu">
+    <span class="logoIcon">⌖</span>
+    BUSCA<span>ACADEMIAS</span>
+  </a>
+
+  <ul>
+
+    <li>
+      <a href="index.html">Início</a>
+    </li>
+
+    <li>
+      <select id="cidade" onchange="abrirCidade(this.value)" aria-label="Escolha uma cidade">
+      </select>
+    </li>
+
+    <li>
+      <a href="#academias">Academias</a>
+    </li>
+
+    <li>
+      <a href="contato.html">Contato</a>
+    </li>
+
+  </ul>
+
+  <div class="menuDireita">
+
+    <button
+      type="button"
+      class="favoritoMenu"
+      aria-label="Favoritar esta página"
+      onclick="alternarFavorito()"
+    >
+      ♡
+    </button>
+
+    <a href="contato.html#cadastro" class="cadastrar">
+      Cadastrar minha academia
+    </a>
+
+  </div>
+
+</nav>
+
+
+
+<header class="cabecalho">
+
+  <div class="cabecalhoConteudo">
+
+    <div class="breadcrumb">
+      <a href="index.html">Início</a>
+      &nbsp;›&nbsp;
+      Academias
+      &nbsp;›&nbsp;
+      Janaúba
+    </div>
+
+    <h1>
+      Academias em
+      <span>Janaúba - MG</span>
+    </h1>
+
+    <p>
+      Encontre a academia perfeita para seu treino. Compare avaliações,
+      horários, modalidades e localização.
+    </p>
+
+  </div>
+
+</header>
+
+
+
+<div class="container buscaArea">
+
+  <div class="barraBusca">
+
+    <input
+      type="text"
+      id="campoBusca"
+      class="busca"
+      placeholder="🔎  Qual academia você está procurando?"
+      onkeyup="buscarAcademia()"
+    >
+
+    <button class="botaoBusca" onclick="buscarAcademia()">
+      Buscar academias →
+    </button>
+
+  </div>
+
+</div>
+
+
+
+<main class="container" id="academias">
+
+  <div class="listaHeader">
+
+    <div>
+      <small>Explore</small>
+      <h2>Academias em <span>Janaúba</span></h2>
+    </div>
+
+    <p id="contador">Carregando...</p>
+
+  </div>
+
+
+  <div class="filtros">
+
+    <button class="filtro ativo" onclick="mostrarTodas(this)">Todas</button>
+    <button class="filtro" onclick="filtrarAvaliadas(this)">⭐ Mais avaliadas</button>
+    <button class="filtro" onclick="filtrarAbertas(this)">🟢 Abertas agora</button>
+
+    <div class="ordenar">
+      <select id="ordenar" onchange="ordenarAcademias()">
+        <option value="padrao">Ordenar por</option>
+        <option value="rating">Melhor avaliação</option>
+        <option value="nome">Nome</option>
+      </select>
+    </div>
+
+  </div>
+
+
+  <section class="academias" id="listaAcademias">
+
+    <div class="semResultado" id="semResultado">
+      <strong>Nenhuma academia encontrada.</strong>
+      Tente outro nome ou altere os filtros.
+    </div>
+
+  </section>
+
+</main>
+
+
+
+<section class="cta" id="cta-cadastro">
+
+  <h2>Não encontrou sua academia?</h2>
+
+  <p>
+    Ajude a aumentar o BuscaAcademias. Se você conhece uma academia
+    que ainda não está cadastrada, cadastre agora mesmo.
+  </p>
+
+  <a href="contato.html#cadastro" class="ctaBtn">
+    Cadastrar uma academia →
+  </a>
+
+</section>
+
+
+
+<footer>
+
+  <strong>BuscaAcademias</strong>
+  <br>
+  Encontre. Compare. Escolha.
+
+  <nav aria-label="Links do rodapé">
+    <a href="index.html">Início</a>
+    <a href="#academias">Academias</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <br>
+  © BuscaAcademias 2026
+
+</footer>
+
+
+<script src="assets/js/cidades-data.js"></script>
+<script src="assets/js/academias-data.js"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/academias.js"></script>
+
+</body>
+</html>
