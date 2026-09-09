@@ -50,7 +50,7 @@ const ACADEMIAS_POR_CIDADE = {
       }
     },
     {
-      nome: "Fox Trainer",
+      nome: "Fox Trainner",
       bairro: "Delfino Magalhães",
       distancia: "2,1 km",
       foto: "assets/img/images.jpg",
