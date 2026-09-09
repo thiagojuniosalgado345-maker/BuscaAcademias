@@ -12,6 +12,7 @@ const DIAS_SEMANA = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sá
 
 let academiasDaCidade = [];
 let academiaEmExibicao = [];
+let localizacaoUsuario = null; // { lat, lng } — preenchido depois que a pessoa autoriza a localização
 
 document.addEventListener("DOMContentLoaded", () => {
   const cidadeSlug = document.body.dataset.cidade;
@@ -19,6 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
   academiaEmExibicao = academiasDaCidade.slice();
 
   renderizarLista(academiaEmExibicao);
+  obterLocalizacaoUsuario();
 
   // Recalcula o status "aberta/fechada" a cada minuto, sem precisar
   // recarregar a página — assim, se alguém deixar a aba aberta bem
@@ -40,6 +42,59 @@ function obterPeriodos(horarioDia) {
   if (!horarioDia) return [];
   const periodos = Array.isArray(horarioDia) ? horarioDia : [horarioDia];
   return periodos.slice().sort((a, b) => a.abre.localeCompare(b.abre));
+}
+
+/* =====================================================
+   LOCALIZAÇÃO E DISTÂNCIA
+   Pede a localização da pessoa (com permissão do navegador)
+   e calcula a distância em linha reta até cada academia,
+   usando as coordenadas cadastradas em cada uma.
+===================================================== */
+function obterLocalizacaoUsuario() {
+  if (!navigator.geolocation) return;
+
+  navigator.geolocation.getCurrentPosition(
+    (posicao) => {
+      localizacaoUsuario = {
+        lat: posicao.coords.latitude,
+        lng: posicao.coords.longitude
+      };
+      renderizarLista(academiaEmExibicao);
+    },
+    () => {
+      // Pessoa não permitiu, ou não foi possível obter a localização —
+      // mantém "Distância indisponível" sem travar o resto do site.
+      localizacaoUsuario = null;
+    }
+  );
+}
+
+function grausParaRad(graus) {
+  return (graus * Math.PI) / 180;
+}
+
+function calcularDistanciaKm(lat1, lon1, lat2, lon2) {
+  const R = 6371; // raio da Terra, em km
+  const dLat = grausParaRad(lat2 - lat1);
+  const dLon = grausParaRad(lon2 - lon1);
+  const a =
+    Math.sin(dLat / 2) ** 2 +
+    Math.cos(grausParaRad(lat1)) * Math.cos(grausParaRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return R * c;
+}
+
+function obterTextoDistancia(academia) {
+  if (!localizacaoUsuario || !academia.coordenadas) {
+    return "Distância indisponível";
+  }
+  const distanciaKm = calcularDistanciaKm(
+    localizacaoUsuario.lat,
+    localizacaoUsuario.lng,
+    academia.coordenadas.lat,
+    academia.coordenadas.lng
+  );
+  return `${distanciaKm.toFixed(1).replace(".", ",")} km`;
 }
 
 /* =====================================================
@@ -122,7 +177,7 @@ function renderizarLista(lista) {
       <div class="academiaConteudo">
         <h3>${academia.nome}</h3>
         <div class="local">
-          <strong>📍</strong> ${academia.bairro} · <strong>${academia.distancia}</strong>
+          <strong>📍</strong> ${academia.bairro} · <strong>${obterTextoDistancia(academia)}</strong>
         </div>
         <div class="modalidades">
           ${academia.modalidades.map((m) => `<span class="tag">${m}</span>`).join("")}
