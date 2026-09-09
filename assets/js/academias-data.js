@@ -14,6 +14,12 @@
   - [{ abre, fecha }, { abre, fecha }] → vários períodos (ex: fecha
     pro almoço e reabre à tarde)
 
+  aceitaWellhub / aceitaTotalPass:
+  - true  → aceita o plano
+  - false → não aceita o plano
+  - null  → ainda não confirmado (use null até saber ao certo,
+    pra não informar errado)
+
   Pra adicionar uma academia nova: copia um objeto existente, muda
   os dados, adiciona no array da cidade certa.
 */
@@ -29,6 +35,8 @@ const ACADEMIAS_POR_CIDADE = {
       avaliacao: 4.8,
       modalidades: ["Musculação", "Funcional", "Spinning"],
       whatsapp: "",
+      aceitaWellhub: null,
+      aceitaTotalPass: null,
       detalhesUrl: "academia-power.html",
       mapsUrl: "#",
       horarios: {
@@ -45,10 +53,12 @@ const ACADEMIAS_POR_CIDADE = {
       nome: "Fox Trainer",
       bairro: "Delfino Magalhães",
       distancia: "2,1 km",
-      foto: "assets/img/images.jpg"
+      foto: "assets/img/images.jpg",
       avaliacao: 4.6,
       modalidades: ["Musculação", "Personal Trainer", "Dança"],
       whatsapp: "",
+      aceitaWellhub: false,
+      aceitaTotalPass: false,
       detalhesUrl: "fox-trainner.html",
       mapsUrl: "https://maps.apple.com/?address=Av.%20Neco%20Delfino%2C%20228%2C%20Montes%20Claros%2C%20MG",
       horarios: {
@@ -72,6 +82,8 @@ const ACADEMIAS_POR_CIDADE = {
       avaliacao: 4.5,
       modalidades: ["Musculação", "Funcional", "Pilates"],
       whatsapp: "",
+      aceitaWellhub: null,
+      aceitaTotalPass: null,
       detalhesUrl: "#",
       mapsUrl: "#",
       horarios: {
@@ -92,6 +104,8 @@ const ACADEMIAS_POR_CIDADE = {
       avaliacao: 4.4,
       modalidades: ["Funcional", "Cross Training", "Dança"],
       whatsapp: "",
+      aceitaWellhub: null,
+      aceitaTotalPass: null,
       detalhesUrl: "#",
       mapsUrl: "#",
       horarios: {
