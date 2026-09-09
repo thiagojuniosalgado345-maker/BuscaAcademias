@@ -91,7 +91,7 @@ const ACADEMIAS_POR_CIDADE = {
       modalidades: ["Musculação", "Funcional", "Pilates"],
       whatsapp: "",
       aceitaWellhub: null,
-      aceitaTotalPass: null,
+      aceitaTotalPass: true,
       detalhesUrl: "#",
       mapsUrl: "#",
       coordenadas: null, // { lat, lng } — pegue no Google Maps (botão direito no local)
@@ -113,8 +113,8 @@ const ACADEMIAS_POR_CIDADE = {
       avaliacao: 4.4,
       modalidades: ["Funcional", "Cross Training", "Dança"],
       whatsapp: "",
-      aceitaWellhub: null,
-      aceitaTotalPass: null,
+      aceitaWellhub: true,
+      aceitaTotalPass: true,
       detalhesUrl: "#",
       mapsUrl: "#",
       coordenadas: null, // { lat, lng } — pegue no Google Maps (botão direito no local)
