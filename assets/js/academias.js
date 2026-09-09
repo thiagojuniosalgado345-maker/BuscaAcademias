@@ -27,6 +27,22 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* =====================================================
+   NORMALIZA O HORÁRIO DE UM DIA EM UMA LISTA DE PERÍODOS,
+   ORDENADA DO MAIS CEDO PARA O MAIS TARDE.
+
+   Aceita tanto o formato antigo — um único objeto
+   { abre, fecha } — quanto o novo, com vários períodos no
+   mesmo dia: [{ abre, fecha }, { abre, fecha }]. Isso é o
+   que permite academias como a Fox Trainer, que fecham pro
+   almoço no sábado e reabrem à tarde.
+===================================================== */
+function obterPeriodos(horarioDia) {
+  if (!horarioDia) return [];
+  const periodos = Array.isArray(horarioDia) ? horarioDia : [horarioDia];
+  return periodos.slice().sort((a, b) => a.abre.localeCompare(b.abre));
+}
+
+/* =====================================================
    CALCULA SE ESTÁ ABERTA AGORA, COM BASE NO HORÁRIO
    INFORMADO PELA PRÓPRIA ACADEMIA (sem imprevistos)
 ===================================================== */
@@ -35,29 +51,35 @@ function calcularStatus(horarios) {
   const diaSemana = agora.getDay();
   const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
 
-  const horarioHoje = horarios[diaSemana];
+  const periodosHoje = obterPeriodos(horarios[diaSemana]);
 
-  if (horarioHoje) {
-    const [horaAbre, minAbre] = horarioHoje.abre.split(":").map(Number);
-    const [horaFecha, minFecha] = horarioHoje.fecha.split(":").map(Number);
+  for (const periodo of periodosHoje) {
+    const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
+    const [horaFecha, minFecha] = periodo.fecha.split(":").map(Number);
     const minutosAbre = horaAbre * 60 + minAbre;
     const minutosFecha = horaFecha * 60 + minFecha;
 
     if (minutosAgora >= minutosAbre && minutosAgora < minutosFecha) {
-      return { aberta: true, texto: `Aberta até ${horarioHoje.fecha}` };
+      return { aberta: true, texto: `Aberta até ${periodo.fecha}` };
     }
+  }
 
-    if (minutosAgora < minutosAbre) {
-      return { aberta: false, texto: `Abre hoje às ${horarioHoje.abre}` };
-    }
+  const proximoPeriodoHoje = periodosHoje.find((periodo) => {
+    const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
+    return minutosAgora < horaAbre * 60 + minAbre;
+  });
+
+  if (proximoPeriodoHoje) {
+    return { aberta: false, texto: `Abre hoje às ${proximoPeriodoHoje.abre}` };
   }
 
   // Fechada agora — procura a próxima abertura nos próximos 7 dias
   for (let i = 1; i <= 7; i++) {
     const proximoDia = (diaSemana + i) % 7;
-    if (horarios[proximoDia]) {
+    const periodosProximoDia = obterPeriodos(horarios[proximoDia]);
+    if (periodosProximoDia.length > 0) {
       const rotulo = i === 1 ? "amanhã" : DIAS_SEMANA[proximoDia];
-      return { aberta: false, texto: `Fechada · abre ${rotulo} às ${horarios[proximoDia].abre}` };
+      return { aberta: false, texto: `Fechada · abre ${rotulo} às ${periodosProximoDia[0].abre}` };
     }
   }
 
@@ -65,9 +87,9 @@ function calcularStatus(horarios) {
 }
 
 function horarioDeHojeTexto(horarios) {
-  const horarioHoje = horarios[new Date().getDay()];
-  if (!horarioHoje) return "Fechada hoje";
-  return `${horarioHoje.abre} às ${horarioHoje.fecha}`;
+  const periodosHoje = obterPeriodos(horarios[new Date().getDay()]);
+  if (periodosHoje.length === 0) return "Fechada hoje";
+  return periodosHoje.map((p) => `${p.abre} às ${p.fecha}`).join(" e ");
 }
 
 /* =====================================================
