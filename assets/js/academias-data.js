@@ -8,6 +8,12 @@
   a hora atual de quem está vendo o site — sem precisar de ninguém
   atualizar isso manualmente.
 
+  Cada dia pode ter:
+  - null                              → fechada o dia todo
+  - { abre, fecha }                   → um único período
+  - [{ abre, fecha }, { abre, fecha }] → vários períodos (ex: fecha
+    pro almoço e reabre à tarde)
+
   Pra adicionar uma academia nova: copia um objeto existente, muda
   os dados, adiciona no array da cidade certa.
 */
@@ -39,20 +45,23 @@ const ACADEMIAS_POR_CIDADE = {
       nome: "Fox Trainer",
       bairro: "Delfino Magalhães",
       distancia: "2,1 km",
-      foto: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80",
+      foto: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80", // TODO: trocar quando a foto do Insta @foxtrainner chegar
       avaliacao: 4.6,
-      modalidades: ["Musculação", "Cross Training", "Lutas"],
+      modalidades: ["Musculação", "Personal Trainer", "Dança"],
       whatsapp: "",
       detalhesUrl: "fox-trainner.html",
       mapsUrl: "https://maps.apple.com/?address=Av.%20Neco%20Delfino%2C%20228%2C%20Montes%20Claros%2C%20MG",
       horarios: {
-        0: null,
-        1: { abre: "05:30", fecha: "23:00" },
-        2: { abre: "05:30", fecha: "23:00" },
-        3: { abre: "05:30", fecha: "23:00" },
-        4: { abre: "05:30", fecha: "23:00" },
-        5: { abre: "05:30", fecha: "23:00" },
-        6: { abre: "08:00", fecha: "14:00" }
+        0: { abre: "08:00", fecha: "12:00" },
+        1: { abre: "05:00", fecha: "23:00" },
+        2: { abre: "05:00", fecha: "23:00" },
+        3: { abre: "05:00", fecha: "23:00" },
+        4: { abre: "05:00", fecha: "23:00" },
+        5: { abre: "05:00", fecha: "23:00" },
+        6: [
+          { abre: "08:00", fecha: "12:00" },
+          { abre: "15:00", fecha: "19:00" }
+        ]
       }
     },
     {
