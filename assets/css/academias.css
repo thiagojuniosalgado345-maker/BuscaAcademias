@@ -464,3 +464,15 @@
     height:190px;
   }
 }
+
+.planos {
+  display: flex;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.planoLogo {
+  height: 24px;
+  width: auto;
+  object-fit: contain;
+}
