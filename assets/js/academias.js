@@ -148,6 +148,27 @@ function horarioDeHojeTexto(horarios) {
 }
 
 /* =====================================================
+   SELOS DE PLANOS (Wellhub / TotalPass)
+   Só mostra o selo quando a academia CONFIRMOU que aceita.
+   Se for false ou null (não confirmado), não aparece nada —
+   pra não afirmar algo que ainda não foi checado.
+===================================================== */
+function gerarSelosDePlanos(academia) {
+  const selos = [];
+
+  if (academia.aceitaWellhub) {
+    selos.push('<img class="planoLogo" src="assets/img/wellhub-logo.png" alt="Aceita Wellhub" title="Aceita Wellhub">');
+  }
+  if (academia.aceitaTotalPass) {
+    selos.push('<img class="planoLogo" src="assets/img/totalpass-logo.png" alt="Aceita TotalPass" title="Aceita TotalPass">');
+  }
+
+  if (selos.length === 0) return "";
+
+  return `<div class="planos">${selos.join("")}</div>`;
+}
+
+/* =====================================================
    RENDERIZA OS CARDS
 ===================================================== */
 function renderizarLista(lista) {
@@ -182,6 +203,7 @@ function renderizarLista(lista) {
         <div class="modalidades">
           ${academia.modalidades.map((m) => `<span class="tag">${m}</span>`).join("")}
         </div>
+        ${gerarSelosDePlanos(academia)}
         <div class="horario">
           🕐 Hoje: <strong>${horarioDeHojeTexto(academia.horarios)}</strong>
         </div>
@@ -229,6 +251,18 @@ function filtrarAvaliadas(botao) {
 function filtrarAbertas(botao) {
   ativarFiltro(botao);
   academiaEmExibicao = academiasDaCidade.filter((a) => calcularStatus(a.horarios).aberta);
+  renderizarLista(academiaEmExibicao);
+}
+
+function filtrarWellhub(botao) {
+  ativarFiltro(botao);
+  academiaEmExibicao = academiasDaCidade.filter((a) => a.aceitaWellhub === true);
+  renderizarLista(academiaEmExibicao);
+}
+
+function filtrarTotalPass(botao) {
+  ativarFiltro(botao);
+  academiaEmExibicao = academiasDaCidade.filter((a) => a.aceitaTotalPass === true);
   renderizarLista(academiaEmExibicao);
 }
 
