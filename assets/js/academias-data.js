@@ -20,6 +20,12 @@
   - null  → ainda não confirmado (use null até saber ao certo,
     pra não informar errado)
 
+  coordenadas:
+  - null              → distância aparece como "Distância indisponível"
+  - { lat, lng }       → usado pra calcular a distância real até quem
+    está vendo o site (pegue no Google Maps: botão direito em cima do
+    local no mapa, copia os dois números que aparecem)
+
   Pra adicionar uma academia nova: copia um objeto existente, muda
   os dados, adiciona no array da cidade certa.
 */
@@ -39,6 +45,7 @@ const ACADEMIAS_POR_CIDADE = {
       aceitaTotalPass: null,
       detalhesUrl: "academia-power.html",
       mapsUrl: "#",
+      coordenadas: null, // { lat, lng } — pegue no Google Maps (botão direito no local)
       horarios: {
         0: null,
         1: { abre: "06:00", fecha: "21:30" },
@@ -61,6 +68,7 @@ const ACADEMIAS_POR_CIDADE = {
       aceitaTotalPass: false,
       detalhesUrl: "fox-trainner.html",
       mapsUrl: "https://maps.apple.com/?address=Av.%20Neco%20Delfino%2C%20228%2C%20Montes%20Claros%2C%20MG",
+      coordenadas: { lat: -16.736319, lng: -43.8382303 },
       horarios: {
         0: { abre: "08:00", fecha: "12:00" },
         1: { abre: "05:00", fecha: "23:00" },
@@ -86,6 +94,7 @@ const ACADEMIAS_POR_CIDADE = {
       aceitaTotalPass: null,
       detalhesUrl: "#",
       mapsUrl: "#",
+      coordenadas: null, // { lat, lng } — pegue no Google Maps (botão direito no local)
       horarios: {
         0: null,
         1: { abre: "06:00", fecha: "22:00" },
@@ -108,6 +117,7 @@ const ACADEMIAS_POR_CIDADE = {
       aceitaTotalPass: null,
       detalhesUrl: "#",
       mapsUrl: "#",
+      coordenadas: null, // { lat, lng } — pegue no Google Maps (botão direito no local)
       horarios: {
         0: null,
         1: { abre: "06:00", fecha: "21:00" },
