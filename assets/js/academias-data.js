@@ -45,7 +45,7 @@ const ACADEMIAS_POR_CIDADE = {
       nome: "Fox Trainer",
       bairro: "Delfino Magalhães",
       distancia: "2,1 km",
-      foto: "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?auto=format&fit=crop&w=1000&q=80", // TODO: trocar quando a foto do Insta @foxtrainner chegar
+      foto: "assets/img/images.jpg"
       avaliacao: 4.6,
       modalidades: ["Musculação", "Personal Trainer", "Dança"],
       whatsapp: "",
