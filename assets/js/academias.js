@@ -56,6 +56,7 @@ async function buscarAcademiasDoSupabase(cidadeSlug) {
 
 function converterLinhaDoSupabase(linha) {
   return {
+    id: linha.id,
     nome: linha.nome,
     bairro: linha.bairro,
     foto: linha.foto,
@@ -254,7 +255,7 @@ function renderizarLista(lista) {
           🕐 Hoje: <strong>${horarioDeHojeTexto(academia.horarios)}</strong>
         </div>
         <div class="cardBottom">
-          <a class="primaryBtn" href="${academia.detalhesUrl}">Ver detalhes</a>
+          <a class="primaryBtn" href="academia.html?id=${academia.id}">Ver detalhes</a>
           <a class="secondaryBtn" href="${academia.mapsUrl}" target="_blank">📍 Localização</a>
         </div>
       </div>
