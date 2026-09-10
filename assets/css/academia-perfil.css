@@ -1,0 +1,80 @@
+/* ===== Página de perfil da academia (academia.html) ===== */
+
+.perfilCapa {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  max-height: 360px;
+  margin: 16px 0;
+}
+
+.perfilCapa img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  display: block;
+}
+
+.perfilCapa .status {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.perfilCabecalho {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.perfilEndereco {
+  opacity: 0.8;
+  margin-top: 4px;
+}
+
+.perfilNota {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.perfilBotoes {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.perfilSecao {
+  margin: 32px 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.perfilSecao h2 {
+  margin-bottom: 12px;
+}
+
+.listaHorarios,
+.listaPrecos,
+.listaEstrutura {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.galeria {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.galeria img {
+  height: 160px;
+  width: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
