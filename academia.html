@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#06152d">
+
+<meta name="description" content="Perfil completo da academia no BuscaAcademias: horários, preços, estrutura, modalidades e localização.">
+
+<title>Academia | BuscaAcademias</title>
+
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/academias.css">
+</head>
+
+<body>
+
+<nav class="menu">
+
+  <a href="index.html" class="logoMenu">
+    <span class="logoIcon">⌖</span>
+    BUSCA<span>ACADEMIAS</span>
+  </a>
+
+  <ul>
+    <li><a href="index.html">Início</a></li>
+    <li>
+      <select id="cidade" onchange="abrirCidade(this.value)" aria-label="Escolha uma cidade"></select>
+    </li>
+    <li><a href="contato.html">Contato</a></li>
+  </ul>
+
+  <div class="menuDireita">
+    <a href="contato.html#cadastro" class="cadastrar">Cadastrar minha academia</a>
+  </div>
+
+</nav>
+
+
+<main class="container" id="perfilConteudo">
+
+  <div class="breadcrumb" id="breadcrumbPerfil">
+    <a href="index.html">Início</a> &nbsp;›&nbsp; Carregando...
+  </div>
+
+  <div class="perfilCapa">
+    <img id="fotoCapa" src="" alt="">
+    <span class="status" id="statusAcademia">Carregando...</span>
+  </div>
+
+  <div class="perfilCabecalho">
+    <div>
+      <h1 id="nomeAcademia">Carregando...</h1>
+      <p id="enderecoAcademia" class="perfilEndereco"></p>
+    </div>
+    <div class="perfilNota">
+      <span id="notaAcademia"></span>
+      <small id="numAvaliacoes"></small>
+    </div>
+  </div>
+
+  <div class="modalidades" id="modalidadesAcademia"></div>
+
+  <div class="planos" id="planosAcademia"></div>
+
+  <div class="perfilBotoes">
+    <a id="btnMapa" class="primaryBtn" href="#" target="_blank">📍 Ver no mapa</a>
+    <a id="btnWhatsapp" class="secondaryBtn" href="#" target="_blank" style="display:none;">💬 WhatsApp</a>
+    <a id="btnInstagram" class="secondaryBtn" href="#" target="_blank" style="display:none;">📷 Instagram</a>
+    <a id="btnSite" class="secondaryBtn" href="#" target="_blank" style="display:none;">🌐 Site</a>
+  </div>
+
+  <section class="perfilSecao">
+    <h2>Horários</h2>
+    <ul class="listaHorarios" id="horariosAcademia"></ul>
+  </section>
+
+  <section class="perfilSecao">
+    <h2>Preços</h2>
+    <ul class="listaPrecos" id="precosAcademia"></ul>
+  </section>
+
+  <section class="perfilSecao">
+    <h2>Estrutura</h2>
+    <ul class="listaEstrutura" id="estruturaAcademia"></ul>
+  </section>
+
+  <section class="perfilSecao" id="secaoGaleria">
+    <h2>Fotos</h2>
+    <div class="galeria" id="galeriaAcademia"></div>
+  </section>
+
+</main>
+
+
+<footer>
+  <strong>BuscaAcademias</strong>
+  <br>
+  Encontre. Compare. Escolha.
+
+  <nav aria-label="Links do rodapé">
+    <a href="index.html">Início</a>
+    <a href="contato.html">Contato</a>
+  </nav>
+
+  <br>
+  © BuscaAcademias 2026
+</footer>
+
+
+<script src="assets/js/cidades-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/academia-perfil.js"></script>
+
+</body>
+</html>
