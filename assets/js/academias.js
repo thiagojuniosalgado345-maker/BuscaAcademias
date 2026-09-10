@@ -10,13 +10,20 @@
 
 const DIAS_SEMANA = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
 
+// Dados de conexão do Supabase. A "publishable key" é segura pra
+// ficar exposta no código do site — não dá acesso de escrita,
+// só permite o que as regras (RLS) da tabela liberarem.
+const SUPABASE_URL = "https://bsihmwcnixszgiaovbnf.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_lNPnVij18jTBa1R8QG_TAA_eCizvL9F";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
 let academiasDaCidade = [];
 let academiaEmExibicao = [];
 let localizacaoUsuario = null; // { lat, lng } — preenchido depois que a pessoa autoriza a localização
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
   const cidadeSlug = document.body.dataset.cidade;
-  academiasDaCidade = ACADEMIAS_POR_CIDADE[cidadeSlug] || [];
+  academiasDaCidade = await buscarAcademiasDoSupabase(cidadeSlug);
   academiaEmExibicao = academiasDaCidade.slice();
 
   renderizarLista(academiaEmExibicao);
@@ -27,6 +34,45 @@ document.addEventListener("DOMContentLoaded", () => {
   // no horário de fechar, o badge atualiza sozinho.
   setInterval(() => renderizarLista(academiaEmExibicao), 60000);
 });
+
+/* =====================================================
+   BUSCA AS ACADEMIAS NO SUPABASE
+   Converte os nomes de coluna do banco (snake_case) pro
+   formato que o resto do código já espera (camelCase).
+===================================================== */
+async function buscarAcademiasDoSupabase(cidadeSlug) {
+  const { data, error } = await supabaseClient
+    .from("academias")
+    .select("*")
+    .eq("cidade", cidadeSlug);
+
+  if (error) {
+    console.error("Erro ao buscar academias no Supabase:", error);
+    return [];
+  }
+
+  return data.map(converterLinhaDoSupabase);
+}
+
+function converterLinhaDoSupabase(linha) {
+  return {
+    nome: linha.nome,
+    bairro: linha.bairro,
+    foto: linha.foto,
+    avaliacao: Number(linha.avaliacao),
+    modalidades: linha.modalidades || [],
+    whatsapp: linha.whatsapp || "",
+    aceitaWellhub: linha.aceita_wellhub,
+    aceitaTotalPass: linha.aceita_totalpass,
+    detalhesUrl: linha.detalhes_url,
+    mapsUrl: linha.maps_url,
+    coordenadas:
+      linha.latitude != null && linha.longitude != null
+        ? { lat: linha.latitude, lng: linha.longitude }
+        : null,
+    horarios: linha.horarios
+  };
+}
 
 /* =====================================================
    NORMALIZA O HORÁRIO DE UM DIA EM UMA LISTA DE PERÍODOS,
