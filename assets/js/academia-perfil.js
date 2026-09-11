@@ -26,6 +26,7 @@ const NOMES_ESTRUTURA = {
 };
 
 let academiaIdAtual = null;
+let notaSelecionada = 0;
 
 document.addEventListener("DOMContentLoaded", async () => {
   const id = new URLSearchParams(window.location.search).get("id");
@@ -214,12 +215,26 @@ function configurarFormularioAvaliacao(academiaId) {
     return;
   }
 
-  document.querySelectorAll('input[name="nota"]').forEach((radio) => {
-    radio.addEventListener("change", () => {
-      const nota = Number(radio.value);
-      document.getElementById("notaTexto").textContent = `${nota} de 5 — ${ROTULOS_NOTA[nota]}`;
+  const estrelas = Array.from(document.querySelectorAll("#estrelasEscolha .estrela"));
+  const notaTexto = document.getElementById("notaTexto");
+  const container = document.getElementById("estrelasEscolha");
+
+  function pintarEstrelas(ate) {
+    estrelas.forEach((estrela) => {
+      estrela.classList.toggle("selecionada", Number(estrela.dataset.nota) <= ate);
+    });
+  }
+
+  estrelas.forEach((estrela) => {
+    estrela.addEventListener("mouseenter", () => pintarEstrelas(Number(estrela.dataset.nota)));
+
+    estrela.addEventListener("click", () => {
+      notaSelecionada = Number(estrela.dataset.nota);
+      notaTexto.textContent = `${notaSelecionada} de 5 — ${ROTULOS_NOTA[notaSelecionada]}`;
     });
   });
+
+  container.addEventListener("mouseleave", () => pintarEstrelas(notaSelecionada));
 
   document.getElementById("btnEnviarAvaliacao").addEventListener("click", () => {
     enviarAvaliacao(academiaId);
@@ -228,14 +243,13 @@ function configurarFormularioAvaliacao(academiaId) {
 
 async function enviarAvaliacao(academiaId) {
   const feedbackEl = document.getElementById("feedbackAvaliacao");
-  const radioSelecionado = document.querySelector('input[name="nota"]:checked');
 
-  if (!radioSelecionado) {
+  if (notaSelecionada < 1) {
     feedbackEl.textContent = "Escolha de 1 a 5 estrelas antes de enviar.";
     return;
   }
 
-  const nota = Number(radioSelecionado.value);
+  const nota = notaSelecionada;
   const comentario = document.getElementById("comentarioAvaliacao").value.trim();
   const botao = document.getElementById("btnEnviarAvaliacao");
   botao.disabled = true;
