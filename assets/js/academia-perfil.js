@@ -25,6 +25,9 @@ const NOMES_ESTRUTURA = {
   wifi: "Wi-Fi"
 };
 
+let academiaIdAtual = null;
+let notaSelecionada = 0;
+
 document.addEventListener("DOMContentLoaded", async () => {
   const id = new URLSearchParams(window.location.search).get("id");
 
@@ -32,6 +35,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     mostrarErro("Academia não encontrada. Volte e tente de novo.");
     return;
   }
+
+  academiaIdAtual = id;
 
   const { data: academia, error } = await supabaseClient
     .from("academias")
@@ -45,6 +50,8 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   renderizarPerfil(academia);
+  configurarFormularioAvaliacao(id);
+  carregarAvaliacoes(id);
 });
 
 function mostrarErro(mensagem) {
@@ -192,4 +199,99 @@ function renderizarPerfil(academia) {
   } else {
     document.getElementById("secaoGaleria").style.display = "none";
   }
+}
+
+
+/* =====================================================
+   AVALIAÇÕES (estrelas + comentário)
+===================================================== */
+function configurarFormularioAvaliacao(academiaId) {
+  const jaAvaliou = localStorage.getItem(`avaliou_academia_${academiaId}`);
+  if (jaAvaliou) {
+    document.getElementById("blocoFormularioAvaliacao").innerHTML =
+      "<p>Você já avaliou essa academia. Obrigado! 🙌</p>";
+    return;
+  }
+
+  const estrelas = document.querySelectorAll("#estrelasEscolha .estrela");
+
+  estrelas.forEach((estrela) => {
+    estrela.addEventListener("click", () => {
+      notaSelecionada = Number(estrela.dataset.nota);
+      atualizarVisualEstrelas();
+    });
+  });
+
+  document.getElementById("btnEnviarAvaliacao").addEventListener("click", () => {
+    enviarAvaliacao(academiaId);
+  });
+}
+
+function atualizarVisualEstrelas() {
+  document.querySelectorAll("#estrelasEscolha .estrela").forEach((estrela) => {
+    estrela.classList.toggle("selecionada", Number(estrela.dataset.nota) <= notaSelecionada);
+  });
+}
+
+async function enviarAvaliacao(academiaId) {
+  const feedbackEl = document.getElementById("feedbackAvaliacao");
+
+  if (notaSelecionada < 1) {
+    feedbackEl.textContent = "Escolha de 1 a 5 estrelas antes de enviar.";
+    return;
+  }
+
+  const comentario = document.getElementById("comentarioAvaliacao").value.trim();
+  const botao = document.getElementById("btnEnviarAvaliacao");
+  botao.disabled = true;
+  feedbackEl.textContent = "Enviando...";
+
+  const { error } = await supabaseClient.from("avaliacoes").insert({
+    academia_id: academiaId,
+    nota: notaSelecionada,
+    comentario: comentario || null
+  });
+
+  if (error) {
+    feedbackEl.textContent = "Não foi possível enviar sua avaliação. Tenta de novo em instantes.";
+    botao.disabled = false;
+    return;
+  }
+
+  localStorage.setItem(`avaliou_academia_${academiaId}`, "true");
+  document.getElementById("blocoFormularioAvaliacao").innerHTML =
+    "<p>Valeu pela avaliação! 🙌</p>";
+
+  // Recarrega os dados da academia pra já mostrar a nota atualizada
+  const { data: academiaAtualizada } = await supabaseClient
+    .from("academias")
+    .select("*")
+    .eq("id", academiaId)
+    .single();
+
+  if (academiaAtualizada) renderizarPerfil(academiaAtualizada);
+  carregarAvaliacoes(academiaId);
+}
+
+async function carregarAvaliacoes(academiaId) {
+  const { data: avaliacoes, error } = await supabaseClient
+    .from("avaliacoes")
+    .select("nota, comentario, criado_em")
+    .eq("academia_id", academiaId)
+    .order("criado_em", { ascending: false });
+
+  const listaEl = document.getElementById("listaAvaliacoes");
+  if (!listaEl) return;
+
+  if (error || !avaliacoes || avaliacoes.length === 0) {
+    listaEl.innerHTML = "<p>Ainda não tem avaliações. Seja o primeiro!</p>";
+    return;
+  }
+
+  listaEl.innerHTML = avaliacoes.map((av) => `
+    <div class="avaliacaoItem">
+      <div class="avaliacaoEstrelas">${"★".repeat(av.nota)}${"☆".repeat(5 - av.nota)}</div>
+      ${av.comentario ? `<p>${av.comentario}</p>` : ""}
+    </div>
+  `).join("");
 }
