@@ -79,20 +79,57 @@
   object-fit: cover;
 }
 
-/* ===== Avaliações (estrelas + comentários) ===== */
+/* ===== Cartão de avaliação (destaque, logo após os botões) ===== */
 
-.estrelasEscolha {
-  font-size: 32px;
-  margin: 12px 0;
+.cartaoAvaliar {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 14px;
+  padding: 24px;
+  margin: 24px 0;
 }
 
-.estrela {
-  cursor: pointer;
+.cartaoAvaliar h2 {
+  margin-bottom: 4px;
+}
+
+.cartaoAvaliar p {
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+/* Estrelas clicáveis — usa inputs de rádio escondidos + labels grandes,
+   é o jeito mais confiável de fazer isso funcionar em qualquer navegador */
+.estrelas {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 4px;
+  margin-bottom: 14px;
+}
+
+.estrelas input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.estrelas label {
+  font-size: 40px;
+  line-height: 1;
   color: rgba(255,255,255,0.25);
-  transition: color 0.15s ease;
+  cursor: pointer;
+  transition: color 0.15s ease, transform 0.1s ease;
+  user-select: none;
 }
 
-.estrela.selecionada {
+.estrelas label:hover {
+  transform: scale(1.1);
+}
+
+.estrelas input:checked ~ label,
+.estrelas label:hover,
+.estrelas label:hover ~ label {
   color: var(--yellow, #ffc107);
 }
 
