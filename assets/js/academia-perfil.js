@@ -26,7 +26,6 @@ const NOMES_ESTRUTURA = {
 };
 
 let academiaIdAtual = null;
-let notaSelecionada = 0;
 
 document.addEventListener("DOMContentLoaded", async () => {
   const id = new URLSearchParams(window.location.search).get("id");
@@ -209,38 +208,25 @@ function configurarFormularioAvaliacao(academiaId) {
   const jaAvaliou = localStorage.getItem(`avaliou_academia_${academiaId}`);
   if (jaAvaliou) {
     document.getElementById("blocoFormularioAvaliacao").innerHTML =
-      "<p>Você já avaliou essa academia. Obrigado! 🙌</p>";
+      "<h2>Você já avaliou essa academia. Obrigado! 🙌</h2>";
     return;
   }
-
-  const estrelas = document.querySelectorAll("#estrelasEscolha .estrela");
-
-  estrelas.forEach((estrela) => {
-    estrela.addEventListener("click", () => {
-      notaSelecionada = Number(estrela.dataset.nota);
-      atualizarVisualEstrelas();
-    });
-  });
 
   document.getElementById("btnEnviarAvaliacao").addEventListener("click", () => {
     enviarAvaliacao(academiaId);
   });
 }
 
-function atualizarVisualEstrelas() {
-  document.querySelectorAll("#estrelasEscolha .estrela").forEach((estrela) => {
-    estrela.classList.toggle("selecionada", Number(estrela.dataset.nota) <= notaSelecionada);
-  });
-}
-
 async function enviarAvaliacao(academiaId) {
   const feedbackEl = document.getElementById("feedbackAvaliacao");
+  const radioSelecionado = document.querySelector('input[name="nota"]:checked');
 
-  if (notaSelecionada < 1) {
+  if (!radioSelecionado) {
     feedbackEl.textContent = "Escolha de 1 a 5 estrelas antes de enviar.";
     return;
   }
 
+  const nota = Number(radioSelecionado.value);
   const comentario = document.getElementById("comentarioAvaliacao").value.trim();
   const botao = document.getElementById("btnEnviarAvaliacao");
   botao.disabled = true;
@@ -248,7 +234,7 @@ async function enviarAvaliacao(academiaId) {
 
   const { error } = await supabaseClient.from("avaliacoes").insert({
     academia_id: academiaId,
-    nota: notaSelecionada,
+    nota: nota,
     comentario: comentario || null
   });
 
@@ -260,7 +246,7 @@ async function enviarAvaliacao(academiaId) {
 
   localStorage.setItem(`avaliou_academia_${academiaId}`, "true");
   document.getElementById("blocoFormularioAvaliacao").innerHTML =
-    "<p>Valeu pela avaliação! 🙌</p>";
+    "<h2>Valeu pela avaliação! 🙌</h2>";
 
   // Recarrega os dados da academia pra já mostrar a nota atualizada
   const { data: academiaAtualizada } = await supabaseClient
