@@ -79,47 +79,93 @@
   object-fit: cover;
 }
 
-/* ===== Cartão de avaliação (destaque, logo após os botões) ===== */
+/* ===== Cartão de avaliação (destaque, logo após os botões) =====
+   Tudo dentro deste cartão é forçado a ficar em coluna (flex-direction:
+   column), um item embaixo do outro — assim nenhuma regra genérica de
+   input/button do resto do site consegue bagunçar esse layout. */
 
 .cartaoAvaliar {
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 14px;
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 18px;
+  background: #0A1E3D;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 28px;
   margin: 24px 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cartaoAvaliarCabecalho {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconeAvaliar {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: rgba(255,193,7,0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 16px;
 }
 
 .cartaoAvaliar h2 {
-  margin-bottom: 4px;
+  margin: 0;
+  font-size: 19px;
 }
 
-.cartaoAvaliar p {
-  opacity: 0.8;
-  margin-bottom: 12px;
+.cartaoAvaliarSubtitulo {
+  margin: -10px 0 0 44px;
+  font-size: 14px;
+  opacity: 0.65;
+  line-height: 1.5;
+}
+
+.blocoEstrelas {
+  margin: 0;
+}
+
+.rotuloEstrelas {
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  opacity: 0.55;
+  margin: 0 0 10px 0;
 }
 
 /* Estrelas clicáveis — usa inputs de rádio escondidos + labels grandes,
    é o jeito mais confiável de fazer isso funcionar em qualquer navegador */
 .estrelas {
-  display: inline-flex;
+  display: flex;
   flex-direction: row-reverse;
   justify-content: flex-end;
-  gap: 4px;
-  margin-bottom: 14px;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  width: auto;
 }
 
 .estrelas input {
   position: absolute;
+  width: 1px;
+  height: 1px;
   opacity: 0;
   pointer-events: none;
 }
 
 .estrelas label {
+  display: inline-block;
   font-size: 40px;
   line-height: 1;
-  color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.18);
   cursor: pointer;
-  transition: color 0.15s ease, transform 0.1s ease;
+  transition: color 0.12s ease, transform 0.1s ease;
   user-select: none;
 }
 
@@ -133,23 +179,49 @@
   color: var(--yellow, #ffc107);
 }
 
+#notaTexto {
+  margin: 8px 0 0 0;
+  font-size: 13px;
+  color: var(--yellow, #ffc107);
+  min-height: 16px;
+}
+
 #comentarioAvaliacao {
-  width: 100%;
-  max-width: 480px;
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 8px;
-  color: inherit;
-  padding: 10px;
-  font-family: inherit;
-  resize: vertical;
   display: block;
-  margin-bottom: 12px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  background: #0F274C;
+  border: 1px solid #23385C;
+  border-radius: 10px;
+  color: inherit;
+  padding: 12px 14px;
+  font-family: inherit;
+  font-size: 14px;
+  resize: vertical;
+  margin: 0;
+}
+
+.cartaoAvaliar #btnEnviarAvaliacao {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 0;
+  padding: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  border-radius: 10px;
 }
 
 #feedbackAvaliacao {
-  margin-top: 8px;
+  margin: 0;
   opacity: 0.85;
+  font-size: 14px;
+}
+
+#feedbackAvaliacao:empty {
+  display: none;
 }
 
 .avaliacaoItem {
