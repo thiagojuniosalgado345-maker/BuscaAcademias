@@ -75,15 +75,23 @@
   </div>
 
   <div class="cartaoAvaliar" id="blocoFormularioAvaliacao">
-    <h2>Avalie sua experiência</h2>
-    <p>Já treinou aqui? Conte pra quem está pesquisando.</p>
 
-    <div class="estrelas" id="estrelasEscolha">
-      <input type="radio" id="estrela5" name="nota" value="5"><label for="estrela5" title="5 estrelas">★</label>
-      <input type="radio" id="estrela4" name="nota" value="4"><label for="estrela4" title="4 estrelas">★</label>
-      <input type="radio" id="estrela3" name="nota" value="3"><label for="estrela3" title="3 estrelas">★</label>
-      <input type="radio" id="estrela2" name="nota" value="2"><label for="estrela2" title="2 estrelas">★</label>
-      <input type="radio" id="estrela1" name="nota" value="1"><label for="estrela1" title="1 estrela">★</label>
+    <div class="cartaoAvaliarCabecalho">
+      <span class="iconeAvaliar">⭐</span>
+      <h2>Avalie sua experiência</h2>
+    </div>
+    <p class="cartaoAvaliarSubtitulo">Já treinou aqui? Conte pra quem está pesquisando.</p>
+
+    <div class="blocoEstrelas">
+      <p class="rotuloEstrelas">SUA NOTA</p>
+      <div class="estrelas" id="estrelasEscolha">
+        <input type="radio" id="estrela5" name="nota" value="5"><label for="estrela5" title="5 estrelas">★</label>
+        <input type="radio" id="estrela4" name="nota" value="4"><label for="estrela4" title="4 estrelas">★</label>
+        <input type="radio" id="estrela3" name="nota" value="3"><label for="estrela3" title="3 estrelas">★</label>
+        <input type="radio" id="estrela2" name="nota" value="2"><label for="estrela2" title="2 estrelas">★</label>
+        <input type="radio" id="estrela1" name="nota" value="1"><label for="estrela1" title="1 estrela">★</label>
+      </div>
+      <p id="notaTexto"></p>
     </div>
 
     <textarea id="comentarioAvaliacao" placeholder="Conte como foi sua experiência (opcional)" rows="3"></textarea>
