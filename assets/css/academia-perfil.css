@@ -78,3 +78,49 @@
   border-radius: 10px;
   object-fit: cover;
 }
+
+/* ===== Avaliações (estrelas + comentários) ===== */
+
+.estrelasEscolha {
+  font-size: 32px;
+  margin: 12px 0;
+}
+
+.estrela {
+  cursor: pointer;
+  color: rgba(255,255,255,0.25);
+  transition: color 0.15s ease;
+}
+
+.estrela.selecionada {
+  color: var(--yellow, #ffc107);
+}
+
+#comentarioAvaliacao {
+  width: 100%;
+  max-width: 480px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 8px;
+  color: inherit;
+  padding: 10px;
+  font-family: inherit;
+  resize: vertical;
+  display: block;
+  margin-bottom: 12px;
+}
+
+#feedbackAvaliacao {
+  margin-top: 8px;
+  opacity: 0.85;
+}
+
+.avaliacaoItem {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding: 14px 0;
+}
+
+.avaliacaoEstrelas {
+  color: var(--yellow, #ffc107);
+  font-size: 18px;
+}
