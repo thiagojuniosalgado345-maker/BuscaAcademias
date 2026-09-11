@@ -204,6 +204,8 @@ function renderizarPerfil(academia) {
 /* =====================================================
    AVALIAÇÕES (estrelas + comentário)
 ===================================================== */
+const ROTULOS_NOTA = { 1: "Ruim", 2: "Regular", 3: "Bom", 4: "Muito bom", 5: "Excelente" };
+
 function configurarFormularioAvaliacao(academiaId) {
   const jaAvaliou = localStorage.getItem(`avaliou_academia_${academiaId}`);
   if (jaAvaliou) {
@@ -211,6 +213,13 @@ function configurarFormularioAvaliacao(academiaId) {
       "<h2>Você já avaliou essa academia. Obrigado! 🙌</h2>";
     return;
   }
+
+  document.querySelectorAll('input[name="nota"]').forEach((radio) => {
+    radio.addEventListener("change", () => {
+      const nota = Number(radio.value);
+      document.getElementById("notaTexto").textContent = `${nota} de 5 — ${ROTULOS_NOTA[nota]}`;
+    });
+  });
 
   document.getElementById("btnEnviarAvaliacao").addEventListener("click", () => {
     enviarAvaliacao(academiaId);
