@@ -139,27 +139,19 @@
   margin: 0 0 10px 0;
 }
 
-/* Estrelas clicáveis — usa inputs de rádio escondidos + labels grandes,
-   é o jeito mais confiável de fazer isso funcionar em qualquer navegador */
+/* Estrelas clicáveis — ordem natural no HTML (1 a 5, esquerda pra
+   direita), a cor é controlada só via JavaScript no clique/mouse por
+   cima. Isso evita a "pegadinha" de técnicas CSS que invertem a ordem
+   sem a gente perceber. */
 .estrelas {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-end;
   align-items: center;
   gap: 6px;
   margin: 0;
   width: auto;
 }
 
-.estrelas input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.estrelas label {
+.estrela {
   display: inline-block;
   font-size: 40px;
   line-height: 1;
@@ -169,13 +161,11 @@
   user-select: none;
 }
 
-.estrelas label:hover {
+.estrela:hover {
   transform: scale(1.1);
 }
 
-.estrelas input:checked ~ label,
-.estrelas label:hover,
-.estrelas label:hover ~ label {
+.estrela.selecionada {
   color: var(--yellow, #ffc107);
 }
 
