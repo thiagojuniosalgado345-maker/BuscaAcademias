@@ -17,8 +17,26 @@
 
 .perfilCapa .status {
   position: absolute;
+  top: auto;
   bottom: 12px;
   left: 12px;
+  right: auto;
+  display: inline-block;
+  width: auto;
+  height: auto;
+  max-width: calc(100% - 24px);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: normal;
+  color: #fff;
+  background: #2E7D32; /* verde = aberta */
+}
+
+.perfilCapa .status.fechada {
+  background: #B3261E; /* vermelho = fechada */
 }
 
 .perfilCabecalho {
