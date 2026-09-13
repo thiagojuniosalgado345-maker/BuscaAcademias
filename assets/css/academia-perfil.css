@@ -42,6 +42,7 @@
 
 .perfilBotoes {
   display: flex;
+  align-items: center;
   gap: 12px;
   flex-wrap: wrap;
   margin: 20px 0;
@@ -222,4 +223,26 @@
 .avaliacaoEstrelas {
   color: var(--yellow, #ffc107);
   font-size: 18px;
+}
+
+/* ===== Ícones circulares de WhatsApp e Instagram ===== */
+
+.botaoIcone {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  transition: transform 0.12s ease;
+}
+
+.botaoIcone:hover {
+  transform: scale(1.08);
+}
+
+.botaoIcone svg {
+  width: 100%;
+  height: 100%;
 }
