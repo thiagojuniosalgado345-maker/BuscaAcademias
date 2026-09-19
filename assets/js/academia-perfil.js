@@ -1,268 +1,328 @@
-/* ===== Página de perfil da academia (academia.html) ===== */
+/*
+  academia-perfil.js — lógica da página de perfil único de uma
+  academia (academia.html). A mesma página serve pra QUALQUER
+  academia: ela lê o "id" na URL (ex: academia.html?id=2), busca
+  os dados no Supabase e monta a página automaticamente.
 
-.perfilCapa {
-  position: relative;
-  border-radius: 12px;
-  overflow: hidden;
-  max-height: 360px;
-  margin: 16px 0;
+  Depende de site.js já carregado antes (pro menu/dropdown de
+  cidade funcionar igual nas outras páginas).
+*/
+
+const SUPABASE_URL = "https://bsihmwcnixszgiaovbnf.supabase.co";
+const SUPABASE_ANON_KEY = "sb_publishable_lNPnVij18jTBa1R8QG_TAA_eCizvL9F";
+const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+const DIAS_SEMANA = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
+
+const NOMES_ESTRUTURA = {
+  estacionamento: "Estacionamento",
+  piscina: "Piscina",
+  vestiario: "Vestiário",
+  chuveiro: "Chuveiro",
+  ar_condicionado: "Ar-condicionado",
+  cardio: "Área de cardio",
+  musculacao: "Área de musculação",
+  wifi: "Wi-Fi"
+};
+
+let academiaIdAtual = null;
+let notaSelecionada = 0;
+
+document.addEventListener("DOMContentLoaded", async () => {
+  const id = new URLSearchParams(window.location.search).get("id");
+
+  if (!id) {
+    mostrarErro("Academia não encontrada. Volte e tente de novo.");
+    return;
+  }
+
+  academiaIdAtual = id;
+
+  const { data: academia, error } = await supabaseClient
+    .from("academias")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error || !academia) {
+    mostrarErro("Não foi possível carregar essa academia agora.");
+    return;
+  }
+
+  renderizarPerfil(academia);
+  configurarFormularioAvaliacao(id);
+  carregarAvaliacoes(id);
+});
+
+function mostrarErro(mensagem) {
+  document.getElementById("perfilConteudo").innerHTML = `<p class="semResultado"><strong>${mensagem}</strong></p>`;
 }
 
-.perfilCapa img {
-  width: 100%;
-  height: 360px;
-  object-fit: cover;
-  display: block;
+/* =====================================================
+   HORÁRIOS (mesma lógica usada na listagem, em academias.js)
+===================================================== */
+function obterPeriodos(horarioDia) {
+  if (!horarioDia) return [];
+  const periodos = Array.isArray(horarioDia) ? horarioDia : [horarioDia];
+  return periodos.slice().sort((a, b) => a.abre.localeCompare(b.abre));
 }
 
-#statusAcademia {
-  position: absolute !important;
-  top: auto !important;
-  bottom: 12px !important;
-  left: 12px !important;
-  right: auto !important;
-  display: inline-block !important;
-  width: auto !important;
-  height: auto !important;
-  min-height: 0 !important;
-  max-width: calc(100% - 24px) !important;
-  padding: 6px 14px !important;
-  margin: 0 !important;
-  border-radius: 20px !important;
-  font-size: 13px !important;
-  font-weight: 600 !important;
-  line-height: 1.3 !important;
-  white-space: normal !important;
-  color: #fff !important;
-  background: #2E7D32 !important; /* verde = aberta */
+function calcularStatus(horarios) {
+  const agora = new Date();
+  const diaSemana = agora.getDay();
+  const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
+
+  const periodosHoje = obterPeriodos(horarios ? horarios[diaSemana] : null);
+
+  for (const periodo of periodosHoje) {
+    const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
+    const [horaFecha, minFecha] = periodo.fecha.split(":").map(Number);
+    const minutosAbre = horaAbre * 60 + minAbre;
+    const minutosFecha = horaFecha * 60 + minFecha;
+
+    if (minutosAgora >= minutosAbre && minutosAgora < minutosFecha) {
+      return { aberta: true, texto: `Aberta até ${periodo.fecha}` };
+    }
+  }
+
+  const proximoPeriodoHoje = periodosHoje.find((periodo) => {
+    const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
+    return minutosAgora < horaAbre * 60 + minAbre;
+  });
+
+  if (proximoPeriodoHoje) {
+    return { aberta: false, texto: `Abre hoje às ${proximoPeriodoHoje.abre}` };
+  }
+
+  for (let i = 1; i <= 7; i++) {
+    const proximoDia = (diaSemana + i) % 7;
+    const periodosProximoDia = obterPeriodos(horarios ? horarios[proximoDia] : null);
+    if (periodosProximoDia.length > 0) {
+      const rotulo = i === 1 ? "amanhã" : DIAS_SEMANA[proximoDia];
+      return { aberta: false, texto: `Fechada · abre ${rotulo} às ${periodosProximoDia[0].abre}` };
+    }
+  }
+
+  return { aberta: false, texto: "Fechada" };
 }
 
-#statusAcademia.fechada {
-  background: #B3261E !important; /* vermelho = fechada */
+/* =====================================================
+   RENDERIZA A PÁGINA INTEIRA A PARTIR DOS DADOS
+===================================================== */
+function renderizarPerfil(academia) {
+  document.title = `${academia.nome} | BuscaAcademias`;
+
+  document.getElementById("breadcrumbPerfil").innerHTML =
+    `<a href="index.html">Início</a> &nbsp;›&nbsp; ${academia.nome}`;
+
+  document.getElementById("nomeAcademia").textContent = academia.nome;
+  document.getElementById("enderecoAcademia").textContent =
+    academia.endereco || `${academia.bairro || ""}`.trim() || "Endereço não informado";
+
+  const fotoCapa = document.getElementById("fotoCapa");
+  fotoCapa.src = academia.foto || "";
+  fotoCapa.alt = academia.nome;
+
+  const status = calcularStatus(academia.horarios);
+  const statusEl = document.getElementById("statusAcademia");
+  statusEl.textContent = status.texto;
+  statusEl.classList.toggle("fechada", !status.aberta);
+
+  const nota = Number(academia.avaliacao);
+  document.getElementById("notaAcademia").textContent = isNaN(nota) ? "" : `⭐ ${nota.toFixed(1).replace(".", ",")}`;
+  document.getElementById("numAvaliacoes").textContent =
+    academia.numero_avaliacoes ? `(${academia.numero_avaliacoes} avaliações)` : "";
+
+  document.getElementById("modalidadesAcademia").innerHTML =
+    (academia.modalidades || []).map((m) => `<span class="tag">${m}</span>`).join("");
+
+  const selos = [];
+  if (academia.aceita_wellhub) {
+    selos.push('<img class="planoLogo" src="assets/img/wellhub-logo.png" alt="Aceita Wellhub" title="Aceita Wellhub">');
+  }
+  if (academia.aceita_totalpass) {
+    selos.push('<img class="planoLogo" src="assets/img/totalpass-logo.png" alt="Aceita TotalPass" title="Aceita TotalPass">');
+  }
+  document.getElementById("planosAcademia").innerHTML = selos.join("");
+
+  // Mapa embutido com o pino dessa academia
+  const secaoLocalizacao = document.getElementById("mapaAcademiaUnica");
+  const linkGoogleMaps = document.getElementById("linkGoogleMaps");
+
+  if (academia.latitude != null && academia.longitude != null) {
+    criarMapaAcademias("mapaAcademiaUnica", [{
+      id: academia.id,
+      nome: academia.nome,
+      bairro: academia.bairro,
+      foto: academia.foto,
+      avaliacao: Number(academia.avaliacao),
+      coordenadas: { lat: academia.latitude, lng: academia.longitude }
+    }]);
+  } else {
+    secaoLocalizacao.innerHTML = "<p>Localização exata ainda não cadastrada.</p>";
+  }
+
+  if (academia.maps_url) {
+    linkGoogleMaps.href = academia.maps_url;
+  } else {
+    linkGoogleMaps.style.display = "none";
+  }
+
+  // Botões de ação
+  const btnMapa = document.getElementById("btnMapa");
+
+  const btnWhatsapp = document.getElementById("btnWhatsapp");
+  if (academia.whatsapp) {
+    btnWhatsapp.href = `https://wa.me/${academia.whatsapp}`;
+    btnWhatsapp.style.display = "inline-flex";
+  }
+
+  const btnInstagram = document.getElementById("btnInstagram");
+  if (academia.instagram) {
+    const usuario = academia.instagram.replace("@", "");
+    btnInstagram.href = `https://instagram.com/${usuario}`;
+    btnInstagram.style.display = "inline-flex";
+  }
+
+  const btnSite = document.getElementById("btnSite");
+  if (academia.site) {
+    btnSite.href = academia.site;
+    btnSite.style.display = "inline-flex";
+  }
+
+  // Horários (todos os dias da semana)
+  document.getElementById("horariosAcademia").innerHTML = DIAS_SEMANA.map((dia, i) => {
+    const periodos = obterPeriodos(academia.horarios ? academia.horarios[i] : null);
+    const texto = periodos.length ? periodos.map((p) => `${p.abre} às ${p.fecha}`).join(" e ") : "Fechado";
+    return `<li><strong>${dia}:</strong> ${texto}</li>`;
+  }).join("");
+
+  // Preços
+  const precos = academia.precos || {};
+  const itensPreco = [];
+  if (precos.mensalidade) itensPreco.push(`<li>Mensalidade: <strong>R$ ${precos.mensalidade}</strong></li>`);
+  if (precos.matricula) itensPreco.push(`<li>Matrícula: <strong>R$ ${precos.matricula}</strong></li>`);
+  document.getElementById("precosAcademia").innerHTML =
+    itensPreco.length ? itensPreco.join("") : "<li>Preço não informado — entre em contato</li>";
+
+  // Estrutura
+  const estrutura = academia.estrutura || {};
+  const itensEstrutura = Object.entries(estrutura)
+    .filter(([, temItem]) => temItem)
+    .map(([chave]) => `<li>✅ ${NOMES_ESTRUTURA[chave] || chave}</li>`);
+  document.getElementById("estruturaAcademia").innerHTML =
+    itensEstrutura.length ? itensEstrutura.join("") : "<li>Estrutura ainda não informada</li>";
+
+  // Galeria de fotos extras
+  const galeriaEl = document.getElementById("galeriaAcademia");
+  const fotosExtras = academia.fotos || [];
+  if (fotosExtras.length > 0) {
+    galeriaEl.innerHTML = fotosExtras.map((f) => `<img src="${f}" alt="${academia.nome}">`).join("");
+  } else {
+    document.getElementById("secaoGaleria").style.display = "none";
+  }
 }
 
-.perfilCabecalho {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-bottom: 12px;
+
+/* =====================================================
+   AVALIAÇÕES (estrelas + comentário)
+===================================================== */
+const ROTULOS_NOTA = { 1: "Ruim", 2: "Regular", 3: "Bom", 4: "Muito bom", 5: "Excelente" };
+
+function configurarFormularioAvaliacao(academiaId) {
+  const jaAvaliou = localStorage.getItem(`avaliou_academia_${academiaId}`);
+  if (jaAvaliou) {
+    document.getElementById("blocoFormularioAvaliacao").innerHTML =
+      "<h2>Você já avaliou essa academia. Obrigado! 🙌</h2>";
+    return;
+  }
+
+  const estrelas = Array.from(document.querySelectorAll("#estrelasEscolha .estrela"));
+  const notaTexto = document.getElementById("notaTexto");
+  const container = document.getElementById("estrelasEscolha");
+
+  function pintarEstrelas(ate) {
+    estrelas.forEach((estrela) => {
+      estrela.classList.toggle("selecionada", Number(estrela.dataset.nota) <= ate);
+    });
+  }
+
+  estrelas.forEach((estrela) => {
+    estrela.addEventListener("mouseenter", () => pintarEstrelas(Number(estrela.dataset.nota)));
+
+    estrela.addEventListener("click", () => {
+      notaSelecionada = Number(estrela.dataset.nota);
+      notaTexto.textContent = `${notaSelecionada} de 5 — ${ROTULOS_NOTA[notaSelecionada]}`;
+    });
+  });
+
+  container.addEventListener("mouseleave", () => pintarEstrelas(notaSelecionada));
+
+  document.getElementById("btnEnviarAvaliacao").addEventListener("click", () => {
+    enviarAvaliacao(academiaId);
+  });
 }
 
-.perfilEndereco {
-  opacity: 0.8;
-  margin-top: 4px;
+async function enviarAvaliacao(academiaId) {
+  const feedbackEl = document.getElementById("feedbackAvaliacao");
+
+  if (notaSelecionada < 1) {
+    feedbackEl.textContent = "Escolha de 1 a 5 estrelas antes de enviar.";
+    return;
+  }
+
+  const nota = notaSelecionada;
+  const comentario = document.getElementById("comentarioAvaliacao").value.trim();
+  const botao = document.getElementById("btnEnviarAvaliacao");
+  botao.disabled = true;
+  feedbackEl.textContent = "Enviando...";
+
+  const { error } = await supabaseClient.from("avaliacoes").insert({
+    academia_id: academiaId,
+    nota: nota,
+    comentario: comentario || null
+  });
+
+  if (error) {
+    feedbackEl.textContent = "Não foi possível enviar sua avaliação. Tenta de novo em instantes.";
+    botao.disabled = false;
+    return;
+  }
+
+  localStorage.setItem(`avaliou_academia_${academiaId}`, "true");
+  document.getElementById("blocoFormularioAvaliacao").innerHTML =
+    "<h2>Valeu pela avaliação! 🙌</h2>";
+
+  // Recarrega os dados da academia pra já mostrar a nota atualizada
+  const { data: academiaAtualizada } = await supabaseClient
+    .from("academias")
+    .select("*")
+    .eq("id", academiaId)
+    .single();
+
+  if (academiaAtualizada) renderizarPerfil(academiaAtualizada);
+  carregarAvaliacoes(academiaId);
 }
 
-.perfilNota {
-  text-align: right;
-  white-space: nowrap;
-}
+async function carregarAvaliacoes(academiaId) {
+  const { data: avaliacoes, error } = await supabaseClient
+    .from("avaliacoes")
+    .select("nota, comentario, criado_em")
+    .eq("academia_id", academiaId)
+    .order("criado_em", { ascending: false });
 
-.perfilBotoes {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
+  const listaEl = document.getElementById("listaAvaliacoes");
+  if (!listaEl) return;
 
-.perfilSecao {
-  margin: 32px 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-}
+  if (error || !avaliacoes || avaliacoes.length === 0) {
+    listaEl.innerHTML = "<p>Ainda não tem avaliações. Seja o primeiro!</p>";
+    return;
+  }
 
-.perfilSecao h2 {
-  margin-bottom: 12px;
-}
-
-.listaHorarios,
-.listaPrecos,
-.listaEstrutura {
-  list-style: none;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-
-.galeria {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-}
-
-.galeria img {
-  height: 160px;
-  width: auto;
-  border-radius: 10px;
-  object-fit: cover;
-}
-
-/* ===== Cartão de avaliação (destaque, logo após os botões) =====
-   Tudo dentro deste cartão é forçado a ficar em coluna (flex-direction:
-   column), um item embaixo do outro — assim nenhuma regra genérica de
-   input/button do resto do site consegue bagunçar esse layout. */
-
-.cartaoAvaliar {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 18px;
-  background: #0A1E3D;
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 28px;
-  margin: 24px 0;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.cartaoAvaliarCabecalho {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.iconeAvaliar {
-  width: 34px;
-  height: 34px;
-  border-radius: 9px;
-  background: rgba(255,193,7,0.14);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  font-size: 16px;
-}
-
-.cartaoAvaliar h2 {
-  margin: 0;
-  font-size: 19px;
-}
-
-.cartaoAvaliarSubtitulo {
-  margin: -10px 0 0 44px;
-  font-size: 14px;
-  opacity: 0.65;
-  line-height: 1.5;
-}
-
-.blocoEstrelas {
-  margin: 0;
-}
-
-.rotuloEstrelas {
-  font-size: 12px;
-  letter-spacing: 0.02em;
-  opacity: 0.55;
-  margin: 0 0 10px 0;
-}
-
-/* Estrelas clicáveis — ordem natural no HTML (1 a 5, esquerda pra
-   direita), a cor é controlada só via JavaScript no clique/mouse por
-   cima. Isso evita a "pegadinha" de técnicas CSS que invertem a ordem
-   sem a gente perceber. */
-.estrelas {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  margin: 0;
-  width: auto;
-}
-
-.estrela {
-  display: inline-block;
-  font-size: 40px;
-  line-height: 1;
-  color: rgba(255,255,255,0.18);
-  cursor: pointer;
-  transition: color 0.12s ease, transform 0.1s ease;
-  user-select: none;
-}
-
-.estrela:hover {
-  transform: scale(1.1);
-}
-
-.estrela.selecionada {
-  color: var(--yellow, #ffc107);
-}
-
-#notaTexto {
-  margin: 8px 0 0 0;
-  font-size: 13px;
-  color: var(--yellow, #ffc107);
-  min-height: 16px;
-}
-
-#comentarioAvaliacao {
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  background: #0F274C;
-  border: 1px solid #23385C;
-  border-radius: 10px;
-  color: inherit;
-  padding: 12px 14px;
-  font-family: inherit;
-  font-size: 14px;
-  resize: vertical;
-  margin: 0;
-}
-
-.cartaoAvaliar #btnEnviarAvaliacao {
-  display: block;
-  width: 100%;
-  box-sizing: border-box;
-  text-align: center;
-  margin: 0;
-  padding: 13px;
-  font-size: 15px;
-  font-weight: 600;
-  border-radius: 10px;
-}
-
-#feedbackAvaliacao {
-  margin: 0;
-  opacity: 0.85;
-  font-size: 14px;
-}
-
-#feedbackAvaliacao:empty {
-  display: none;
-}
-
-.avaliacaoItem {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding: 14px 0;
-}
-
-.avaliacaoEstrelas {
-  color: var(--yellow, #ffc107);
-  font-size: 18px;
-}
-
-/* ===== Ícones circulares de WhatsApp e Instagram ===== */
-
-.botaoIcone {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  flex-shrink: 0;
-  transition: transform 0.12s ease;
-}
-
-.botaoIcone:hover {
-  transform: scale(1.08);
-}
-
-.botaoIcone svg {
-  width: 100%;
-  height: 100%;
+  listaEl.innerHTML = avaliacoes.map((av) => `
+    <div class="avaliacaoItem">
+      <div class="avaliacaoEstrelas">${"★".repeat(av.nota)}${"☆".repeat(5 - av.nota)}</div>
+      ${av.comentario ? `<p>${av.comentario}</p>` : ""}
+    </div>
+  `).join("");
 }
