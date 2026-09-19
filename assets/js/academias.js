@@ -340,3 +340,32 @@ function favoritar(botao) {
   botao.innerText = favoritado ? "♡" : "♥";
   botao.style.color = favoritado ? "#fff" : "var(--yellow)";
 }
+
+/* =====================================================
+   ALTERNAR ENTRE VISÃO "LISTA" E "MAPA"
+   Usado no toggle da página de listagem por cidade.
+===================================================== */
+let mapaInstancia = null;
+
+function mostrarVisaoLista() {
+  document.getElementById("academias").style.display = "";
+  document.getElementById("blocoMapa").style.display = "none";
+  document.getElementById("btnVisaoLista").classList.add("ativo");
+  document.getElementById("btnVisaoMapa").classList.remove("ativo");
+}
+
+function mostrarVisaoMapa() {
+  document.getElementById("academias").style.display = "none";
+  document.getElementById("blocoMapa").style.display = "";
+  document.getElementById("btnVisaoMapa").classList.add("ativo");
+  document.getElementById("btnVisaoLista").classList.remove("ativo");
+
+  if (!mapaInstancia) {
+    mapaInstancia = criarMapaAcademias("mapaAcademias", academiasDaCidade);
+  }
+
+  // O Leaflet calcula o tamanho do mapa no momento em que é criado.
+  // Como o container estava escondido (display:none) até agora, sem
+  // isso o mapa aparece cinza/cortado. invalidateSize() corrige.
+  setTimeout(() => mapaInstancia.invalidateSize(), 100);
+}
