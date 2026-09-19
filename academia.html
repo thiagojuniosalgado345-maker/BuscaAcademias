@@ -13,33 +13,17 @@
 <link rel="icon" type="image/png" href="favicon-32.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/academias.css">
 <link rel="stylesheet" href="assets/css/academia-perfil.css">
+<link rel="stylesheet" href="assets/css/mapa-academias.css">
 </head>
 
 <body>
 
-<nav class="menu">
-
-  <a href="index.html" class="logoMenu">
-    <span class="logoIcon">⌖</span>
-    BUSCA<span>ACADEMIAS</span>
-  </a>
-
-  <ul>
-    <li><a href="index.html">Início</a></li>
-    <li>
-      <select id="cidade" onchange="abrirCidade(this.value)" aria-label="Escolha uma cidade"></select>
-    </li>
-    <li><a href="contato.html">Contato</a></li>
-  </ul>
-
-  <div class="menuDireita">
-    <a href="contato.html#cadastro" class="cadastrar">Cadastrar minha academia</a>
-  </div>
-
-</nav>
+<div id="menuTopo"></div>
 
 
 <main class="container" id="perfilConteudo">
@@ -69,7 +53,7 @@
   <div class="planos" id="planosAcademia"></div>
 
   <div class="perfilBotoes">
-    <a id="btnMapa" class="primaryBtn" href="#" target="_blank">📍 Ver no mapa</a>
+    <a id="btnMapa" class="primaryBtn" href="#secaoLocalizacao">📍 Ver no mapa</a>
 
     <a id="btnWhatsapp" class="botaoIcone botaoIconeWhatsapp" href="#" target="_blank" title="WhatsApp" style="display:none;">
       <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -124,6 +108,12 @@
     <p id="feedbackAvaliacao"></p>
   </div>
 
+  <section class="perfilSecao" id="secaoLocalizacao">
+    <h2>Localização</h2>
+    <div id="mapaAcademiaUnica"></div>
+    <a id="linkGoogleMaps" href="#" target="_blank" class="linkMapaExterno">Abrir no Google Maps →</a>
+  </section>
+
   <section class="perfilSecao">
     <h2>Horários</h2>
     <ul class="listaHorarios" id="horariosAcademia"></ul>
@@ -152,24 +142,15 @@
 </main>
 
 
-<footer>
-  <strong>BuscaAcademias</strong>
-  <br>
-  Encontre. Compare. Escolha.
-
-  <nav aria-label="Links do rodapé">
-    <a href="index.html">Início</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-
-  <br>
-  © BuscaAcademias 2026
-</footer>
+<div id="rodape"></div>
 
 
 <script src="assets/js/cidades-data.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/layout.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/mapa-academias.js"></script>
 <script src="assets/js/academia-perfil.js"></script>
 
 </body>
