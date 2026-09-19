@@ -52,7 +52,34 @@ document.addEventListener("DOMContentLoaded", async () => {
   renderizarPerfil(academia);
   configurarFormularioAvaliacao(id);
   carregarAvaliacoes(id);
+  escutarAtualizacoesEmTempoReal(id);
 });
+
+/* =====================================================
+   TEMPO REAL — quando alguém avalia essa academia (mesmo
+   sendo outra pessoa, em outro celular/computador), a nota
+   e a lista de avaliações atualizam sozinhas nesta tela,
+   sem precisar recarregar a página.
+===================================================== */
+function escutarAtualizacoesEmTempoReal(academiaId) {
+  supabaseClient
+    .channel(`academia-${academiaId}`)
+    .on(
+      "postgres_changes",
+      { event: "UPDATE", schema: "public", table: "academias", filter: `id=eq.${academiaId}` },
+      (payload) => {
+        renderizarPerfil(payload.new);
+      }
+    )
+    .on(
+      "postgres_changes",
+      { event: "INSERT", schema: "public", table: "avaliacoes", filter: `academia_id=eq.${academiaId}` },
+      () => {
+        carregarAvaliacoes(academiaId);
+      }
+    )
+    .subscribe();
+}
 
 function mostrarErro(mensagem) {
   document.getElementById("perfilConteudo").innerHTML = `<p class="semResultado"><strong>${mensagem}</strong></p>`;
