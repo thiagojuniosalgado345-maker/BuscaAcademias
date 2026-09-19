@@ -25,58 +25,15 @@
 
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/academias.css">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/mapa-academias.css">
 </head>
 
 
 <body data-cidade="montes-claros">
 
 
-<nav class="menu">
-
-  <a href="index.html" class="logoMenu">
-    <span class="logoIcon">⌖</span>
-    BUSCA<span>ACADEMIAS</span>
-  </a>
-
-  <ul>
-
-    <li>
-      <a href="index.html">Início</a>
-    </li>
-
-    <li>
-      <select id="cidade" onchange="abrirCidade(this.value)" aria-label="Escolha uma cidade">
-      </select>
-    </li>
-
-    <li>
-      <a href="#academias">Academias</a>
-    </li>
-
-    <li>
-      <a href="contato.html">Contato</a>
-    </li>
-
-  </ul>
-
-  <div class="menuDireita">
-
-    <button
-      type="button"
-      class="favoritoMenu"
-      aria-label="Favoritar esta página"
-      onclick="alternarFavorito()"
-    >
-      ♡
-    </button>
-
-    <a href="contato.html#cadastro" class="cadastrar">
-      Cadastrar minha academia
-    </a>
-
-  </div>
-
-</nav>
+<div id="menuTopo"></div>
 
 
 
@@ -128,7 +85,14 @@
 
 </div>
 
+<div class="container toggleVisualizacao">
+  <button class="toggleBtn ativo" id="btnVisaoLista" onclick="mostrarVisaoLista()">📋 Lista</button>
+  <button class="toggleBtn" id="btnVisaoMapa" onclick="mostrarVisaoMapa()">🗺️ Mapa</button>
+</div>
 
+<div class="container" id="blocoMapa" style="display:none;">
+  <div id="mapaAcademias"></div>
+</div>
 
 <main class="container" id="academias">
 
@@ -193,27 +157,15 @@
 
 
 
-<footer>
-
-  <strong>BuscaAcademias</strong>
-  <br>
-  Encontre. Compare. Escolha.
-
-  <nav aria-label="Links do rodapé">
-    <a href="index.html">Início</a>
-    <a href="#academias">Academias</a>
-    <a href="contato.html">Contato</a>
-  </nav>
-
-  <br>
-  © BuscaAcademias 2026
-
-</footer>
+<div id="rodape"></div>
 
 
 <script src="assets/js/cidades-data.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/layout.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="assets/js/mapa-academias.js"></script>
 <script src="assets/js/academias.js"></script>
 
 </body>
