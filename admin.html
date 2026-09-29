@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#06152d">
+
+<title>Painel | BuscaAcademias</title>
+
+<link rel="icon" type="image/png" href="favicon-32.png">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+
+<body>
+
+<!-- =================== TELA DE LOGIN =================== -->
+<main id="telaLogin" class="login">
+  <form id="formLogin" class="cartao loginCartao">
+    <h1>⌖ BUSCA<span>ACADEMIAS</span></h1>
+    <p class="sub">Painel de administração · acesso restrito</p>
+
+    <label class="campo">
+      <span>E-mail</span>
+      <input type="email" id="loginEmail" autocomplete="username" required>
+    </label>
+
+    <label class="campo">
+      <span>Senha</span>
+      <input type="password" id="loginSenha" autocomplete="current-password" required>
+    </label>
+
+    <button type="submit" id="btnLogin" class="btn btnPrimario btnGrande">Entrar</button>
+    <p id="loginErro" class="msgErro" role="alert"></p>
+  </form>
+</main>
+
+
+<!-- =================== PAINEL =================== -->
+<div id="telaPainel" hidden>
+
+  <header class="topo">
+    <strong class="marca">⌖ BUSCA<span>ACADEMIAS</span> <em>· Painel</em></strong>
+    <div class="topoDireita">
+      <a href="index.html" target="_blank" class="linkTopo">Ver site ↗</a>
+      <span id="usuarioLogado" class="usuario"></span>
+      <button type="button" id="btnSair" class="btn btnSecundario">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+
+    <div class="barraFerramentas">
+      <input type="search" id="filtroLista" placeholder="Buscar por nome, bairro ou cidade...">
+      <button type="button" id="btnNova" class="btn btnPrimario">＋ Nova academia</button>
+    </div>
+
+    <p id="resumoLista" class="sub"></p>
+
+    <div id="listaAdmin" class="lista"></div>
+
+  </main>
+
+
+  <!-- =================== FORMULÁRIO (janela) =================== -->
+  <div id="modalFundo" class="modalFundo" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="tituloModal">
+
+      <header class="modalTopo">
+        <h2 id="tituloModal">Nova academia</h2>
+        <button type="button" id="btnFecharModal" class="btnIcone" aria-label="Fechar">✕</button>
+      </header>
+
+      <form id="formAcademia" class="modalCorpo" novalidate>
+
+        <fieldset>
+          <legend>Informações básicas</legend>
+
+          <div class="grade">
+            <label class="campo">
+              <span>Cidade *</span>
+              <select id="f_cidade"></select>
+            </label>
+
+            <label class="campo">
+              <span>Nome da academia *</span>
+              <input type="text" id="f_nome" maxlength="80" placeholder="Ex: Fox Trainner">
+            </label>
+
+            <label class="campo">
+              <span>Bairro</span>
+              <input type="text" id="f_bairro" maxlength="60" placeholder="Ex: Delfino Magalhães">
+            </label>
+
+            <label class="campo largo">
+              <span>Endereço completo</span>
+              <input type="text" id="f_endereco" maxlength="160" placeholder="Ex: Av. Neco Delfino, 228, Montes Claros - MG">
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Contato</legend>
+
+          <div class="grade">
+            <label class="campo">
+              <span>WhatsApp</span>
+              <input type="text" id="f_whatsapp" inputmode="tel" placeholder="Ex: (38) 99904-2432">
+              <small>Pode digitar do jeito que quiser — o painel arruma o formato.</small>
+            </label>
+
+            <label class="campo">
+              <span>Instagram</span>
+              <input type="text" id="f_instagram" placeholder="Ex: @foxtrainner ou o link do perfil">
+            </label>
+
+            <label class="campo largo">
+              <span>Site (se tiver)</span>
+              <input type="text" id="f_site" placeholder="Ex: www.minhaacademia.com.br">
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Localização no mapa</legend>
+
+          <label class="campo">
+            <span>Colar coordenadas ou link do Google Maps</span>
+            <input type="text" id="f_coordenadas" placeholder="Ex: -16.7351185, -43.8416424  ou  o link completo do Google Maps">
+            <small>
+              Jeito mais fácil: no Google Maps, clique com o botão direito exatamente em cima da academia
+              e clique nos números que aparecem (eles são copiados). Cole aqui.
+              Links curtos (maps.app.goo.gl) não funcionam: abra o link, e copie o endereço completo da barra do navegador.
+            </small>
+            <small id="coordenadasResultado"></small>
+          </label>
+
+          <div class="grade">
+            <label class="campo">
+              <span>Latitude</span>
+              <input type="text" id="f_lat" inputmode="decimal" placeholder="-16.7351185">
+            </label>
+
+            <label class="campo">
+              <span>Longitude</span>
+              <input type="text" id="f_lng" inputmode="decimal" placeholder="-43.8416424">
+            </label>
+
+            <label class="campo largo">
+              <span>Link do Google Maps (opcional)</span>
+              <input type="text" id="f_mapsurl" placeholder="Se deixar em branco, o painel gera um link a partir das coordenadas">
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Modalidades e preços</legend>
+
+          <div class="grade">
+            <label class="campo largo">
+              <span>Modalidades (separe por vírgula)</span>
+              <input type="text" id="f_modalidades" placeholder="Ex: Musculação, Funcional, Pilates">
+            </label>
+
+            <label class="campo">
+              <span>Mensalidade (R$)</span>
+              <input type="text" id="f_mensalidade" inputmode="decimal" placeholder="Ex: 95">
+            </label>
+
+            <label class="campo">
+              <span>Matrícula (R$)</span>
+              <input type="text" id="f_matricula" inputmode="decimal" placeholder="Ex: 0">
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Planos aceitos</legend>
+
+          <div class="grade">
+            <label class="campo">
+              <span>Wellhub</span>
+              <select id="f_wellhub">
+                <option value="">Ainda não confirmado</option>
+                <option value="sim">Aceita</option>
+                <option value="nao">Não aceita</option>
+              </select>
+            </label>
+
+            <label class="campo">
+              <span>TotalPass</span>
+              <select id="f_totalpass">
+                <option value="">Ainda não confirmado</option>
+                <option value="sim">Aceita</option>
+                <option value="nao">Não aceita</option>
+              </select>
+            </label>
+          </div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Horários de funcionamento</legend>
+
+          <p class="dica">
+            Deixe em branco os dias em que a academia fecha. Se ela fecha pro almoço,
+            preencha também "Reabre / Fecha" (2º período). Academia 24h: 00:00 às 23:59.
+          </p>
+
+          <div class="atalhos">
+            <button type="button" id="btnCopiarSegunda" class="btn btnSecundario btnPequeno">Copiar segunda → terça a sexta</button>
+            <button type="button" id="btnLimparHorarios" class="btn btnSecundario btnPequeno">Limpar tudo</button>
+          </div>
+
+          <div id="gridHorarios" class="gridHorarios"></div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Estrutura</legend>
+          <div id="gridEstrutura" class="gridEstrutura"></div>
+        </fieldset>
+
+
+        <fieldset>
+          <legend>Fotos</legend>
+
+          <div class="blocoFoto">
+            <span class="rotulo">Foto principal (aparece na lista e no topo da página)</span>
+            <div id="previewCapa" class="previewCapa"></div>
+            <input type="file" id="f_capa" accept="image/jpeg,image/png,image/webp">
+            <small>As fotos são reduzidas automaticamente antes do envio, pra o site carregar rápido.</small>
+          </div>
+
+          <div class="blocoFoto">
+            <span class="rotulo">Galeria (fotos extras — pode escolher várias)</span>
+            <div id="previewGaleria" class="previewGaleria"></div>
+            <input type="file" id="f_galeria" accept="image/jpeg,image/png,image/webp" multiple>
+          </div>
+        </fieldset>
+
+      </form>
+
+      <footer class="modalRodape">
+        <p id="formMsg" class="formMsg" role="status"></p>
+        <div class="modalBotoes">
+          <button type="button" id="btnCancelar" class="btn btnSecundario">Cancelar</button>
+          <button type="submit" form="formAcademia" id="btnSalvar" class="btn btnPrimario">Salvar academia</button>
+        </div>
+      </footer>
+
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" hidden></div>
+
+</div>
+
+
+<script src="assets/js/cidades-data.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/admin.js"></script>
+
+</body>
+</html>
