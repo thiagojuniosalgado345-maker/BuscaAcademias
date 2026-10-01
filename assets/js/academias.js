@@ -10,6 +10,15 @@
 
 const DIAS_SEMANA = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
 
+// Imagem padrão (SVG embutido, não depende de arquivo) usada quando a
+// academia ainda não tem foto cadastrada.
+window.FOTO_PADRAO = window.FOTO_PADRAO || "data:image/svg+xml;utf8," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'><rect width='400' height='260' fill='#0A1E3D'/>" +
+  "<g fill='none' stroke='#2C4A78' stroke-width='10' stroke-linecap='round'><path d='M140 122h120'/><path d='M122 92v60M102 102v40M278 92v60M298 102v40'/></g>" +
+  "<text x='200' y='200' font-family='Arial,sans-serif' font-size='16' text-anchor='middle' fill='#4E6A96'>Foto em breve</text></svg>"
+);
+
+
 // Dados de conexão do Supabase. A "publishable key" é segura pra
 // ficar exposta no código do site — não dá acesso de escrita,
 // só permite o que as regras (RLS) da tabela liberarem.
@@ -58,9 +67,10 @@ function converterLinhaDoSupabase(linha) {
   return {
     id: linha.id,
     nome: linha.nome,
-    bairro: linha.bairro,
-    foto: linha.foto,
-    avaliacao: Number(linha.avaliacao),
+    bairro: linha.bairro || "",
+    foto: linha.foto || FOTO_PADRAO,
+    logo: linha.logo || null,
+    avaliacao: linha.avaliacao != null ? Number(linha.avaliacao) : null,
     modalidades: linha.modalidades || [],
     whatsapp: linha.whatsapp || "",
     aceitaWellhub: linha.aceita_wellhub,
@@ -71,7 +81,7 @@ function converterLinhaDoSupabase(linha) {
       linha.latitude != null && linha.longitude != null
         ? { lat: linha.latitude, lng: linha.longitude }
         : null,
-    horarios: linha.horarios
+    horarios: linha.horarios || {}
   };
 }
 
@@ -240,12 +250,12 @@ function renderizarLista(lista) {
         <img src="${academia.foto}" alt="${academia.nome}">
         <span class="status ${status.aberta ? "" : "fechada"}">${status.texto}</span>
         <button class="coracao" onclick="favoritar(this)">♡</button>
-        <span class="notaFoto">⭐ ${academia.avaliacao.toFixed(1).replace(".", ",")}</span>
+        <span class="notaFoto">${academia.avaliacao ? `⭐ ${academia.avaliacao.toFixed(1).replace(".", ",")}` : "Novo"}</span>
       </div>
       <div class="academiaConteudo">
         <h3>${academia.nome}</h3>
         <div class="local">
-          <strong>📍</strong> ${academia.bairro} · <strong>${obterTextoDistancia(academia)}</strong>
+          <strong>📍</strong> ${academia.bairro ? academia.bairro + " · " : ""}<strong>${obterTextoDistancia(academia)}</strong>
         </div>
         <div class="modalidades">
           ${academia.modalidades.map((m) => `<span class="tag">${m}</span>`).join("")}
