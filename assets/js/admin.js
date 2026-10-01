@@ -43,6 +43,8 @@ let todasAcademias = [];
 let editando = null;          // academia sendo editada (null = criando uma nova)
 let salvando = false;
 let formSujo = false;         // true se mexeu em algo (pra avisar antes de descartar)
+let logoAtualUrl = null;       // logo que já está salva
+let logoNovoArquivo = null;   // logo escolhida agora (ainda não enviada)
 let capaAtualUrl = null;      // foto principal que já está salva
 let capaNovaArquivo = null;   // foto principal escolhida agora (ainda não enviada)
 let galeriaUrls = [];         // fotos da galeria já salvas
@@ -235,6 +237,7 @@ async function carregarLista() {
 function pendenciasDaAcademia(a) {
   const p = [];
   if (!a.foto) p.push("sem foto");
+  if (!a.logo) p.push("sem logo");
   if (a.latitude == null || a.longitude == null) p.push("sem localização");
   if (!temHorario(a.horarios)) p.push("sem horários");
   if (!a.whatsapp) p.push("sem WhatsApp");
@@ -311,7 +314,7 @@ async function excluirAcademia(id) {
     return;
   }
 
-  await removerFotosDoBucket([academia.foto, ...(academia.fotos || [])]);
+  await removerFotosDoBucket([academia.logo, academia.foto, ...(academia.fotos || [])]);
   avisar("Academia excluída.");
   await carregarLista();
 }
@@ -428,12 +431,16 @@ function abrirFormulario(academia) {
   preencherHorarios(a.horarios);
   preencherEstrutura(a.estrutura);
 
+  logoAtualUrl = a.logo || null;
+  logoNovoArquivo = null;
   capaAtualUrl = a.foto || null;
   capaNovaArquivo = null;
   galeriaUrls = (a.fotos || []).slice();
   galeriaNovosArquivos = [];
+  $("f_logo").value = "";
   $("f_capa").value = "";
   $("f_galeria").value = "";
+  renderizarPreviewLogo();
   renderizarPreviewCapa();
   renderizarPreviewGaleria();
 
@@ -465,6 +472,22 @@ function urlTemporaria(arquivo) {
   const url = URL.createObjectURL(arquivo);
   urlsTemporarias.push(url);
   return url;
+}
+
+function renderizarPreviewLogo() {
+  const el = $("previewLogo");
+  const src = logoNovoArquivo ? urlTemporaria(logoNovoArquivo) : logoAtualUrl;
+
+  if (!src) {
+    el.innerHTML = '<span class="semFoto">Sem logo — o pino do mapa vai usar a foto principal.</span>';
+    return;
+  }
+
+  el.innerHTML = `
+    <div class="caixaLogo">
+      <img src="${escaparHtml(src)}" alt="Logo">
+      <button type="button" class="remover" data-acao="remover-logo" aria-label="Remover logo">✕</button>
+    </div>`;
 }
 
 function renderizarPreviewCapa() {
@@ -544,6 +567,53 @@ async function enviarFoto(arquivo, pasta, nomeBase) {
   const { error } = await supabaseClient.storage
     .from(BUCKET_FOTOS)
     .upload(caminho, blob, { contentType: "image/jpeg", cacheControl: "31536000", upsert: false });
+
+  if (error) throw error;
+
+  const { data } = supabaseClient.storage.from(BUCKET_FOTOS).getPublicUrl(caminho);
+  return data.publicUrl;
+}
+
+// Logo usa PNG (preserva fundo transparente) e fica menor — não precisa
+// do tamanho de uma foto, é só pro pino do mapa.
+function comprimirLogo(arquivo, tamanhoMax = 512) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(arquivo);
+    const img = new Image();
+
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const escala = Math.min(1, tamanhoMax / Math.max(img.width, img.height));
+      const largura = Math.round(img.width * escala);
+      const altura = Math.round(img.height * escala);
+
+      const canvas = document.createElement("canvas");
+      canvas.width = largura;
+      canvas.height = altura;
+      canvas.getContext("2d").drawImage(img, 0, 0, largura, altura);
+
+      canvas.toBlob(
+        (blob) => (blob ? resolve(blob) : reject(new Error("Não foi possível processar a logo."))),
+        "image/png"
+      );
+    };
+
+    img.onerror = () => {
+      URL.revokeObjectURL(url);
+      reject(new Error(`Não consegui ler a imagem "${arquivo.name}". Use JPG, PNG ou WebP.`));
+    };
+
+    img.src = url;
+  });
+}
+
+async function enviarLogo(arquivo, nomeBase) {
+  const blob = await comprimirLogo(arquivo);
+  const caminho = `logos/${slugify(nomeBase)}-${Date.now()}-${Math.random().toString(36).slice(2, 7)}.png`;
+
+  const { error } = await supabaseClient.storage
+    .from(BUCKET_FOTOS)
+    .upload(caminho, blob, { contentType: "image/png", cacheControl: "31536000", upsert: false });
 
   if (error) throw error;
 
@@ -701,6 +771,17 @@ async function salvarAcademia(evento) {
   const fotosParaApagar = [];
 
   try {
+    // ----- logo -----
+    let logoFinal = logoAtualUrl;
+    if (logoNovoArquivo) {
+      mostrarMensagemForm("Enviando logo...");
+      logoFinal = await enviarLogo(logoNovoArquivo, registro.nome);
+      if (editando && editando.logo) fotosParaApagar.push(editando.logo);
+    } else if (!logoAtualUrl && editando && editando.logo) {
+      fotosParaApagar.push(editando.logo); // o usuário removeu a logo
+    }
+    registro.logo = logoFinal || null;
+
     // ----- foto principal -----
     let fotoFinal = capaAtualUrl;
     if (capaNovaArquivo) {
@@ -800,6 +881,20 @@ function ligarEventos() {
   $("btnCopiarSegunda").addEventListener("click", copiarSegundaParaSemana);
   $("btnLimparHorarios").addEventListener("click", limparHorarios);
   $("f_coordenadas").addEventListener("input", tratarCoordenadasColadas);
+
+  $("f_logo").addEventListener("change", (evento) => {
+    logoNovoArquivo = evento.target.files[0] || null;
+    renderizarPreviewLogo();
+  });
+
+  $("previewLogo").addEventListener("click", (evento) => {
+    if (!evento.target.closest('[data-acao="remover-logo"]')) return;
+    logoNovoArquivo = null;
+    logoAtualUrl = null;
+    $("f_logo").value = "";
+    formSujo = true;
+    renderizarPreviewLogo();
+  });
 
   $("f_capa").addEventListener("change", (evento) => {
     capaNovaArquivo = evento.target.files[0] || null;
