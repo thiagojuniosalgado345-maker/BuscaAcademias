@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     nome: linha.nome,
     bairro: linha.bairro,
     foto: linha.foto,
+    logo: linha.logo || null,
     avaliacao: Number(linha.avaliacao),
     coordenadas:
       linha.latitude != null && linha.longitude != null
