@@ -14,6 +14,29 @@ const supabaseClient = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const DIAS_SEMANA = ["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];
 
+// Imagem padrão (SVG embutido, não depende de arquivo) usada quando a
+// academia ainda não tem foto cadastrada.
+window.FOTO_PADRAO = window.FOTO_PADRAO || "data:image/svg+xml;utf8," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'><rect width='400' height='260' fill='#0A1E3D'/>" +
+  "<g fill='none' stroke='#2C4A78' stroke-width='10' stroke-linecap='round'><path d='M140 122h120'/><path d='M122 92v60M102 102v40M278 92v60M298 102v40'/></g>" +
+  "<text x='200' y='200' font-family='Arial,sans-serif' font-size='16' text-anchor='middle' fill='#4E6A96'>Foto em breve</text></svg>"
+);
+
+function escaparHtml(texto) {
+  return String(texto ?? "").replace(/[&<>"']/g, (c) => (
+    { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
+  ));
+}
+
+function formatarReais(valor) {
+  const n = Number(valor);
+  return n.toLocaleString("pt-BR", {
+    style: "currency",
+    currency: "BRL",
+    minimumFractionDigits: Number.isInteger(n) ? 0 : 2
+  });
+}
+
 const NOMES_ESTRUTURA = {
   estacionamento: "Estacionamento",
   piscina: "Piscina",
@@ -26,6 +49,7 @@ const NOMES_ESTRUTURA = {
 };
 
 let academiaIdAtual = null;
+let mapaPerfil = null; // guarda o mapa pra não recriar (o Leaflet dá erro se iniciar 2x)
 let notaSelecionada = 0;
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -140,14 +164,14 @@ function renderizarPerfil(academia) {
   document.title = `${academia.nome} | BuscaAcademias`;
 
   document.getElementById("breadcrumbPerfil").innerHTML =
-    `<a href="index.html">Início</a> &nbsp;›&nbsp; ${academia.nome}`;
+    `<a href="index.html">Início</a> &nbsp;›&nbsp; ${escaparHtml(academia.nome)}`;
 
   document.getElementById("nomeAcademia").textContent = academia.nome;
   document.getElementById("enderecoAcademia").textContent =
     academia.endereco || `${academia.bairro || ""}`.trim() || "Endereço não informado";
 
   const fotoCapa = document.getElementById("fotoCapa");
-  fotoCapa.src = academia.foto || "";
+  fotoCapa.src = academia.foto || FOTO_PADRAO;
   fotoCapa.alt = academia.nome;
 
   const status = calcularStatus(academia.horarios);
@@ -155,13 +179,16 @@ function renderizarPerfil(academia) {
   statusEl.textContent = status.texto;
   statusEl.classList.toggle("fechada", !status.aberta);
 
-  const nota = Number(academia.avaliacao);
-  document.getElementById("notaAcademia").textContent = isNaN(nota) ? "" : `⭐ ${nota.toFixed(1).replace(".", ",")}`;
+  const nota = academia.avaliacao != null ? Number(academia.avaliacao) : NaN;
+  const temNota = !isNaN(nota) && nota > 0;
+  const qtdAvaliacoes = academia.numero_avaliacoes || 0;
+  document.getElementById("notaAcademia").textContent =
+    temNota ? `⭐ ${nota.toFixed(1).replace(".", ",")}` : "Sem avaliações ainda";
   document.getElementById("numAvaliacoes").textContent =
-    academia.numero_avaliacoes ? `(${academia.numero_avaliacoes} avaliações)` : "";
+    temNota && qtdAvaliacoes ? `(${qtdAvaliacoes} ${qtdAvaliacoes === 1 ? "avaliação" : "avaliações"})` : "";
 
   document.getElementById("modalidadesAcademia").innerHTML =
-    (academia.modalidades || []).map((m) => `<span class="tag">${m}</span>`).join("");
+    (academia.modalidades || []).map((m) => `<span class="tag">${escaparHtml(m)}</span>`).join("");
 
   const selos = [];
   if (academia.aceita_wellhub) {
@@ -177,14 +204,17 @@ function renderizarPerfil(academia) {
   const linkGoogleMaps = document.getElementById("linkGoogleMaps");
 
   if (academia.latitude != null && academia.longitude != null) {
-    criarMapaAcademias("mapaAcademiaUnica", [{
-      id: academia.id,
-      nome: academia.nome,
-      bairro: academia.bairro,
-      foto: academia.foto,
-      avaliacao: Number(academia.avaliacao),
-      coordenadas: { lat: academia.latitude, lng: academia.longitude }
-    }]);
+    if (!mapaPerfil) {
+      mapaPerfil = criarMapaAcademias("mapaAcademiaUnica", [{
+        id: academia.id,
+        nome: academia.nome,
+        bairro: academia.bairro,
+        foto: academia.foto || FOTO_PADRAO,
+        logo: academia.logo || null,
+        avaliacao: Number(academia.avaliacao),
+        coordenadas: { lat: academia.latitude, lng: academia.longitude }
+      }]);
+    }
   } else {
     secaoLocalizacao.innerHTML = "<p>Localização exata ainda não cadastrada.</p>";
   }
@@ -227,8 +257,8 @@ function renderizarPerfil(academia) {
   // Preços
   const precos = academia.precos || {};
   const itensPreco = [];
-  if (precos.mensalidade) itensPreco.push(`<li>Mensalidade: <strong>R$ ${precos.mensalidade}</strong></li>`);
-  if (precos.matricula) itensPreco.push(`<li>Matrícula: <strong>R$ ${precos.matricula}</strong></li>`);
+  if (precos.mensalidade) itensPreco.push(`<li>Mensalidade: <strong>${formatarReais(precos.mensalidade)}</strong></li>`);
+  if (precos.matricula) itensPreco.push(`<li>Matrícula: <strong>${formatarReais(precos.matricula)}</strong></li>`);
   document.getElementById("precosAcademia").innerHTML =
     itensPreco.length ? itensPreco.join("") : "<li>Preço não informado — entre em contato</li>";
 
@@ -299,7 +329,7 @@ async function enviarAvaliacao(academiaId) {
   }
 
   const nota = notaSelecionada;
-  const comentario = document.getElementById("comentarioAvaliacao").value.trim();
+  const comentario = document.getElementById("comentarioAvaliacao").value.trim().slice(0, 500);
   const botao = document.getElementById("btnEnviarAvaliacao");
   botao.disabled = true;
   feedbackEl.textContent = "Enviando...";
@@ -349,7 +379,7 @@ async function carregarAvaliacoes(academiaId) {
   listaEl.innerHTML = avaliacoes.map((av) => `
     <div class="avaliacaoItem">
       <div class="avaliacaoEstrelas">${"★".repeat(av.nota)}${"☆".repeat(5 - av.nota)}</div>
-      ${av.comentario ? `<p>${av.comentario}</p>` : ""}
+      ${av.comentario ? `<p>${escaparHtml(av.comentario)}</p>` : ""}
     </div>
   `).join("");
 }
