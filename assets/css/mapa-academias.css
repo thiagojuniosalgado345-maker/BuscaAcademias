@@ -28,6 +28,16 @@
   display: block;
 }
 
+/* Logo: fundo branco + a imagem "encolhe pra caber" em vez de cortar
+   (uma logo cortada nas bordas fica estranha; uma foto de ambiente, não) */
+.pinAcademia.pinComLogo {
+  background: #fff;
+}
+.pinAcademia.pinComLogo img {
+  object-fit: contain;
+  padding: 5px;
+}
+
 .pinAcademia::after {
   content: "";
   position: absolute;
