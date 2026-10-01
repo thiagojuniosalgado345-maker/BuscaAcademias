@@ -13,6 +13,14 @@
   Academias sem coordenadas são ignoradas (não aparecem no mapa).
 */
 
+// Imagem padrão (SVG embutido, não depende de arquivo) usada quando a
+// academia ainda não tem foto cadastrada.
+window.FOTO_PADRAO = window.FOTO_PADRAO || "data:image/svg+xml;utf8," + encodeURIComponent(
+  "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 260'><rect width='400' height='260' fill='#0A1E3D'/>" +
+  "<g fill='none' stroke='#2C4A78' stroke-width='10' stroke-linecap='round'><path d='M140 122h120'/><path d='M122 92v60M102 102v40M278 92v60M298 102v40'/></g>" +
+  "<text x='200' y='200' font-family='Arial,sans-serif' font-size='16' text-anchor='middle' fill='#4E6A96'>Foto em breve</text></svg>"
+);
+
 function criarMapaAcademias(containerId, academias) {
   const CENTRO_PADRAO = [-16.7282, -43.8578]; // Montes Claros, aproximado
 
@@ -32,11 +40,17 @@ function criarMapaAcademias(containerId, academias) {
   }
 
   const marcadores = academiasComCoordenadas.map((academia) => {
+    // Prioridade no pino: logo (se tiver) > foto principal > placeholder.
+    // A logo usa fundo branco + "contain" (pra não cortar), já a foto usa
+    // "cover" (preenche o círculo todo) — por isso a classe extra.
+    const usaLogo = !!academia.logo;
+    const imagemPino = academia.logo || academia.foto || FOTO_PADRAO;
+
     const icone = L.divIcon({
       className: "pinAcademiaWrapper",
       html: `
-        <div class="pinAcademia">
-          <img src="${academia.foto || ""}" alt="${academia.nome}">
+        <div class="pinAcademia${usaLogo ? " pinComLogo" : ""}">
+          <img src="${imagemPino}" alt="${academia.nome}">
         </div>
       `,
       iconSize: [48, 58],
