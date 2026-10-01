@@ -196,6 +196,13 @@ legend { padding: 0 10px 0 0; font-weight: 700; color: var(--amarelo); font-size
 /* Fotos */
 .blocoFoto { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
 .previewCapa img { width: 220px; height: 150px; object-fit: cover; border-radius: 12px; display: block; }
+
+.previewLogo img {
+  width: 96px; height: 96px; object-fit: contain; border-radius: 12px; display: block;
+  background: repeating-conic-gradient(#0F274C 0% 25%, #0A1E3D 0% 50%) 0 0 / 16px 16px; /* xadrez = mostra transparência */
+  padding: 6px;
+}
+.previewLogo .caixaLogo { position: relative; width: 96px; }
 .previewGaleria { display: flex; flex-wrap: wrap; gap: 10px; }
 .miniFoto { position: relative; width: 110px; height: 80px; }
 .miniFoto img { width: 100%; height: 100%; object-fit: cover; border-radius: 10px; display: block; }
