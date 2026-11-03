@@ -397,6 +397,7 @@ def inserir_academia(dados):
 # PROCESSAR CADA CIDADE
 # ==========================================
 
+
 def importar_cidade(cidade):
 
     print("\n====================================")
@@ -407,12 +408,9 @@ def importar_cidade(cidade):
 
     print("Registros encontrados na fonte:", len(elementos))
 
-    # Remove elementos repetidos da própria consulta.
-
     unicos = {}
 
     for elemento in elementos:
-
         chave = (elemento["type"], elemento["id"])
         unicos[chave] = elemento
 
@@ -433,23 +431,23 @@ def importar_cidade(cidade):
 
         dados = organizar_academia(elemento, cidade)
 
-       if not dados:
+        if not dados:
 
-    tags = elemento.get("tags", {})
+            tags = elemento.get("tags", {})
 
-    print(
-        "[IGNORADA: sem nome ou localização]",
-        elemento["type"],
-        elemento["id"],
-        tags
-    )
+            print(
+                "[IGNORADA: sem nome ou localização]",
+                elemento["type"],
+                elemento["id"],
+                tags
+            )
 
-    ignoradas += 1
-    continue
+            ignoradas += 1
+            continue
 
         chave = (dados["osm_type"], dados["osm_id"])
 
-        # 1. A academia já possui identificador OSM.
+        # 1. Procurar pelo identificador do OpenStreetMap.
 
         existente = por_osm.get(chave)
 
@@ -496,8 +494,7 @@ def importar_cidade(cidade):
                 vinculadas += 1
                 continue
 
-        # Se houver nomes iguais ambíguos, não cria
-        # outro cadastro automaticamente.
+        # 3. Não duplicar nomes ambíguos.
 
         if mesmos_nomes:
 
@@ -509,7 +506,7 @@ def importar_cidade(cidade):
             ignoradas += 1
             continue
 
-        # 3. Inserir academia nova.
+        # 4. Cadastrar academia nova.
 
         inserir_academia(dados)
 
@@ -523,6 +520,7 @@ def importar_cidade(cidade):
     print("Atualizadas:", atualizadas)
     print("Cadastros manuais vinculados:", vinculadas)
     print("Ignoradas para revisão:", ignoradas)
+
 
 
 # ==========================================
