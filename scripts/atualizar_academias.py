@@ -14,6 +14,7 @@ import requests
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SECRET_KEY", "")
+DRY_RUN = os.getenv("DRY_RUN", "true").lower() == "true"
 
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 
@@ -273,6 +274,12 @@ def buscar_cadastradas(slug):
 # ==========================================
 
 def atualizar_registro(registro, dados, cadastro_manual=False):
+    if DRY_RUN:
+        print(
+            f"[TESTE] Atualizaria: {registro.get('nome')} "
+            f"(ID {registro.get('id')})"
+        )
+        return
 
     atualizacao = {
         "osm_type": dados["osm_type"],
@@ -346,6 +353,12 @@ def atualizar_registro(registro, dados, cadastro_manual=False):
 # ==========================================
 
 def inserir_academia(dados):
+    if DRY_RUN:
+        print(
+            f"[TESTE] Inseriria: {dados['nome']} "
+            f"({dados['cidade']})"
+        )
+        return
 
     supabase_request(
         "POST",
