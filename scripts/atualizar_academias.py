@@ -93,6 +93,7 @@ def vazio(valor):
 # BUSCAR ACADEMIAS NO OPENSTREETMAP
 # ==========================================
 
+
 def buscar_openstreetmap(cidade):
 
     consulta = f"""
@@ -117,40 +118,61 @@ def buscar_openstreetmap(cidade):
     out center tags;
     """
 
-    for tentativa in range(3):
+    servidores = [
+        "https://overpass-api.de/api/interpreter",
+        "https://overpass.private.coffee/api/interpreter"
+    ]
 
-        try:
+    erros = []
 
-            resposta = session.post(
-                OVERPASS_URL,
-                data={"data": consulta},
-                headers={"User-Agent": "BuscaAcademias/1.0"},
-                timeout=120
-            )
+    for servidor in servidores:
 
-            resposta.raise_for_status()
+        for tentativa in range(2):
 
-            dados = resposta.json()
+            try:
 
-            if dados.get("remark"):
-                raise RuntimeError(dados["remark"])
+                print(f"Consultando: {servidor}")
 
-            return dados.get("elements", [])
+                resposta = session.post(
+                    servidor,
+                    data={"data": consulta},
+                    headers={
+                        "User-Agent": "BuscaAcademias/1.0"
+                    },
+                    timeout=120
+                )
 
-        except (
-            requests.RequestException,
-            ValueError,
-            RuntimeError
-        ) as erro:
+                resposta.raise_for_status()
 
-            print(
-                f"Erro na busca de {cidade['nome']}: {erro}"
-            )
+                dados = resposta.json()
 
-            if tentativa == 2:
-                raise
+                if dados.get("remark"):
+                    raise RuntimeError(dados["remark"])
 
-            time.sleep(15 * (tentativa + 1))
+                return dados.get("elements", [])
+
+            except (
+                requests.RequestException,
+                ValueError,
+                RuntimeError
+            ) as erro:
+
+                mensagem = str(erro)
+
+                erros.append(mensagem)
+
+                print(
+                    f"Falha na tentativa {tentativa + 1}: "
+                    f"{mensagem}"
+                )
+
+                time.sleep(20 * (tentativa + 1))
+
+    raise RuntimeError(
+        "Todos os servidores Overpass falharam: "
+        + " | ".join(erros)
+    )
+
 
 
 # ==========================================
@@ -411,9 +433,19 @@ def importar_cidade(cidade):
 
         dados = organizar_academia(elemento, cidade)
 
-        if not dados:
-            ignoradas += 1
-            continue
+       if not dados:
+
+    tags = elemento.get("tags", {})
+
+    print(
+        "[IGNORADA: sem nome ou localização]",
+        elemento["type"],
+        elemento["id"],
+        tags
+    )
+
+    ignoradas += 1
+    continue
 
         chave = (dados["osm_type"], dados["osm_id"])
 
