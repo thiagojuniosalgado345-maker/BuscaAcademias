@@ -374,22 +374,27 @@ def atualizar_registro(registro, dados, cadastro_manual=False):
 # INSERIR ACADEMIA NOVA
 # ==========================================
 
-def inserir_academia(dados):
-    if DRY_RUN:
-   print("[TESTE] NOVA ACADEMIA ENCONTRADA")
 
-for campo in [
-    "nome",
-    "cidade",
-    "bairro",
-    "endereco",
-    "latitude",
-    "longitude",
-    "site",
-    "osm_type",
-    "osm_id"
-]:
-    print(f"{campo}: {dados.get(campo)}")
+def inserir_academia(dados):
+
+    if DRY_RUN:
+
+        print("[TESTE] NOVA ACADEMIA ENCONTRADA")
+
+        for campo in [
+            "nome",
+            "cidade",
+            "bairro",
+            "endereco",
+            "latitude",
+            "longitude",
+            "site",
+            "osm_type",
+            "osm_id"
+        ]:
+
+            print(f"{campo}: {dados.get(campo)}")
+
         return
 
     supabase_request(
@@ -401,6 +406,7 @@ for campo in [
         },
         json=dados
     )
+
 
 
 # ==========================================
