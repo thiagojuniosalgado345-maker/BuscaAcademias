@@ -321,5 +321,150 @@
     "avaliacao": 4.81,
     "numero_avaliacoes": 37,
     "fonte": "Wellhub"
+  },
+  {
+    "id": "studio-pedro-sodre",
+    "nome": "Studio Pedro Sodré",
+    "cidade": "montes-claros",
+    "bairro": "Morada do Sol",
+    "endereco": "Rua B, 1000 - Morada do Sol",
+    "telefone": "38984016999",
+    "instagram": null,
+    "site": "https://pedro.com.br/",
+    "categoria": "Academia",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/studio-pedro-sodre-morada-do-sol-montes-claros/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Funcional",
+      "Musculação"
+    ],
+    "estrutura": {
+      "ar_condicionado": true,
+      "armarios": true,
+      "banheiro_acessivel": true,
+      "fisioterapeuta": true,
+      "mini_bar": true,
+      "personal_trainer": true,
+      "salao_de_beleza": true,
+      "spa": true,
+      "wifi": true
+    },
+    "avaliacao": 4.62,
+    "numero_avaliacoes": 29,
+    "fonte": "Wellhub"
+  },
+  {
+    "id": "cross-up",
+    "nome": "Cross UP",
+    "cidade": "montes-claros",
+    "bairro": "Esplanada",
+    "endereco": "Rua Jacinto Alves Silveira, 400 - Esplanada",
+    "telefone": null,
+    "instagram": null,
+    "site": null,
+    "categoria": "Centro de treinamento",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/cross-up-jardim-sao-geraldo-montes-claros/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "08:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "20:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "07:00",
+          "fecha": "08:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "20:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "08:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "20:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "07:00",
+          "fecha": "08:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "20:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "08:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "20:00"
+        }
+      ],
+      "6": []
+    },
+    "modalidades": [
+      "Crosstrain",
+      "Queima de gordura",
+      "Aula de pula corda",
+      "Cross training"
+    ],
+    "estrutura": {},
+    "avaliacao": 4.86,
+    "numero_avaliacoes": 36,
+    "fonte": "Wellhub"
   }
 ]
