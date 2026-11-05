@@ -120,6 +120,10 @@ function obterPeriodos(horarioDia) {
 }
 
 function calcularStatus(horarios) {
+  if (!horarios || typeof horarios !== "object" || Object.keys(horarios).length === 0) {
+    return { aberta: false, texto: "Horário não informado", desconhecida: true };
+  }
+
   const agora = new Date();
   const diaSemana = agora.getDay();
   const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
@@ -155,7 +159,7 @@ function calcularStatus(horarios) {
     }
   }
 
-  return { aberta: false, texto: "Fechada" };
+  return { aberta: false, texto: "Fechada", desconhecida: false };
 }
 
 /* =====================================================
@@ -178,7 +182,8 @@ function renderizarPerfil(academia) {
   const status = calcularStatus(academia.horarios);
   const statusEl = document.getElementById("statusAcademia");
   statusEl.textContent = status.texto;
-  statusEl.classList.toggle("fechada", !status.aberta);
+  statusEl.classList.toggle("fechada", !status.aberta && !status.desconhecida);
+  statusEl.classList.toggle("semHorario", Boolean(status.desconhecida));
 
   const nota = academia.avaliacao != null ? Number(academia.avaliacao) : NaN;
   const temNota = !isNaN(nota) && nota > 0;
@@ -249,9 +254,15 @@ function renderizarPerfil(academia) {
   }
 
   // Horários (todos os dias da semana)
+  const temHorarios = academia.horarios &&
+    typeof academia.horarios === "object" &&
+    Object.keys(academia.horarios).length > 0;
+
   document.getElementById("horariosAcademia").innerHTML = DIAS_SEMANA.map((dia, i) => {
     const periodos = obterPeriodos(academia.horarios ? academia.horarios[i] : null);
-    const texto = periodos.length ? periodos.map((p) => `${p.abre} às ${p.fecha}`).join(" e ") : "Fechado";
+    const texto = periodos.length
+      ? periodos.map((p) => `${p.abre} às ${p.fecha}`).join(" e ")
+      : (temHorarios ? "Fechado" : "Horário não informado");
     return `<li><strong>${dia}:</strong> ${texto}</li>`;
   }).join("");
 
