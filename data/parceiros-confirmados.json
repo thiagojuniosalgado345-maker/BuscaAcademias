@@ -1,0 +1,1142 @@
+[
+  {
+    "id": 2,
+    "nome": "Fox Trainner",
+    "cidade": "montes-claros",
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/fox-trainner-academia/",
+    "modalidades": [
+      "Musculação"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "19:00"
+        }
+      ]
+    },
+    "fonte": "https://totalpass.com/br/academias/fox-trainner-academia/"
+  },
+  {
+    "id": 8,
+    "nome": "3F ACADEMIA LTDA",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/academia-3f/",
+    "modalidades": [
+      "Funcional",
+      "Fit Dance",
+      "Musculação",
+      "Abdominais",
+      "Ritbox",
+      "Cross Funcional",
+      "Core 360"
+    ],
+    "fonte": "https://totalpass.com/br/academias/academia-3f/ | https://wellhub.com/pt-br/search/mg/janauba--rio-novo/"
+  },
+  {
+    "id": 16,
+    "nome": "BODYART ACADEMIA",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/",
+    "instagram": "https://instagram.com/bodyart.academia",
+    "modalidades": [
+      "Musculação",
+      "Treino híbrido",
+      "Fitness"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "22:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "15:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "vestiario": true,
+      "chuveiro": true,
+      "wifi": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/"
+  },
+  {
+    "id": 17,
+    "nome": "BIOTECH",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/",
+    "instagram": "https://instagram.com/centrodetreinamentobiotech",
+    "modalidades": [
+      "Cross training",
+      "Musculação",
+      "Levantamento de peso",
+      "Treino de força"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "09:00",
+          "fecha": "12:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "13:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "ar_condicionado": true,
+      "vestiario": true,
+      "wifi": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/"
+  },
+  {
+    "id": 20,
+    "nome": "ESSENTIAL FITNESS - CENTRO DE TREINAMENTO PERSONALIZADO",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
+    "fonte": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/"
+  },
+  {
+    "id": 22,
+    "nome": "SPARTAN GYM",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
+    "modalidades": [
+      "Treinamento híbrido",
+      "Musculação",
+      "Fitness"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/"
+  },
+  {
+    "id": 25,
+    "nome": "ALADA ESCOLA DE DANCA E NATACAO",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/alada-academia-de-ginastica-e-natacao/",
+    "instagram": "https://instagram.com/academiaaladajanauba",
+    "modalidades": [
+      "GAP",
+      "Treino funcional",
+      "Tae Bo",
+      "Musculação"
+    ],
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "10:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "10:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "10:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "10:00"
+        },
+        {
+          "abre": "16:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "10:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": []
+    },
+    "estrutura": {
+      "piscina": true,
+      "vestiario": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/alada-academia-de-ginastica-e-natacao/"
+  },
+  {
+    "id": 29,
+    "nome": "NEW TIME",
+    "cidade": "janauba",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/new-time-academia/",
+    "instagram": "https://instagram.com/newtime_janauba",
+    "modalidades": [
+      "Treino de força",
+      "Fit Training",
+      "Aulas de entretenimento",
+      "Treino híbrido",
+      "Treino funcional"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "19:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "19:00"
+        }
+      ]
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/new-time-academia/"
+  },
+  {
+    "id": 61,
+    "nome": "ACADEMIA SHAPE EM DIA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
+    "modalidades": [
+      "Fitness",
+      "Treinamento híbrido",
+      "Dança"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/"
+  },
+  {
+    "id": 62,
+    "nome": "ACADEMIA TAURUS FITNESS",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/taurus-academia-143ecf54-0665-4bd5-8deb-3e1651bdfd17/",
+    "instagram": "https://instagram.com/taurus_moc_oficial",
+    "modalidades": [
+      "Musculação",
+      "Treino híbrido",
+      "Fisiculturismo"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "09:00",
+          "fecha": "13:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "18:00"
+        }
+      ]
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/taurus-academia-143ecf54-0665-4bd5-8deb-3e1651bdfd17/"
+  },
+  {
+    "id": 78,
+    "nome": "BIOATIVA ACADEMIA FEMININA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/bioativa-academia-feminina/",
+    "modalidades": [
+      "Musculação",
+      "Treino de força"
+    ],
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "11:30"
+        },
+        {
+          "abre": "13:30",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "11:30"
+        },
+        {
+          "abre": "13:30",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "11:30"
+        },
+        {
+          "abre": "13:30",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "11:30"
+        },
+        {
+          "abre": "13:30",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "11:30"
+        },
+        {
+          "abre": "13:30",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "11:00"
+        }
+      ]
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/bioativa-academia-feminina/"
+  },
+  {
+    "id": 97,
+    "nome": "ACADEMIA TRAINER",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/academia-trainer-ca55b65b-0011-4f88-92e2-ed30be921751/",
+    "modalidades": [
+      "Musculação",
+      "Personal trainer",
+      "Treino funcional"
+    ],
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "13:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "13:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "13:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "13:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "13:00"
+        },
+        {
+          "abre": "15:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "ar_condicionado": true,
+      "cardio": true,
+      "musculacao": true,
+      "chuveiro": true,
+      "vestiario": true,
+      "wifi": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/academia-trainer-ca55b65b-0011-4f88-92e2-ed30be921751/"
+  },
+  {
+    "id": 104,
+    "nome": "ELITE TREINAMENTO FISICO",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+    "modalidades": [
+      "Funcional",
+      "Cross training",
+      "Treinamento funcional"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/"
+  },
+  {
+    "id": 106,
+    "nome": "ENERGIA ACADEMIA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/energia-academia/",
+    "modalidades": [
+      "Musculação",
+      "Muay Thai",
+      "Treino funcional",
+      "Cross training"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "08:30",
+          "fecha": "12:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:30",
+          "fecha": "23:30"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:30",
+          "fecha": "23:30"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:30",
+          "fecha": "23:30"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:30",
+          "fecha": "23:30"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:30",
+          "fecha": "23:30"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "14:00",
+          "fecha": "18:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "vestiario": true
+    },
+    "fonte": "https://totalpass.com/br/academias/energia-academia/"
+  },
+  {
+    "id": 119,
+    "nome": "AARON ACADEMIA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/K5GDv391cWixkGh7c0Xrem60Sm-5vMsc_VjWsEoAJiv-i5nq01rx1hGQYwcUaBe-/",
+    "instagram": "https://instagram.com/aaronacademiaa",
+    "modalidades": [
+      "Treino híbrido",
+      "Fisiculturismo",
+      "Musculação"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "06:30",
+          "fecha": "14:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "vestiario": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/K5GDv391cWixkGh7c0Xrem60Sm-5vMsc_VjWsEoAJiv-i5nq01rx1hGQYwcUaBe-/"
+  },
+  {
+    "id": 122,
+    "nome": "FULL TIME ACADEMIA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+    "modalidades": [
+      "Musculação",
+      "Muay Thai",
+      "Jiu-jitsu"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/"
+  },
+  {
+    "id": 126,
+    "nome": "GREENFIT MOC",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
+    "modalidades": [
+      "Fitness",
+      "Treino híbrido",
+      "Musculação"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/"
+  },
+  {
+    "id": 127,
+    "nome": "HARD CROSS",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/y0KtWbZ_x0ttP73qe6kHTOj8HcjuqOFn9X98yTFELLZkwmqa4RXeTWByaat6fKwc/",
+    "instagram": "https://instagram.com/hardcrosstreino",
+    "modalidades": [
+      "Muay Thai",
+      "Cross Functional",
+      "Cross training",
+      "Treino funcional",
+      "CrossFit",
+      "Mat Pilates"
+    ],
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "10:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "vestiario": true,
+      "wifi": true
+    },
+    "fonte": "https://wellhub.com/pt-br/search/partners/y0KtWbZ_x0ttP73qe6kHTOj8HcjuqOFn9X98yTFELLZkwmqa4RXeTWByaat6fKwc/"
+  },
+  {
+    "id": 142,
+    "nome": "LIFE SKULL LTDA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+    "instagram": "https://instagram.com/life_skull",
+    "modalidades": [
+      "Treinamento híbrido",
+      "Fitness"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  },
+  {
+    "id": 144,
+    "nome": "IRON FIT",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
+    "modalidades": [
+      "Fitness"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/"
+  },
+  {
+    "id": 146,
+    "nome": "M & A EMPREENDIMENTOS FITNES LTDA",
+    "cidade": "montes-claros",
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/fulltime-academia-planalto/",
+    "modalidades": [
+      "Fit Dance",
+      "Musculação",
+      "Muay Thai"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "07:00",
+          "fecha": "15:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "19:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "ar_condicionado": true,
+      "estacionamento": true,
+      "vestiario": true,
+      "wifi": true
+    },
+    "fonte": "https://totalpass.com/br/academias/fulltime-academia-planalto/"
+  },
+  {
+    "id": 176,
+    "nome": "FORMULA FIT",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+    "modalidades": [
+      "Treinamento funcional"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  },
+  {
+    "id": 177,
+    "nome": "REDE LEVITAR LTDA",
+    "cidade": "montes-claros",
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/academia-rede-levitar/",
+    "modalidades": [
+      "Musculação"
+    ],
+    "fonte": "https://totalpass.com/br/academias/academia-rede-levitar/"
+  },
+  {
+    "id": 182,
+    "nome": "PLENA FORMA ACADEMIA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/circuito-funcional/",
+    "modalidades": [
+      "Circuito",
+      "Treino funcional",
+      "Aero Jump"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/circuito-funcional/"
+  },
+  {
+    "id": 183,
+    "nome": "ACADEMIA PERFORMANCE",
+    "cidade": "montes-claros",
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/academia-performance/",
+    "modalidades": [
+      "Treinamento personalizado",
+      "Musculação",
+      "Abdominais"
+    ],
+    "fonte": "https://totalpass.com/br/academias/academia-performance/"
+  },
+  {
+    "id": 198,
+    "nome": "TOP GYM CT",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+    "modalidades": [
+      "Funcional",
+      "Musculação",
+      "Cross Move"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  },
+  {
+    "id": 207,
+    "nome": "WCT CENTRO DE TREINAMENTO",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/wct-centro-de-treinamento/",
+    "modalidades": [
+      "Musculação",
+      "Pilates",
+      "Hidroginástica",
+      "Fit Dance",
+      "Abdominais",
+      "Circuito funcional",
+      "GAP"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "07:00",
+          "fecha": "16:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "18:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "ar_condicionado": true,
+      "estacionamento": true,
+      "vestiario": true,
+      "wifi": true
+    },
+    "fonte": "https://totalpass.com/br/academias/wct-centro-de-treinamento/ | Wellhub: https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+    "observacao": "A rua divulgada pelas plataformas (Av Santos Guimaraes, 2020) diverge do endereço empresarial no banco (Av Manoel Caribe Filho, 2020); endereço preservado para revisão."
+  },
+  {
+    "id": 208,
+    "nome": "WF11 CT CANELAS",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "aceita_totalpass": true,
+    "detalhes_url": "https://totalpass.com/br/academias/wf11/",
+    "modalidades": [
+      "Musculação"
+    ],
+    "horarios": {
+      "0": [
+        {
+          "abre": "09:00",
+          "fecha": "21:00"
+        }
+      ],
+      "1": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:00",
+          "fecha": "23:59"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "19:00"
+        }
+      ]
+    },
+    "estrutura": {
+      "vestiario": true,
+      "wifi": true
+    },
+    "instagram": "https://instagram.com/wf11ct_gym",
+    "fonte": "https://totalpass.com/br/academias/wf11/ | https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+    "observacao": "A rua divulgada pelas plataformas (Av Vicente Guimaraes, 2036) diverge do endereço empresarial no banco (Av Manoel Caribe Filho, 2036); endereço preservado para revisão."
+  },
+  {
+    "id": 212,
+    "nome": "WF11 GYM MESTRA FININHA LTDA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+    "modalidades": [
+      "Musculação",
+      "Muay Thai",
+      "Fit Dance"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  },
+  {
+    "id": 214,
+    "nome": "WOLVER COMMUNITY FITNESS ACADEMIA DE ATIVIDADES ESPORTIVAS LTDA",
+    "cidade": "montes-claros",
+    "aceita_wellhub": true,
+    "detalhes_url": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+    "modalidades": [
+      "CrossFit",
+      "Aulas em grupo"
+    ],
+    "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  }
+]
