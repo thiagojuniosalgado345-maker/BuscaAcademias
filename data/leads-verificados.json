@@ -1,0 +1,79 @@
+[
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Atlhetica — Unidade 8",
+    "bairro": "Maracanã",
+    "endereco": "Praça Beato Francisco Coll, 45",
+    "telefone": "3830161104",
+    "categoria": "Academia",
+    "fonte": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias?pagina=3",
+    "fonte_secundaria": "Google Maps: Atlhetica Academy - Maracanã Unit 08",
+    "validacao": "Nome da unidade, endereço e telefone convergem em listagem local e mapa; telefone é fixo, não WhatsApp."
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Vilsao Team Matriz",
+    "bairro": "Planalto",
+    "endereco": "Rua Rio Viêira, 140",
+    "telefone": "38991757038",
+    "categoria": "Centro de treinamento",
+    "fonte": "https://www.cylex.com.br/montes-claros/vilsao-team-matriz-13632334.html",
+    "fonte_secundaria": "",
+    "validacao": "Listagem específica confirma nome, endereço, bairro e telefone."
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Cross X Delfino",
+    "bairro": "Jardim Palmeiras",
+    "endereco": "Avenida Coronel Luiz Maia, 1663",
+    "telefone": "38988236537",
+    "categoria": "Centro de treinamento",
+    "fonte": "https://www.cylex.com.br/montes-claros/cross-x-delfino-11904783.html",
+    "fonte_secundaria": "",
+    "validacao": "Listagem específica confirma nome, endereço, bairro e telefone."
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Hard Cross Treino",
+    "bairro": "Sagrada Família",
+    "endereco": "Avenida Vicente Guimarães, 1025",
+    "telefone": "38988620302",
+    "categoria": "Centro de treinamento",
+    "fonte": "https://totalpass.com/br/academias/hard-cross-treino/",
+    "fonte_secundaria": "https://www.cylex.com.br/montes-claros/academias/",
+    "validacao": "TotalPass confirma nome, endereço, cidade e telefone atual divulgado; telefone foi preferido ao número divergente do diretório antigo."
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Cross Experience — Major Prates",
+    "bairro": "Major Prates",
+    "endereco": "Rua Neco de Santa Maria, 719",
+    "telefone": "38998134364",
+    "categoria": "Centro de treinamento",
+    "fonte": "https://www.locaisdobrasil.com.br/encontre/academia/montes-claros-mg/cross-experience-major-prates/621829e28f789efbaaa5da65",
+    "fonte_secundaria": "https://www.diariocidade.com/mg/montes-claros/guia/academias/",
+    "validacao": "Duas listagens convergem para nome e endereço; telefone coincide com a listagem específica."
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Mega Fitness",
+    "bairro": "Major Prates",
+    "endereco": "Avenida Francisco Gaetani, 950A",
+    "telefone": "3830155232",
+    "categoria": "Academia",
+    "fonte": "https://www.locaisdobrasil.com.br/encontre/academia/montes-claros-mg/academia-mega-fitness/621829db8f789efbaaa5da59",
+    "fonte_secundaria": "https://www.cylex.com.br/montes-claros/fulltime-academia-11818905.html",
+    "validacao": "Duas listagens convergem para nome, endereço e telefone."
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Moov Academia — Unidade II",
+    "bairro": "Santo Antônio",
+    "endereco": "Avenida Manoel Athaide, 1344",
+    "telefone": "38991400064",
+    "categoria": "Academia",
+    "fonte": "https://agendajanauba.com.br/guia/?sort=date-asc&view=grid",
+    "fonte_secundaria": "https://agendajanauba.com.br/guia/page/2/?view=map",
+    "validacao": "Duas páginas do guia local convergem para nome, endereço e telefone."
+  }
+]
