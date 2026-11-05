@@ -31,7 +31,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
-          DRY_RUN: 'false' # importação pontual; restaurar para simulação após concluir
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false' && 'false' || 'true' }}
         run: python scripts/importar_leads_verificados.py
       - uses: actions/upload-artifact@v6
         with:
