@@ -1,0 +1,662 @@
+[
+  {
+    "id": 3,
+    "nome": "WF11",
+    "cidade": "montes-claros",
+    "fonte_e_observacao": "Revisão de identidade: o cadastro não tem endereço nem telefone e a marca WF11 possui várias unidades em Montes Claros. Não há base segura para atribuir a este registro os parceiros WF11 CT Canelas, CT Portal Eventos ou Mestra Fininha; status de benefícios removidos para não exibir selo indevido.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": null
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    }
+  },
+  {
+    "id": 4,
+    "nome": "Studio 360",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MACHADO",
+      "100"
+    ],
+    "fonte_e_observacao": "Telefone conferido em ficha comercial da unidade Studio 360 no endereço Avenida José Corrêa Machado, 100, Montes Claros. Fonte: pesquisa de estabelecimento local.",
+    "campos": {
+      "telefone": {
+        "modo": "preencher",
+        "valor": "38992219259"
+      }
+    }
+  },
+  {
+    "id": 5,
+    "nome": "Focco Academia Sports",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "BRASILIA",
+      "252"
+    ],
+    "fonte_e_observacao": "Perfil oficial de parceiro Wellhub da Focco Academia Sports confirma endereço, telefone, Instagram, horários e modalidades. Não foi localizada listagem oficial específica no TotalPass; aceitação TotalPass permanece não confirmada.",
+    "campos": {
+      "telefone": {
+        "modo": "preencher",
+        "valor": "38997384544"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/focco-academia-sports/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/foccoacademia/"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Treino de força",
+          "Treino híbrido"
+        ]
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    }
+  },
+  {
+    "id": 6,
+    "nome": "Panobianco",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MESTRE JANJAO",
+      "300"
+    ],
+    "fonte_e_observacao": "Perfil oficial Wellhub da unidade Panobianco Montes Claros - São José e site oficial Panobianco. A página oficial Wellhub identifica a unidade como exclusiva no Wellhub; modalidades, comodidades, horários, telefone e endereço conferidos. TotalPass não confirmado e não marcado como aceitação nem rejeição.",
+    "campos": {
+      "telefone": {
+        "modo": "preencher",
+        "valor": "38999042432"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://www.panobiancoacademia.com.br/academias/montes-claros"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/panobianco-montes-claros-sao-jose/"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Aeróbico",
+          "Aulas especiais",
+          "Abd",
+          "Abdômen e braço",
+          "Aeropower",
+          "Body Jam",
+          "Fisiculturismo",
+          "Power Bike",
+          "Queima de gordura"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "chuveiro": true,
+          "estacionamento": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 8,
+    "nome": "3F ACADEMIA LTDA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MESTRE ALFREDO BARBOSA",
+      "413"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da 3F Academia em Janaúba confirma endereço, telefone, Instagram, horários, atividades e comodidades. Página oficial TotalPass confirma parceria.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891495720",
+        "valor": "38991434988"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/academia3f/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/3f-academia-padre-eustaquio-janauba/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "14:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Aeróbico",
+          "Aulas de dança",
+          "Meditação",
+          "Arte marcial",
+          "Atividades anaeróbicas",
+          "Boxe",
+          "Circuitos funcionais",
+          "Cross Fight",
+          "Crosstrain",
+          "Dança forró",
+          "Fisiculturismo",
+          "Mat Pilates",
+          "Muay Thai",
+          "Pernas",
+          "Strong"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "bioimpedancia": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "chuveiro_acessivel": true,
+          "acessibilidade": true,
+          "coworking": true,
+          "estacionamento": true,
+          "loja_artigos_esportivos": true,
+          "personal_trainer": true,
+          "tapete_yoga": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 23,
+    "nome": "KAREN BASTOS ESTUDIO DE PILATES LTDA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MARTINIANO COELHO",
+      "414"
+    ],
+    "fonte_e_observacao": "Perfil Local Treino da unidade confirma endereço e horários. Há divergência entre telefones publicados por diretórios; o telefone do registro (11 2222-2222) é dado placeholder e foi removido, sem substituir por número não confirmado diretamente.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "1122222222",
+        "valor": null
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Pilates"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/estudios-de-pilates/janauba/karen-bastos-estudio-de-pilates/"
+      }
+    }
+  },
+  {
+    "id": 26,
+    "nome": "FORMA TRAINING",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AMERICO SOARES",
+      "101"
+    ],
+    "fonte_e_observacao": "Ficha de estabelecimento da Forma Academia em Janaúba confirma correspondência da unidade pelo endereço Rua Américo Soares, 101, e telefone já cadastrado. Horário publicado pela ficha comercial.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      }
+    }
+  },
+  {
+    "id": 57,
+    "nome": "ACADEMIA MARACANA LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "BEATO FRANCISCO",
+      "45"
+    ],
+    "fonte_e_observacao": "Endereço e telefone correspondem à unidade Atlhetica Maracanã / Unidade 08. A lista oficial Wellhub mostra Atlhetica Maracanã; ficha local confirma endereço e telefone da unidade.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "06:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Fitness",
+          "Personal Dance",
+          "Danças sociais"
+        ]
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 122,
+    "nome": "FULL TIME ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "FRANCISCO CAETANI",
+      "742"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Major Prates confirma endereço, telefone, Instagram, horários, comodidades e atividades. O registro TotalPass anteriormente atribuído pertence à Unidade Planalto, não à unidade Major Prates; TotalPass desta unidade fica não confirmado.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3830825789",
+        "valor": "38999592075"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/fulltime_academia_suplementos/"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+        "valor": "https://wellhub.com/pt-br/search/partners/fulltime-academia-unidade-major-prates-major-prates-montes-claros/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "15:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Aulas especiais",
+          "Arte marcial",
+          "Aeróbico",
+          "Aulas de dança",
+          "Crosstrain",
+          "Dança",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "armarios": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "estacionamento": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    }
+  },
+  {
+    "id": 218,
+    "nome": "CROSSFIT ZERO TRES OITO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "PRESIDENTE KENNEDY",
+      "110"
+    ],
+    "fonte_e_observacao": "Cadastro oficial de afiliados CrossFit confirma nome, endereço Avenida Presidente Kennedy, 110, telefone +55 38 3321-3938 e site oficial. Horários comerciais complementados por ficha pública local; confirmar grade de aulas diretamente com a unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3830825789",
+        "valor": "3833213938"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://www.crossfitzero38.com.br/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.crossfit.com/gym/29570/crossfit-zero38"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "CrossFit"
+        ]
+      }
+    }
+  }
+]
