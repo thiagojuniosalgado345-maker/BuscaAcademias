@@ -127,8 +127,14 @@ function calcularStatus(horarios) {
   const agora = new Date();
   const diaSemana = agora.getDay();
   const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
+  const chaveHoje = String(diaSemana);
 
-  const periodosHoje = obterPeriodos(horarios ? horarios[diaSemana] : null);
+  // Dia ausente = informação não cadastrada; null/[] = fechado.
+  if (!Object.prototype.hasOwnProperty.call(horarios, chaveHoje)) {
+    return { aberta: false, texto: "Horário não informado", desconhecida: true };
+  }
+
+  const periodosHoje = obterPeriodos(horarios[chaveHoje]);
 
   for (const periodo of periodosHoje) {
     const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
@@ -152,7 +158,11 @@ function calcularStatus(horarios) {
 
   for (let i = 1; i <= 7; i++) {
     const proximoDia = (diaSemana + i) % 7;
-    const periodosProximoDia = obterPeriodos(horarios ? horarios[proximoDia] : null);
+    const chaveProximoDia = String(proximoDia);
+    if (!Object.prototype.hasOwnProperty.call(horarios, chaveProximoDia)) {
+      return { aberta: false, texto: "Horário não informado", desconhecida: true };
+    }
+    const periodosProximoDia = obterPeriodos(horarios[chaveProximoDia]);
     if (periodosProximoDia.length > 0) {
       const rotulo = i === 1 ? "amanhã" : DIAS_SEMANA[proximoDia];
       return { aberta: false, texto: `Fechada · abre ${rotulo} às ${periodosProximoDia[0].abre}` };
@@ -248,8 +258,12 @@ function renderizarPerfil(academia) {
 
   const btnInstagram = document.getElementById("btnInstagram");
   if (academia.instagram) {
-    const usuario = academia.instagram.replace("@", "");
-    btnInstagram.href = `https://instagram.com/${usuario}`;
+    const valorInstagram = String(academia.instagram).trim();
+    const linkInstagram = /^https?:\/\//i.test(valorInstagram)
+      ? valorInstagram
+      : `https://www.instagram.com/${encodeURIComponent(valorInstagram.replace(/^@+/, ""))}/`;
+    btnInstagram.href = linkInstagram;
+    btnInstagram.rel = "noopener noreferrer";
     btnInstagram.style.display = "inline-flex";
   }
 
@@ -265,10 +279,13 @@ function renderizarPerfil(academia) {
     Object.keys(academia.horarios).length > 0;
 
   document.getElementById("horariosAcademia").innerHTML = DIAS_SEMANA.map((dia, i) => {
-    const periodos = obterPeriodos(academia.horarios ? academia.horarios[i] : null);
+    const chaveDia = String(i);
+    const diaInformado = Boolean(academia.horarios) &&
+      Object.prototype.hasOwnProperty.call(academia.horarios, chaveDia);
+    const periodos = obterPeriodos(diaInformado ? academia.horarios[chaveDia] : null);
     const texto = periodos.length
       ? periodos.map((p) => `${p.abre} às ${p.fecha}`).join(" e ")
-      : (temHorarios ? "Fechado" : "Horário não informado");
+      : (!temHorarios || !diaInformado ? "Horário não informado" : "Fechado");
     return `<li><strong>${dia}:</strong> ${texto}</li>`;
   }).join("");
 
