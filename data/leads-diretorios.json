@@ -1,0 +1,245 @@
+[
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Space Corpus",
+    "endereco": "Av. Manoel Magalhaes Filho 241",
+    "bairro": "Delfino Magalhães",
+    "telefone": "38992030174",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Atlhetica Unidade 8",
+    "endereco": "Praça Francisco Coll 45",
+    "bairro": "Maracanã",
+    "telefone": "3830161104",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Ideal Esportes e Eventos",
+    "endereco": "Av. Corinto Crisóstomo Freire 516",
+    "bairro": "Morada do Parque",
+    "telefone": "3832234996",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Espaço Di Castro",
+    "endereco": "Rua Padre Vieira 37",
+    "bairro": "São Judas Tadeu",
+    "telefone": "3832225001",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "CT Elite Moc",
+    "endereco": "Rua Rivadávio Lucas Mendes 415",
+    "bairro": null,
+    "telefone": "38999256619",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Top Gym Moc",
+    "endereco": "Rua Dom João Pimenta 701",
+    "bairro": "Centro",
+    "telefone": "38999548887",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Vilsao Team Matriz",
+    "endereco": "Rua Rio Viêira 140",
+    "bairro": "Planalto",
+    "telefone": "38991757038",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Jump Academia",
+    "endereco": "Rua Pires e Albuquerque 435",
+    "bairro": null,
+    "telefone": "3899197006",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Torga Squash Fit",
+    "endereco": "Rua Lírio Brant 742",
+    "bairro": "Melo",
+    "telefone": "3832216168",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Hora do Recreio",
+    "endereco": "Rua Tupiniquins 176",
+    "bairro": "Melo",
+    "telefone": "3830842779",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Cross X Delfino",
+    "endereco": "Av. Cel. Luiz Maia 1663",
+    "bairro": "Jardim Palmeiras",
+    "telefone": "38988236537",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Hard Cross Treino",
+    "endereco": "Av. Vicente Guimarães 1025",
+    "bairro": "Sagrada Família",
+    "telefone": "38992708200",
+    "fonte": "https://www.cylex.com.br/montes-claros/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia TRISPORT Fitness Aquático",
+    "endereco": "Rua Agapito dos Anjos 543",
+    "bairro": null,
+    "telefone": "3832121016",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Extreme Fit",
+    "endereco": "Av. João XXIII 1755",
+    "bairro": null,
+    "telefone": "38991319621",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Cross Life Independência",
+    "endereco": "Rua Lagoa das Palmas 404",
+    "bairro": null,
+    "telefone": null,
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Mega Fitness",
+    "endereco": "Av. Francisco Gaetani 950A",
+    "bairro": null,
+    "telefone": "3830155232",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Cross Experience",
+    "endereco": "Rua Neco de Santa Maria 719",
+    "bairro": null,
+    "telefone": "38998134364",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Apolo Fitness Academia",
+    "endereco": "Rua Professor Monteiro Fonseca 39",
+    "bairro": null,
+    "telefone": "38999567887",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Wolver CrossFit",
+    "endereco": "Av. Donato Quintino 90",
+    "bairro": null,
+    "telefone": "3832201379",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "montes-claros",
+    "nome": "Academia Sintonia do Corpo",
+    "endereco": "Av. Geraldo Athayde 1018",
+    "bairro": null,
+    "telefone": "3832153238",
+    "fonte": "https://www.cylex.com.br/montes-claros/academias/",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "DA Slim Estúdio de Treinamento e Saúde",
+    "endereco": "Rua Maurício Augusto de Azevedo 95",
+    "bairro": "Centro",
+    "telefone": "38998952416",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Alpha Performance e Bem-Estar",
+    "endereco": "Rua Santos Dumont 158",
+    "bairro": "Centro",
+    "telefone": "38988192836",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "BemStar Academia",
+    "endereco": "Rua José Teotônio 333",
+    "bairro": "Centro",
+    "telefone": "38984131070",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Bodyart Academia",
+    "endereco": "Rua Américo Soares 712",
+    "bairro": "São Gonçalo",
+    "telefone": "38988044421",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Gym Prime",
+    "endereco": "Rua São João da Ponte 1770",
+    "bairro": "Santo Antônio",
+    "telefone": "38999966493",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Centro de Treinamento Biotech",
+    "endereco": "Rua Cirílo Barbosa 712",
+    "bairro": "Centro",
+    "telefone": "38984185663",
+    "fonte": "https://agendajanauba.com.br/guia/?view=grid",
+    "status": "candidato_nao_verificado"
+  },
+  {
+    "cidade": "janauba",
+    "nome": "Moov Academia Unidade II",
+    "endereco": "Av. Manoel Athaide 1344",
+    "bairro": "Santo Antônio",
+    "telefone": "38991400064",
+    "fonte": "https://agendajanauba.com.br/guia/?sort=date-asc&view=grid",
+    "status": "candidato_nao_verificado"
+  }
+]
