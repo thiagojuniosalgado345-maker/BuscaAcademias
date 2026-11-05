@@ -17,8 +17,8 @@ import requests
 ROOT = Path(__file__).resolve().parents[1]
 INPUT = ROOT / "data" / "atualizacoes-verificadas.json"
 OUTPUT = ROOT / "relatorio-atualizacoes-verificadas.csv"
-URL = os.getenv("SUPABASE_URL", "").strip().replace("\\\\", "").strip().strip('"').strip("'").rstrip("/")
-KEY = os.getenv("SUPABASE_SECRET_KEY", "").strip().replace("\\\\", "").strip().strip('"').strip("'")
+URL = os.getenv("SUPABASE_URL", "").strip().replace("\\", "").strip().strip('"').strip("'").rstrip("/")
+KEY = os.getenv("SUPABASE_SECRET_KEY", "").strip().replace("\\", "").strip().strip('"').strip("'")
 DRY_RUN = os.getenv("DRY_RUN", "true").strip().lower() != "false"
 ALLOWED_FIELDS = {
     "telefone", "whatsapp", "horarios", "modalidades", "instagram", "site",
