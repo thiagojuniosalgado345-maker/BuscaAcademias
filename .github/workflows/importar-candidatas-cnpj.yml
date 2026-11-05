@@ -32,5 +32,5 @@ jobs:
           GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
-          DRY_RUN: "false"
+          DRY_RUN: "true"
         run: python scripts/importar_candidatas_cnpj.py
