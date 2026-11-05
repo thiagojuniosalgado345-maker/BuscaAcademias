@@ -3008,7 +3008,7 @@
       "GOVERNADOR MAGALHAES PINTO",
       "1550"
     ],
-    "fonte_e_observacao": "Página individual oficial TotalPass ACADEMIA INOVE FITNESS confirma endereço Avenida Governador Magalhães Pinto, 1550, Vera Cruz, Montes Claros; coincide exatamente com o registro CNPJ. Modalidades, estrutura e horários complementados a partir da página oficial.",
+    "fonte_e_observacao": "Página individual oficial TotalPass ACADEMIA INOVE FITNESS confirma endereço Avenida Governador Magalhães Pinto, 1550, Vera Cruz, Montes Claros; coincide exatamente com o registro CNPJ. Modalidades, estrutura e horários complementados a partir da página oficial. | Perfil individual oficial Wellhub Academia Inove Fit 24h confirma a mesma unidade na Av. Gov. Magalhães Pinto, 1550, Instagram academia_inovefit e modalidades/funcionamento. Telefone publicado pelo Wellhub (38) 99140-5675 difere do telefone empresarial; telefone antigo preservado.",
     "campos": {
       "detalhes_url": {
         "modo": "preencher",
@@ -3084,10 +3084,18 @@
           "vestiario": true,
           "wifi": true
         }
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/academia_inovefit/"
       }
     },
     "parcerias": {
       "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      },
+      "aceita_wellhub": {
         "valor_anterior": null,
         "valor": true
       }
