@@ -69,3 +69,5 @@ print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
 # Auditoria final após inclusão de Studio Pedro Sodré e Cross UP e parcerias verificadas.
 
 # Atualizacao de auditoria apos insercao dos registros 230 e 231; nenhuma alteracao no banco.
+
+# Auditoria geral após suspensão temporária da revisão das parcerias Wellhub/TotalPass; foco nos dados cadastrais.
