@@ -18,3 +18,5 @@ for city in ("montes-claros","janauba"):
  print(city,len(subset))
 
 # Exportacao usada para conferir a sincronizacao de parceiros em 05/11/2026.
+
+# Reexportacao de conferência após o último lote de dados.
