@@ -1,0 +1,41 @@
+name: Importar leads verificados como rascunhos
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'true = simular; false = inserir rascunhos ocultos'
+        required: true
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+        default: 'true'
+  push:
+    paths:
+      - 'data/leads-verificados.json'
+      - 'scripts/importar_leads_verificados.py'
+      - '.github/workflows/importar-leads-verificados.yml'
+permissions:
+  contents: read
+jobs:
+  importar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python -m pip install requests
+      - name: Executar importador seguro
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false' && 'false' || 'true' }}
+        run: python scripts/importar_leads_verificados.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: relatorio-importacao-leads-verificados
+          path: relatorio-importacao-leads-verificados.csv
+          if-no-files-found: error
+          retention-days: 30
