@@ -53,7 +53,8 @@ async function buscarAcademiasDoSupabase(cidadeSlug) {
   const { data, error } = await supabaseClient
     .from("academias")
     .select("*")
-    .eq("cidade", cidadeSlug);
+    .eq("cidade", cidadeSlug)
+    .eq("publicado", true);
 
   if (error) {
     console.error("Erro ao buscar academias no Supabase:", error);
@@ -67,6 +68,7 @@ function converterLinhaDoSupabase(linha) {
   return {
     id: linha.id,
     nome: linha.nome,
+    categoria: linha.categoria || "Academia",
     bairro: linha.bairro || "",
     foto: linha.foto || FOTO_PADRAO,
     logo: linha.logo || null,
@@ -254,6 +256,9 @@ function renderizarLista(lista) {
       </div>
       <div class="academiaConteudo">
         <h3>${academia.nome}</h3>
+        <div class="modalidades categoriaEstabelecimento">
+          <span class="tag">${academia.categoria || "Academia"}</span>
+        </div>
         <div class="local">
           <strong>📍</strong> ${academia.bairro ? academia.bairro + " · " : ""}<strong>${obterTextoDistancia(academia)}</strong>
         </div>
@@ -286,6 +291,7 @@ function buscarAcademia() {
   const filtradas = academiasDaCidade.filter((a) =>
     a.nome.toLowerCase().includes(texto) ||
     a.bairro.toLowerCase().includes(texto) ||
+    (a.categoria || "").toLowerCase().includes(texto) ||
     a.modalidades.some((m) => m.toLowerCase().includes(texto))
   );
   academiaEmExibicao = filtradas;
@@ -342,7 +348,9 @@ function ordenarAcademias() {
 function atualizarContador(quantidade) {
   const contador = document.getElementById("contador");
   if (!contador) return;
-  contador.innerText = quantidade === 1 ? "1 academia encontrada" : `${quantidade} academias encontradas`;
+  contador.innerText = quantidade === 1
+    ? "1 estabelecimento encontrado"
+    : `${quantidade} estabelecimentos encontrados`;
 }
 
 function favoritar(botao) {
