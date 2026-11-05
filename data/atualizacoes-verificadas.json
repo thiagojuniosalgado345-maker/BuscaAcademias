@@ -1169,7 +1169,7 @@
       "OLIMPIO PRATES",
       "868"
     ],
-    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade no endereço Av. Olímpio Pratés, 868.",
+    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade no endereço Av. Olímpio Pratés, 868. | Perfil oficial Wellhub consultado em 05/11/2026 apresenta avaliação 4,87/5 com 52 avaliações para Bioativa Academia Feminina. Os demais campos e a parceria Wellhub já constavam do catálogo.",
     "campos": {
       "estrutura": {
         "modo": "mesclar_objeto",
@@ -1180,8 +1180,17 @@
           "nutricionista": true,
           "personal_trainer": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.87
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 52
       }
-    }
+    },
+    "parcerias": {}
   },
   {
     "id": 97,
@@ -1265,7 +1274,7 @@
       "VICENTE GUIMARAES",
       "1025"
     ],
-    "fonte_e_observacao": "Listagem individual TotalPass e perfil individual Wellhub identificam a Hard Cross Treino no endereço Av. Vicente Guimarães, 1025. A página individual TotalPass confirma parceria desta unidade; o telefone do cadastro foi preservado porque há números divergentes entre as fontes.",
+    "fonte_e_observacao": "Listagem individual TotalPass e perfil individual Wellhub identificam a Hard Cross Treino no endereço Av. Vicente Guimarães, 1025. A página individual TotalPass confirma parceria desta unidade; o telefone do cadastro foi preservado porque há números divergentes entre as fontes. | Perfil oficial Wellhub consultado em 05/11/2026 apresenta avaliação 4,97/5 com 160 avaliações para Hard Cross Treino. A parceria Wellhub e TotalPass e os dados de funcionamento já constavam do catálogo.",
     "campos": {
       "detalhes_url": {
         "modo": "preencher",
@@ -1281,6 +1290,14 @@
           "ventilador": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.97
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 160
       }
     },
     "parcerias": {
@@ -3894,6 +3911,521 @@
       }
     },
     "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 Gym Córrego das Melancias confirma Av. Antônio Lafetá Rebelo, 625, horários, musculação, fisiculturismo, funcional infantil, Instagram e comodidades. Telefone divulgado no perfil difere do cadastral, por isso o telefone existente foi preservado. Avaliação 4,85/5 (204 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 112,
+    "nome": "FAST FIT 2",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MESTRA FININHA",
+      "3170"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-fast-fit-2-interlagos/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/academiafastfitmoc"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:30"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Treino híbrido",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "estacionamento": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.79
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 604
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Fast Fit 2 confirma Av. Mestra Fininha, 3170, horários, modalidades, Instagram, estrutura e parceria. Telefone da página oficial diverge do telefone empresarial e foi preservado. Avaliação 4,79/5 (604 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 121,
+    "nome": "FULL TIME ACADEMIA IBITURUNA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "JOSE CORREIA MACHADO",
+      "1079"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/fulltime-academia-unidade-ibituruna-ibituruna-montes-claros/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/fulltime_academia"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Fit Dance",
+          "Muay Thai",
+          "Jump",
+          "Cycling indoor",
+          "Fisiculturismo",
+          "Alongamento"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "chuveiro": true,
+          "elevador": true,
+          "estacionamento": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.87
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 1344
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Ibituruna confirma Av. José Corrêa Machado, 1079, horários, modalidades, Instagram, estrutura e parceria. Telefone publicado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,87/5 (1.344 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 123,
+    "nome": "FULL TIME ACADEMIA SAO JOSE LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "FLORIANO NEIVA",
+      "610"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/fulltime-academia-sao-jose-alto-sao-joao/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/fulltime_academia"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Aeróbico",
+          "Dança",
+          "Aulas especiais",
+          "Aerojump",
+          "Condicionamento corporal",
+          "Corrida na esteira",
+          "Fisiculturismo",
+          "Treino de força"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "chuveiro": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.93
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 1578
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia São José confirma Av. Floriano Neiva, 610, horários, modalidades, Instagram, estrutura e parceria. Telefone divulgado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,93/5 (1.578 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 155,
+    "nome": "MAXXFORCE",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "PLINIO RIBEIRO",
+      "2155"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-maxxforce-jardim-palmeiras/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/maxxforcemoc"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "14:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Fisiculturismo",
+          "Artes marciais",
+          "Funcional infantil",
+          "Aulas de dança"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "chuveiro_acessivel": true,
+          "espaco_cadeira_rodas": true,
+          "estacionamento": true,
+          "estacionamento_acessivel": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.87
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 525
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia MaxxForce confirma Av. Dep. Plínio Ribeiro, 2155, Jardim Palmeiras, horários, modalidades, Instagram, comodidades e parceria. Telefone oficial publicado difere do telefone empresarial e foi preservado. Avaliação 4,87/5 (525 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 158,
+    "nome": "COMMUNITY FITNESS MONSTER",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "OLIMPIO GUEDES",
+      "170"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/cf-monster/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/cfmonster_"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "08:05"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "08:05"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "08:05"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "08:05"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "08:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "10:30"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Aeróbico",
+          "CrossFit"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "chuveiro": true,
+          "espaco_cadeira_rodas": true,
+          "loja_artigos_esportivos": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.99
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 71
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub CF Monster confirma Rua Olímpio Guedes, 170, Morada do Sol, horários específicos, CrossFit, Instagram, comodidades e parceria. Telefone do perfil difere do telefone cadastral e foi preservado. Avaliação 4,99/5 (71 avaliações), consultada em 05/11/2026.",
     "parcerias": {
       "aceita_wellhub": {
         "valor_anterior": null,
