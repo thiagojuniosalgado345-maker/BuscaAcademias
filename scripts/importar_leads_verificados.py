@@ -112,17 +112,38 @@ def validar_lead(lead):
 
 def classificar(lead, existentes):
     nome_n = normalizar(lead["nome"])
+    semelhancas = []
+    enderecos = []
     for atual in existentes:
         if atual.get("cidade") != lead["cidade"]:
             continue
         existente_n = normalizar(atual.get("nome"))
         similaridade_nome = SequenceMatcher(None, nome_n, existente_n).ratio()
-        if nome_n and (nome_n in existente_n or existente_n in nome_n or similaridade_nome >= 0.90):
-            return "duplicado_nome", atual, "Nome muito semelhante a registro existente."
-        if telefone_compativel(lead.get("telefone"), atual.get("telefone")) or telefone_compativel(lead.get("telefone"), atual.get("whatsapp")):
+        mesmo_nome = bool(nome_n and (
+            nome_n in existente_n or existente_n in nome_n or similaridade_nome >= 0.90
+        ))
+        mesmo_endereco = endereco_compativel(lead.get("endereco"), atual.get("endereco"))
+        mesmo_telefone = (
+            telefone_compativel(lead.get("telefone"), atual.get("telefone"))
+            or telefone_compativel(lead.get("telefone"), atual.get("whatsapp"))
+        )
+        if mesmo_endereco and (mesmo_nome or mesmo_telefone):
+            return "duplicado_confirmado", atual, "Nome/telefone e endereço apontam para o mesmo estabelecimento."
+        if mesmo_telefone:
             return "possivel_duplicado_telefone", atual, "Telefone coincide com registro existente."
-        if endereco_compativel(lead.get("endereco"), atual.get("endereco")):
-            return "revisar_endereco", atual, "Mesmo logradouro e número; pode haver outra unidade ou ocupante no local."
+        if mesmo_nome:
+            semelhancas.append((similaridade_nome, atual))
+        if mesmo_endereco:
+            enderecos.append(atual)
+
+    if lead.get("unidade_separada") and semelhancas:
+        semelhancas.sort(key=lambda x: x[0], reverse=True)
+        return "nova_unidade_mesma_marca", semelhancas[0][1], "A fonte identifica unidade própria em endereço diferente do registro da mesma marca."
+    if semelhancas:
+        semelhancas.sort(key=lambda x: x[0], reverse=True)
+        return "revisar_mesma_marca", semelhancas[0][1], "Marca semelhante em endereço diferente; confirmar se é filial ou mudança de endereço."
+    if enderecos:
+        return "revisar_endereco", enderecos[0], "Mesmo logradouro e número, mas nome/telefone não confirmam duplicidade."
     return "novo_rascunho", None, "Sem duplicidade por nome, telefone ou endereço detectável."
 
 
@@ -190,7 +211,7 @@ def main():
             "publicado_existente": atual.get("publicado", "") if atual else "",
             "motivo": motivo,
         })
-        if status == "novo_rascunho":
+        if status in ("novo_rascunho", "nova_unidade_mesma_marca"):
             novos.append(transformar(lead))
 
     with OUTPUT.open("w", newline="", encoding="utf-8-sig") as f:
