@@ -532,12 +532,11 @@
       "RUA MARTINIANO COELHO",
       "414"
     ],
-    "fonte_e_observacao": "Perfil Local Treino da unidade confirma endereço e horários. Há divergência entre telefones publicados por diretórios; o telefone do registro (11 2222-2222) é dado placeholder e foi removido, sem substituir por número não confirmado diretamente. | Avaliação pública consultada em 05/11/2026 para Karen Bastos Estúdio de Pilates: 5.0/5 (16 avaliações). Nota e contagem são variáveis e podem mudar.",
+    "fonte_e_observacao": "Perfil Local Treino da unidade confirma endereço e horários. Há divergência entre telefones publicados por diretórios; o telefone do registro (11 2222-2222) é dado placeholder e foi removido, sem substituir por número não confirmado diretamente. | Avaliação pública consultada em 05/11/2026 para Karen Bastos Estúdio de Pilates: 5.0/5 (16 avaliações). Nota e contagem são variáveis e podem mudar. | Ficha pública de Karen Bastos Estúdio de Pilates informa telefone (38) 98434-6277 para o endereço Rua Martiniano Coelho, 414.",
     "campos": {
       "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "1122222222",
-        "valor": null
+        "modo": "preencher",
+        "valor": "38984346277"
       },
       "horarios": {
         "modo": "preencher",
@@ -2138,9 +2137,17 @@
           "vestiario": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 98
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil. | Google Business consultado em 05/11/2026: 4,9/5 com 98 avaliações; contagem e nota podem mudar.",
     "parcerias": {
       "aceita_wellhub": {
         "valor_anterior": null,
