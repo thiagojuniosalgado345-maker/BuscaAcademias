@@ -975,7 +975,7 @@
       "FRANCISCO CAETANI",
       "742"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Major Prates confirma endereço, telefone, Instagram, horários, comodidades e atividades. O registro TotalPass anteriormente atribuído pertence à Unidade Planalto, não à unidade Major Prates; TotalPass desta unidade fica não confirmado.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Major Prates confirma endereço, telefone, Instagram, horários, comodidades e atividades. O registro TotalPass anteriormente atribuído pertence à Unidade Planalto, não à unidade Major Prates; TotalPass desta unidade fica não confirmado. | Google Business consultado em 05/11/2026 também identifica Fulltime Academia na Av. Francisco Gaetani, 742, e o mesmo telefone (38) 99959-2075. Avaliação 4,7/5 com 253 avaliações; métricas variáveis.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -1065,6 +1065,14 @@
           "vestiario": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 253
       }
     },
     "parcerias": {
@@ -5201,6 +5209,205 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 23
+      }
+    }
+  },
+  {
+    "id": 110,
+    "nome": "ACADEMIA EXTREME FIT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA JOAO XXIII",
+      "1755"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academy Extreme Fit no mesmo endereço Av. João XXIII, 1755, bairro Santos Reis. Horários públicos: seg–sex 05:00–23:00; sábado 07:00–13:00 e 16:00–20:00; domingo 07:00–12:00. Avaliação 4,7/5 (351 avaliações), sujeita a atualização. Telefone do banco foi preservado porque difere do número do perfil comercial.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 351
+      }
+    }
+  },
+  {
+    "id": 81,
+    "nome": "ACADEMIA SPACE CORPUS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA MIRAMAR",
+      "139"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Space Corpus na Rua Miramar, 139, Jardim Palmeiras; telefone público +55 38 3222-1373 coincide com o contato cadastrado. Horários publicados: seg–sex 05:30–21:00 e sábado 08:00–12:00; domingo sem horário disponível. Avaliação 5,0/5 com 1 avaliação; amostra pequena e métrica variável.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "05:30",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:30",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:30",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:30",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:30",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 1
+      }
+    }
+  },
+  {
+    "id": 99,
+    "nome": "ACADEMIA X MOVMENT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA JOAO F PIMENTA",
+      "32"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica X Move Gym na Rua João F. Pimenta, 32, Cidade Santa Maria, endereço igual ao cadastro Academia X Movment. Horários publicados: seg–sex 05:30–22:00; sábado e domingo 08:00–12:00. Avaliação 5,0/5 com 106 avaliações, métricas variáveis. Telefone do cadastro foi preservado porque diverge do telefone do perfil comercial; confirmar antes de substituir.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:30",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:30",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:30",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:30",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:30",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 106
       }
     }
   }
