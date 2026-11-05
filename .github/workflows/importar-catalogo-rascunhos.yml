@@ -2,6 +2,15 @@ name: Importar candidatos no catalogo como rascunhos
 
 on:
   workflow_dispatch:
+    inputs:
+      dry_run:
+        description: "true = simular; false = inserir rascunhos ocultos no site"
+        required: true
+        type: choice
+        options:
+          - "true"
+          - "false"
+        default: "true"
   push:
     paths:
       - "scripts/importar_catalogo_rascunhos.py"
@@ -29,9 +38,9 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install requests
 
-      - name: Simular importacao de rascunhos
+      - name: Executar importador
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
-          DRY_RUN: "true"
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false' && 'false' || 'true' }}
         run: python scripts/importar_catalogo_rascunhos.py
