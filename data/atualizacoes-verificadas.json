@@ -5980,5 +5980,336 @@
       }
     },
     "fonte_e_observacao": "LocalTreino, Cylex e AcademiasBR consultados em 05/11/2026 identificam Torga Squash Fit na Rua Lírio Brant, 742; telefone (38) 3221-6168 coincide com o cadastro. Horários: seg–sex 06:00–22:00, sábado 08:00–12:00, domingo fechado. Avaliação do Google Business: 4,9/5 com 98 avaliações, métrica variável. Detalhes técnicos das modalidades além do nome comercial não foram publicados de forma consistente."
+  },
+  {
+    "id": 151,
+    "nome": "A2 STUDIO TRAINING",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA JOSE AVELINO PEREIRA",
+      "356"
+    ],
+    "fonte_e_observacao": "LocalTreino e Google Business consultados em 05/11/2026 identificam A2 Studio Training na Rua José Avelino Pereira, 356B, Santa Rita II. Telefone divulgado: (38) 99117-7194; corrigido o número antigo do cadastro, que divergía. Instagram divulgado: @a2studiotraining. Google Business: 4,9/5 com 67 avaliações. Horários divergentes entre as duas fontes; mantidos sem alteração até nova confirmação.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898891880",
+        "valor": "38991177194"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/a2studiotraining/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/personal-trainers/montes-claros/a2-studio-training/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 67
+      }
+    }
+  },
+  {
+    "id": 138,
+    "nome": "ACADEMIA ATLETA FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA MONTE PLANO",
+      "1045"
+    ],
+    "fonte_e_observacao": "Solutudo identifica a Academia Atleta Fitness (CNPJ e nome empresarial correspondentes) na Rua Monte Plano, 1045, Letra B, Santa Rita I, com telefone e WhatsApp (38) 99211-9078. O número do cadastro estava sem dígitos; corrigido a partir da ficha específica da unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3892119078",
+        "valor": "38992119078"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38992119078"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/karoline-ferraz-de-souza-6237728"
+      }
+    }
+  },
+  {
+    "id": 45,
+    "nome": "ACADEMIA CROSS TRAINING DELFINO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA NECO DELFINO",
+      "1045"
+    ],
+    "fonte_e_observacao": "Casa dos Dados consultada em 05/11/2026 identifica a filial da Academia Cross Training Delfino Ltda, CNPJ 29.897.278/0002-76, ativa, exatamente na Rua Neco Delfino, 1045, Delfino Magalhães. A ficha publica telefone/WhatsApp (38) 98402-2668; o cadastro antigo estava sem o nono dígito e foi corrigido.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3884022668",
+        "valor": "38984022668"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38984022668"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://casadosdados.com.br/solucao/cnpj/academia-cross-training-delfino-ltda-29897278000276"
+      }
+    }
+  },
+  {
+    "id": 43,
+    "nome": "ACADEMIA CORPO E MENTE",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA G",
+      "100"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Corpo X Mente na Rua G, 100, Vila Anália, correspondente ao endereço do cadastro Academia Corpo e Mente. Horários publicados: seg–sex 05:00–23:00, sábado 05:00–13:00; domingo sem horário publicado. Avaliação 4,0/5 com 3 avaliações. O telefone público difere do cadastrado; preservado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "05:00",
+              "fecha": "13:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "vestiario": true,
+          "chuveiro": true,
+          "armarios": true,
+          "estacionamento": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 3
+      }
+    }
+  },
+  {
+    "id": 95,
+    "nome": "COSMO FIT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA PORTO RICO",
+      "214"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Cosmo Fit na Rua Porto Rico, 214, Independência, endereço igual ao cadastro. Horários: seg–sex 05:00–23:00; sábado 07:00–12:00 e 16:00–20:00; domingo 07:00–12:00. Avaliação 4,7/5 com 184 avaliações. O telefone público diverge do registro empresarial; preservado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "acessibilidade": true,
+          "estacionamento": true,
+          "banheiro_acessivel": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 184
+      }
+    }
+  },
+  {
+    "id": 111,
+    "nome": "ACADEMIA EXTREME",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA PADRE EUSTAQUIO",
+      "99"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Extreme Fit - Unidade 2 na Rua Padre Eustáquio, 99, São José, endereço igual ao cadastro. Horários: seg–sex 05:00–23:00; sábado 08:00–13:00 e 16:00–20:00; domingo 08:00–13:00. Avaliação 4,6/5 com 204 avaliações. O telefone público difere do contato do registro empresarial; preservado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "acessibilidade": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.6
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 204
+      }
+    }
   }
 ]
