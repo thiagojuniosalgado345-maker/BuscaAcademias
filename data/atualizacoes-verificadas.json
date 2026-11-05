@@ -2799,5 +2799,188 @@
       }
     },
     "fonte_e_observacao": "Perfil individual oficial Wellhub Plena Forma Academia confirma Praça José Fernandes de Araújo, 80A, Roxo Verde, mesmo logradouro e número do cadastro. Horários, atividades e comodidades complementados; parceria Wellhub já estava marcada como confirmada no banco."
+  },
+  {
+    "id": 51,
+    "nome": "ACADEMIA INOVE FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "GOVERNADOR MAGALHAES PINTO",
+      "1550"
+    ],
+    "fonte_e_observacao": "Página individual oficial TotalPass ACADEMIA INOVE FITNESS confirma endereço Avenida Governador Magalhães Pinto, 1550, Vera Cruz, Montes Claros; coincide exatamente com o registro CNPJ. Modalidades, estrutura e horários complementados a partir da página oficial.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://totalpass.com/br/academias/academia-inove-fitness/"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Treinamento funcional",
+          "Atividades aeróbicas"
+        ]
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "2": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "3": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "4": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "5": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "banheiro_adulto": true,
+          "bebedouro": true,
+          "bicicletario": true,
+          "chapinha_cabelo": true,
+          "secador_cabelo": true,
+          "toalhas": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 55,
+    "nome": "I9 FIT STORE",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "NENEN SOUTO",
+      "29"
+    ],
+    "fonte_e_observacao": "Página oficial TotalPass ACADEMIA I9 UND II indica Rua Nenen Souto, 29, Alto São João, Montes Claros, endereço exato do cadastro I9 FIT STORE. Nome comercial do perfil parceiro difere do nome empresarial, mas a unidade e o número coincidem; telefone da página TotalPass difere do cadastro e foi preservado.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://totalpass.com/br/academias/academia-i9-und-ii/"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "banheiro_adulto": true,
+          "bebedouro": true,
+          "bicicletario": true,
+          "climatizador": true,
+          "estacionamento_conveniado": true,
+          "loja": true,
+          "ventilador": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
   }
 ]
