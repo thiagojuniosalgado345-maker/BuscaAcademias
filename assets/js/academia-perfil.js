@@ -66,6 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     .from("academias")
     .select("*")
     .eq("id", id)
+    .eq("publicado", true)
     .single();
 
   if (error || !academia) {
