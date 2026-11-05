@@ -112,7 +112,7 @@ def to_row(candidate):
         "publicado": False,
         "cnpj": None,
         "origem_dados": (
-            f"Parceiro confirmado em perfil individual oficial do Wellhub: "
+            f"Parceiro confirmado em {candidate.get('fonte', 'perfil individual oficial do Wellhub')}: "
             f"{candidate['detalhes_url']} | dados públicos consultados em 05/11/2026. "
             ("Cadastro inserido como rascunho; TotalPass confirmado." if candidate.get("aceita_totalpass") is True else "Cadastro inserido como rascunho; TotalPass não verificado.")
         ),
