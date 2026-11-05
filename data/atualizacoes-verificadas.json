@@ -5704,5 +5704,200 @@
         "valor": 19
       }
     }
+  },
+  {
+    "id": 173,
+    "nome": "POWER FIT CONDICIONAMENTO FISICO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA MACEIO",
+      "668"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Power Fit na Rua Maceió, 668, Santo Antônio, o mesmo endereço do cadastro POWER FIT CONDICIONAMENTO FISICO. Horários públicos: seg–sex 05:00–23:00; sábado 07:00–12:00 e 16:00–20:00; domingo 08:00–12:00. Avaliação 4,9/5 com 74 avaliações, sujeita a mudança. A descrição pública lista musculação, treino híbrido e fisiculturismo, além de climatização, personal trainer, bioimpedância, armários e recursos de acessibilidade. O telefone público difere do telefone empresarial já cadastrado; mantido o número existente.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Treino híbrido",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "personal_trainer": true,
+          "avaliacao_bioimpedancia": true,
+          "acessibilidade": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 74
+      }
+    }
+  },
+  {
+    "id": 183,
+    "nome": "ACADEMIA PERFORMANCE",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA ANTONIO LAFETA REBELO",
+      "593"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Performance - Musculação e Piscina na Av. Antônio Lafetá Rebelo, 593, Santa Lúcia; endereço e telefone coincidem com o registro. Horários publicados: seg–sex 05:30–12:30 e 14:00–22:30; sábado 08:00–12:00 e 17:00–19:00; domingo 08:00–12:00. Avaliação 4,5/5 com 125 avaliações (métricas variáveis). A ficha pública indica musculação, Pilates, aulas de salsa/dança e piscina, além de recursos de acessibilidade.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:30",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "22:30"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:30",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "22:30"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:30",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "22:30"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:30",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "22:30"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:30",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "22:30"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Pilates",
+          "Dança"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "piscina": true,
+          "acessibilidade": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 125
+      }
+    }
   }
 ]
