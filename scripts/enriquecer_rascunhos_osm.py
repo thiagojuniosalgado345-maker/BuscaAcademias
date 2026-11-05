@@ -22,7 +22,7 @@ session.headers.update({"User-Agent": "BuscaAcademias/1.0 (catalog enrichment)"}
 
 
 def norm(value):
-    value = unicodedata.normalize("NFKD, ", str(value or ""))
+    value = unicodedata.normalize("NFKD", str(value or ""))
     value = "".join(c for c in value if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
