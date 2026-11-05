@@ -75,3 +75,5 @@ print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
 # Auditoria cadastral continua separada da etapa futura de validacao Wellhub/TotalPass.
 
 # Auditoria cadastral independente das verificacoes de parceiros adiadas a pedido do usuario.
+
+# Inventario atualizado apos lotes cadastrais, sem alterar verificacao de parcerias.
