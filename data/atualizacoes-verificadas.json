@@ -4744,10 +4744,6 @@
         "modo": "preencher",
         "valor": "https://wellhub.com/pt-br/search/partners/corpus-fitness-unidade-1-santa-rita-i-montes-claros/"
       },
-      "facebook": {
-        "modo": "preencher",
-        "valor": "https://facebook.com/academiacorpusfitnessmoc"
-      },
       "horarios": {
         "modo": "preencher",
         "valor": {
@@ -4810,6 +4806,6 @@
         "valor": true
       }
     },
-    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado."
+    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc."
   }
 ]
