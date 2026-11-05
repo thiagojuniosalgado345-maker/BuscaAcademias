@@ -1,0 +1,325 @@
+[
+  {
+    "id": "one-centro",
+    "nome": "One Centro de Treinamento",
+    "cidade": "montes-claros",
+    "bairro": "Maracanã",
+    "endereco": "Rua Canto do Rio, 188 - Maracanã",
+    "telefone": "38991122048",
+    "instagram": "https://instagram.com/one.ct.moc",
+    "categoria": "Centro de treinamento",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/one-centro-de-treinamento/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:30"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:30"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:30"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:30"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "17:00",
+          "fecha": "21:30"
+        }
+      ],
+      "6": [
+        {
+          "abre": "09:00",
+          "fecha": "12:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Musculação",
+      "Treino de força"
+    ],
+    "estrutura": {},
+    "avaliacao": null,
+    "numero_avaliacoes": null,
+    "fonte": "Wellhub"
+  },
+  {
+    "id": "nathan-leite",
+    "nome": "Nathan Leite Fight Team",
+    "cidade": "montes-claros",
+    "bairro": "Major Prates",
+    "endereco": "Rua Neco de Santa Maria, 660 - Major Prates",
+    "telefone": "38988517909",
+    "instagram": "https://www.instagram.com/nathanleiteteam",
+    "categoria": "Centro de treinamento",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/IJMFK19TQ8HOmqQYXb0jGVrqVRGkm40Yv5bhZ31OGMHi_OajYA8J1uZJ3RoW9MAA/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "08:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "19:30",
+          "fecha": "20:30"
+        }
+      ],
+      "2": [
+        {
+          "abre": "20:30",
+          "fecha": "21:30"
+        }
+      ],
+      "3": [
+        {
+          "abre": "08:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "19:30",
+          "fecha": "20:30"
+        }
+      ],
+      "4": [
+        {
+          "abre": "20:30",
+          "fecha": "21:30"
+        }
+      ],
+      "5": [
+        {
+          "abre": "08:00",
+          "fecha": "09:00"
+        },
+        {
+          "abre": "19:30",
+          "fecha": "20:30"
+        }
+      ],
+      "6": []
+    },
+    "modalidades": [
+      "Muay Thai"
+    ],
+    "estrutura": {
+      "banheiro_acessivel": true,
+      "bebedouro": true
+    },
+    "avaliacao": null,
+    "numero_avaliacoes": null,
+    "fonte": "Wellhub"
+  },
+  {
+    "id": "biocorpus-4",
+    "nome": "Academia Biocorpus - 4 Unidade",
+    "cidade": "montes-claros",
+    "bairro": "Cidade Santa Maria",
+    "endereco": "Rua João F. Pimenta, 20 - Cidade Santa Maria",
+    "telefone": "38999459994",
+    "instagram": "https://instagram.com/biocorpusacademia",
+    "categoria": "Academia",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/_sN6ICLm4yd_ihxuaYHFjgtva8z3tJT9wk3b33Aga1CtfY1cYVR0WW8hP-K6cmWA/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:30",
+          "fecha": "22:00"
+        }
+      ],
+      "6": []
+    },
+    "modalidades": [
+      "Indoor bike",
+      "Musculação"
+    ],
+    "estrutura": {
+      "armarios": true,
+      "vestiario": true
+    },
+    "avaliacao": null,
+    "numero_avaliacoes": null,
+    "fonte": "Wellhub"
+  },
+  {
+    "id": "red-tiger",
+    "nome": "Red Tiger Cross Training",
+    "cidade": "montes-claros",
+    "bairro": "São José",
+    "endereco": "Rua Joviniano Ramos, 167 - São José",
+    "telefone": "38999140836",
+    "instagram": "https://instagram.com/redtigercrosstraining",
+    "categoria": "Centro de treinamento",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/wdfj7n9Tz6Ww5USJAQwHQ_w2GIToxY8cRERYNTuFpdyG7wGgaZrN690kxmfvP-RF/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "09:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Cross training",
+      "Treino de core"
+    ],
+    "estrutura": {
+      "portas_adaptadas_cadeirantes": true
+    },
+    "avaliacao": 4.93,
+    "numero_avaliacoes": 41,
+    "fonte": "Wellhub"
+  },
+  {
+    "id": "red-blue",
+    "nome": "Red Blue Academia",
+    "cidade": "montes-claros",
+    "bairro": "São José",
+    "endereco": "Rua Gregório Veloso, 292 - São José",
+    "telefone": "3832146881",
+    "instagram": null,
+    "categoria": "Academia",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/red-blue-academia-52512175-cbff-4ff2-832a-9cdb3f049244/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "13:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Cross training",
+      "Musculação"
+    ],
+    "estrutura": {
+      "armarios": true,
+      "chuveiro": true,
+      "vestiario": true
+    },
+    "avaliacao": 4.81,
+    "numero_avaliacoes": 37,
+    "fonte": "Wellhub"
+  }
+]
