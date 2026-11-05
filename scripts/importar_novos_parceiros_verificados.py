@@ -114,7 +114,11 @@ def to_row(candidate):
         "origem_dados": (
             f"Parceiro confirmado em {candidate.get('fonte', 'perfil individual oficial do Wellhub')}: "
             f"{candidate['detalhes_url']} | dados públicos consultados em 05/11/2026. "
-            ("Cadastro inserido como rascunho; TotalPass confirmado." if candidate.get("aceita_totalpass") is True else "Cadastro inserido como rascunho; TotalPass não verificado.")
+            + (
+                "Cadastro inserido como rascunho; TotalPass confirmado."
+                if candidate.get("aceita_totalpass") is True
+                else "Cadastro inserido como rascunho; TotalPass não verificado."
+            )
         ),
     }
     return {key: value for key, value in row.items() if value is not None}
