@@ -710,7 +710,7 @@
       "RUA AMERICO SOARES",
       "101"
     ],
-    "fonte_e_observacao": "Ficha de estabelecimento da Forma Academia em Janaúba confirma correspondência da unidade pelo endereço Rua Américo Soares, 101, e telefone já cadastrado. Horário publicado pela ficha comercial. | Avaliação pública consultada em 05/11/2026 para Forma Academia Janaúba: 4.5/5 (103 avaliações). Nota e contagem são variáveis e podem mudar.",
+    "fonte_e_observacao": "Ficha de estabelecimento da Forma Academia em Janaúba confirma correspondência da unidade pelo endereço Rua Américo Soares, 101, e telefone já cadastrado. Horário publicado pela ficha comercial. | Avaliação pública consultada em 05/11/2026 para Forma Academia Janaúba: 4.5/5 (103 avaliações). Nota e contagem são variáveis e podem mudar. | Perfil público de Forma Academia Janaúba consultado em 05/11/2026 confirma musculação e acompanhamento por instrutores/personal trainer; endereço e telefone coincidem com o registro.",
     "campos": {
       "horarios": {
         "modo": "preencher",
@@ -766,6 +766,13 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 103
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Personal trainer"
+        ]
       }
     }
   },
@@ -3519,11 +3526,13 @@
     ],
     "campos": {
       "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/elite-treinamento-fisico-morada-do-sol/"
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros--major-prates/",
+        "valor": "https://localtreino.com/personal-trainers/montes-claros/ct-elite-moc/"
       },
       "telefone": {
-        "modo": "preencher",
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899256619",
         "valor": "38999256619"
       },
       "instagram": {
@@ -3531,8 +3540,8 @@
         "valor": "https://www.instagram.com/ct.elitemoc/"
       },
       "horarios": {
-        "modo": "preencher",
-        "valor": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": {
           "0": [],
           "1": [
             {
@@ -3590,6 +3599,65 @@
               "fecha": "10:00"
             }
           ]
+        },
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "10:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "10:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "10:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "10:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "10:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "09:00",
+              "fecha": "10:00"
+            }
+          ]
         }
       },
       "modalidades": {
@@ -3617,11 +3685,12 @@
         "valor": 5
       },
       "numero_avaliacoes": {
-        "modo": "preencher",
-        "valor": 8
+        "modo": "substituir_se_igual",
+        "valor_anterior": 8,
+        "valor": 82
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Elite Treinamento Físico confirma endereço R. Rivadávio Lucas Mendes, 415, Morada do Sol, modalidades, horários, contato, comodidades e parceiro Wellhub. Nome e endereço correspondem exatamente ao registro."
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Elite Treinamento Físico confirma endereço R. Rivadávio Lucas Mendes, 415, Morada do Sol, modalidades, horários, contato, comodidades e parceiro Wellhub. Nome e endereço correspondem exatamente ao registro. | LocalTreino e perfil público do Google consultados em 05/11/2026 identificam CT Elite Moc na Rua Rivadávio Lucas Mendes, 415, Morada do Sol. Telefone divulgado: (38) 99925-6619; o número cadastrado estava sem um dígito e foi corrigido. Horários: seg–sex 06:00–10:00 e 17:00–21:00; sábado 09:00–10:00; domingo fechado. Avaliação 5,0/5 com 82 avaliações, sujeita a atualização. Instagram já cadastrado corresponde a @ct.elitemoc."
   },
   {
     "id": 176,
@@ -5687,5 +5756,229 @@
       }
     },
     "fonte_e_observacao": " | Solutudo, página de academias em Montes Claros, consultada em 05/11/2026, identifica Top Gym Academia Ltda na Avenida Doutor Rui de Albuquerque, 1279, Village do Lago I, com telefone e opção de conversa WhatsApp (38) 99931-7105. O número cadastrado estava sem o nono dígito; corrigido."
+  },
+  {
+    "id": 85,
+    "nome": "IDEAL ESPORTE E EVENTOS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA CORINTO CRISOSTOMO FREIRE",
+      "516"
+    ],
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "07:00",
+              "fecha": "21:30"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "21:30"
+            }
+          ],
+          "3": [
+            {
+              "abre": "07:00",
+              "fecha": "21:30"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "21:30"
+            }
+          ],
+          "5": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Natação",
+          "Hidroginástica",
+          "Dança"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "acessibilidade": true,
+          "banheiro_acessivel": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 88
+      }
+    },
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Ideal Esportes e Eventos na Av. Corinto Crisóstomo Freire, 516; telefone coincide com o cadastro. Horários: seg–qui 07:00–21:30, sex 07:00–21:00 e sáb 09:00–12:00; domingo fechado. Avaliação 4,7/5 com 88 avaliações, métrica variável. A ficha pública descreve musculação, natação, hidroginástica e dança/balé, além de entrada e banheiro acessíveis."
+  },
+  {
+    "id": 199,
+    "nome": "TOP GYM MOC LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA DOM JOAO PIMENTA",
+      "701"
+    ],
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://linktr.ee/topgymmoc"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.cylex.com.br/montes-claros/top-gym-moc-13296339.html"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.4
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 64
+      }
+    },
+    "fonte_e_observacao": "Cylex e Google Business consultados em 05/11/2026 identificam Top Gym Moc na Rua Dom João Pimenta, 701, Loja 3, Centro. Horários convergentes: seg–sex 06:00–22:00, sáb 08:00–12:00 e 15:00–19:00, domingo fechado. Avaliação pública 4,4/5 com 64 avaliações. A listagem Cylex aponta linktree/topgymmoc como site. Há divergência de telefone entre fontes; o contato já cadastrado foi preservado."
+  },
+  {
+    "id": 105,
+    "nome": "EMPRESA MINEIRA DE ESPORTE E SAUDE LIMITADA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA LIRIO BRANT",
+      "742"
+    ],
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/academias/montes-claros/torga-squash-fit/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 98
+      }
+    },
+    "fonte_e_observacao": "LocalTreino, Cylex e AcademiasBR consultados em 05/11/2026 identificam Torga Squash Fit na Rua Lírio Brant, 742; telefone (38) 3221-6168 coincide com o cadastro. Horários: seg–sex 06:00–22:00, sábado 08:00–12:00, domingo fechado. Avaliação do Google Business: 4,9/5 com 98 avaliações, métrica variável. Detalhes técnicos das modalidades além do nome comercial não foram publicados de forma consistente."
   }
 ]
