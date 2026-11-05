@@ -2414,5 +2414,390 @@
         "valor": "38998952416"
       }
     }
+  },
+  {
+    "id": 40,
+    "nome": "ACADEMIA ATLETA FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA DAS AMERICAS",
+      "278"
+    ],
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3888468461",
+        "valor": "38988468461"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-atleta-fitness-unidade-02-joao-alves/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/academiaatletafitness"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:30"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:30"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:30"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:30"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:30"
+            }
+          ],
+          "6": [
+            {
+              "abre": "06:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Cardio",
+          "Musculação",
+          "Treino de força",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "itens_higiene_pessoal": true,
+          "mini_bar": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Página individual oficial Wellhub Academia Atleta Fitness unidade 02 confirma endereço Av. das Américas, 278, João Alves, modalidades, horário, Instagram e comodidades. Nome e endereço coincidem com ID 40; telefone cadastral anterior tinha 10 dígitos e foi corrigido para o celular publicado pelo parceiro.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 162,
+    "nome": "NEW ERA FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "GENI LEITE",
+      "150"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/new-era-academia-cidade-nova/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/neweramoc/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "14:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "17:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Cardio",
+          "Musculação",
+          "Fisiculturismo",
+          "Treinamento funcional",
+          "Aulas especiais",
+          "Treino de força"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "chuveiro_acessivel": true,
+          "itens_higiene_pessoal": true,
+          "personal_trainer": true,
+          "piso_tatil": true,
+          "tapete_yoga": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Era Academia confirma endereço Rua Professora Geni Leite, 150, Cidade Nova, horários, modalidades, Instagram e comodidades. O cadastro empresarial NEW ERA FITNESS tem a mesma rua e número; o telefone publicado pelo parceiro difere do telefone empresarial, que foi preservado.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 150,
+    "nome": "FORMA FISICAL",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "SANTO AMARO",
+      "184"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/j78Bd8xYutYwft72SH8r4JRG0nOUk-XXyeN0iIaOlYfUABCrUKDgUGQc0RjftCbP/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/academiaformafisical"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Treinamento funcional",
+          "Nutrição",
+          "Pilates com deslizadores",
+          "Pilates com personal trainer",
+          "Dança"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "chuveiro": true,
+          "loja_artigos_esportivos": true,
+          "nutricionista": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Formal Fisical informa R. Santo Amaro Dois, 184, São Judas Tadeu, mesmo número e nome comercial compatível com o cadastro FORMA FISICAL, que informa R. Santo Amaro, 184, letra A. Parceria associada pela correspondência do nome e número; telefone de diretório diverge do publicado pelo parceiro e foi preservado.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 182,
+    "nome": "PLENA FORMA ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "PRACA JOSE FERNANDES ARAUJO",
+      "80"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/plena-forma-academia-26ea6853-301d-42ec-8852-68ec45c2eef1/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "06:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Circuitos",
+          "Treinamento funcional com personal",
+          "Aerojump",
+          "Abdômen e braço",
+          "Body Pump",
+          "Aeroboxing"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "adaptacoes_autismo": true,
+          "aquecedor": true,
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "assistencia_pcd": true,
+          "banheiro_acessivel": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "chuveiro_acessivel": true,
+          "espaco_cadeira_rodas": true,
+          "estacionamento_acessivel": true,
+          "nutricionista": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Plena Forma Academia confirma Praça José Fernandes de Araújo, 80A, Roxo Verde, mesmo logradouro e número do cadastro. Horários, atividades e comodidades complementados; parceria Wellhub já estava marcada como confirmada no banco."
   }
 ]
