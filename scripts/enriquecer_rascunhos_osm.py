@@ -16,6 +16,8 @@ CIDADES = {
 OVERPASS_SERVERS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.private.coffee/api/interpreter",
+    "https://overpass.kumi.systems/api/interpreter",
+    "https://overpass.nchc.org.tw/api/interpreter",
 ]
 session = requests.Session()
 session.headers.update({"User-Agent": "BuscaAcademias/1.0 (catalog enrichment)"})
@@ -65,7 +67,7 @@ def fetch_drafts(city):
 
 def fetch_osm(city_name):
     query = f"""
-    [out:json][timeout:90];
+    [out:json][timeout:150];
     area["name"="{city_name}"]["boundary"="administrative"]->.a;
     (
       nwr["leisure"="fitness_centre"](area.a);
@@ -76,18 +78,19 @@ def fetch_osm(city_name):
     """
     errors = []
     for server in OVERPASS_SERVERS:
-        for attempt in range(2):
-            try:
-                response = session.post(server, data={"data": query}, timeout=120)
-                response.raise_for_status()
-                data = response.json()
-                if data.get("remark"):
-                    raise RuntimeError(data["remark"])
-                return data.get("elements", [])
-            except Exception as exc:
-                errors.append(str(exc))
-                time.sleep(10 * (attempt + 1))
-    raise RuntimeError("Overpass indisponível: " + " | ".join(errors))
+        try:
+            print(f"Consultando OpenStreetMap: {server}")
+            response = session.post(server, data={"data": query}, timeout=(20, 180))
+            response.raise_for_status()
+            data = response.json()
+            if data.get("remark"):
+                raise RuntimeError(data["remark"])
+            return data.get("elements", [])
+        except Exception as exc:
+            errors.append(f"{server}: {exc}")
+            print(f"[AVISO] Servidor Overpass falhou: {exc}")
+            time.sleep(5)
+    raise RuntimeError("Todos os servidores Overpass falharam: " + " | ".join(errors))
 
 
 def osm_record(element):
