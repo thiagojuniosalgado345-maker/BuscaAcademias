@@ -2351,9 +2351,14 @@
         "valor": [
           "Musculação"
         ]
+      },
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899971919",
+        "valor": "38999971919"
       }
     },
-    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço."
+    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço. | Fonte empresarial consultada em 05/11/2026 (SupraVerso, CNPJ 47.637.185/0001-03) confirma LT Spartan House Overall Ltda na Av. Prefeito Edilson Brandão Guimarães, 1190, São Gonçalo, Janaúba, com telefone (38) 99997-1919. O número cadastral estava sem um dígito e foi corrigido; não foi assumido que telefone seja WhatsApp."
   },
   {
     "id": 44,
@@ -4648,9 +4653,22 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 15
+      },
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899943030",
+        "valor": "38999943030"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38999943030"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.econodata.com.br/consulta-empresa/65350056000111-ntime-gym-ltda"
       }
     },
-    "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade."
+    "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade. | Casa dos Dados e Econodata consultados em 05/11/2026 identificam NTIME GYM LTDA no mesmo endereço Av. Militão José dos Santos, 1475. Publicam telefone e WhatsApp (38) 99994-3030; o número do cadastro estava sem um dígito. Contato corrigido e WhatsApp cadastrado."
   },
   {
     "id": 130,
@@ -5619,5 +5637,55 @@
         "valor": 125
       }
     }
+  },
+  {
+    "id": 37,
+    "nome": "WISH ACADEMY FITNESS",
+    "cidade": "janauba",
+    "campos": {
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38998254028"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.econodata.com.br/consulta-empresa/48946629000155-wish-academy-fitness-ltda"
+      }
+    },
+    "fonte_e_observacao": " | Econodata consultada em 05/11/2026 confirma Wish Academy Fitness Ltda ativa no endereço Rua Neco Tiburtino, 159, Janaúba, e publica link direto de WhatsApp (38) 99825-4028. O telefone já cadastrado é diferente, então foi preservado; foi acrescentado apenas o WhatsApp explícito na ficha."
+  },
+  {
+    "id": 56,
+    "nome": "ACADEMIA MAIS FIT",
+    "cidade": "montes-claros",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898922595",
+        "valor": "38998922595"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38998922595"
+      }
+    },
+    "fonte_e_observacao": " | Solutudo, página de academias em Montes Claros, consultada em 05/11/2026, identifica Academia Mais Fit Ltda na Rua Duque de Caxias, 30, Santa Rita I, e disponibiliza contato para ligação e WhatsApp (38) 99892-2595. O número cadastrado estava sem o nono dígito; corrigido."
+  },
+  {
+    "id": 197,
+    "nome": "TOP GYM ACADEMIA LTDA",
+    "cidade": "montes-claros",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899317105",
+        "valor": "38999317105"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38999317105"
+      }
+    },
+    "fonte_e_observacao": " | Solutudo, página de academias em Montes Claros, consultada em 05/11/2026, identifica Top Gym Academia Ltda na Avenida Doutor Rui de Albuquerque, 1279, Village do Lago I, com telefone e opção de conversa WhatsApp (38) 99931-7105. O número cadastrado estava sem o nono dígito; corrigido."
   }
 ]
