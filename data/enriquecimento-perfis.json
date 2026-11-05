@@ -1,0 +1,240 @@
+[
+  {
+    "id": 219,
+    "nome": "Vilsao Team Matriz",
+    "cidade": "montes-claros",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": []
+    },
+    "modalidades": [],
+    "telefone": "38991757038",
+    "detalhes_url": "https://www.cylex.com.br/montes-claros/vilsao-team-matriz-13632334.html",
+    "fonte": "Cylex: horários e telefone publicados no cadastro da unidade. Horários não confirmados diretamente com a academia."
+  },
+  {
+    "id": 220,
+    "nome": "Cross X Delfino",
+    "cidade": "montes-claros",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "07:00",
+          "fecha": "20:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "09:00",
+          "fecha": "10:00"
+        }
+      ]
+    },
+    "modalidades": [],
+    "telefone": "38988236537",
+    "detalhes_url": "https://www.cylex.com.br/montes-claros/cross-x-delfino-11904783.html",
+    "fonte": "Cylex: endereço, telefone e horários publicados no cadastro da unidade. Horários não confirmados diretamente com a academia."
+  },
+  {
+    "id": 221,
+    "nome": "Cross Experience — Major Prates",
+    "cidade": "montes-claros",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "07:00",
+          "fecha": "21:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "21:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "07:00",
+          "fecha": "08:00"
+        }
+      ]
+    },
+    "modalidades": [],
+    "telefone": "38998134364",
+    "detalhes_url": "https://www.locaisdobrasil.com.br/encontre/academia/montes-claros-mg/cross-experience-major-prates/621829e28f789efbaaa5da65",
+    "fonte": "Locais do Brasil: endereço, telefone e horários publicados para a unidade Major Prates. Sábado aparece como 07:00–08:00 na fonte; confirmar diretamente."
+  },
+  {
+    "id": 222,
+    "nome": "Mega Fitness",
+    "cidade": "montes-claros",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "22:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ]
+    },
+    "modalidades": [],
+    "telefone": "3830155232",
+    "detalhes_url": "https://www.locaisdobrasil.com.br/encontre/academia/montes-claros-mg/academia-mega-fitness/621829db8f789efbaaa5da59",
+    "fonte": "Locais do Brasil: endereço, telefone e horários publicados para a unidade da Av. Francisco Gaetani. Confirmar diretamente antes da visita."
+  },
+  {
+    "id": 223,
+    "nome": "Moov Academia — Unidade II",
+    "cidade": "janauba",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "05:30",
+          "fecha": "21:30"
+        }
+      ],
+      "2": [
+        {
+          "abre": "05:30",
+          "fecha": "21:30"
+        }
+      ],
+      "3": [
+        {
+          "abre": "05:30",
+          "fecha": "21:30"
+        }
+      ],
+      "4": [
+        {
+          "abre": "05:30",
+          "fecha": "21:30"
+        }
+      ],
+      "5": [
+        {
+          "abre": "05:30",
+          "fecha": "21:30"
+        }
+      ],
+      "6": [
+        {
+          "abre": "08:00",
+          "fecha": "12:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Musculação",
+      "Treinamento funcional"
+    ],
+    "telefone": "38991400064",
+    "detalhes_url": "https://localtreino.com/estudios-de-treinamento-funcional/janauba/moov-academia-unidade-ii/",
+    "fonte": "Local Treino: endereço, telefone e horários publicados; página classifica a unidade em treinamento funcional e reúne avaliações que descrevem musculação. Confirmar horários diretamente."
+  }
+]
