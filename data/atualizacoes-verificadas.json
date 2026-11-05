@@ -1105,5 +1105,282 @@
         "valor": true
       }
     }
+  },
+  {
+    "id": 106,
+    "nome": "ENERGIA ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "PADRE ANTONIO",
+      "180"
+    ],
+    "fonte_e_observacao": "Página individual TotalPass e ficha comercial local convergem para Rua Padre Antônio, 180 e telefone (38) 98865-6484. Comodidades complementadas a partir da página oficial.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3832232998",
+        "valor": "38988656484"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988656484"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "banheiro_adulto": true,
+          "bebedouro": true,
+          "lanchonete": true,
+          "vestiario": true
+        }
+      }
+    }
+  },
+  {
+    "id": 146,
+    "nome": "M & A EMPREENDIMENTOS FITNES LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "OSMANI BARBOSA",
+      "1177"
+    ],
+    "fonte_e_observacao": "Perfil individual Wellhub Fulltime Academia Planalto e página individual TotalPass confirmam unidade, telefone e Instagram. Página Wellhub confirma parceria desta unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3830825789",
+        "valor": "38999518541"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38999518541"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/fulltime_academia_suplementos/"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Corrida",
+          "Dança",
+          "Abdominal",
+          "Abdômen e braço"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "higiene_pessoal": true,
+          "estacionamento_acessivel": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 177,
+    "nome": "REDE LEVITAR LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CIRILO JORGE DA SILVA",
+      "391"
+    ],
+    "fonte_e_observacao": "Página individual TotalPass, ficha CNPJ e ficha comercial convergem para Av. Cirilo Jorge da Silva, 391 e telefone/WhatsApp (38) 99876-2027. Horários e comodidades vieram da página individual TotalPass.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898762027",
+        "valor": "38998762027"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38998762027"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "banheiro_adulto": true,
+          "bebedouro": true,
+          "climatizador": true,
+          "ventilador": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 212,
+    "nome": "WF11 GYM MESTRA FININHA LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MESTRA FININHA",
+      "1570"
+    ],
+    "fonte_e_observacao": "Página individual Wellhub e página individual TotalPass identificam a WF11 Gym Mestra Fininha na Av. Mestra Fininha, 1570. Wellhub publica o telefone fixo (38) 3216-0396; Solutudo e dados cadastrais confirmam WhatsApp (38) 98815-6296.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3888156296",
+        "valor": "3832160396"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988156296"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/wf11gym"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/wf11-gym-mestra-fininha/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Muay Thai",
+          "Fitness dance",
+          "Treino Híbrido",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "bebedouro": true,
+          "bicicletario": true,
+          "chuveiro": true,
+          "secador_cabelo": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
   }
 ]
