@@ -280,8 +280,18 @@ function renderizarPerfil(academia) {
 
   const btnWhatsapp = document.getElementById("btnWhatsapp");
   if (academia.whatsapp) {
-    btnWhatsapp.href = `https://wa.me/${academia.whatsapp}`;
-    btnWhatsapp.style.display = "inline-flex";
+    const numeroWhatsapp = String(academia.whatsapp).replace(/\D/g, "");
+    const numeroInternacional = numeroWhatsapp.startsWith("55")
+      ? numeroWhatsapp
+      : `55${numeroWhatsapp}`;
+    if (numeroInternacional.length >= 12 && numeroInternacional.length <= 13) {
+      btnWhatsapp.href = `https://wa.me/${numeroInternacional}`;
+      btnWhatsapp.target = "_blank";
+      btnWhatsapp.rel = "noopener noreferrer";
+      btnWhatsapp.style.display = "inline-flex";
+    } else {
+      btnWhatsapp.style.display = "none";
+    }
   }
 
   const btnInstagram = document.getElementById("btnInstagram");
