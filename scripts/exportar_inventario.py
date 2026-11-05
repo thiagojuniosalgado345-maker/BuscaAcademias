@@ -16,3 +16,5 @@ print("Total:",len(rows),"| publicados:",sum(x.get("publicado") is True for x in
 for city in ("montes-claros","janauba"):
  subset=[x for x in rows if x.get("cidade")==city]
  print(city,len(subset))
+
+# Exportacao usada para conferir a sincronizacao de parceiros em 05/11/2026.
