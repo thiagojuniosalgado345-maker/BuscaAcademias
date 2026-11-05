@@ -62,3 +62,5 @@ def main():
     print("Relatório:",OUT.name)
     print("Nenhum dado do Supabase foi alterado; nenhum registro foi publicado.")
 if __name__=="__main__": main()
+
+# Pipeline de triagem: somente leitura no Supabase; revisão humana obrigatória.
