@@ -352,17 +352,9 @@ def configurar_supabase():
         )
 
     return {
-
         "apikey": SUPABASE_SECRET_KEY,
-
-        "Authorization": (
-            f"Bearer {SUPABASE_SECRET_KEY}"
-        ),
-
         "Content-Type": "application/json",
-
         "Accept": "application/json"
-
     }
 
 
