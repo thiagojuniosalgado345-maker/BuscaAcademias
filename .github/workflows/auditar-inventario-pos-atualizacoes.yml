@@ -1,0 +1,28 @@
+name: Auditar catálogo após atualizações
+on:
+  push:
+    paths:
+      - 'scripts/exportar_inventario.py'
+      - '.github/workflows/auditar-inventario-pos-atualizacoes.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exportar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install requests
+      - name: Exportar inventário atualizado (somente leitura)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: python scripts/exportar_inventario.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: inventario-atualizado-pos-enriquecimento
+          path: inventario-academias.csv
+          retention-days: 30
