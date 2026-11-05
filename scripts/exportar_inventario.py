@@ -22,3 +22,5 @@ for city in ("montes-claros","janauba"):
 # Reexportacao de conferência após o último lote de dados.
 
 # Inventário pós-lote de 27 perfis verificados em 05/11/2026.
+
+# Auditoria de inventario apos lote de parcerias e avaliacoes de 05/11/2026.
