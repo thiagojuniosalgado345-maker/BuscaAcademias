@@ -6311,5 +6311,229 @@
         "valor": 204
       }
     }
+  },
+  {
+    "id": 38,
+    "nome": "ABDO REVIVE",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA SANTOS GUIMARAES",
+      "855"
+    ],
+    "fonte_e_observacao": "Ficha específica Solutudo e CNPJ.biz identificam Abdo Revive Ltda, CNPJ 65.255.268/0001-10, na Avenida Santos Guimarães, 855, Funcionários. Solutudo publica telefone e WhatsApp (38) 98844-0292; o número cadastrado estava sem o nono dígito, corrigido.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3888440292",
+        "valor": "38988440292"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988440292"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/abdo-revive-ltda-35502917"
+      }
+    }
+  },
+  {
+    "id": 179,
+    "nome": "DNA ACADEMIA E ARTIGOS ESPORTIVOS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA INDEPENDENCIA",
+      "4474"
+    ],
+    "fonte_e_observacao": "Ficha específica Solutudo associa o CNPJ 31.079.563/0001-40 à DNA Academia e Artigos Esportivos no endereço Avenida Independência, 4474, Letra B. Publica telefone e WhatsApp (38) 99822-2127; o telefone cadastrado estava sem o nono dígito e foi corrigido. Outra página pública de nome semelhante apresenta número diferente; foi priorizada a ficha com CNPJ e endereço coincidentes.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898222127",
+        "valor": "38998222127"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38998222127"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/dna-academia-e-artigos-esportivos-6251385"
+      }
+    }
+  },
+  {
+    "id": 100,
+    "nome": "DOUTOR PILATES LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA JUCA MACEDO",
+      "14"
+    ],
+    "fonte_e_observacao": "LocalTreino e Econodata identificam Doutor Pilates na Rua Juca Macedo, 14, Funcionários. Telefone divulgado (38) 2200-1803 e WhatsApp explícito via wa.me/553822001803; corrigido o contato empresarial antigo. Horários convergentes de segunda a sexta: 07:00–12:00 e 15:00–20:00; fim de semana não foi informado de forma consistente. Google Business: 5,0/5 com 14 avaliações. Modalidade Pilates.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891034666",
+        "valor": "3822001803"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "553822001803"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/estudios-de-pilates/montes-claros/doutor-pilates/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "20:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "20:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "20:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "20:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Pilates"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "banheiro_acessivel": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 14
+      }
+    }
+  },
+  {
+    "id": 79,
+    "nome": "BODY EVOLUTION",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA DOUTOR RUI DE ALBUQUERQUE",
+      "3009"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia Body Evolution na Avenida Doutor Rui de Albuquerque, 3009, Village do Lago I, mesmo endereço do cadastro. Horários publicados: seg–sex 06:00–23:00, sábado 06:00–16:00 e domingo 06:00–11:00. Avaliação 4,2/5 com 22 avaliações. Descrição da unidade indica musculação e condicionamento físico. Telefone do cadastro foi preservado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "06:00",
+              "fecha": "11:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "06:00",
+              "fecha": "16:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.2
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 22
+      }
+    }
   }
 ]
