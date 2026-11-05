@@ -177,13 +177,10 @@ def transformar_candidata(candidata):
         "bairro": bairro,
         "endereco": endereco,
         "telefone": telefone,
-        # Telefone cadastral não é tratado como WhatsApp confirmado.
-        "whatsapp": None,
+        # Campos de contato e conteúdo não informados ficam com os
+        # padrões do banco; telefone não é tratado como WhatsApp.
         "categoria": categoria,
         "publicado": False,
-        "foto": None,
-        "avaliacao": None,
-        "modalidades": [],
         "maps_url": (
             "https://www.google.com/maps/search/?api=1&query="
             + consulta_maps
