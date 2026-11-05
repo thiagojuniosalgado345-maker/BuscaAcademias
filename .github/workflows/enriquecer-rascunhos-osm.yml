@@ -11,6 +11,10 @@ on:
           - "true"
           - "false"
         default: "true"
+  push:
+    paths:
+      - "scripts/enriquecer_rascunhos_osm.py"
+      - ".github/workflows/enriquecer-rascunhos-osm.yml"
   schedule:
     - cron: "0 9 * * 1"
 
