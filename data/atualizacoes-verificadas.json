@@ -1227,7 +1227,7 @@
       "OLIMPIO PRATES",
       "247"
     ],
-    "fonte_e_observacao": "Perfil individual Wellhub AARON ACADEMIA identifica a unidade na Av. Olímpio Pratés, 247 e oferece link direto para o parceiro; estrutura listada no próprio perfil.",
+    "fonte_e_observacao": "Perfil individual Wellhub AARON ACADEMIA identifica a unidade na Av. Olímpio Pratés, 247 e oferece link direto para o parceiro; estrutura listada no próprio perfil. | Perfil individual oficial Wellhub AARON ACADEMIA confirma Av. Olímpio Prates, 247, horários, musculação, atividades especiais, Instagram, comodidades e avaliação 4,86/5 (259 avaliações) em 05/11/2026. Telefone oficial publicado (38) 99997-4722; corrigido somente se o cadastro ainda contiver o número antigo.",
     "campos": {
       "detalhes_url": {
         "modo": "substituir_se_igual",
@@ -1240,8 +1240,22 @@
           "armarios": true,
           "vestiario": true
         }
+      },
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899974722",
+        "valor": "38999974722"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.86
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 259
       }
-    }
+    },
+    "parcerias": {}
   },
   {
     "id": 127,
@@ -1288,7 +1302,7 @@
       "PADRE ANTONIO",
       "180"
     ],
-    "fonte_e_observacao": "Página individual TotalPass e ficha comercial local convergem para Rua Padre Antônio, 180 e telefone (38) 98865-6484. Comodidades complementadas a partir da página oficial.",
+    "fonte_e_observacao": "Página individual TotalPass e ficha comercial local convergem para Rua Padre Antônio, 180 e telefone (38) 98865-6484. Comodidades complementadas a partir da página oficial. | Perfil individual oficial Wellhub Academia Energia confirma Rua Padre Antônio, 180, horários, Muay Thai, funcional, cross training, fitness dance, musculação, fisiculturismo e avaliação 4,91/5 (265 avaliações), consultado em 05/11/2026. A URL principal do catálogo continua apontando para TotalPass; ambas as parcerias já estavam confirmadas.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -1308,8 +1322,17 @@
           "lanchonete": true,
           "vestiario": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.91
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 265
       }
-    }
+    },
+    "parcerias": {}
   },
   {
     "id": 146,
@@ -1574,7 +1597,7 @@
       "CASTELAR PRATES",
       "21"
     ],
-    "fonte_e_observacao": "Perfis individuais oficiais Wellhub e TotalPass identificam a Taurus na Av. Castelar Prates, 21, Major Prates. Wellhub publica telefone (38) 99217-4483; a página TotalPass publica WhatsApp/telefone (38) 99262-4130. Os dois contatos foram separados nos campos telefone e WhatsApp. Estrutura conferida pela página individual TotalPass.",
+    "fonte_e_observacao": "Perfis individuais oficiais Wellhub e TotalPass identificam a Taurus na Av. Castelar Prates, 21, Major Prates. Wellhub publica telefone (38) 99217-4483; a página TotalPass publica WhatsApp/telefone (38) 99262-4130. Os dois contatos foram separados nos campos telefone e WhatsApp. Estrutura conferida pela página individual TotalPass. | Perfil individual oficial Wellhub Taurus Academia confirma Av. Castelar Prates, 21, horários, musculação, aulas especiais, fisiculturismo, treino de força e avaliação 4,87/5 (308 avaliações), consultado em 05/11/2026. Informações de contato e estrutura já estavam verificadas no registro.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -1600,8 +1623,17 @@
           "vestiario": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.87
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 308
       }
-    }
+    },
+    "parcerias": {}
   },
   {
     "id": 214,
@@ -1777,7 +1809,7 @@
       "CIRILO JORGE DA SILVA",
       "678"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub GREENFIT MOC confirma endereço, telefone atualizado, Instagram, horários, modalidades e comodidades.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub GREENFIT MOC confirma endereço, telefone atualizado, Instagram, horários, modalidades e comodidades. | Páginas individuais oficiais Wellhub e TotalPass confirmam a Greenfit MOC na Av. Cirilo Jorge da Silva, 678. TotalPass adicionada como segunda parceria confirmada; Wellhub já constava. Avaliação Wellhub 4,91/5 (416 avaliações), consultada em 05/11/2026.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -1860,6 +1892,20 @@
           "estacionamento": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.91
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 416
+      }
+    },
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
       }
     }
   },
@@ -3651,6 +3697,203 @@
       }
     },
     "fonte_e_observacao": "Perfil individual oficial Wellhub Fórmula fit confirma R. Raul Corrêa, 766, Funcionários, Montes Claros, horários, treino funcional e comodidades. Endereço e número coincidem com o registro (letra C foi preservada no cadastro); parceria Wellhub confirmada.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 209,
+    "nome": "WF11 CT PORTAL EVENTOS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "JUCA FROES",
+      "220"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/87cupAJdTs_En6S1DR-vwZdE1XCZW1FDZV9qRtuhjl1QMwtvz-jwTeIcDRqIV_-w/"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://www.wf11gym.com.br"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "21:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "2": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "3": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "4": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "5": [
+            {
+              "abre": "00:00",
+              "fecha": "23:59"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "22:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "cafeteria": true,
+          "chuveiro": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.93
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 15
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 CT Portal Eventos confirma Rua Jucá Fróes, 220, site, telefone (38) 3216-0396, funcionamento, musculação e comodidades; nome e endereço coincidem com o cadastro. Avaliação 4,93/5 (15 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 210,
+    "nome": "WF11 GYM CORREGO MELANCIAS LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "ANTONIO LAFETA REBELO",
+      "625"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/wf11-gym-corrego-das-melancias/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/wf11gym/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "14:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Fisiculturismo",
+          "Funcional infantil"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "area_funcional": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.85
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 204
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 Gym Córrego das Melancias confirma Av. Antônio Lafetá Rebelo, 625, horários, musculação, fisiculturismo, funcional infantil, Instagram e comodidades. Telefone divulgado no perfil difere do cadastral, por isso o telefone existente foi preservado. Avaliação 4,85/5 (204 avaliações), consultada em 05/11/2026.",
     "parcerias": {
       "aceita_wellhub": {
         "valor_anterior": null,
