@@ -1044,5 +1044,66 @@
         }
       }
     }
+  },
+  {
+    "id": 119,
+    "nome": "AARON ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "OLIMPIO PRATES",
+      "247"
+    ],
+    "fonte_e_observacao": "Perfil individual Wellhub AARON ACADEMIA identifica a unidade na Av. Olímpio Pratés, 247 e oferece link direto para o parceiro; estrutura listada no próprio perfil.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/partners/K5GDv391cWixkGh7c0Xrem60Sm-5vMsc_VjWsEoAJiv-i5nq01rx1hGQYwcUaBe-/",
+        "valor": "https://wellhub.com/pt-br/search/partners/aaron-academia-major-prates/"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "vestiario": true
+        }
+      }
+    }
+  },
+  {
+    "id": 127,
+    "nome": "HARD CROSS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "VICENTE GUIMARAES",
+      "1025"
+    ],
+    "fonte_e_observacao": "Listagem individual TotalPass e perfil individual Wellhub identificam a Hard Cross Treino no endereço Av. Vicente Guimarães, 1025. A página individual TotalPass confirma parceria desta unidade; o telefone do cadastro foi preservado porque há números divergentes entre as fontes.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/hard-cross-treino-sagrada-familia/"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "bebedouro": true,
+          "acessibilidade": true,
+          "fisioterapeuta": true,
+          "personal_trainer": true,
+          "ventilador": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
   }
 ]
