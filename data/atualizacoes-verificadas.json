@@ -255,6 +255,252 @@
     }
   },
   {
+    "id": 16,
+    "nome": "BODYART ACADEMIA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AMERICO SOARES",
+      "734"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado. | Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3892410011",
+        "valor": "38988044421"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Treinamento híbrido (Musculação + Funcional)"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true
+        }
+      }
+    },
+    "parcerias": {}
+  },
+  {
+    "id": 17,
+    "nome": "BIOTECH",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "CIRILO BARBOSA",
+      "712"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários e comodidades. A listagem oficial usa o telefone 38 99131-9033; o número antigo do cadastro estava sem o nono dígito. | Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários, comodidades e parceria. O telefone antigo do cadastro estava sem o nono dígito.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891319033",
+        "valor": "38991319033"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Personal trainer - levantamento de peso",
+          "Treino de core"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "acessibilidade": true,
+          "estacionamento": true,
+          "higiene_pessoal": true,
+          "nutricionista": true,
+          "personal_trainer": true
+        }
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/"
+      }
+    },
+    "parcerias": {}
+  },
+  {
+    "id": 20,
+    "nome": "ESSENTIAL FITNESS - CENTRO DE TREINAMENTO PERSONALIZADO",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MANOEL ATHAIDE",
+      "1067"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Essential Fitness - Centro de Treinamento Personalizado confere endereço Avenida Manoel Athayde, 1067, e confirma telefone, horários, musculação, armários e parceria Wellhub.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891519069",
+        "valor": "38999750418"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/essentialfitnessctp"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
+        "valor": "https://wellhub.com/pt-br/search/partners/essential-fitness-centro-de-treinamento-personalizado/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "09:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "09:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "09:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "09:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "09:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": []
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true
+        }
+      }
+    }
+  },
+  {
+    "id": 22,
+    "nome": "SPARTAN GYM",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MESTRE ALFREDO BARBOSA",
+      "271"
+    ],
+    "fonte_e_observacao": "A página individual Wellhub identifica a unidade no mesmo endereço cadastrado como Spartan Fit - Janaúba, enquanto o nome empresarial no catálogo é SPARTAN GYM. O endereço e número coincidem; foi mantido o nome cadastral e documentada a diferença de nome comercial.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899971919",
+        "valor": "38988641551"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/spartanfit.janauba/"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
+        "valor": "https://wellhub.com/pt-br/search/partners/REf8wnlztFZ-G1Qs8kBIB-Hsl-i0ku8TUP6yI_CDqJPQOkefzCZBBcCZPMWVXL7R/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "14:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Artes marciais",
+          "Personal trainer - dança",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "bebedouro": true,
+          "cafeteria": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    }
+  },
+  {
     "id": 23,
     "nome": "KAREN BASTOS ESTUDIO DE PILATES LTDA",
     "cidade": "janauba",
@@ -324,6 +570,46 @@
     }
   },
   {
+    "id": 25,
+    "nome": "ALADA ESCOLA DE DANCA E NATACAO",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "CIRILO BARBOSA",
+      "754"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada Academia de Ginástica e Natação confirma endereço, telefone, modalidades e comodidades. O telefone cadastral antigo foi substituído pelo telefone exibido na página individual. | Perfil individual oficial Wellhub da Alada confirma endereço, telefone, modalidades, comodidades e parceria. O telefone antigo foi corrigido pelo contato exibido na página da unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3838211557",
+        "valor": "38991296701"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Glúteos, abdômen e pernas",
+          "Treino de força"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/alada-academia-de-ginastica-e-natacao/"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "infantil": true,
+          "armarios": true,
+          "acessibilidade": true,
+          "estacionamento": true,
+          "loja_artigos_esportivos": true
+        }
+      }
+    },
+    "parcerias": {}
+  },
+  {
     "id": 26,
     "nome": "FORMA TRAINING",
     "cidade": "janauba",
@@ -381,6 +667,59 @@
         }
       }
     }
+  },
+  {
+    "id": 29,
+    "nome": "NEW TIME",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "SANTA MONICA",
+      "580"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma unidade na Av. Santa Mônica, 580, telefone, horários, modalidades, Instagram e comodidades. Telefone antigo estava sem o nono dígito. | Perfil individual oficial Wellhub New Time Academia confirma endereço, telefone, modalidades, Instagram, horários, comodidades e parceria. Telefone antigo estava sem o nono dígito.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3884017107",
+        "valor": "38984017107"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Personal trainer - treino funcional",
+          "Treino de combate"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "cardio": true,
+          "musculacao": true,
+          "infantil": true,
+          "armarios": true,
+          "cafeteria": true,
+          "chuveiro": true,
+          "elevador": true,
+          "acessibilidade": true,
+          "fisioterapeuta": true,
+          "higiene_pessoal": true,
+          "loja_artigos_esportivos": true,
+          "mini_bar": true,
+          "nutricionista": true,
+          "personal_trainer": true,
+          "toalhas_banho": true,
+          "toalhas_treino": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/new-time-academia/"
+      }
+    },
+    "parcerias": {}
   },
   {
     "id": 57,
@@ -656,458 +995,6 @@
         "valor": [
           "CrossFit"
         ]
-      }
-    }
-  },
-  {
-    "id": 16,
-    "nome": "BODYART ACADEMIA",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "AMERICO SOARES",
-      "734"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3892410011",
-        "valor": "38988044421"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Treinamento híbrido (Musculação + Funcional)"
-        ]
-      },
-      "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/"
-      }
-    }
-  },
-  {
-    "id": 17,
-    "nome": "BIOTECH",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "CIRILO BARBOSA",
-      "712"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários e comodidades. A listagem oficial usa o telefone 38 99131-9033; o número antigo do cadastro estava sem o nono dígito.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3891319033",
-        "valor": "38991319033"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Personal trainer - levantamento de peso",
-          "Treino de core"
-        ]
-      },
-      "estrutura": {
-        "modo": "adicionar_lista",
-        "valor": []
-      },
-      "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/"
-      }
-    }
-  },
-  {
-    "id": 25,
-    "nome": "ALADA ESCOLA DE DANCA E NATACAO",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "CIRILO BARBOSA",
-      "754"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada Academia de Ginástica e Natação confirma endereço, telefone, modalidades e comodidades. O telefone cadastral antigo foi substituído pelo telefone exibido na página individual.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3838211557",
-        "valor": "38991296701"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Glúteos, abdômen e pernas",
-          "Treino de força"
-        ]
-      },
-      "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/alada-academia-de-ginastica-e-natacao/"
-      }
-    }
-  },
-  {
-    "id": 29,
-    "nome": "NEW TIME",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "SANTA MONICA",
-      "580"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma unidade na Av. Santa Mônica, 580, telefone, horários, modalidades, Instagram e comodidades. Telefone antigo estava sem o nono dígito.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3884017107",
-        "valor": "38984017107"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Personal trainer - treino funcional",
-          "Treino de combate"
-        ]
-      },
-      "estrutura": {
-        "modo": "preencher",
-        "valor": {
-          "ar_condicionado": true,
-          "cardio": true,
-          "musculacao": true,
-          "infantil": true,
-          "armarios": true,
-          "cafeteria": true,
-          "chuveiro": true,
-          "elevador": true,
-          "acessibilidade": true,
-          "fisioterapeuta": true,
-          "higiene_pessoal": true,
-          "loja_artigos_esportivos": true,
-          "mini_bar": true,
-          "nutricionista": true,
-          "personal_trainer": true,
-          "toalhas_banho": true,
-          "toalhas_treino": true,
-          "vestiario": true,
-          "wifi": true
-        }
-      },
-      "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/new-time-academia/"
-      }
-    }
-  },
-  {
-    "id": 16,
-    "nome": "BODYART ACADEMIA",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "AMERICO SOARES",
-      "734"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3892410011",
-        "valor": "38988044421"
-      },
-      "estrutura": {
-        "modo": "mesclar_objeto",
-        "valor": {
-          "armarios": true
-        }
-      }
-    }
-  },
-  {
-    "id": 17,
-    "nome": "BIOTECH",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "CIRILO BARBOSA",
-      "712"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários, comodidades e parceria. O telefone antigo do cadastro estava sem o nono dígito.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3891319033",
-        "valor": "38991319033"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Personal trainer - levantamento de peso",
-          "Treino de core"
-        ]
-      },
-      "estrutura": {
-        "modo": "mesclar_objeto",
-        "valor": {
-          "armarios": true,
-          "acessibilidade": true,
-          "estacionamento": true,
-          "higiene_pessoal": true,
-          "nutricionista": true,
-          "personal_trainer": true
-        }
-      }
-    }
-  },
-  {
-    "id": 25,
-    "nome": "ALADA ESCOLA DE DANCA E NATACAO",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "CIRILO BARBOSA",
-      "754"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada confirma endereço, telefone, modalidades, comodidades e parceria. O telefone antigo foi corrigido pelo contato exibido na página da unidade.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3838211557",
-        "valor": "38991296701"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Glúteos, abdômen e pernas",
-          "Treino de força"
-        ]
-      },
-      "estrutura": {
-        "modo": "mesclar_objeto",
-        "valor": {
-          "ar_condicionado": true,
-          "infantil": true,
-          "armarios": true,
-          "acessibilidade": true,
-          "estacionamento": true,
-          "loja_artigos_esportivos": true
-        }
-      }
-    }
-  },
-  {
-    "id": 29,
-    "nome": "NEW TIME",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "SANTA MONICA",
-      "580"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma endereço, telefone, modalidades, Instagram, horários, comodidades e parceria. Telefone antigo estava sem o nono dígito.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3884017107",
-        "valor": "38984017107"
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Personal trainer - treino funcional",
-          "Treino de combate"
-        ]
-      },
-      "estrutura": {
-        "modo": "preencher",
-        "valor": {
-          "ar_condicionado": true,
-          "cardio": true,
-          "musculacao": true,
-          "infantil": true,
-          "armarios": true,
-          "cafeteria": true,
-          "chuveiro": true,
-          "elevador": true,
-          "acessibilidade": true,
-          "fisioterapeuta": true,
-          "higiene_pessoal": true,
-          "loja_artigos_esportivos": true,
-          "mini_bar": true,
-          "nutricionista": true,
-          "personal_trainer": true,
-          "toalhas_banho": true,
-          "toalhas_treino": true,
-          "vestiario": true,
-          "wifi": true
-        }
-      }
-    }
-  },
-  {
-    "id": 20,
-    "nome": "ESSENTIAL FITNESS - CENTRO DE TREINAMENTO PERSONALIZADO",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "MANOEL ATHAIDE",
-      "1067"
-    ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Essential Fitness - Centro de Treinamento Personalizado confere endereço Avenida Manoel Athayde, 1067, e confirma telefone, horários, musculação, armários e parceria Wellhub.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3891519069",
-        "valor": "38999750418"
-      },
-      "instagram": {
-        "modo": "preencher",
-        "valor": "https://instagram.com/essentialfitnessctp"
-      },
-      "detalhes_url": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
-        "valor": "https://wellhub.com/pt-br/search/partners/essential-fitness-centro-de-treinamento-personalizado/"
-      },
-      "horarios": {
-        "modo": "preencher",
-        "valor": {
-          "0": [],
-          "1": [
-            {
-              "abre": "09:00",
-              "fecha": "22:00"
-            }
-          ],
-          "2": [
-            {
-              "abre": "09:00",
-              "fecha": "22:00"
-            }
-          ],
-          "3": [
-            {
-              "abre": "09:00",
-              "fecha": "22:00"
-            }
-          ],
-          "4": [
-            {
-              "abre": "09:00",
-              "fecha": "22:00"
-            }
-          ],
-          "5": [
-            {
-              "abre": "09:00",
-              "fecha": "22:00"
-            }
-          ],
-          "6": []
-        }
-      },
-      "modalidades": {
-        "modo": "preencher",
-        "valor": [
-          "Musculação"
-        ]
-      },
-      "estrutura": {
-        "modo": "preencher",
-        "valor": {
-          "armarios": true
-        }
-      }
-    }
-  },
-  {
-    "id": 22,
-    "nome": "SPARTAN GYM",
-    "cidade": "janauba",
-    "endereco_contem": [
-      "MESTRE ALFREDO BARBOSA",
-      "271"
-    ],
-    "fonte_e_observacao": "A página individual Wellhub identifica a unidade no mesmo endereço cadastrado como Spartan Fit - Janaúba, enquanto o nome empresarial no catálogo é SPARTAN GYM. O endereço e número coincidem; foi mantido o nome cadastral e documentada a diferença de nome comercial.",
-    "campos": {
-      "telefone": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "3899971919",
-        "valor": "38988641551"
-      },
-      "instagram": {
-        "modo": "preencher",
-        "valor": "https://www.instagram.com/spartanfit.janauba/"
-      },
-      "detalhes_url": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": "https://wellhub.com/pt-br/search/mg/janauba--rio-novo/",
-        "valor": "https://wellhub.com/pt-br/search/partners/REf8wnlztFZ-G1Qs8kBIB-Hsl-i0ku8TUP6yI_CDqJPQOkefzCZBBcCZPMWVXL7R/"
-      },
-      "horarios": {
-        "modo": "preencher",
-        "valor": {
-          "0": [
-            {
-              "abre": "07:00",
-              "fecha": "12:00"
-            }
-          ],
-          "1": [
-            {
-              "abre": "05:00",
-              "fecha": "22:00"
-            }
-          ],
-          "2": [
-            {
-              "abre": "05:00",
-              "fecha": "22:00"
-            }
-          ],
-          "3": [
-            {
-              "abre": "05:00",
-              "fecha": "22:00"
-            }
-          ],
-          "4": [
-            {
-              "abre": "05:00",
-              "fecha": "22:00"
-            }
-          ],
-          "5": [
-            {
-              "abre": "05:00",
-              "fecha": "22:00"
-            }
-          ],
-          "6": [
-            {
-              "abre": "07:00",
-              "fecha": "14:00"
-            }
-          ]
-        }
-      },
-      "modalidades": {
-        "modo": "adicionar_lista",
-        "valor": [
-          "Artes marciais",
-          "Personal trainer - dança",
-          "Fisiculturismo"
-        ]
-      },
-      "estrutura": {
-        "modo": "preencher",
-        "valor": {
-          "armarios": true,
-          "bebedouro": true,
-          "cafeteria": true,
-          "vestiario": true,
-          "wifi": true
-        }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
       }
     }
   }
