@@ -24,3 +24,5 @@ for city in ("montes-claros","janauba"):
 # Inventário pós-lote de 27 perfis verificados em 05/11/2026.
 
 # Auditoria de inventario apos lote de parcerias e avaliacoes de 05/11/2026.
+
+# Conferência final dos dados públicos, parceiros e rascunhos em 05/11/2026.
