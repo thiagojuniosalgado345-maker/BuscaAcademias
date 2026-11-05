@@ -658,5 +658,144 @@
         ]
       }
     }
+  },
+  {
+    "id": 16,
+    "nome": "BODYART ACADEMIA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AMERICO SOARES",
+      "734"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3892410011",
+        "valor": "38988044421"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Treinamento híbrido (Musculação + Funcional)"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/"
+      }
+    }
+  },
+  {
+    "id": 17,
+    "nome": "BIOTECH",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "CIRILO BARBOSA",
+      "712"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários e comodidades. A listagem oficial usa o telefone 38 99131-9033; o número antigo do cadastro estava sem o nono dígito.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891319033",
+        "valor": "38991319033"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Personal trainer - levantamento de peso",
+          "Treino de core"
+        ]
+      },
+      "estrutura": {
+        "modo": "adicionar_lista",
+        "valor": []
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/"
+      }
+    }
+  },
+  {
+    "id": 25,
+    "nome": "ALADA ESCOLA DE DANCA E NATACAO",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "CIRILO BARBOSA",
+      "754"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada Academia de Ginástica e Natação confirma endereço, telefone, modalidades e comodidades. O telefone cadastral antigo foi substituído pelo telefone exibido na página individual.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3838211557",
+        "valor": "38991296701"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Glúteos, abdômen e pernas",
+          "Treino de força"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/alada-academia-de-ginastica-e-natacao/"
+      }
+    }
+  },
+  {
+    "id": 29,
+    "nome": "NEW TIME",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "SANTA MONICA",
+      "580"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma unidade na Av. Santa Mônica, 580, telefone, horários, modalidades, Instagram e comodidades. Telefone antigo estava sem o nono dígito.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3884017107",
+        "valor": "38984017107"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Personal trainer - treino funcional",
+          "Treino de combate"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "cardio": true,
+          "musculacao": true,
+          "infantil": true,
+          "armarios": true,
+          "cafeteria": true,
+          "chuveiro": true,
+          "elevador": true,
+          "acessibilidade": true,
+          "fisioterapeuta": true,
+          "higiene_pessoal": true,
+          "loja_artigos_esportivos": true,
+          "mini_bar": true,
+          "nutricionista": true,
+          "personal_trainer": true,
+          "toalhas_banho": true,
+          "toalhas_treino": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/new-time-academia/"
+      }
+    }
   }
 ]
