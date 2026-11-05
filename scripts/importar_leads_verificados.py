@@ -162,6 +162,9 @@ def inserir(registros):
     return inseridos
 
 
+# Reconsulta o catálogo inteiro antes da inserção para evitar duplicatas.
+# Os registros novos entram exclusivamente como rascunhos.
+
 def main():
     validar_configuracao()
     leads = json.loads(INPUT.read_text(encoding="utf-8"))
