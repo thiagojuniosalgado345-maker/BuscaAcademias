@@ -26,3 +26,5 @@ jobs:
           name: inventario-atualizado-pos-enriquecimento
           path: inventario-academias.csv
           retention-days: 30
+
+# Auditoria atualizada apos lote de 30 perfis em 05/11/2026.
