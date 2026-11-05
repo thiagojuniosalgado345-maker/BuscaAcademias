@@ -5543,5 +5543,166 @@
         "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/academia-sintonia-do-corpo-6235326"
       }
     }
+  },
+  {
+    "id": 71,
+    "nome": "APOLO FITNESS ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA PROFESSOR MONTEIRO FONSECA",
+      "39"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Apolo Fitness Academia no mesmo endereço Rua Professor Monteiro Fonseca, 39, Vila Brasília. Horários publicados: segunda a sexta 05:40–12:30 e 14:40–22:00; sábado 08:00–12:00; domingo sem horário publicado. Avaliação 4,3/5 com 54 avaliações (métrica variável). Telefone do cadastro foi preservado porque o número divulgado no perfil público diverge do contato cadastrado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "05:40",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:40",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:40",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:40",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:40",
+              "fecha": "12:30"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.3
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 54
+      }
+    }
+  },
+  {
+    "id": 147,
+    "nome": "TRI SPORTS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA AGAPITO DOS ANJOS",
+      "543"
+    ],
+    "fonte_e_observacao": "Google Business consultado em 05/11/2026 identifica Academia TRISPORT Fitness Aquático na Rua Agapito dos Anjos, 543, Cândida Câmara, o mesmo endereço do cadastro TRI SPORTS. Horários publicados: segunda a sexta 07:00–20:00; sábado e domingo sem horário publicado. Avaliação 4,7/5 com 19 avaliações. A descrição pública da unidade indica piscina, natação, hidroginástica, musculação, dança e lutas. O telefone do perfil público diverge do telefone cadastrado; o número existente foi preservado.",
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "07:00",
+              "fecha": "20:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "20:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "07:00",
+              "fecha": "20:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "20:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "07:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Natação",
+          "Hidroginástica",
+          "Musculação",
+          "Dança",
+          "Lutas",
+          "Condicionamento físico"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "piscina": true,
+          "acessibilidade": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 19
+      }
+    }
   }
 ]
