@@ -1767,5 +1767,89 @@
         }
       }
     }
+  },
+  {
+    "id": 63,
+    "nome": "AFT ACADEMIA FULLFIT LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "PEDRA AZUL",
+      "28"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub AFT Academia confirma endereço R. Pedra Azul, 28, horários, modalidades e comodidades. O telefone divulgado no perfil da plataforma é (38) 99195-5167; o telefone cadastral anterior foi preservado porque não há confirmação de que tenha sido desativado.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/aft-academia/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Treino Híbrido",
+          "Fisiculturismo"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "vestiario": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
   }
 ]
