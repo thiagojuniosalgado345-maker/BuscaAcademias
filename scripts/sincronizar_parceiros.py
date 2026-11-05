@@ -35,7 +35,7 @@ def main():
             patch["aceita_wellhub"]=True
         if item.get("aceita_totalpass") is True and row.get("aceita_totalpass") is not True:
             patch["aceita_totalpass"]=True
-        for field in ("horarios","modalidades","instagram","detalhes_url","estrutura"):
+        for field in ("horarios","modalidades","instagram","detalhes_url","estrutura","categoria","maps_url"):
             proposed=item.get(field)
             existing=row.get(field)
             empty=existing is None or existing=="" or existing=={} or existing==[]
