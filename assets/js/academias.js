@@ -168,8 +168,13 @@ function calcularStatus(horarios) {
   const agora = new Date();
   const diaSemana = agora.getDay();
   const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
+  const chaveHoje = String(diaSemana);
 
-  const periodosHoje = obterPeriodos(horarios[diaSemana]);
+  if (!Object.prototype.hasOwnProperty.call(horarios, chaveHoje)) {
+    return { aberta: false, texto: "Horário não informado", desconhecida: true };
+  }
+
+  const periodosHoje = obterPeriodos(horarios[chaveHoje]);
 
   for (const periodo of periodosHoje) {
     const [horaAbre, minAbre] = periodo.abre.split(":").map(Number);
@@ -191,10 +196,14 @@ function calcularStatus(horarios) {
     return { aberta: false, texto: `Abre hoje às ${proximoPeriodoHoje.abre}` };
   }
 
-  // Fechada agora — procura a próxima abertura nos próximos 7 dias
+  // Só informa a próxima abertura quando todos os dias intermediários foram cadastrados.
   for (let i = 1; i <= 7; i++) {
     const proximoDia = (diaSemana + i) % 7;
-    const periodosProximoDia = obterPeriodos(horarios[proximoDia]);
+    const chaveProximoDia = String(proximoDia);
+    if (!Object.prototype.hasOwnProperty.call(horarios, chaveProximoDia)) {
+      return { aberta: false, texto: "Horário não informado", desconhecida: true };
+    }
+    const periodosProximoDia = obterPeriodos(horarios[chaveProximoDia]);
     if (periodosProximoDia.length > 0) {
       const rotulo = i === 1 ? "amanhã" : DIAS_SEMANA[proximoDia];
       return { aberta: false, texto: `Fechada · abre ${rotulo} às ${periodosProximoDia[0].abre}` };
@@ -209,7 +218,11 @@ function horarioDeHojeTexto(horarios) {
     return "Horário não informado";
   }
 
-  const periodosHoje = obterPeriodos(horarios[new Date().getDay()]);
+  const chaveHoje = String(new Date().getDay());
+  if (!Object.prototype.hasOwnProperty.call(horarios, chaveHoje)) {
+    return "Horário não informado";
+  }
+  const periodosHoje = obterPeriodos(horarios[chaveHoje]);
   if (periodosHoje.length === 0) return "Fechada hoje";
   return periodosHoje.map((p) => `${p.abre} às ${p.fecha}`).join(" e ");
 }
