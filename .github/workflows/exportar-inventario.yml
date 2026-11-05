@@ -1,0 +1,29 @@
+name: Exportar inventário completo do catálogo
+on:
+  push:
+    paths:
+      - 'scripts/exportar_inventario.py'
+      - '.github/workflows/exportar-inventario.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exportar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python -m pip install requests
+      - name: Exportar inventário em somente leitura
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: python scripts/exportar_inventario.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: inventario-completo-catalogo
+          path: inventario-academias.csv
+          if-no-files-found: error
+          retention-days: 30
