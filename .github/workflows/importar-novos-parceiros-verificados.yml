@@ -1,0 +1,40 @@
+name: Importar novos parceiros verificados como rascunhos
+
+on:
+  push:
+    paths:
+      - "data/novos-parceiros-verificados.json"
+      - "scripts/importar_novos_parceiros_verificados.py"
+      - ".github/workflows/importar-novos-parceiros-verificados.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  importar-parceiros:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: python -m pip install requests
+
+      - name: Inserir somente unidades verificadas como rascunhos
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+        run: python scripts/importar_novos_parceiros_verificados.py
+
+      - name: Publicar relatório do lote
+        uses: actions/upload-artifact@v4
+        with:
+          name: relatorio-novos-parceiros-verificados
+          path: relatorio-novos-parceiros.csv
+          retention-days: 30
