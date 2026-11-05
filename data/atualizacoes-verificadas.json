@@ -4815,5 +4815,192 @@
       }
     },
     "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc."
+  },
+  {
+    "id": 15,
+    "nome": "BALIEIRO E BASTOS EMPREENDIMENTOS LTDA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "RUA SAO JOAO DA PONTE",
+      "1770"
+    ],
+    "fonte_e_observacao": "Identidade comercial confirmada pelo site oficial Gym Prime, com o mesmo endereço R. São João da Ponte, 1770 - Santo Antônio, Janaúba. Site oficial divulga WhatsApp (38) 99966-6493, horários de segunda a sexta 05h–22h, sábado 07h–18h e domingo 08h–16h. O site confirma coworking, ar-condicionado, vestiários, duchas, Wi-Fi, avaliação por bioimpedância, consulta nutricional, armários rotativos, acompanhamento profissional, lanchonete e secador. Google Business consultado em 05/11/2026: 5,0/5 com 87 avaliações; métricas variáveis.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891259455",
+        "valor": "3899966493"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "3899966493"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://gymprimeacademia.com.br/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://gymprimeacademia.com.br/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "16:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "coworking": true,
+          "ar_condicionado": true,
+          "vestiario": true,
+          "chuveiro": true,
+          "wifi": true,
+          "bioimpedancia": true,
+          "nutricionista": true,
+          "armarios": true,
+          "personal_trainer": true,
+          "lanchonete": true,
+          "secador_cabelo": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 87
+      }
+    }
+  },
+  {
+    "id": 65,
+    "nome": "ACADEMIA O2",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA SANTA MARIA",
+      "286"
+    ],
+    "fonte_e_observacao": "Ficha específica Cylex confirma a unidade Academia O2 na Rua Santa Maria, 286, telefone (38) 3221-0909 e horários de segunda a sexta 06h–22h, sábado 07h–16h e domingo fechado. LocalBrazil consultado em 05/11/2026 lista 4,7/5 com 188 avaliações; nota/contagem podem variar.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.cylex.com.br/montes-claros/academia-o2-11904752.html"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "16:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 188
+      }
+    }
+  },
+  {
+    "id": 198,
+    "nome": "TOP GYM CT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA DEPUTADO PLINIO RIBEIRO",
+      "2680"
+    ],
+    "fonte_e_observacao": "Solutudo, página de academias em Montes Claros, consultada em 05/11/2026, lista Top Gym CT na Avenida Deputado Plínio Ribeiro, 2680, com telefone/contato (38) 99954-8887. Nome e endereço coincidem com o cadastro. O banco tinha o número sem um dígito; corrigido para o número de 11 dígitos informado na listagem.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899548887",
+        "valor": "38999548887"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38999548887"
+      }
+    }
   }
 ]
