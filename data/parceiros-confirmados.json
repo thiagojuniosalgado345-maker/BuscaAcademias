@@ -1139,5 +1139,41 @@
       "Aulas em grupo"
     ],
     "fonte": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+  },
+  {
+    "id": 1,
+    "nome": "Academia Power",
+    "cidade": "montes-claros",
+    "categoria": "Academia",
+    "fonte": "Cadastro original do BuscaAcademias; categoria geral atribuída pelo nome informado."
+  },
+  {
+    "id": 3,
+    "nome": "WF11",
+    "cidade": "montes-claros",
+    "categoria": "Academia",
+    "fonte": "Cadastro original do BuscaAcademias; categoria geral atribuída pelo nome informado."
+  },
+  {
+    "id": 4,
+    "nome": "Studio 360",
+    "cidade": "montes-claros",
+    "categoria": "Estúdio especializado",
+    "fonte": "Cadastro original do BuscaAcademias; classificado como estúdio pelo nome e formato informado."
+  },
+  {
+    "id": 5,
+    "nome": "Focco Academia Sports",
+    "cidade": "montes-claros",
+    "categoria": "Academia",
+    "fonte": "Cadastro original do BuscaAcademias; categoria geral atribuída pelo nome informado."
+  },
+  {
+    "id": 6,
+    "nome": "Panobianco",
+    "cidade": "montes-claros",
+    "categoria": "Academia",
+    "maps_url": "https://www.google.com/maps/search/?api=1&query=Panobianco%2C%20Rua%20Mestre%20Janj%C3%A3o%20300%2C%20S%C3%A3o%20Jos%C3%A9%2C%20Montes%20Claros%2C%20MG",
+    "fonte": "Cadastro original do BuscaAcademias; categoria geral atribuída pelo nome informado. Link de busca de localização gerado a partir do endereço já cadastrado."
   }
 ]
