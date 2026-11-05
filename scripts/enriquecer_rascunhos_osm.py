@@ -3,16 +3,14 @@ import re
 import time
 import unicodedata
 from datetime import datetime, timezone
+from difflib import SequenceMatcher
 
 import requests
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SECRET_KEY", "")
 DRY_RUN = os.getenv("DRY_RUN", "true").strip().lower() == "true"
-CIDADES = {
-    "montes-claros": "Montes Claros",
-    "janauba": "Janaúba",
-}
+CIDADES = {"montes-claros": "Montes Claros", "janauba": "Janaúba"}
 OVERPASS_SERVERS = [
     "https://overpass-api.de/api/interpreter",
     "https://overpass.private.coffee/api/interpreter",
@@ -20,7 +18,7 @@ OVERPASS_SERVERS = [
     "https://overpass.nchc.org.tw/api/interpreter",
 ]
 session = requests.Session()
-session.headers.update({"User-Agent": "BuscaAcademias/1.0 (catalog enrichment)"})
+session.headers.update({"User-Agent": "BuscaAcademias/1.1 (catalog enrichment)"})
 
 
 def norm(value):
@@ -29,8 +27,18 @@ def norm(value):
     return re.sub(r"[^a-z0-9]", "", value.lower())
 
 
-def digits(value):
-    return re.sub(r"\D", "", str(value or ""))
+def street_norm(value):
+    value = norm(value)
+    for prefix in ("avenida", "av", "rua", "r", "travessa", "tv",
+                   "alameda", "rodovia", "estrada", "praca"):
+        if value.startswith(prefix) and len(value) > len(prefix) + 3:
+            return value[len(prefix):]
+    return value
+
+
+def number_in(value):
+    match = re.search(r"(?:^|[,;\s])(?:n[ºo.]?\s*)?(\d{1,5})(?:$|[,;\s])", str(value or ""), re.I)
+    return match.group(1) if match else None
 
 
 def request_supabase(method, table, **kwargs):
@@ -42,10 +50,8 @@ def request_supabase(method, table, **kwargs):
     }
     if method == "PATCH":
         headers["Prefer"] = "return=minimal"
-    response = session.request(
-        method, f"{SUPABASE_URL}/rest/v1/{table}",
-        headers=headers, timeout=60, **kwargs
-    )
+    response = session.request(method, f"{SUPABASE_URL}/rest/v1/{table}",
+                               headers=headers, timeout=60, **kwargs)
     if not response.ok:
         raise RuntimeError(f"Supabase {response.status_code}: {response.text[:1000]}")
     return response
@@ -56,10 +62,8 @@ def fetch_drafts(city):
         "GET", "academias",
         params={
             "select": "id,nome,cidade,bairro,endereco,telefone,latitude,longitude,site,whatsapp,modalidades,horarios,maps_url,osm_type,osm_id",
-            "cidade": f"eq.{city}",
-            "publicado": "eq.false",
-            "cnpj": "not.is.null",
-            "limit": "2000",
+            "cidade": f"eq.{city}", "publicado": "eq.false",
+            "cnpj": "not.is.null", "limit": "2000",
         },
     )
     return response.json()
@@ -95,89 +99,133 @@ def fetch_osm(city_name):
 
 def osm_record(element):
     tags = element.get("tags", {})
-    name = tags.get("name")
+    aliases = {
+        norm(tags.get(key))
+        for key in ("name", "brand", "operator", "short_name",
+                    "official_name", "alt_name", "name:pt")
+        if tags.get(key)
+    }
+    aliases.discard("")
     center = element.get("center", {})
-    lat = element.get("lat", center.get("lat"))
-    lon = element.get("lon", center.get("lon"))
-    if not name or lat is None or lon is None:
+    lat, lon = element.get("lat", center.get("lat")), element.get("lon", center.get("lon"))
+    if not aliases or lat is None or lon is None:
         return None
-    street = tags.get("addr:street", "")
-    number = tags.get("addr:housenumber", "")
+    street, number = tags.get("addr:street", ""), tags.get("addr:housenumber", "")
     address = tags.get("addr:full") or (f"{street}, {number}".strip(", ") if street else None)
     phone = tags.get("contact:phone") or tags.get("phone")
     website = tags.get("contact:website") or tags.get("website")
     sports = [x.strip() for x in re.split(r"[;,]", tags.get("sport", "")) if x.strip()]
-    hours = tags.get("opening_hours")
     return {
-        "name": name, "key": norm(name),
+        "aliases": aliases,
+        "street_key": street_norm(street),
+        "house_number": str(number).strip() or None,
         "osm_type": element["type"], "osm_id": element["id"],
         "bairro": tags.get("addr:suburb") or tags.get("addr:neighbourhood") or tags.get("addr:district"),
-        "endereco": address,
-        "latitude": float(lat), "longitude": float(lon),
-        "telefone": digits(phone) or None,
+        "endereco": address, "latitude": float(lat), "longitude": float(lon),
+        "telefone": re.sub(r"\D", "", str(phone or "")) or None,
         "site": website, "modalidades": sports or None,
-        "horarios": hours,
+        "horarios": tags.get("opening_hours"),
         "maps_url": f"https://www.google.com/maps/search/?api=1&query={lat},{lon}",
     }
+
+
+def address_matches(draft, osm):
+    address = str(draft.get("endereco") or "")
+    draft_number = number_in(address)
+    osm_number = osm.get("house_number")
+    if not draft_number or not osm_number or draft_number != osm_number:
+        return False
+    # O endereço precisa conter rua e número. Compara a rua após remover prefixos.
+    before_number = re.split(r"[,;]", address, maxsplit=1)[0]
+    before_number = re.sub(r"\b(?:n[ºo.]?\s*)?\d{1,5}.*$", "", before_number, flags=re.I)
+    street = street_norm(before_number)
+    osm_street = osm.get("street_key")
+    return bool(street and osm_street and SequenceMatcher(None, street, osm_street).ratio() >= 0.90)
+
+
+def choose_match(draft, items, used):
+    key = norm(draft.get("nome"))
+    available = [x for x in items if (x["osm_type"], x["osm_id"]) not in used]
+    by_name = [x for x in available if key and key in x["aliases"]]
+    by_address = [x for x in available if address_matches(draft, x)]
+
+    if len(by_address) == 1:
+        found = by_address[0]
+        if len(by_name) == 1 and by_name[0] != found:
+            return None, "conflito_nome_endereco"
+        return found, "endereco"
+    if len(by_address) > 1:
+        return None, "endereco_ambiguo"
+    if len(by_name) == 1:
+        return by_name[0], "nome"
+    if len(by_name) > 1:
+        return None, "nome_ambiguo"
+    return None, "sem_correspondencia"
 
 
 def main():
     if not SUPABASE_URL or not SUPABASE_SECRET_KEY:
         raise RuntimeError("SUPABASE_URL e SUPABASE_SECRET_KEY são obrigatórios.")
 
-    print("Enriquecimento automático de rascunhos —", "SIMULAÇÃO" if DRY_RUN else "EXECUÇÃO")
-    total_matches = total_updates = total_ambiguous = total_unmatched = 0
+    print("Enriquecimento de rascunhos —", "SIMULAÇÃO" if DRY_RUN else "EXECUÇÃO")
+    counts = {"nome": 0, "endereco": 0, "atualizados": 0,
+              "ambiguos": 0, "conflitos": 0, "sem_correspondencia": 0,
+              "sem_dados_novos": 0}
 
     for city, city_name in CIDADES.items():
         drafts = fetch_drafts(city)
         print(f"\n{city_name}: {len(drafts)} rascunhos CNPJ para analisar")
-        elements = fetch_osm(city_name)
-        by_name = {}
-        for element in elements:
-            item = osm_record(element)
-            if item:
-                by_name.setdefault(item["key"], []).append(item)
+        items = [x for element in fetch_osm(city_name) if (x := osm_record(element))]
+        print(f"Objetos relevantes encontrados no OpenStreetMap: {len(items)}")
+        used = set()
 
         for draft in drafts:
-            matches = by_name.get(norm(draft.get("nome")), [])
-            if len(matches) == 0:
-                total_unmatched += 1
-                continue
-            if len(matches) != 1:
-                total_ambiguous += 1
-                print(f"[REVISÃO] Nome ambíguo: {draft.get('nome')} (ID {draft['id']})")
+            osm, method = choose_match(draft, items, used)
+            if osm is None:
+                if method == "sem_correspondencia":
+                    counts["sem_correspondencia"] += 1
+                elif method == "conflito_nome_endereco":
+                    counts["conflitos"] += 1
+                else:
+                    counts["ambiguos"] += 1
+                print(f"[REVISÃO: {method}] {draft.get('nome')} (ID {draft['id']})")
                 continue
 
-            osm = matches[0]
+            used.add((osm["osm_type"], osm["osm_id"]))
+            counts[method] += 1
             patch = {
                 "osm_type": osm["osm_type"],
                 "osm_id": osm["osm_id"],
                 "osm_atualizado_em": datetime.now(timezone.utc).isoformat(),
             }
-            # Only fill empty fields. Never overwrite existing/manual values.
-            for field in ("bairro", "endereco", "latitude", "longitude", "telefone", "site", "modalidades", "horarios", "maps_url"):
-                current = draft.get(field)
-                incoming = osm.get(field)
-                empty = current is None or current == "" or current == []
-                if empty and incoming not in (None, "", []):
+            for field in ("bairro", "endereco", "latitude", "longitude", "telefone",
+                          "site", "modalidades", "horarios", "maps_url"):
+                current, incoming = draft.get(field), osm.get(field)
+                if (current is None or current == "" or current == []) and incoming not in (None, "", []):
                     patch[field] = incoming
 
             if len(patch) == 3:
+                counts["sem_dados_novos"] += 1
                 continue
 
-            total_matches += 1
-            print(f"[{'SIMULAÇÃO' if DRY_RUN else 'ATUALIZAR'}] {draft.get('nome')} — campos: {', '.join(k for k in patch if k not in ('osm_type','osm_id','osm_atualizado_em'))}")
+            fields = ", ".join(k for k in patch if k not in ("osm_type", "osm_id", "osm_atualizado_em"))
+            print(f"[{'SIMULAÇÃO' if DRY_RUN else 'ATUALIZAR'}: {method}] {draft.get('nome')} — {fields}")
             if not DRY_RUN:
-                request_supabase("PATCH", "academias", params={"id": f"eq.{draft['id']}", "publicado": "eq.false"}, json=patch)
-                total_updates += 1
+                request_supabase("PATCH", "academias",
+                                 params={"id": f"eq.{draft['id']}", "publicado": "eq.false"},
+                                 json=patch)
+                counts["atualizados"] += 1
 
         time.sleep(5)
 
     print("\nRESUMO")
-    print("Correspondências únicas com dados novos:", total_matches)
-    print("Registros efetivamente atualizados:", total_updates)
-    print("Nomes ambíguos para revisão manual:", total_ambiguous)
-    print("Sem correspondência no OpenStreetMap:", total_unmatched)
+    print("Correspondências por nome/aliases:", counts["nome"])
+    print("Correspondências por endereço (rua + número):", counts["endereco"])
+    print("Registros efetivamente atualizados:", counts["atualizados"])
+    print("Correspondências ambíguas:", counts["ambiguos"])
+    print("Conflitos entre nome e endereço:", counts["conflitos"])
+    print("Correspondências sem campos novos:", counts["sem_dados_novos"])
+    print("Sem correspondência:", counts["sem_correspondencia"])
     print("Nenhum rascunho foi publicado automaticamente.")
 
 
