@@ -24,6 +24,8 @@ jobs:
       - uses: actions/upload-artifact@v6
         with:
           name: inventario-completo-catalogo
-          path: inventario-academias.csv
+          path: |
+            inventario-academias.csv
+            correspondencia-nome-fantasia.csv
           if-no-files-found: error
           retention-days: 30
