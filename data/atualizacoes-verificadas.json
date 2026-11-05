@@ -3,17 +3,7 @@
     "id": 3,
     "nome": "WF11",
     "cidade": "montes-claros",
-    "fonte_e_observacao": "Revisão de identidade: o cadastro não tem endereço nem telefone e a marca WF11 possui várias unidades em Montes Claros. Não há base segura para atribuir a este registro os parceiros WF11 CT Canelas, CT Portal Eventos ou Mestra Fininha; status de benefícios removidos para não exibir selo indevido.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": null
-      },
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": null
-      }
-    }
+    "fonte_e_observacao": "Revisão de identidade: o cadastro não tem endereço nem telefone e a marca WF11 possui várias unidades em Montes Claros. Não há base segura para atribuir a este registro os parceiros WF11 CT Canelas, CT Portal Eventos ou Mestra Fininha; status de benefícios removidos para não exibir selo indevido."
   },
   {
     "id": 4,
@@ -123,12 +113,6 @@
           "vestiario": true
         }
       }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
     }
   },
   {
@@ -159,16 +143,6 @@
           "Treino de força",
           "Treino híbrido"
         ]
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": null
       }
     }
   },
@@ -219,12 +193,6 @@
           "vestiario": true,
           "wifi": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
       }
     }
   },
@@ -350,16 +318,6 @@
         "modo": "preencher",
         "valor": 108
       }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": true
-      }
     }
   },
   {
@@ -406,8 +364,7 @@
         "modo": "preencher",
         "valor": "38988044421"
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 17,
@@ -454,8 +411,7 @@
         "modo": "preencher",
         "valor": 74
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 20,
@@ -621,12 +577,6 @@
           "wifi": true
         }
       }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      }
     }
   },
   {
@@ -750,8 +700,7 @@
         "modo": "preencher",
         "valor": 74
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 26,
@@ -878,8 +827,7 @@
         "modo": "preencher",
         "valor": 85
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 57,
@@ -958,12 +906,6 @@
         "valor": {
           "portas_adaptadas_cadeirantes": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -1073,16 +1015,6 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 253
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": null
       }
     }
   },
@@ -1215,8 +1147,7 @@
         "modo": "preencher",
         "valor": 52
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 97,
@@ -1289,8 +1220,7 @@
         "modo": "preencher",
         "valor": 259
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 127,
@@ -1324,16 +1254,6 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 160
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -1374,8 +1294,7 @@
         "modo": "preencher",
         "valor": 265
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 146,
@@ -1415,16 +1334,6 @@
           "higiene_pessoal": true,
           "estacionamento_acessivel": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": true
       }
     }
   },
@@ -1506,12 +1415,6 @@
           "climatizador": true,
           "ventilador": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_totalpass": {
-        "valor_anterior": true,
-        "valor": true
       }
     }
   },
@@ -1620,16 +1523,6 @@
         "modo": "preencher",
         "valor": 264
       }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
-      }
     }
   },
   {
@@ -1675,8 +1568,7 @@
         "modo": "preencher",
         "valor": 308
       }
-    },
-    "parcerias": {}
+    }
   },
   {
     "id": 214,
@@ -1785,16 +1677,6 @@
         "valor": {
           "armarios": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": true,
-        "valor": true
-      },
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -1943,12 +1825,6 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 416
-      }
-    },
-    "parcerias": {
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -2131,12 +2007,6 @@
           "vestiario": true
         }
       }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
     }
   },
   {
@@ -2265,13 +2135,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia ZMA Fitness confirma unidade na Av. Cel. Luiz Maia, 1590, modalidades, horários, Instagram, comodidades e parceria. Telefone do perfil oficial difere do registro empresarial anterior; correção documentada.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia ZMA Fitness confirma unidade na Av. Cel. Luiz Maia, 1590, modalidades, horários, Instagram, comodidades e parceria. Telefone do perfil oficial difere do registro empresarial anterior; correção documentada."
   },
   {
     "id": 116,
@@ -2364,13 +2228,7 @@
         "valor": 98
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil. | Google Business consultado em 05/11/2026: 4,9/5 com 98 avaliações; contagem e nota podem mudar.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil. | Google Business consultado em 05/11/2026: 4,9/5 com 98 avaliações; contagem e nota podem mudar."
   },
   {
     "id": 140,
@@ -2473,13 +2331,7 @@
         "valor": 1
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado. | Google Business consultado em 05/11/2026 identifica a unidade Rede Levitar Morrinhos no mesmo endereço Rua Cônego Chaves, 10. Avaliação pública 4,0/5 com 1 avaliação; amostra pequena e métrica variável.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado. | Google Business consultado em 05/11/2026 identifica a unidade Rede Levitar Morrinhos no mesmo endereço Rua Cônego Chaves, 10. Avaliação pública 4,0/5 com 1 avaliação; amostra pequena e métrica variável."
   },
   {
     "id": 24,
@@ -2501,13 +2353,7 @@
         ]
       }
     },
-    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço.",
-    "parcerias": {
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço."
   },
   {
     "id": 44,
@@ -2597,12 +2443,6 @@
           "vestiario": true,
           "wifi": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -2891,13 +2731,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Página individual oficial Wellhub Academia Atleta Fitness unidade 02 confirma endereço Av. das Américas, 278, João Alves, modalidades, horário, Instagram e comodidades. Nome e endereço coincidem com ID 40; telefone cadastral anterior tinha 10 dígitos e foi corrigido para o celular publicado pelo parceiro.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Página individual oficial Wellhub Academia Atleta Fitness unidade 02 confirma endereço Av. das Américas, 278, João Alves, modalidades, horário, Instagram e comodidades. Nome e endereço coincidem com ID 40; telefone cadastral anterior tinha 10 dígitos e foi corrigido para o celular publicado pelo parceiro."
   },
   {
     "id": 162,
@@ -2996,13 +2830,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub New Era Academia confirma endereço Rua Professora Geni Leite, 150, Cidade Nova, horários, modalidades, Instagram e comodidades. O cadastro empresarial NEW ERA FITNESS tem a mesma rua e número; o telefone publicado pelo parceiro difere do telefone empresarial, que foi preservado.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Era Academia confirma endereço Rua Professora Geni Leite, 150, Cidade Nova, horários, modalidades, Instagram e comodidades. O cadastro empresarial NEW ERA FITNESS tem a mesma rua e número; o telefone publicado pelo parceiro difere do telefone empresarial, que foi preservado."
   },
   {
     "id": 150,
@@ -3087,13 +2915,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Formal Fisical informa R. Santo Amaro Dois, 184, São Judas Tadeu, mesmo número e nome comercial compatível com o cadastro FORMA FISICAL, que informa R. Santo Amaro, 184, letra A. Parceria associada pela correspondência do nome e número; telefone de diretório diverge do publicado pelo parceiro e foi preservado.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Formal Fisical informa R. Santo Amaro Dois, 184, São Judas Tadeu, mesmo número e nome comercial compatível com o cadastro FORMA FISICAL, que informa R. Santo Amaro, 184, letra A. Parceria associada pela correspondência do nome e número; telefone de diretório diverge do publicado pelo parceiro e foi preservado."
   },
   {
     "id": 182,
@@ -3276,16 +3098,6 @@
         "modo": "preencher",
         "valor": "https://www.instagram.com/academia_inovefit/"
       }
-    },
-    "parcerias": {
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
-      },
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
     }
   },
   {
@@ -3369,12 +3181,6 @@
           "vestiario": true,
           "wifi": true
         }
-      }
-    },
-    "parcerias": {
-      "aceita_totalpass": {
-        "valor_anterior": null,
-        "valor": true
       }
     }
   },
@@ -3465,13 +3271,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil oficial Wellhub Academia Alpha Morada do Sol confirma Av. Mestra Fininha, 2845, mesmo endereço do cadastro empresarial Academia Atlhetica Morada do Sol. Diretórios locais também associam Alpha Gym Morada do Sol a esse endereço; nome comercial da plataforma difere da razão social. Telefone da plataforma diverge do telefone cadastral e foi preservado.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil oficial Wellhub Academia Alpha Morada do Sol confirma Av. Mestra Fininha, 2845, mesmo endereço do cadastro empresarial Academia Atlhetica Morada do Sol. Diretórios locais também associam Alpha Gym Morada do Sol a esse endereço; nome comercial da plataforma difere da razão social. Telefone da plataforma diverge do telefone cadastral e foi preservado."
   },
   {
     "id": 58,
@@ -3548,13 +3348,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Nado Livre confirma parceria e telefone (38) 3221-6880, coincidente com ficha comercial Cylex; o perfil Wellhub informa Rua João F. Pimenta, 378, enquanto CNPJ/Solutudo e Cylex apontam nº 32. Mantido o endereço cadastral nº 32 e documentada a divergência para confirmação direta.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Nado Livre confirma parceria e telefone (38) 3221-6880, coincidente com ficha comercial Cylex; o perfil Wellhub informa Rua João F. Pimenta, 378, enquanto CNPJ/Solutudo e Cylex apontam nº 32. Mantido o endereço cadastral nº 32 e documentada a divergência para confirmação direta."
   },
   {
     "id": 142,
@@ -3708,8 +3502,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Life Skull confirma endereço Rua Agapito dos Anjos, 543, horários por sessão, musculação, treino híbrido e comodidades. O registro já estava marcado como parceiro Wellhub; o link genérico será substituído pelo perfil individual. Telefone oficial difere do telefone empresarial e foi preservado.",
-    "parcerias": {}
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Life Skull confirma endereço Rua Agapito dos Anjos, 543, horários por sessão, musculação, treino híbrido e comodidades. O registro já estava marcado como parceiro Wellhub; o link genérico será substituído pelo perfil individual. Telefone oficial difere do telefone empresarial e foi preservado."
   },
   {
     "id": 104,
@@ -3823,13 +3616,7 @@
         "valor": 8
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Elite Treinamento Físico confirma endereço R. Rivadávio Lucas Mendes, 415, Morada do Sol, modalidades, horários, contato, comodidades e parceiro Wellhub. Nome e endereço correspondem exatamente ao registro.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Elite Treinamento Físico confirma endereço R. Rivadávio Lucas Mendes, 415, Morada do Sol, modalidades, horários, contato, comodidades e parceiro Wellhub. Nome e endereço correspondem exatamente ao registro."
   },
   {
     "id": 176,
@@ -3921,13 +3708,7 @@
         }
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fórmula fit confirma R. Raul Corrêa, 766, Funcionários, Montes Claros, horários, treino funcional e comodidades. Endereço e número coincidem com o registro (letra C foi preservada no cadastro); parceria Wellhub confirmada.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fórmula fit confirma R. Raul Corrêa, 766, Funcionários, Montes Claros, horários, treino funcional e comodidades. Endereço e número coincidem com o registro (letra C foi preservada no cadastro); parceria Wellhub confirmada."
   },
   {
     "id": 209,
@@ -4019,13 +3800,7 @@
         "valor": 15
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 CT Portal Eventos confirma Rua Jucá Fróes, 220, site, telefone (38) 3216-0396, funcionamento, musculação e comodidades; nome e endereço coincidem com o cadastro. Avaliação 4,93/5 (15 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 CT Portal Eventos confirma Rua Jucá Fróes, 220, site, telefone (38) 3216-0396, funcionamento, musculação e comodidades; nome e endereço coincidem com o cadastro. Avaliação 4,93/5 (15 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 210,
@@ -4118,13 +3893,7 @@
         "valor": 204
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 Gym Córrego das Melancias confirma Av. Antônio Lafetá Rebelo, 625, horários, musculação, fisiculturismo, funcional infantil, Instagram e comodidades. Telefone divulgado no perfil difere do cadastral, por isso o telefone existente foi preservado. Avaliação 4,85/5 (204 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 Gym Córrego das Melancias confirma Av. Antônio Lafetá Rebelo, 625, horários, musculação, fisiculturismo, funcional infantil, Instagram e comodidades. Telefone divulgado no perfil difere do cadastral, por isso o telefone existente foi preservado. Avaliação 4,85/5 (204 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 112,
@@ -4218,13 +3987,7 @@
         "valor": 604
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Fast Fit 2 confirma Av. Mestra Fininha, 3170, horários, modalidades, Instagram, estrutura e parceria. Telefone da página oficial diverge do telefone empresarial e foi preservado. Avaliação 4,79/5 (604 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Fast Fit 2 confirma Av. Mestra Fininha, 3170, horários, modalidades, Instagram, estrutura e parceria. Telefone da página oficial diverge do telefone empresarial e foi preservado. Avaliação 4,79/5 (604 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 121,
@@ -4321,13 +4084,7 @@
         "valor": 1344
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Ibituruna confirma Av. José Corrêa Machado, 1079, horários, modalidades, Instagram, estrutura e parceria. Telefone publicado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,87/5 (1.344 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Ibituruna confirma Av. José Corrêa Machado, 1079, horários, modalidades, Instagram, estrutura e parceria. Telefone publicado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,87/5 (1.344 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 123,
@@ -4427,13 +4184,7 @@
         "valor": 1578
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia São José confirma Av. Floriano Neiva, 610, horários, modalidades, Instagram, estrutura e parceria. Telefone divulgado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,93/5 (1.578 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia São José confirma Av. Floriano Neiva, 610, horários, modalidades, Instagram, estrutura e parceria. Telefone divulgado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,93/5 (1.578 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 155,
@@ -4538,13 +4289,7 @@
         "valor": 525
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia MaxxForce confirma Av. Dep. Plínio Ribeiro, 2155, Jardim Palmeiras, horários, modalidades, Instagram, comodidades e parceria. Telefone oficial publicado difere do telefone empresarial e foi preservado. Avaliação 4,87/5 (525 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia MaxxForce confirma Av. Dep. Plínio Ribeiro, 2155, Jardim Palmeiras, horários, modalidades, Instagram, comodidades e parceria. Telefone oficial publicado difere do telefone empresarial e foi preservado. Avaliação 4,87/5 (525 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 158,
@@ -4633,13 +4378,7 @@
         "valor": 71
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub CF Monster confirma Rua Olímpio Guedes, 170, Morada do Sol, horários específicos, CrossFit, Instagram, comodidades e parceria. Telefone do perfil difere do telefone cadastral e foi preservado. Avaliação 4,99/5 (71 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub CF Monster confirma Rua Olímpio Guedes, 170, Morada do Sol, horários específicos, CrossFit, Instagram, comodidades e parceria. Telefone do perfil difere do telefone cadastral e foi preservado. Avaliação 4,99/5 (71 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 109,
@@ -4735,13 +4474,7 @@
         "valor": 558
       }
     },
-    "fonte_e_observacao": "Perfil oficial Wellhub EXTREME FIT MARACANA confirma Praça Beato Francisco Coll, 112, mesma unidade do cadastro ID 109. Página fornece telefone, Instagram, horários, modalidades, comodidades e nota 4,88/5 (558 avaliações), consultada em 05/11/2026. Telefone oficial diverge do cadastral e foi preservado.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil oficial Wellhub EXTREME FIT MARACANA confirma Praça Beato Francisco Coll, 112, mesma unidade do cadastro ID 109. Página fornece telefone, Instagram, horários, modalidades, comodidades e nota 4,88/5 (558 avaliações), consultada em 05/11/2026. Telefone oficial diverge do cadastral e foi preservado."
   },
   {
     "id": 144,
@@ -4835,13 +4568,7 @@
         "valor": 28
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub Iron Fit - Maracanã confirma Rua Cassimiro de Abreu, 181 A, endereço compatível com cadastro empresarial ID 144. Telefone oficial corrigido após verificar que o cadastro antigo estava sem o nono dígito. Perfil fornece Instagram, horários, musculação, comodidades e avaliação 4,86/5 (28 avaliações), consultada em 05/11/2026.",
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
-      }
-    }
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Iron Fit - Maracanã confirma Rua Cassimiro de Abreu, 181 A, endereço compatível com cadastro empresarial ID 144. Telefone oficial corrigido após verificar que o cadastro antigo estava sem o nono dígito. Perfil fornece Instagram, horários, musculação, comodidades e avaliação 4,86/5 (28 avaliações), consultada em 05/11/2026."
   },
   {
     "id": 30,
@@ -4923,8 +4650,7 @@
         "valor": 15
       }
     },
-    "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade.",
-    "parcerias": {}
+    "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade."
   },
   {
     "id": 130,
@@ -5001,12 +4727,6 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 30
-      }
-    },
-    "parcerias": {
-      "aceita_wellhub": {
-        "valor_anterior": null,
-        "valor": true
       }
     },
     "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc. | Google Business consultado em 05/11/2026 identifica Corpus Gym na Rua Mestre Janjão, 264, mesmo endereço do cadastro (loja 02 no CNPJ). Avaliação pública 4,8/5 com 30 avaliações; métricas variáveis. O telefone cadastral foi preservado por divergir do contato público associado ao mesmo endereço."
