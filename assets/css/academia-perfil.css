@@ -41,6 +41,10 @@
   background: #B3261E !important; /* vermelho = fechada */
 }
 
+#statusAcademia.semHorario {
+  background: #475569 !important; /* neutro = horário não informado */
+}
+
 .perfilCabecalho {
   display: flex;
   justify-content: space-between;
