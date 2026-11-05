@@ -65,3 +65,5 @@ print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
 # Auditoria final de parceiros Wellhub/TotalPass apos lote 56 registros.
 
 # Auditoria final apos os lotes Wellhub e importacao dos novos parceiros verificados.
+
+# Auditoria final após inclusão de Studio Pedro Sodré e Cross UP e parcerias verificadas.
