@@ -6,8 +6,8 @@ import requests
 
 BASE=Path(__file__).resolve().parents[1]
 LEADS=json.loads((BASE/"data/leads-diretorios.json").read_text(encoding="utf-8"))
-URL=os.getenv("SUPABASE_URL","").rstrip("/")
-KEY=os.getenv("SUPABASE_SECRET_KEY","")
+URL=os.getenv("SUPABASE_URL","").strip().replace("\\","").strip().strip('"').strip("'").rstrip("/")
+KEY=os.getenv("SUPABASE_SECRET_KEY","").strip().replace("\\","").strip().strip('"').strip("'")
 OUT=BASE/"relatorio-cruzamento-diretorios.csv"
 
 def norm(s):
@@ -44,6 +44,8 @@ def find(lead,items):
     return "possivel_correspondencia",found[0][1],found[0][0]
 def main():
     if not URL or not KEY: raise RuntimeError("SUPABASE_URL e SUPABASE_SECRET_KEY são obrigatórios.")
+    if not URL.startswith(("https://","http://")):
+        raise RuntimeError("SUPABASE_URL inválida: confira o Secret SUPABASE_URL no GitHub; deve começar com https://.")
     current=drafts(); rows=[]
     for lead in LEADS:
         status,d,score=find(lead,current)
