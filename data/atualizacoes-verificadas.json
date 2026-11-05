@@ -370,7 +370,7 @@
       "RUA AMERICO SOARES",
       "734"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado. | Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado. | Avaliação pública consultada em 05/11/2026 para Bodyart Academia: 4.7/5 (184 avaliações). Nota e contagem são variáveis e podem mudar.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado. | Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado. | Avaliação pública consultada em 05/11/2026 para Bodyart Academia: 4.7/5 (184 avaliações). Nota e contagem são variáveis e podem mudar. | Agenda Janaúba também lista esta unidade na Rua Américo Soares, nº 712–764, com o número/WhatsApp (38) 98804-4421. O endereço cadastral nº 734 está dentro do intervalo comercial publicado; número cadastral e telefone já existentes foram preservados.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -384,8 +384,9 @@
         ]
       },
       "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/"
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/partners/bodyart-academia-sao-goncalo-janauba/",
+        "valor": "https://agendajanauba.com.br/comercio/bodyart-academia/"
       },
       "estrutura": {
         "modo": "mesclar_objeto",
@@ -400,6 +401,10 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 184
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988044421"
       }
     },
     "parcerias": {}
@@ -2142,9 +2147,13 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 93
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38991400064"
       }
     },
-    "fonte_e_observacao": "Avaliação pública consultada em 05/11/2026 para Moov Academia — Unidade II: 4.8/5 (93 avaliações). Nota e contagem são variáveis e podem mudar."
+    "fonte_e_observacao": "Avaliação pública consultada em 05/11/2026 para Moov Academia — Unidade II: 4.8/5 (93 avaliações). Nota e contagem são variáveis e podem mudar. | Agenda Janaúba lista a Moov Academia Unidade II na Av. Manoel Athaide, 1344 e identifica o número (38) 99140-0064 como WhatsApp/telefone; o número coincide com o telefone cadastrado."
   },
   {
     "id": 82,
@@ -2589,12 +2598,85 @@
       "SANTOS DUMONT",
       "158"
     ],
-    "fonte_e_observacao": "Agenda Janaúba lista Alpha Performance e Bem-Estar na Rua Santos Dumont, 158, Janaúba, com telefone (38) 98819-2836. O endereço e os dígitos do telefone coincidem com o cadastro empresarial Alpha Escola de Esportes; o nome comercial diferente foi preservado e a correção do nono dígito documentada.",
+    "fonte_e_observacao": "Agenda Janaúba lista Alpha Performance e Bem-Estar na Rua Santos Dumont, 158, Janaúba, com telefone (38) 98819-2836. O endereço e os dígitos do telefone coincidem com o cadastro empresarial Alpha Escola de Esportes; o nome comercial diferente foi preservado e a correção do nono dígito documentada. | Agenda Janaúba identifica explicitamente a ficha pública Alpha Performance e Bem-Estar, mesmo endereço e telefone/WhatsApp (38) 98819-2836. O Google Business consultado em 05/11/2026 indica funcionamento de segunda a sexta 08:00–11:00 e 14:00–21:00, sem funcionamento aos sábados e domingos, avaliação 4,7/5 com 3 avaliações; métricas variáveis. A razão social/nome cadastral foi preservada.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
         "valor_anterior": "3888192836",
         "valor": "38988192836"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988192836"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://agendajanauba.com.br/comercio/alpha-performance-e-bem-estar/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "08:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "08:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "08:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "08:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "08:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": []
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 3
       }
     }
   },
@@ -2606,12 +2688,101 @@
       "MAURICIO AUGUSTO DE AZEVEDO",
       "95"
     ],
-    "fonte_e_observacao": "Agenda Janaúba lista DA Slim Estúdio de Treinamento e Saúde na Rua/Avenida Maurício Augusto de Azevedo, 95, com telefone (38) 99895-2416. O nome e endereço correspondem ao cadastro; telefone atualizado com o nono dígito publicado na ficha.",
+    "fonte_e_observacao": "Agenda Janaúba lista DA Slim Estúdio de Treinamento e Saúde na Rua/Avenida Maurício Augusto de Azevedo, 95, com telefone (38) 99895-2416. O nome e endereço correspondem ao cadastro; telefone atualizado com o nono dígito publicado na ficha. | Agenda Janaúba publica telefone/WhatsApp e Instagram @da_slim_mulher para a unidade no nº 95; Google Business consultado em 05/11/2026 indica segunda a sexta 05:00–11:00 e 14:00–20:00, sábado 08:00–12:00, nota 5,0/5 com 3 avaliações. O domingo não aparece com horário publicado. A ficha CNPJ registra 'Avenida', enquanto as fontes comerciais exibem 'Rua'; o endereço cadastral foi preservado.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
         "valor_anterior": "3898952416",
         "valor": "38998952416"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38998952416"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/da_slim_mulher/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://agendajanauba.com.br/comercio/da-slim-estudio-de-treinamento-e-saude/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "20:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "20:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "20:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "20:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "11:00"
+            },
+            {
+              "abre": "14:00",
+              "fecha": "20:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 3
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "piscina": true,
+          "chuveiro": true,
+          "estacionamento": true
+        }
       }
     }
   },
@@ -4824,16 +4995,17 @@
       "RUA SAO JOAO DA PONTE",
       "1770"
     ],
-    "fonte_e_observacao": "Identidade comercial confirmada pelo site oficial Gym Prime, com o mesmo endereço R. São João da Ponte, 1770 - Santo Antônio, Janaúba. Site oficial divulga WhatsApp (38) 99966-6493, horários de segunda a sexta 05h–22h, sábado 07h–18h e domingo 08h–16h. O site confirma coworking, ar-condicionado, vestiários, duchas, Wi-Fi, avaliação por bioimpedância, consulta nutricional, armários rotativos, acompanhamento profissional, lanchonete e secador. Google Business consultado em 05/11/2026: 5,0/5 com 87 avaliações; métricas variáveis.",
+    "fonte_e_observacao": "Identidade comercial confirmada pelo site oficial Gym Prime, com o mesmo endereço R. São João da Ponte, 1770 - Santo Antônio, Janaúba. Site oficial divulga WhatsApp (38) 99966-6493, horários de segunda a sexta 05h–22h, sábado 07h–18h e domingo 08h–16h. O site confirma coworking, ar-condicionado, vestiários, duchas, Wi-Fi, avaliação por bioimpedância, consulta nutricional, armários rotativos, acompanhamento profissional, lanchonete e secador. Google Business consultado em 05/11/2026: 5,0/5 com 87 avaliações; métricas variáveis. | Correção de telefone em 05/11/2026: o próprio site oficial publica o WhatsApp como (38) 99966-6493; dígitos corretos 38999666493. Uma listagem de diretório apresenta número divergente, por isso foi priorizada a página oficial da unidade.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
-        "valor_anterior": "3891259455",
-        "valor": "3899966493"
+        "valor_anterior": "3899966493",
+        "valor": "38999666493"
       },
       "whatsapp": {
-        "modo": "preencher",
-        "valor": "3899966493"
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899966493",
+        "valor": "38999666493"
       },
       "site": {
         "modo": "preencher",
