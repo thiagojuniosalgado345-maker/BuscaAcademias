@@ -4924,15 +4924,15 @@
       "RUA SANTA MARIA",
       "286"
     ],
-    "fonte_e_observacao": "Ficha específica Cylex confirma a unidade Academia O2 na Rua Santa Maria, 286, telefone (38) 3221-0909 e horários de segunda a sexta 06h–22h, sábado 07h–16h e domingo fechado. LocalBrazil consultado em 05/11/2026 lista 4,7/5 com 188 avaliações; nota/contagem podem variar.",
+    "fonte_e_observacao": "Ficha específica Cylex confirma a unidade Academia O2 na Rua Santa Maria, 286 e telefone (38) 3221-0909. LocalBrazil consultado em 05/11/2026 lista 4,7/5 com 188 avaliações; nota e contagem podem variar. Horários foram retirados porque Cylex e a listagem empresarial consultada apresentam divergência entre abertura aos domingos e horário de início nos dias úteis; não exibir horário sem confirmação.",
     "campos": {
       "detalhes_url": {
         "modo": "preencher",
         "valor": "https://www.cylex.com.br/montes-claros/academia-o2-11904752.html"
       },
       "horarios": {
-        "modo": "preencher",
-        "valor": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": {
           "0": [],
           "1": [
             {
@@ -4970,7 +4970,8 @@
               "fecha": "16:00"
             }
           ]
-        }
+        },
+        "valor": null
       },
       "avaliacao": {
         "modo": "preencher",
@@ -5000,6 +5001,34 @@
       "whatsapp": {
         "modo": "preencher",
         "valor": "38999548887"
+      }
+    }
+  },
+  {
+    "id": 47,
+    "nome": "ACADEMIA FIRE FIT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA JACINTO DOS SANTOS LIMA",
+      "166"
+    ],
+    "fonte_e_observacao": "FindGlocal identifica o perfil Instagram @firefitmoc e endereço da unidade na Rua Jacinto dos Santos Lima, Montes Claros. Local Treino lista a mesma unidade no número 166 e avaliação pública 4,7/5 com 23 avaliações (métricas variáveis). Duas fontes consultadas publicam horários diferentes; horários permanecem não informados até confirmação.",
+    "campos": {
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/firefitmoc/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/academias/montes-claros/fire-fit-academia/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 23
       }
     }
   }
