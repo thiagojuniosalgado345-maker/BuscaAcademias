@@ -183,6 +183,10 @@ def main():
             "status": status,
             "id_existente": atual.get("id", "") if atual else "",
             "nome_existente": atual.get("nome", "") if atual else "",
+            "endereco_existente": atual.get("endereco", "") if atual else "",
+            "telefone_existente": atual.get("telefone", "") if atual else "",
+            "whatsapp_existente": atual.get("whatsapp", "") if atual else "",
+            "cnpj_existente": atual.get("cnpj", "") if atual else "",
             "publicado_existente": atual.get("publicado", "") if atual else "",
             "motivo": motivo,
         })
