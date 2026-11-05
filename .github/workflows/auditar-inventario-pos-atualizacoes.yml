@@ -24,7 +24,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: inventario-atualizado-pos-enriquecimento
-          path: inventario-academias.csv
+          path: |
+            inventario-academias.csv
+            correspondencia-nome-fantasia.csv
           retention-days: 30
 
 # Auditoria atualizada apos lote de 30 perfis em 05/11/2026.
