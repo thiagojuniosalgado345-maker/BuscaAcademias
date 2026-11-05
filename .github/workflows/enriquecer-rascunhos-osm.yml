@@ -20,7 +20,7 @@ permissions:
 jobs:
   enriquecer:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 35
     steps:
       - name: Baixar arquivos do repositorio
         uses: actions/checkout@v7
