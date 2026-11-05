@@ -234,6 +234,12 @@ function renderizarPerfil(academia) {
   // Botões de ação
   const btnMapa = document.getElementById("btnMapa");
 
+  const btnTelefone = document.getElementById("btnTelefone");
+  if (academia.telefone) {
+    btnTelefone.href = `tel:${String(academia.telefone).replace(/[^0-9+]/g, "")}`;
+    btnTelefone.style.display = "inline-flex";
+  }
+
   const btnWhatsapp = document.getElementById("btnWhatsapp");
   if (academia.whatsapp) {
     btnWhatsapp.href = `https://wa.me/${academia.whatsapp}`;
