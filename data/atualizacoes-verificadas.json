@@ -5719,9 +5719,65 @@
       "detalhes_url": {
         "modo": "preencher",
         "valor": "https://www.econodata.com.br/consulta-empresa/48946629000155-wish-academy-fitness-ltda"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "11:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 7
       }
     },
-    "fonte_e_observacao": " | Econodata consultada em 05/11/2026 confirma Wish Academy Fitness Ltda ativa no endereço Rua Neco Tiburtino, 159, Janaúba, e publica link direto de WhatsApp (38) 99825-4028. O telefone já cadastrado é diferente, então foi preservado; foi acrescentado apenas o WhatsApp explícito na ficha."
+    "fonte_e_observacao": " | Econodata consultada em 05/11/2026 confirma Wish Academy Fitness Ltda ativa no endereço Rua Neco Tiburtino, 159, Janaúba, e publica link direto de WhatsApp (38) 99825-4028. O telefone já cadastrado é diferente, então foi preservado; foi acrescentado apenas o WhatsApp explícito na ficha. | Google Business consultado em 05/11/2026 identifica Wish Fitness Academy no mesmo endereço Rua Neco Tiburtino, 159. Horários: seg–sex 05:00–21:00 e sábado 07:00–11:00; domingo não informado. Avaliação 5,0/5 com 7 avaliações. Modalidades: musculação e condicionamento físico. O telefone empresarial foi preservado porque o número publicado coincide com o WhatsApp que já estava cadastrado, mas diverge do telefone empresarial."
   },
   {
     "id": 56,
@@ -6533,6 +6589,150 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 22
+      }
+    }
+  },
+  {
+    "id": 10,
+    "nome": "ACADEMIA FORMA MULHER LTDA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AVENIDA MAURICIO AUGUSTO DE AZEVEDO",
+      "95"
+    ],
+    "fonte_e_observacao": "Solutudo e Casa dos Dados identificam Academia Forma Mulher Ltda, CNPJ 47.753.169/0001-86, na Avenida Maurício Augusto de Azevedo, 95, Centro, Janaúba. Ambas as fichas publicam telefone e WhatsApp (38) 99221-0000; o número cadastrado estava sem o nono dígito e foi corrigido.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3892210000",
+        "valor": "38992210000"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38992210000"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/janauba/academias/academia-forma-mulher-ltda-25428828"
+      }
+    }
+  },
+  {
+    "id": 11,
+    "nome": "FORMAFIT ACADEMIA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AVENIDA SANTA MONICA",
+      "31"
+    ],
+    "fonte_e_observacao": "Casa dos Dados identifica Academia Forma Training Ltda, nome fantasia Formafit Academia, no mesmo endereço Avenida Santa Mônica, 31, São Gonçalo, Janaúba. A ficha cadastral publica WhatsApp (38) 98827-0036, correspondente ao telefone do registro; adicionado o canal WhatsApp e link de conferência.",
+    "campos": {
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38988270036"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://casadosdados.com.br/solucao/cnpj/academia-forma-training-ltda-29919137000126"
+      }
+    }
+  },
+  {
+    "id": 14,
+    "nome": "AMANDAFISIOTERAPIAEPILATES@GMA",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "RUA SAO JOAO DA PONTE",
+      "1077"
+    ],
+    "fonte_e_observacao": "Google Business identifica Amanda Mendes - Fisioterapia e Pilates exatamente na Rua São João da Ponte, 1077, São Gonçalo, Janaúba. Telefone público (38) 98814-5700; o contato cadastrado estava sem um dígito e foi corrigido. Avaliação 5,0/5 com 15 avaliações. A unidade oferece fisioterapia e Pilates; horários publicados de segunda a sexta 08:00–20:00. Fim de semana não informado.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3888145700",
+        "valor": "38988145700"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Fisioterapia",
+          "Pilates"
+        ]
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "1": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "08:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 15
+      }
+    }
+  },
+  {
+    "id": 34,
+    "nome": "STUDIO CORPO EM MOVIMENTO",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "RUA MACEIO",
+      "45"
+    ],
+    "fonte_e_observacao": "Casa dos Dados confirma Studio Corpo em Movimento Andressa Almeida Ltda, CNPJ 13.807.134/0001-60, ativa, no exato endereço Rua Maceió, 45, Santa Cruz, Janaúba. A ficha indica telefone e WhatsApp (38) 99184-4252. Google Business identifica Andressa Almeida - Musculação e Pilates no mesmo endereço. O número cadastrado estava sem o nono dígito e foi corrigido.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891844252",
+        "valor": "38991844252"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38991844252"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Pilates"
+        ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://casadosdados.com.br/solucao/cnpj/studio-corpo-em-movimento-andressa-almeida-ltda-13807134000160"
       }
     }
   }
