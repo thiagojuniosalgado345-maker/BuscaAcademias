@@ -23,9 +23,9 @@ jobs:
   aplicar:
     runs-on: ubuntu-latest
     env:
-      SUPABASE_URL: \${{ secrets.SUPABASE_URL }}
-      SUPABASE_SECRET_KEY: \${{ secrets.SUPABASE_SECRET_KEY }}
-      DRY_RUN: \${{ github.event_name == 'push' && 'false' || (inputs.dry_run == 'false' && 'false' || 'true') }}
+      SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+      SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+      DRY_RUN: ${{ github.event_name == 'push' && 'false' || (inputs.dry_run == 'false' && 'false' || 'true') }}
     steps:
       - name: Baixar repositório
         uses: actions/checkout@v4
