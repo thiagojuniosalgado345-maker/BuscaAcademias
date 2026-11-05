@@ -161,6 +161,10 @@ function obterTextoDistancia(academia) {
    INFORMADO PELA PRÓPRIA ACADEMIA (sem imprevistos)
 ===================================================== */
 function calcularStatus(horarios) {
+  if (!horarios || typeof horarios !== "object" || Object.keys(horarios).length === 0) {
+    return { aberta: false, texto: "Horário não informado", desconhecida: true };
+  }
+
   const agora = new Date();
   const diaSemana = agora.getDay();
   const minutosAgora = agora.getHours() * 60 + agora.getMinutes();
@@ -197,10 +201,14 @@ function calcularStatus(horarios) {
     }
   }
 
-  return { aberta: false, texto: "Fechada" };
+  return { aberta: false, texto: "Fechada", desconhecida: false };
 }
 
 function horarioDeHojeTexto(horarios) {
+  if (!horarios || typeof horarios !== "object" || Object.keys(horarios).length === 0) {
+    return "Horário não informado";
+  }
+
   const periodosHoje = obterPeriodos(horarios[new Date().getDay()]);
   if (periodosHoje.length === 0) return "Fechada hoje";
   return periodosHoje.map((p) => `${p.abre} às ${p.fecha}`).join(" e ");
@@ -240,6 +248,9 @@ function renderizarLista(lista) {
 
   lista.forEach((academia) => {
     const status = calcularStatus(academia.horarios);
+    const classeStatus = status.desconhecida
+      ? "status semHorario"
+      : `status ${status.aberta ? "" : "fechada"}`;
 
     const card = document.createElement("article");
     card.className = "academia";
@@ -250,7 +261,7 @@ function renderizarLista(lista) {
     card.innerHTML = `
       <div class="fotoAcademia">
         <img src="${academia.foto}" alt="${academia.nome}">
-        <span class="status ${status.aberta ? "" : "fechada"}">${status.texto}</span>
+        <span class="${classeStatus}">${status.texto}</span>
         <button class="coracao" onclick="favoritar(this)">♡</button>
         <span class="notaFoto">${academia.avaliacao ? `⭐ ${academia.avaliacao.toFixed(1).replace(".", ",")}` : "Novo"}</span>
       </div>
