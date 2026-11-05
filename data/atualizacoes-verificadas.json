@@ -881,10 +881,9 @@
     "nome": "ACADEMIA MARACANA LTDA",
     "cidade": "montes-claros",
     "endereco_contem": [
-      "BEATO FRANCISCO",
-      "45"
+      "BEATO FRANCISCO COLL"
     ],
-    "fonte_e_observacao": "Endereço e telefone correspondem à unidade Atlhetica Maracanã / Unidade 08. A lista oficial Wellhub mostra Atlhetica Maracanã; ficha local confirma endereço e telefone da unidade.",
+    "fonte_e_observacao": "Endereço e telefone correspondem à unidade Atlhetica Maracanã / Unidade 08. A lista oficial Wellhub mostra Atlhetica Maracanã; ficha local confirma endereço e telefone da unidade. | Perfil oficial Wellhub Atlhetica Maracanã informa Praça Beato Francisco Coll, 65, telefone (38) 3016-1104 e Instagram atlheticamaracana. O CNPJ ID 57 indica Praça Beato Francisco Coll, 45 e exatamente o mesmo telefone. Associação de parceria feita pela combinação de telefone idêntico, logradouro e nome de academia; número divergente mantido para confirmação direta.",
     "campos": {
       "horarios": {
         "modo": "preencher",
@@ -940,6 +939,20 @@
           "Personal Dance",
           "Danças sociais"
         ]
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/atlhetica-maracana/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/atlheticamaracana"
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "portas_adaptadas_cadeirantes": true
+        }
       }
     },
     "parcerias": {
@@ -4717,5 +4730,86 @@
     },
     "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade.",
     "parcerias": {}
+  },
+  {
+    "id": 130,
+    "nome": "CORPUS GYM",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MESTRE JANJAO",
+      "264"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/corpus-fitness-unidade-1-santa-rita-i-montes-claros/"
+      },
+      "facebook": {
+        "modo": "preencher",
+        "valor": "https://facebook.com/academiacorpusfitnessmoc"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "17:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Funcional",
+          "Zumba",
+          "Musculação"
+        ]
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado."
   }
 ]
