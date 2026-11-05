@@ -4432,5 +4432,290 @@
         "valor": true
       }
     }
+  },
+  {
+    "id": 109,
+    "nome": "EXTREME FIT ACADEMIA DE CONDICIONAMENTO FISICO.",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "BEATO FRANCISCO COLL",
+      "112"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/extreme-fit-maracana-montes-claros/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/extremefit_maracana"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "13:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "20:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Power Bike",
+          "Queima de gordura",
+          "Fisiculturismo",
+          "CrossFit",
+          "Barre Training"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.88
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 558
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub EXTREME FIT MARACANA confirma Praça Beato Francisco Coll, 112, mesma unidade do cadastro ID 109. Página fornece telefone, Instagram, horários, modalidades, comodidades e nota 4,88/5 (558 avaliações), consultada em 05/11/2026. Telefone oficial diverge do cadastral e foi preservado.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 144,
+    "nome": "IRON FIT",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CASSIMIRO DE ABREU",
+      "181"
+    ],
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891504092",
+        "valor": "38991504092"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/iron-fit-maracana/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/_ironfitacademia/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "05:30",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:30",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:30",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:30",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:30",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "area_alongamento": true,
+          "cardio": true,
+          "area_funcional": true,
+          "armarios": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "personal_trainer": true,
+          "wifi": true
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.86
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 28
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Iron Fit - Maracanã confirma Rua Cassimiro de Abreu, 181 A, endereço compatível com cadastro empresarial ID 144. Telefone oficial corrigido após verificar que o cadastro antigo estava sem o nono dígito. Perfil fornece Instagram, horários, musculação, comodidades e avaliação 4,86/5 (28 avaliações), consultada em 05/11/2026.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 30,
+    "nome": "NTIME GYM",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MILITAO JOSE DOS SANTOS",
+      "1475"
+    ],
+    "campos": {
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "18:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Condicionamento físico"
+        ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 15
+      }
+    },
+    "fonte_e_observacao": "Agenda Janaúba identifica N Time Gym – Unidade II na Av. Militão José dos Santos, 1475, telefone (38) 99908-5782; endereço coincide com o cadastro ID 30. Google Business informa nota 5,0/5 (15 avaliações), horários e telefone correspondente; o telefone do cadastro atual é diferente e foi preservado. Não foi localizada comprovação oficial de Wellhub ou TotalPass para esta unidade.",
+    "parcerias": {}
   }
 ]
