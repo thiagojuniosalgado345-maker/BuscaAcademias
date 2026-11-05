@@ -74,6 +74,7 @@
     "categoria": "Academia",
     "fonte": "https://agendajanauba.com.br/guia/?sort=date-asc&view=grid",
     "fonte_secundaria": "https://agendajanauba.com.br/guia/page/2/?view=map",
-    "validacao": "Duas páginas do guia local convergem para nome, endereço e telefone."
+    "validacao": "O guia local identifica explicitamente Unidade II no endereço Av. Manoel Athaide, 1344. O registro Moov já existente está na Av. Mestre Alfredo Barbosa, 413; são endereços distintos, então deve ser tratado como outra unidade, não duplicata.",
+    "unidade_separada": true
   }
 ]
