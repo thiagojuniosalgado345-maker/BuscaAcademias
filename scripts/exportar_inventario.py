@@ -77,3 +77,5 @@ print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
 # Auditoria cadastral independente das verificacoes de parceiros adiadas a pedido do usuario.
 
 # Inventario atualizado apos lotes cadastrais, sem alterar verificacao de parcerias.
+
+# Inventario apos lote final cadastral e correcao dos links WhatsApp.
