@@ -73,3 +73,5 @@ print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
 # Auditoria geral após suspensão temporária da revisão das parcerias Wellhub/TotalPass; foco nos dados cadastrais.
 
 # Auditoria cadastral continua separada da etapa futura de validacao Wellhub/TotalPass.
+
+# Auditoria cadastral independente das verificacoes de parceiros adiadas a pedido do usuario.
