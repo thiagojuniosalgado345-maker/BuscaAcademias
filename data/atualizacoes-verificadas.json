@@ -1299,7 +1299,8 @@
         "valor": "https://www.instagram.com/wf11gym"
       },
       "detalhes_url": {
-        "modo": "preencher",
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
         "valor": "https://wellhub.com/pt-br/search/partners/wf11-gym-mestra-fininha/"
       },
       "horarios": {
@@ -1537,6 +1538,52 @@
       "aceita_totalpass": {
         "valor_anterior": null,
         "valor": true
+      }
+    }
+  },
+  {
+    "id": 207,
+    "nome": "WCT CENTRO DE TREINAMENTO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MANOEL CARIBE FILHO",
+      "2020"
+    ],
+    "fonte_e_observacao": "Perfil individual Wellhub e página TotalPass identificam a WCT na unidade da Av. Vicente Guimarães, 2020; o endereço empresarial no CNPJ aparece como Av. Manoel Caribe Filho, 2020, com mesmo número e mesma empresa. Mantido o endereço cadastral original e registrada a divergência. O telefone fixo/celular (38) 99938-1129 é divulgado no perfil Wellhub e TotalPass; o telefone de CNPJ (38) 99958-7088 é mantido separadamente como WhatsApp informado por diretório local. Instagram oficial @wct.oficial. Horários e modalidades já cadastrados foram preservados; foram adicionadas modalidades e comodidades listadas pela unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3899587088",
+        "valor": "38999381129"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38999587088"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/wct.oficial/"
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Treino híbrido",
+          "Fisiculturismo",
+          "Funcional infantil"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "bebedouro": true,
+          "bicicletario": true,
+          "acessibilidade": true,
+          "sauna": true,
+          "secador_cabelo": true,
+          "wifi": true,
+          "vestiario": true
+        }
       }
     }
   }
