@@ -1,0 +1,41 @@
+name: Enriquecer perfis de academias
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'true = simular; false = atualizar somente os rascunhos listados'
+        required: true
+        type: choice
+        options:
+          - 'true'
+          - 'false'
+        default: 'true'
+  push:
+    paths:
+      - 'data/enriquecimento-perfis.json'
+      - 'scripts/enriquecer_perfis_catalogo.py'
+      - '.github/workflows/enriquecer-perfis.yml'
+permissions:
+  contents: read
+jobs:
+  enriquecer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: '3.13'
+      - run: python -m pip install requests
+      - name: Atualizar perfis com segurança
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SECRET_KEY: ${{ secrets.SUPABASE_SECRET_KEY }}
+          DRY_RUN: ${{ github.event_name == 'workflow_dispatch' && inputs.dry_run == 'false' && 'false' || 'true' }}
+        run: python scripts/enriquecer_perfis_catalogo.py
+      - uses: actions/upload-artifact@v6
+        with:
+          name: relatorio-enriquecimento-perfis
+          path: relatorio-enriquecimento-perfis.csv
+          if-no-files-found: error
+          retention-days: 30
