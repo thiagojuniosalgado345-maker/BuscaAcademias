@@ -1,0 +1,506 @@
+[
+  {
+    "id": 3,
+    "nome": "WF11",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": null
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    },
+    "fonte_e_observacao": "Revisão de identidade: o cadastro não tem endereço nem telefone e a marca WF11 possui várias unidades em Montes Claros. Não há base segura para atribuir a este registro os parceiros WF11 CT Canelas, CT Portal Eventos ou Mestra Fininha; status de benefícios removidos para não exibir selo indevido."
+  },
+  {
+    "id": 4,
+    "nome": "Studio 360",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Telefone conferido em ficha comercial da unidade Studio 360 no endereço Avenida José Corrêa Machado, 100, Montes Claros. Fonte: pesquisa de estabelecimento local. | Perfil individual oficial Wellhub 360 Studio Fitness confirma Av. José Corrêa Machado, 100, modalidades, horários, Instagram e estrutura. Endereço e telefone do catálogo Studio 360 coincidem com o perfil; parceiro mapeado pela correspondência exata da unidade."
+  },
+  {
+    "id": 5,
+    "nome": "Focco Academia Sports",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial de parceiro Wellhub da Focco Academia Sports confirma endereço, telefone, Instagram, horários e modalidades. Não foi localizada listagem oficial específica no TotalPass; aceitação TotalPass permanece não confirmada."
+  },
+  {
+    "id": 6,
+    "nome": "Panobianco",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub da unidade Panobianco Montes Claros - São José e site oficial Panobianco. A página oficial Wellhub identifica a unidade como exclusiva no Wellhub; modalidades, comodidades, horários, telefone e endereço conferidos. TotalPass não confirmado e não marcado como aceitação nem rejeição."
+  },
+  {
+    "id": 8,
+    "nome": "3F ACADEMIA LTDA",
+    "cidade": "janauba",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da 3F Academia em Janaúba confirma endereço, telefone, Instagram, horários, atividades e comodidades. Página oficial TotalPass confirma parceria. | Avaliação pública consultada em 05/11/2026 para Academia 3F: 4.8/5 (108 avaliações). Nota e contagem são variáveis e podem mudar."
+  },
+  {
+    "id": 22,
+    "nome": "SPARTAN GYM",
+    "cidade": "janauba",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "A página individual Wellhub identifica a unidade no mesmo endereço cadastrado como Spartan Fit - Janaúba, enquanto o nome empresarial no catálogo é SPARTAN GYM. O endereço e número coincidem; foi mantido o nome cadastral e documentada a diferença de nome comercial."
+  },
+  {
+    "id": 57,
+    "nome": "ACADEMIA MARACANA LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Endereço e telefone correspondem à unidade Atlhetica Maracanã / Unidade 08. A lista oficial Wellhub mostra Atlhetica Maracanã; ficha local confirma endereço e telefone da unidade. | Perfil oficial Wellhub Atlhetica Maracanã informa Praça Beato Francisco Coll, 65, telefone (38) 3016-1104 e Instagram atlheticamaracana. O CNPJ ID 57 indica Praça Beato Francisco Coll, 45 e exatamente o mesmo telefone. Associação de parceria feita pela combinação de telefone idêntico, logradouro e nome de academia; número divergente mantido para confirmação direta."
+  },
+  {
+    "id": 122,
+    "nome": "FULL TIME ACADEMIA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": null
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Major Prates confirma endereço, telefone, Instagram, horários, comodidades e atividades. O registro TotalPass anteriormente atribuído pertence à Unidade Planalto, não à unidade Major Prates; TotalPass desta unidade fica não confirmado. | Google Business consultado em 05/11/2026 também identifica Fulltime Academia na Av. Francisco Gaetani, 742, e o mesmo telefone (38) 99959-2075. Avaliação 4,7/5 com 253 avaliações; métricas variáveis."
+  },
+  {
+    "id": 127,
+    "nome": "HARD CROSS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Listagem individual TotalPass e perfil individual Wellhub identificam a Hard Cross Treino no endereço Av. Vicente Guimarães, 1025. A página individual TotalPass confirma parceria desta unidade; o telefone do cadastro foi preservado porque há números divergentes entre as fontes. | Perfil oficial Wellhub consultado em 05/11/2026 apresenta avaliação 4,97/5 com 160 avaliações para Hard Cross Treino. A parceria Wellhub e TotalPass e os dados de funcionamento já constavam do catálogo."
+  },
+  {
+    "id": 146,
+    "nome": "M & A EMPREENDIMENTOS FITNES LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual Wellhub Fulltime Academia Planalto e página individual TotalPass confirmam unidade, telefone e Instagram. Página Wellhub confirma parceria desta unidade."
+  },
+  {
+    "id": 177,
+    "nome": "REDE LEVITAR LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": true,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página individual TotalPass, ficha CNPJ e ficha comercial convergem para Av. Cirilo Jorge da Silva, 391 e telefone/WhatsApp (38) 99876-2027. Horários e comodidades vieram da página individual TotalPass."
+  },
+  {
+    "id": 212,
+    "nome": "WF11 GYM MESTRA FININHA LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página individual Wellhub e página individual TotalPass identificam a WF11 Gym Mestra Fininha na Av. Mestra Fininha, 1570. Wellhub publica o telefone fixo (38) 3216-0396; Solutudo e dados cadastrais confirmam WhatsApp (38) 98815-6296. | Perfil individual oficial Wellhub consultado em 05/11/2026 apresenta nota 4,94/5 com 264 avaliações. Contagem e nota podem mudar."
+  },
+  {
+    "id": 214,
+    "nome": "WOLVER COMMUNITY FITNESS ACADEMIA DE ATIVIDADES ESPORTIVAS LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Site oficial Wolver, perfil individual Wellhub e página individual TotalPass correspondem à mesma unidade na Rua Sapucaia, 42, Canelas. Wellhub informa telefone, horários e modalidades; site oficial confirma localização e WhatsApp; TotalPass confirma parceria nesta unidade."
+  },
+  {
+    "id": 126,
+    "nome": "GREENFIT MOC",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub GREENFIT MOC confirma endereço, telefone atualizado, Instagram, horários, modalidades e comodidades. | Páginas individuais oficiais Wellhub e TotalPass confirmam a Greenfit MOC na Av. Cirilo Jorge da Silva, 678. TotalPass adicionada como segunda parceria confirmada; Wellhub já constava. Avaliação Wellhub 4,91/5 (416 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 63,
+    "nome": "AFT ACADEMIA FULLFIT LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub AFT Academia confirma endereço R. Pedra Azul, 28, horários, modalidades e comodidades. O telefone divulgado no perfil da plataforma é (38) 99195-5167; o telefone cadastral anterior foi preservado porque não há confirmação de que tenha sido desativado."
+  },
+  {
+    "id": 82,
+    "nome": "ACADEMIA ZMA FITNESS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia ZMA Fitness confirma unidade na Av. Cel. Luiz Maia, 1590, modalidades, horários, Instagram, comodidades e parceria. Telefone do perfil oficial difere do registro empresarial anterior; correção documentada."
+  },
+  {
+    "id": 116,
+    "nome": "FIQUE EM FORMA ACADEMIA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil. | Google Business consultado em 05/11/2026: 4,9/5 com 98 avaliações; contagem e nota podem mudar."
+  },
+  {
+    "id": 140,
+    "nome": "REDE LEVITAR",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado. | Google Business consultado em 05/11/2026 identifica a unidade Rede Levitar Morrinhos no mesmo endereço Rua Cônego Chaves, 10. Avaliação pública 4,0/5 com 1 avaliação; amostra pequena e métrica variável."
+  },
+  {
+    "id": 24,
+    "nome": "SPARTAN HOUSE",
+    "cidade": "janauba",
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço."
+  },
+  {
+    "id": 44,
+    "nome": "ACEDEMIA CROSS TRAINING DELFINO",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Cross Training Delfino Magalhães informa endereço Av. Neco Delfino, 1034, horários, modalidades e comodidades. O número coincide exatamente com o cadastro ID 44; o registro ID 45, no nº 1045, foi mantido separado."
+  },
+  {
+    "id": 40,
+    "nome": "ACADEMIA ATLETA FITNESS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página individual oficial Wellhub Academia Atleta Fitness unidade 02 confirma endereço Av. das Américas, 278, João Alves, modalidades, horário, Instagram e comodidades. Nome e endereço coincidem com ID 40; telefone cadastral anterior tinha 10 dígitos e foi corrigido para o celular publicado pelo parceiro."
+  },
+  {
+    "id": 162,
+    "nome": "NEW ERA FITNESS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Era Academia confirma endereço Rua Professora Geni Leite, 150, Cidade Nova, horários, modalidades, Instagram e comodidades. O cadastro empresarial NEW ERA FITNESS tem a mesma rua e número; o telefone publicado pelo parceiro difere do telefone empresarial, que foi preservado."
+  },
+  {
+    "id": 150,
+    "nome": "FORMA FISICAL",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Formal Fisical informa R. Santo Amaro Dois, 184, São Judas Tadeu, mesmo número e nome comercial compatível com o cadastro FORMA FISICAL, que informa R. Santo Amaro, 184, letra A. Parceria associada pela correspondência do nome e número; telefone de diretório diverge do publicado pelo parceiro e foi preservado."
+  },
+  {
+    "id": 51,
+    "nome": "ACADEMIA INOVE FITNESS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      },
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página individual oficial TotalPass ACADEMIA INOVE FITNESS confirma endereço Avenida Governador Magalhães Pinto, 1550, Vera Cruz, Montes Claros; coincide exatamente com o registro CNPJ. Modalidades, estrutura e horários complementados a partir da página oficial. | Perfil individual oficial Wellhub Academia Inove Fit 24h confirma a mesma unidade na Av. Gov. Magalhães Pinto, 1550, Instagram academia_inovefit e modalidades/funcionamento. Telefone publicado pelo Wellhub (38) 99140-5675 difere do telefone empresarial; telefone antigo preservado."
+  },
+  {
+    "id": 55,
+    "nome": "I9 FIT STORE",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Página oficial TotalPass ACADEMIA I9 UND II indica Rua Nenen Souto, 29, Alto São João, Montes Claros, endereço exato do cadastro I9 FIT STORE. Nome comercial do perfil parceiro difere do nome empresarial, mas a unidade e o número coincidem; telefone da página TotalPass difere do cadastro e foi preservado."
+  },
+  {
+    "id": 41,
+    "nome": "ACADEMIA ATLHETICA MORADA DO SOL",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub Academia Alpha Morada do Sol confirma Av. Mestra Fininha, 2845, mesmo endereço do cadastro empresarial Academia Atlhetica Morada do Sol. Diretórios locais também associam Alpha Gym Morada do Sol a esse endereço; nome comercial da plataforma difere da razão social. Telefone da plataforma diverge do telefone cadastral e foi preservado."
+  },
+  {
+    "id": 58,
+    "nome": "ACADEMIA NADO LIVRE LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Nado Livre confirma parceria e telefone (38) 3221-6880, coincidente com ficha comercial Cylex; o perfil Wellhub informa Rua João F. Pimenta, 378, enquanto CNPJ/Solutudo e Cylex apontam nº 32. Mantido o endereço cadastral nº 32 e documentada a divergência para confirmação direta."
+  },
+  {
+    "id": 104,
+    "nome": "ELITE TREINAMENTO FISICO",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Elite Treinamento Físico confirma endereço R. Rivadávio Lucas Mendes, 415, Morada do Sol, modalidades, horários, contato, comodidades e parceiro Wellhub. Nome e endereço correspondem exatamente ao registro."
+  },
+  {
+    "id": 176,
+    "nome": "FORMULA FIT",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fórmula fit confirma R. Raul Corrêa, 766, Funcionários, Montes Claros, horários, treino funcional e comodidades. Endereço e número coincidem com o registro (letra C foi preservada no cadastro); parceria Wellhub confirmada."
+  },
+  {
+    "id": 209,
+    "nome": "WF11 CT PORTAL EVENTOS",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 CT Portal Eventos confirma Rua Jucá Fróes, 220, site, telefone (38) 3216-0396, funcionamento, musculação e comodidades; nome e endereço coincidem com o cadastro. Avaliação 4,93/5 (15 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 210,
+    "nome": "WF11 GYM CORREGO MELANCIAS LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub WF11 Gym Córrego das Melancias confirma Av. Antônio Lafetá Rebelo, 625, horários, musculação, fisiculturismo, funcional infantil, Instagram e comodidades. Telefone divulgado no perfil difere do cadastral, por isso o telefone existente foi preservado. Avaliação 4,85/5 (204 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 112,
+    "nome": "FAST FIT 2",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Fast Fit 2 confirma Av. Mestra Fininha, 3170, horários, modalidades, Instagram, estrutura e parceria. Telefone da página oficial diverge do telefone empresarial e foi preservado. Avaliação 4,79/5 (604 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 121,
+    "nome": "FULL TIME ACADEMIA IBITURUNA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia Unidade Ibituruna confirma Av. José Corrêa Machado, 1079, horários, modalidades, Instagram, estrutura e parceria. Telefone publicado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,87/5 (1.344 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 123,
+    "nome": "FULL TIME ACADEMIA SAO JOSE LTDA",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fulltime Academia São José confirma Av. Floriano Neiva, 610, horários, modalidades, Instagram, estrutura e parceria. Telefone divulgado pela plataforma diverge do telefone cadastral e foi preservado. Avaliação 4,93/5 (1.578 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 155,
+    "nome": "MAXXFORCE",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia MaxxForce confirma Av. Dep. Plínio Ribeiro, 2155, Jardim Palmeiras, horários, modalidades, Instagram, comodidades e parceria. Telefone oficial publicado difere do telefone empresarial e foi preservado. Avaliação 4,87/5 (525 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 158,
+    "nome": "COMMUNITY FITNESS MONSTER",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub CF Monster confirma Rua Olímpio Guedes, 170, Morada do Sol, horários específicos, CrossFit, Instagram, comodidades e parceria. Telefone do perfil difere do telefone cadastral e foi preservado. Avaliação 4,99/5 (71 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 109,
+    "nome": "EXTREME FIT ACADEMIA DE CONDICIONAMENTO FISICO.",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub EXTREME FIT MARACANA confirma Praça Beato Francisco Coll, 112, mesma unidade do cadastro ID 109. Página fornece telefone, Instagram, horários, modalidades, comodidades e nota 4,88/5 (558 avaliações), consultada em 05/11/2026. Telefone oficial diverge do cadastral e foi preservado."
+  },
+  {
+    "id": 144,
+    "nome": "IRON FIT",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Iron Fit - Maracanã confirma Rua Cassimiro de Abreu, 181 A, endereço compatível com cadastro empresarial ID 144. Telefone oficial corrigido após verificar que o cadastro antigo estava sem o nono dígito. Perfil fornece Instagram, horários, musculação, comodidades e avaliação 4,86/5 (28 avaliações), consultada em 05/11/2026."
+  },
+  {
+    "id": 130,
+    "nome": "CORPUS GYM",
+    "cidade": "montes-claros",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc. | Google Business consultado em 05/11/2026 identifica Corpus Gym na Rua Mestre Janjão, 264, mesmo endereço do cadastro (loja 02 no CNPJ). Avaliação pública 4,8/5 com 30 avaliações; métricas variáveis. O telefone cadastral foi preservado por divergir do contato público associado ao mesmo endereço."
+  }
+]
