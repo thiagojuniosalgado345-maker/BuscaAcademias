@@ -2463,9 +2463,17 @@
           "estacionamento": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 1
       }
     },
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado. | Google Business consultado em 05/11/2026 identifica a unidade Rede Levitar Morrinhos no mesmo endereço Rua Cônego Chaves, 10. Avaliação pública 4,0/5 com 1 avaliação; amostra pequena e métrica variável.",
     "parcerias": {
       "aceita_wellhub": {
         "valor_anterior": null,
@@ -4985,6 +4993,14 @@
           "Zumba",
           "Musculação"
         ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.8
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 30
       }
     },
     "parcerias": {
@@ -4993,7 +5009,7 @@
         "valor": true
       }
     },
-    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc."
+    "fonte_e_observacao": "Perfil oficial Wellhub Corpus Fitness Unidade 1 informa Rua Mestre Janjão, 264, São José; o cadastro empresarial Corpus Gym possui o mesmo logradouro e número, mas telefone e nome comercial divergentes. Parceria associada com base na coincidência exata do endereço e na categoria; contato empresarial preservado. Link social localizado, não gravado em coluna própria do banco: https://facebook.com/academiacorpusfitnessmoc. | Google Business consultado em 05/11/2026 identifica Corpus Gym na Rua Mestre Janjão, 264, mesmo endereço do cadastro (loja 02 no CNPJ). Avaliação pública 4,8/5 com 30 avaliações; métricas variáveis. O telefone cadastral foi preservado por divergir do contato público associado ao mesmo endereço."
   },
   {
     "id": 15,
@@ -5104,43 +5120,49 @@
       "RUA SANTA MARIA",
       "286"
     ],
-    "fonte_e_observacao": "Ficha específica Cylex confirma a unidade Academia O2 na Rua Santa Maria, 286 e telefone (38) 3221-0909. LocalBrazil consultado em 05/11/2026 lista 4,7/5 com 188 avaliações; nota e contagem podem variar. Horários foram retirados porque Cylex e a listagem empresarial consultada apresentam divergência entre abertura aos domingos e horário de início nos dias úteis; não exibir horário sem confirmação.",
+    "fonte_e_observacao": "Ficha específica Cylex confirma a unidade Academia O2 na Rua Santa Maria, 286 e telefone (38) 3221-0909. LocalBrazil consultado em 05/11/2026 lista 4,7/5 com 188 avaliações; nota e contagem podem variar. Horários foram retirados porque Cylex e a listagem empresarial consultada apresentam divergência entre abertura aos domingos e horário de início nos dias úteis; não exibir horário sem confirmação. | Nova conferência em 05/11/2026: LocalTreino publica o Instagram academia.o2 e os horários 05:00–22:00 (seg–sex), 07:00–16:00 (sábado), 09:00–12:00 (domingo), também confirmados por outra ficha local. Horários agora foram preenchidos com base na convergência dessas duas fontes; o início de 05:00 difere do antigo cadastro Cylex.",
     "campos": {
       "detalhes_url": {
-        "modo": "preencher",
-        "valor": "https://www.cylex.com.br/montes-claros/academia-o2-11904752.html"
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://www.cylex.com.br/montes-claros/academia-o2-11904752.html",
+        "valor": "https://localtreino.com/academias/montes-claros/academia-o2/"
       },
       "horarios": {
-        "modo": "substituir_se_igual",
-        "valor_anterior": {
-          "0": [],
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ],
           "1": [
             {
-              "abre": "06:00",
+              "abre": "05:00",
               "fecha": "22:00"
             }
           ],
           "2": [
             {
-              "abre": "06:00",
+              "abre": "05:00",
               "fecha": "22:00"
             }
           ],
           "3": [
             {
-              "abre": "06:00",
+              "abre": "05:00",
               "fecha": "22:00"
             }
           ],
           "4": [
             {
-              "abre": "06:00",
+              "abre": "05:00",
               "fecha": "22:00"
             }
           ],
           "5": [
             {
-              "abre": "06:00",
+              "abre": "05:00",
               "fecha": "22:00"
             }
           ],
@@ -5150,8 +5172,7 @@
               "fecha": "16:00"
             }
           ]
-        },
-        "valor": null
+        }
       },
       "avaliacao": {
         "modo": "preencher",
@@ -5160,6 +5181,10 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 188
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/academia.o2/"
       }
     }
   },
@@ -5408,6 +5433,114 @@
       "numero_avaliacoes": {
         "modo": "preencher",
         "valor": 106
+      }
+    }
+  },
+  {
+    "id": 161,
+    "nome": "MOVMENTE ACADEMIA MONTES CLAROS LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AVENIDA OSMANI BARBOSA",
+      "611"
+    ],
+    "fonte_e_observacao": "Cylex e LocalTreino identificam Academia Movmente na Av. Osmane Barbosa, 611, Conjunto Residencial JK, com telefone (38) 4141-2220 e horários convergentes. O registro empresarial tem o mesmo endereço e nome de marca, mas telefone antigo divergente; corrigido para o contato atual publicado. Google Business consultado em 05/11/2026: 4,8/5 com 216 avaliações, métricas variáveis.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3830825789",
+        "valor": "3841412220"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://localtreino.com/academias/montes-claros/academia-movmente/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:45"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:45"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:45"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:45"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:45"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "16:00"
+            }
+          ]
+        }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.8
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 216
+      }
+    }
+  },
+  {
+    "id": 83,
+    "nome": "CENTER FITNESS S/C LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA SEBASTIAO SANTOS",
+      "241"
+    ],
+    "fonte_e_observacao": "Solutudo possui ficha específica de Center Fitness S/C Ltda com o mesmo nome empresarial e endereço Rua Sebastião Santos, 241, Augusta Mota, Montes Claros. A ficha não apresenta telefone público nem horários; esses campos permanecem sem confirmação.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/center-fitness-s-c-ltda-6222967"
+      }
+    }
+  },
+  {
+    "id": 187,
+    "nome": "ACADEMIA SINTONIA DO CORPO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RUA BRASILIA",
+      "252"
+    ],
+    "fonte_e_observacao": "Solutudo tem ficha específica da Academia Sintonia do Corpo na Rua Brasília, 252, Jardim Palmeiras, Montes Claros, com CNPJ/nome correspondentes. A ficha indica telefone (38) 3215-7299, que já coincide com o telefone do cadastro; nenhum horário ou rede social foi confirmado.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://www.solutudo.com.br/empresas/mg/montes-claros/academias/academia-sintonia-do-corpo-6235326"
       }
     }
   }
