@@ -1586,5 +1586,99 @@
         }
       }
     }
+  },
+  {
+    "id": 126,
+    "nome": "GREENFIT MOC",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CIRILO JORGE DA SILVA",
+      "678"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub GREENFIT MOC confirma endereço, telefone atualizado, Instagram, horários, modalidades e comodidades.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891464388",
+        "valor": "38991464388"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/greenfitmoc"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
+        "valor": "https://wellhub.com/pt-br/search/partners/uOOsM8DuKg38r2_UmWyKltJBgg6ODisn0GLKD0waPoRglGqFYD6y4_kCUbD89kks/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "13:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Fisiculturismo",
+          "Alongamento",
+          "GRIT",
+          "Funcional infantil"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "chuveiro": true,
+          "chuveiro_acessivel": true,
+          "estacionamento": true,
+          "wifi": true
+        }
+      }
+    }
   }
 ]
