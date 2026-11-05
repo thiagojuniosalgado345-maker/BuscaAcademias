@@ -466,5 +466,162 @@
     "avaliacao": 4.86,
     "numero_avaliacoes": 36,
     "fonte": "Wellhub"
+  },
+  {
+    "id": "energym-treinamento-fisico-integrado",
+    "nome": "Energym - Treinamento Físico Integrado",
+    "cidade": "montes-claros",
+    "bairro": "Planalto",
+    "endereco": "Rua Celestino Pinheiro, 81 - Planalto, Montes Claros - MG, 39404-034",
+    "telefone": "38991727998",
+    "instagram": "https://instagram.com/energym_moc",
+    "categoria": "Centro de treinamento",
+    "detalhes_url": "https://wellhub.com/pt-br/search/partners/energym-treinamento-fisico-integrado/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ],
+      "2": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ],
+      "3": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ],
+      "4": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ],
+      "5": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ],
+      "6": [
+        {
+          "abre": "06:00",
+          "fecha": "12:00"
+        },
+        {
+          "abre": "12:00",
+          "fecha": "22:00"
+        }
+      ]
+    },
+    "modalidades": [
+      "Funcional",
+      "Musculação"
+    ],
+    "estrutura": {
+      "armarios": true,
+      "chuveiro": true,
+      "fisioterapeuta": true,
+      "itens_higiene_pessoal": true,
+      "loja_artigos_esportivos": true,
+      "nutricionista": true,
+      "salao_de_beleza": true,
+      "spa": true,
+      "wifi": true
+    },
+    "avaliacao": null,
+    "numero_avaliacoes": null,
+    "aceita_totalpass": null,
+    "fonte": "perfil individual oficial Wellhub"
+  },
+  {
+    "id": "movimento-genuina",
+    "nome": "Movimento Genuína",
+    "cidade": "montes-claros",
+    "bairro": "Centro",
+    "endereco": "Avenida Santos Dumont, 232 - Centro, Montes Claros - MG, 39400-061",
+    "telefone": "38984217731",
+    "instagram": null,
+    "categoria": "Estúdio especializado",
+    "detalhes_url": "https://totalpass.com/br/academias/movimento-genuina/",
+    "horarios": {
+      "0": [],
+      "1": [
+        {
+          "abre": "08:10",
+          "fecha": "19:50"
+        }
+      ],
+      "2": [
+        {
+          "abre": "08:10",
+          "fecha": "20:50"
+        }
+      ],
+      "3": [
+        {
+          "abre": "08:10",
+          "fecha": "19:50"
+        }
+      ],
+      "4": [
+        {
+          "abre": "08:10",
+          "fecha": "20:20"
+        }
+      ],
+      "5": [
+        {
+          "abre": "08:10",
+          "fecha": "19:50"
+        }
+      ],
+      "6": []
+    },
+    "modalidades": [
+      "Fit Dance",
+      "Pilates Solo",
+      "Funcional",
+      "Ritbox"
+    ],
+    "estrutura": {
+      "ar_condicionado": true,
+      "armarios": true,
+      "banheiro_adulto": true,
+      "bebedouro": true,
+      "climatizador": true,
+      "estacionamento": true,
+      "wifi": true
+    },
+    "avaliacao": null,
+    "numero_avaliacoes": null,
+    "aceita_totalpass": true,
+    "fonte": "página oficial TotalPass e listagem oficial Wellhub"
   }
 ]
