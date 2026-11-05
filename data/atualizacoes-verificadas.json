@@ -133,10 +133,10 @@
     "nome": "3F ACADEMIA LTDA",
     "cidade": "janauba",
     "endereco_contem": [
-      "MESTRE ALFREDO BARBOSA",
+      "AVENIDA MESTRE ALFREDO BARBOSA",
       "413"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da 3F Academia em Janaúba confirma endereço, telefone, Instagram, horários, atividades e comodidades. Página oficial TotalPass confirma parceria.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da 3F Academia em Janaúba confirma endereço, telefone, Instagram, horários, atividades e comodidades. Página oficial TotalPass confirma parceria. | Avaliação pública consultada em 05/11/2026 para Academia 3F: 4.8/5 (108 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -241,6 +241,14 @@
           "vestiario": true,
           "wifi": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.8
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 108
       }
     },
     "parcerias": {
@@ -259,10 +267,10 @@
     "nome": "BODYART ACADEMIA",
     "cidade": "janauba",
     "endereco_contem": [
-      "AMERICO SOARES",
+      "RUA AMERICO SOARES",
       "734"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado. | Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, horários, modalidades e comodidades. O endereço e número conferem com o registro; o bairro cadastral está divergente da designação de bairro exibida no perfil, então não foi alterado. | Perfil individual oficial Wellhub da Bodyart Academia confirma unidade na Rua Américo Soares, 734, telefone, modalidades, comodidades e parceria Wellhub. O bairro cadastral diverge do bairro informado pelo perfil, por isso foi preservado. | Avaliação pública consultada em 05/11/2026 para Bodyart Academia: 4.7/5 (184 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -284,6 +292,14 @@
         "valor": {
           "armarios": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.7
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 184
       }
     },
     "parcerias": {}
@@ -293,10 +309,10 @@
     "nome": "BIOTECH",
     "cidade": "janauba",
     "endereco_contem": [
-      "CIRILO BARBOSA",
+      "RUA CIRILO BARBOSA",
       "712"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários e comodidades. A listagem oficial usa o telefone 38 99131-9033; o número antigo do cadastro estava sem o nono dígito. | Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários, comodidades e parceria. O telefone antigo do cadastro estava sem o nono dígito.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários e comodidades. A listagem oficial usa o telefone 38 99131-9033; o número antigo do cadastro estava sem o nono dígito. | Perfil individual oficial Wellhub do Centro de Treinamento Biotech confirma endereço, telefone, modalidades, horários, comodidades e parceria. O telefone antigo do cadastro estava sem o nono dígito. | Avaliação pública consultada em 05/11/2026 para Centro de Treinamento Biotech: 4.9/5 (74 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -324,6 +340,14 @@
       "detalhes_url": {
         "modo": "preencher",
         "valor": "https://wellhub.com/pt-br/search/partners/centro-de-treinamento-biotech/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 74
       }
     },
     "parcerias": {}
@@ -505,10 +529,10 @@
     "nome": "KAREN BASTOS ESTUDIO DE PILATES LTDA",
     "cidade": "janauba",
     "endereco_contem": [
-      "MARTINIANO COELHO",
+      "RUA MARTINIANO COELHO",
       "414"
     ],
-    "fonte_e_observacao": "Perfil Local Treino da unidade confirma endereço e horários. Há divergência entre telefones publicados por diretórios; o telefone do registro (11 2222-2222) é dado placeholder e foi removido, sem substituir por número não confirmado diretamente.",
+    "fonte_e_observacao": "Perfil Local Treino da unidade confirma endereço e horários. Há divergência entre telefones publicados por diretórios; o telefone do registro (11 2222-2222) é dado placeholder e foi removido, sem substituir por número não confirmado diretamente. | Avaliação pública consultada em 05/11/2026 para Karen Bastos Estúdio de Pilates: 5.0/5 (16 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -566,6 +590,14 @@
       "detalhes_url": {
         "modo": "preencher",
         "valor": "https://localtreino.com/estudios-de-pilates/janauba/karen-bastos-estudio-de-pilates/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 16
       }
     }
   },
@@ -574,10 +606,10 @@
     "nome": "ALADA ESCOLA DE DANCA E NATACAO",
     "cidade": "janauba",
     "endereco_contem": [
-      "CIRILO BARBOSA",
+      "RUA CIRILO BARBOSA",
       "754"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada Academia de Ginástica e Natação confirma endereço, telefone, modalidades e comodidades. O telefone cadastral antigo foi substituído pelo telefone exibido na página individual. | Perfil individual oficial Wellhub da Alada confirma endereço, telefone, modalidades, comodidades e parceria. O telefone antigo foi corrigido pelo contato exibido na página da unidade.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Alada Academia de Ginástica e Natação confirma endereço, telefone, modalidades e comodidades. O telefone cadastral antigo foi substituído pelo telefone exibido na página individual. | Perfil individual oficial Wellhub da Alada confirma endereço, telefone, modalidades, comodidades e parceria. O telefone antigo foi corrigido pelo contato exibido na página da unidade. | Avaliação pública consultada em 05/11/2026 para Alada Academia de Ginástica e Natação: 4.6/5 (74 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -605,6 +637,14 @@
           "estacionamento": true,
           "loja_artigos_esportivos": true
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.6
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 74
       }
     },
     "parcerias": {}
@@ -614,10 +654,10 @@
     "nome": "FORMA TRAINING",
     "cidade": "janauba",
     "endereco_contem": [
-      "AMERICO SOARES",
+      "RUA AMERICO SOARES",
       "101"
     ],
-    "fonte_e_observacao": "Ficha de estabelecimento da Forma Academia em Janaúba confirma correspondência da unidade pelo endereço Rua Américo Soares, 101, e telefone já cadastrado. Horário publicado pela ficha comercial.",
+    "fonte_e_observacao": "Ficha de estabelecimento da Forma Academia em Janaúba confirma correspondência da unidade pelo endereço Rua Américo Soares, 101, e telefone já cadastrado. Horário publicado pela ficha comercial. | Avaliação pública consultada em 05/11/2026 para Forma Academia Janaúba: 4.5/5 (103 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "horarios": {
         "modo": "preencher",
@@ -665,6 +705,14 @@
             }
           ]
         }
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 103
       }
     }
   },
@@ -673,10 +721,10 @@
     "nome": "NEW TIME",
     "cidade": "janauba",
     "endereco_contem": [
-      "SANTA MONICA",
+      "AVENIDA SANTA MONICA",
       "580"
     ],
-    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma unidade na Av. Santa Mônica, 580, telefone, horários, modalidades, Instagram e comodidades. Telefone antigo estava sem o nono dígito. | Perfil individual oficial Wellhub New Time Academia confirma endereço, telefone, modalidades, Instagram, horários, comodidades e parceria. Telefone antigo estava sem o nono dígito.",
+    "fonte_e_observacao": "Perfil individual oficial Wellhub New Time Academia confirma unidade na Av. Santa Mônica, 580, telefone, horários, modalidades, Instagram e comodidades. Telefone antigo estava sem o nono dígito. | Perfil individual oficial Wellhub New Time Academia confirma endereço, telefone, modalidades, Instagram, horários, comodidades e parceria. Telefone antigo estava sem o nono dígito. | Avaliação pública consultada em 05/11/2026 para New Time Gym: 4.9/5 (85 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -717,6 +765,14 @@
       "detalhes_url": {
         "modo": "preencher",
         "valor": "https://wellhub.com/pt-br/search/partners/new-time-academia/"
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.9
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 85
       }
     },
     "parcerias": {}
@@ -910,10 +966,10 @@
     "nome": "CROSSFIT ZERO TRES OITO",
     "cidade": "montes-claros",
     "endereco_contem": [
-      "PRESIDENTE KENNEDY",
+      "AVENIDA PRESIDENTE KENNEDY",
       "110"
     ],
-    "fonte_e_observacao": "Cadastro oficial de afiliados CrossFit confirma nome, endereço Avenida Presidente Kennedy, 110, telefone +55 38 3321-3938 e site oficial. Horários comerciais complementados por ficha pública local; confirmar grade de aulas diretamente com a unidade.",
+    "fonte_e_observacao": "Cadastro oficial de afiliados CrossFit confirma nome, endereço Avenida Presidente Kennedy, 110, telefone +55 38 3321-3938 e site oficial. Horários comerciais complementados por ficha pública local; confirmar grade de aulas diretamente com a unidade. | Avaliação pública consultada em 05/11/2026 para CrossFit Zero38: 5.0/5 (65 avaliações). Nota e contagem são variáveis e podem mudar.",
     "campos": {
       "telefone": {
         "modo": "substituir_se_igual",
@@ -995,6 +1051,14 @@
         "valor": [
           "CrossFit"
         ]
+      },
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 5
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 65
       }
     }
   },
@@ -1028,7 +1092,7 @@
       "RAUL CORREA",
       "624"
     ],
-    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade na Rua Raul Corrêa, 624.",
+    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade na Rua Raul Corrêa, 624. | Página individual oficial Wellhub Academia Trainer confirma endereço Rua Raul Corrêa, 624, telefone (38) 99851-0570, modalidades e horários; telefone corrigido após correspondência exata de nome e endereço.",
     "campos": {
       "estrutura": {
         "modo": "mesclar_objeto",
@@ -1042,6 +1106,17 @@
           "acessibilidade": true,
           "personal_trainer": true
         }
+      },
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3841410570",
+        "valor": "38998510570"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Fisiculturismo"
+        ]
       }
     }
   },
@@ -1847,6 +1922,356 @@
     },
     "parcerias": {
       "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 223,
+    "nome": "Moov Academia — Unidade II",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "AVENIDA MANOEL ATHAIDE",
+      "1344"
+    ],
+    "campos": {
+      "avaliacao": {
+        "modo": "preencher",
+        "valor": 4.8
+      },
+      "numero_avaliacoes": {
+        "modo": "preencher",
+        "valor": 93
+      }
+    },
+    "fonte_e_observacao": "Avaliação pública consultada em 05/11/2026 para Moov Academia — Unidade II: 4.8/5 (93 avaliações). Nota e contagem são variáveis e podem mudar."
+  },
+  {
+    "id": 82,
+    "nome": "ACADEMIA ZMA FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CORONEL LUIZ MAIA",
+      "1590"
+    ],
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3881249156",
+        "valor": "38988614541"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-zma-fitness-jardim-palmeiras-montes-claros/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/zma_fitness"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "05:40",
+              "fecha": "12:40"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:40",
+              "fecha": "12:40"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:40",
+              "fecha": "12:40"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:40",
+              "fecha": "12:40"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:40",
+              "fecha": "12:40"
+            },
+            {
+              "abre": "14:40",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Aeróbico",
+          "Musculação",
+          "Circuitos funcionais",
+          "Queima de gordura",
+          "Treino de força"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "vestiario": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia ZMA Fitness confirma unidade na Av. Cel. Luiz Maia, 1590, modalidades, horários, Instagram, comodidades e parceria. Telefone do perfil oficial difere do registro empresarial anterior; correção documentada.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 116,
+    "nome": "FIQUE EM FORMA ACADEMIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AUGUSTA VALE",
+      "160"
+    ],
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898567236",
+        "valor": "38998567236"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/fique-em-forma-academia/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "bioimpedancia": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Fique em Forma confirma unidade na Rua Augusta Valê, 160A, contato, horários, musculação, estrutura e parceria Wellhub. Telefone empresarial anterior, sem nono dígito, foi substituído pelo contato publicado no perfil.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 140,
+    "nome": "REDE LEVITAR",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CONEGO CHAVES",
+      "10"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-rede-levitar-morrinhos-morrinhos/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "09:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "18:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Treinamento funcional",
+          "Zumba",
+          "Musculação",
+          "Fisiculturismo"
+        ]
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/redelevitar_morrinhos/"
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "area_alongamento": true,
+          "cardio": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "cafeteria": true,
+          "acessibilidade": true,
+          "estacionamento": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Rede Levitar - Morrinhos corresponde ao endereço Rua Cônego Chaves, 10. Horários, modalidades, Instagram, comodidades e parceria Wellhub obtidos da página da unidade; telefone cadastral preservado por divergir do contato publicado.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 24,
+    "nome": "SPARTAN HOUSE",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "PREFEITO EDILSON BRANDAO GUIMARAES",
+      "1190"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://totalpass.com/br/academias/spartan-gym-iii/"
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação"
+        ]
+      }
+    },
+    "fonte_e_observacao": "Página oficial TotalPass lista Spartan Gym III na Av. Prefeito Edilson Brandão Guimarães, 1190, Janaúba, endereço exato do registro CNPJ SPARTAN HOUSE. Nome empresarial preservado; parceria associada pela correspondência exata do endereço.",
+    "parcerias": {
+      "aceita_totalpass": {
         "valor_anterior": null,
         "valor": true
       }
