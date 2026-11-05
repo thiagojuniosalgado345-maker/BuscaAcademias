@@ -2283,5 +2283,136 @@
         "valor": true
       }
     }
+  },
+  {
+    "id": 44,
+    "nome": "ACEDEMIA CROSS TRAINING DELFINO",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "NECO DELFINO",
+      "1034"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Cross Training Delfino Magalhães informa endereço Av. Neco Delfino, 1034, horários, modalidades e comodidades. O número coincide exatamente com o cadastro ID 44; o registro ID 45, no nº 1045, foi mantido separado.",
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/cross-training-delfino-magalhaes-delfino-magalhaes-montes-claros/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Aeróbico",
+          "Aulas de dança",
+          "Musculação",
+          "Aulas de treinamento funcional",
+          "Aulas especiais",
+          "Cross training infantil",
+          "CrossFit",
+          "Dança",
+          "Fisiculturismo",
+          "Funcional",
+          "Treino de força",
+          "Treino híbrido",
+          "Zumba"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "area_alongamento": true,
+          "cardio": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "bioimpedancia": true,
+          "bebedouro": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 7,
+    "nome": "ALPHA ESCOLA DE ESPORTES",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "SANTOS DUMONT",
+      "158"
+    ],
+    "fonte_e_observacao": "Agenda Janaúba lista Alpha Performance e Bem-Estar na Rua Santos Dumont, 158, Janaúba, com telefone (38) 98819-2836. O endereço e os dígitos do telefone coincidem com o cadastro empresarial Alpha Escola de Esportes; o nome comercial diferente foi preservado e a correção do nono dígito documentada.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3888192836",
+        "valor": "38988192836"
+      }
+    }
+  },
+  {
+    "id": 19,
+    "nome": "DA SLIM",
+    "cidade": "janauba",
+    "endereco_contem": [
+      "MAURICIO AUGUSTO DE AZEVEDO",
+      "95"
+    ],
+    "fonte_e_observacao": "Agenda Janaúba lista DA Slim Estúdio de Treinamento e Saúde na Rua/Avenida Maurício Augusto de Azevedo, 95, com telefone (38) 99895-2416. O nome e endereço correspondem ao cadastro; telefone atualizado com o nono dígito publicado na ficha.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3898952416",
+        "valor": "38998952416"
+      }
+    }
   }
 ]
