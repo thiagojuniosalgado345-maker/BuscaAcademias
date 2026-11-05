@@ -997,5 +997,52 @@
         ]
       }
     }
+  },
+  {
+    "id": 78,
+    "nome": "BIOATIVA ACADEMIA FEMININA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "OLIMPIO PRATES",
+      "868"
+    ],
+    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade no endereço Av. Olímpio Pratés, 868.",
+    "campos": {
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "chuveiro": true,
+          "nutricionista": true,
+          "personal_trainer": true
+        }
+      }
+    }
+  },
+  {
+    "id": 97,
+    "nome": "ACADEMIA TRAINER",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "RAUL CORREA",
+      "624"
+    ],
+    "fonte_e_observacao": "Perfil individual Wellhub confirma as comodidades adicionais da unidade na Rua Raul Corrêa, 624.",
+    "campos": {
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "area_alongamento": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "bebedouro": true,
+          "chuveiro_acessivel": true,
+          "acessibilidade": true,
+          "personal_trainer": true
+        }
+      }
+    }
   }
 ]
