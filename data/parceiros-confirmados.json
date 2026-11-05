@@ -56,8 +56,9 @@
         }
       ]
     },
-    "fonte": "https://totalpass.com/br/academias/fox-trainner-academia/ | https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
-    "aceita_wellhub": true
+    "fonte": "https://totalpass.com/br/academias/fox-trainner-academia/ | https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/ | Categoria geral padronizada como Academia a partir do nome comercial Fox Trainner.",
+    "aceita_wellhub": true,
+    "categoria": "Academia"
   },
   {
     "id": 8,
