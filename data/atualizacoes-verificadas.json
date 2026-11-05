@@ -1419,5 +1419,125 @@
         }
       }
     }
+  },
+  {
+    "id": 214,
+    "nome": "WOLVER COMMUNITY FITNESS ACADEMIA DE ATIVIDADES ESPORTIVAS LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "SAPUCAIA",
+      "42"
+    ],
+    "fonte_e_observacao": "Site oficial Wolver, perfil individual Wellhub e página individual TotalPass correspondem à mesma unidade na Rua Sapucaia, 42, Canelas. Wellhub informa telefone, horários e modalidades; site oficial confirma localização e WhatsApp; TotalPass confirma parceria nesta unidade.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3891392137",
+        "valor": "38984231987"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38984231987"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://www.wolverfitness.com.br/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/wolver.fitness"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/",
+        "valor": "https://wellhub.com/pt-br/search/partners/wolver-community-fintess-cidade-nova-montes-claros/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "17:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "10:30",
+              "fecha": "12:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Ginástica",
+          "Levantamento de peso olímpico",
+          "Treino de core"
+        ]
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "armarios": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": true,
+        "valor": true
+      },
+      "aceita_totalpass": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
   }
 ]
