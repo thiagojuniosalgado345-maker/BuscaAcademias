@@ -1680,5 +1680,92 @@
         }
       }
     }
+  },
+  {
+    "id": 61,
+    "nome": "ACADEMIA SHAPE EM DIA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "SAO JUDAS",
+      "2364"
+    ],
+    "fonte_e_observacao": "Perfil individual oficial Wellhub da Academia Shape Em Dia confirma endereço, Instagram, horários e comodidades desta unidade.",
+    "campos": {
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://www.instagram.com/academiashapeemdia/"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros--antonio-pimenta/",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-shape-em-dia/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "14:00"
+            }
+          ]
+        }
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "area_alongamento": true,
+          "musculacao": true,
+          "pesos_livres": true,
+          "area_funcional": true,
+          "armarios": true,
+          "banheiro_acessivel": true,
+          "bebedouro": true,
+          "chuveiro": true,
+          "acessibilidade": true,
+          "estacionamento": true,
+          "personal_trainer": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    }
   }
 ]
