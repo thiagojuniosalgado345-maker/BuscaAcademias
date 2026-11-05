@@ -108,13 +108,13 @@ def to_row(candidate):
         "avaliacao": candidate.get("avaliacao"),
         "numero_avaliacoes": candidate.get("numero_avaliacoes"),
         "aceita_wellhub": True,
-        "aceita_totalpass": None,
+        "aceita_totalpass": candidate.get("aceita_totalpass"),
         "publicado": False,
         "cnpj": None,
         "origem_dados": (
             f"Parceiro confirmado em perfil individual oficial do Wellhub: "
             f"{candidate['detalhes_url']} | dados públicos consultados em 05/11/2026. "
-            "Cadastro inserido como rascunho; TotalPass não verificado."
+            ("Cadastro inserido como rascunho; TotalPass confirmado." if candidate.get("aceita_totalpass") is True else "Cadastro inserido como rascunho; TotalPass não verificado.")
         ),
     }
     return {key: value for key, value in row.items() if value is not None}
@@ -161,8 +161,9 @@ def main():
             raise RuntimeError(f"{candidate['nome']} não retornou como rascunho.")
         if row.get("aceita_wellhub") is not True:
             raise RuntimeError(f"Wellhub não retornou confirmado em {candidate['nome']}.")
-        if row.get("aceita_totalpass") is not None:
-            raise RuntimeError(f"TotalPass não verificado deveria permanecer vazio em {candidate['nome']}.")
+        expected_totalpass = candidate.get("aceita_totalpass")
+        if row.get("aceita_totalpass") is not expected_totalpass:
+            raise RuntimeError(f"Status TotalPass retornado diferente do validado em {candidate['nome']}.")
         if row.get("cidade") != candidate["cidade"] or norm(row.get("nome")) != norm(candidate["nome"]):
             raise RuntimeError(f"Identidade retornada diferente para {candidate['nome']}.")
 
