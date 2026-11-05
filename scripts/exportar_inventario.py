@@ -20,3 +20,5 @@ for city in ("montes-claros","janauba"):
 # Exportacao usada para conferir a sincronizacao de parceiros em 05/11/2026.
 
 # Reexportacao de conferência após o último lote de dados.
+
+# Inventário pós-lote de 27 perfis verificados em 05/11/2026.
