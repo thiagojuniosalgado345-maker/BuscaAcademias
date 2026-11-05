@@ -156,6 +156,21 @@ def montar_patch(item, row):
                 report.append(f"{field}: itens complementares adicionados")
             else:
                 report.append(f"{field}: já estava completo para esta fonte")
+        elif mode == "mesclar_objeto":
+            if not isinstance(value, dict):
+                raise RuntimeError(f"{field} deve receber um objeto no ID {ident}.")
+            if current is not None and not isinstance(current, dict):
+                raise RuntimeError(f"{field} atual não é um objeto no ID {ident}.")
+            current_object = current or {}
+            merged_object = dict(current_object)
+            for key, entry in value.items():
+                if key not in merged_object:
+                    merged_object[key] = entry
+            if merged_object != current_object:
+                patch[field] = merged_object
+                report.append(f"{field}: comodidades complementares adicionadas")
+            else:
+                report.append(f"{field}: já estava completo para esta fonte")
         else:
             raise RuntimeError(f"Modo desconhecido {mode!r} no ID {ident}.")
 
