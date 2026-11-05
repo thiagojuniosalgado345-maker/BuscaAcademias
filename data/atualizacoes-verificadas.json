@@ -1382,5 +1382,42 @@
         "valor": true
       }
     }
+  },
+  {
+    "id": 62,
+    "nome": "ACADEMIA TAURUS FITNESS",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "CASTELAR PRATES",
+      "21"
+    ],
+    "fonte_e_observacao": "Perfis individuais oficiais Wellhub e TotalPass identificam a Taurus na Av. Castelar Prates, 21, Major Prates. Wellhub publica telefone (38) 99217-4483; a página TotalPass publica WhatsApp/telefone (38) 99262-4130. Os dois contatos foram separados nos campos telefone e WhatsApp. Estrutura conferida pela página individual TotalPass.",
+    "campos": {
+      "telefone": {
+        "modo": "substituir_se_igual",
+        "valor_anterior": "3892624130",
+        "valor": "38992174483"
+      },
+      "whatsapp": {
+        "modo": "preencher",
+        "valor": "38992624130"
+      },
+      "estrutura": {
+        "modo": "mesclar_objeto",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "banheiro_adulto": true,
+          "bebedouro": true,
+          "bicicletario": true,
+          "climatizador": true,
+          "espaco_kids": true,
+          "loja": true,
+          "ventilador": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    }
   }
 ]
