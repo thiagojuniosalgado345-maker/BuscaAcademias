@@ -11,20 +11,13 @@ from google.oauth2 import service_account
 
 
 # ==========================================
-# CONFIGURAÇÕES
+# CONFIGURACOES
 # ==========================================
 
 PROJECT_ID = os.getenv("GCP_PROJECT_ID", "")
-
-GOOGLE_CREDENTIALS_JSON = os.getenv(
-    "GOOGLE_CREDENTIALS_JSON", ""
-)
-
+GOOGLE_CREDENTIALS_JSON = os.getenv("GOOGLE_CREDENTIALS_JSON", "")
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
-
-SUPABASE_SECRET_KEY = os.getenv(
-    "SUPABASE_SECRET_KEY", ""
-)
+SUPABASE_SECRET_KEY = os.getenv("SUPABASE_SECRET_KEY", "")
 
 DRY_RUN = os.getenv("DRY_RUN", "true").lower() == "true"
 
@@ -57,6 +50,14 @@ SELECT
         FROM UNNEST(cnaes.secundarios) AS secundario
         WHERE secundario.codigo = '9313100'
     ) AS possui_cnae_secundario,
+
+    ARRAY(
+        SELECT AS STRUCT
+            CAST(secundario.codigo AS STRING) AS codigo,
+            secundario.descricao AS descricao
+        FROM UNNEST(cnaes.secundarios) AS secundario
+        WHERE secundario.codigo IS NOT NULL
+    ) AS cnaes_secundarios,
 
     endereco.tipo_logradouro,
     endereco.logradouro,
@@ -145,6 +146,39 @@ def cidade_slug(cidade):
 
 
 # ==========================================
+# ORGANIZAR CNAES SECUNDARIOS
+# ==========================================
+
+def normalizar_cnaes_secundarios(lista):
+
+    resultado = []
+
+    for item in lista or []:
+
+        if hasattr(item, "items"):
+            dados = dict(item.items())
+
+        elif isinstance(item, dict):
+            dados = item
+
+        else:
+            continue
+
+        codigo = dados.get("codigo")
+        descricao = dados.get("descricao")
+
+        if codigo is None:
+            continue
+
+        resultado.append({
+            "codigo": str(codigo),
+            "descricao": descricao
+        })
+
+    return resultado
+
+
+# ==========================================
 # CONECTAR BIGQUERY
 # ==========================================
 
@@ -184,7 +218,6 @@ def consultar_empresas():
     client = conectar_bigquery()
 
     print("Conexão com BigQuery estabelecida.")
-
     print("Calculando volume da consulta...")
 
     config_teste = bigquery.QueryJobConfig(
@@ -284,11 +317,16 @@ def organizar_registro(registro):
     if telefone:
         telefone = str(telefone).strip()
 
+    cnaes_secundarios = normalizar_cnaes_secundarios(
+        registro.get("cnaes_secundarios")
+    )
+
     original = {
         "cnae_principal": registro.get("cnae_principal"),
         "possui_cnae_secundario": bool(
             registro.get("possui_cnae_secundario")
         ),
+        "cnaes_secundarios": cnaes_secundarios,
         "tipo_logradouro": registro.get("tipo_logradouro"),
         "logradouro": registro.get("logradouro"),
         "numero": registro.get("numero"),
@@ -323,6 +361,8 @@ def organizar_registro(registro):
         "possui_cnae_secundario": bool(
             registro.get("possui_cnae_secundario")
         ),
+
+        "cnaes_secundarios": cnaes_secundarios,
 
         "data_inicio_atividade": data_inicio,
 
@@ -359,7 +399,7 @@ def configurar_supabase():
 
 
 # ==========================================
-# VERIFICAR CNPJs JÁ CADASTRADOS
+# VERIFICAR CNPJs EXISTENTES
 # ==========================================
 
 def consultar_cnpjs_existentes(cnpjs, headers):
@@ -406,6 +446,73 @@ def consultar_cnpjs_existentes(cnpjs, headers):
             )
 
     return existentes
+
+
+# ==========================================
+# ATUALIZAR CNAES DOS REGISTROS EXISTENTES
+# ==========================================
+
+def atualizar_cnaes_secundarios(registros, headers):
+
+    endpoint = (
+        f"{SUPABASE_URL}/rest/v1/"
+        f"{TABELA_SUPABASE}"
+    )
+
+    atualizados = 0
+
+    for indice, registro in enumerate(registros, start=1):
+
+        resposta = session.patch(
+
+            endpoint,
+
+            headers={
+                **headers,
+                "Prefer": "return=representation"
+            },
+
+            params={
+                "cnpj": f"eq.{registro['cnpj']}",
+                "select": "cnpj"
+            },
+
+            json={
+                "cnaes_secundarios": registro["cnaes_secundarios"]
+            },
+
+            timeout=45
+
+        )
+
+        if not resposta.ok:
+
+            raise RuntimeError(
+                "Erro ao atualizar CNAEs secundários: "
+                + resposta.text[:1000]
+            )
+
+        retorno = resposta.json()
+
+        if len(retorno) != 1:
+
+            raise RuntimeError(
+                "O CNPJ "
+                + registro["cnpj"]
+                + " não retornou exatamente um registro "
+                "na atualização."
+            )
+
+        atualizados += 1
+
+        if indice % 25 == 0 or indice == len(registros):
+
+            print(
+                f"CNAEs secundários atualizados: "
+                f"{indice}/{len(registros)}"
+            )
+
+    return atualizados
 
 
 # ==========================================
@@ -482,7 +589,7 @@ def main():
         for registro in resultados
     ]
 
-    # Evitar duplicação dentro da própria consulta.
+    # 3. Evitar duplicações na consulta.
 
     unicos = {}
 
@@ -492,7 +599,7 @@ def main():
 
     registros = list(unicos.values())
 
-    # 3. Consultar Supabase.
+    # 4. Consultar Supabase.
 
     headers = configurar_supabase()
 
@@ -506,13 +613,19 @@ def main():
         headers
     )
 
+    registros_existentes = [
+        registro
+        for registro in registros
+        if registro["cnpj"] in existentes
+    ]
+
     novos = [
         registro
         for registro in registros
         if registro["cnpj"] not in existentes
     ]
 
-    # 4. Mostrar relatório.
+    # 5. Relatório.
 
     print("\n====================================")
     print("RELATÓRIO")
@@ -523,6 +636,11 @@ def main():
     print("CNPJs únicos:", len(registros))
 
     print("Já existentes no Supabase:", len(existentes))
+
+    print(
+        "Registros que receberão CNAEs secundários:",
+        len(registros_existentes)
+    )
 
     print("Novos candidatos:", len(novos))
 
@@ -538,7 +656,7 @@ def main():
 
         print(f"{cidade}: {quantidade}")
 
-    print("\nPrimeiros candidatos:")
+    print("\nPrimeiros novos candidatos:")
 
     for registro in novos[:15]:
 
@@ -547,11 +665,21 @@ def main():
             or registro.get("razao_social")
         )
 
-    # 5. Gravar somente quando autorizado.
+    # 6. Simulação.
 
     if DRY_RUN:
 
         print("\nSIMULAÇÃO FINALIZADA.")
+
+        print(
+            "Atualizações simuladas:",
+            len(registros_existentes)
+        )
+
+        print(
+            "Inserções simuladas:",
+            len(novos)
+        )
 
         print(
             "Nenhum registro foi inserido ou modificado."
@@ -559,7 +687,17 @@ def main():
 
         return
 
-    quantidade = inserir_candidatos(
+    # 7. Atualizar somente a coluna cnaes_secundarios
+    # dos registros que já existem.
+
+    atualizados = atualizar_cnaes_secundarios(
+        registros_existentes,
+        headers
+    )
+
+    # 8. Inserir somente novos candidatos.
+
+    inseridos = inserir_candidatos(
         novos,
         headers
     )
@@ -567,8 +705,13 @@ def main():
     print("\nIMPORTAÇÃO FINALIZADA.")
 
     print(
+        "Registros existentes atualizados:",
+        atualizados
+    )
+
+    print(
         "Novos registros inseridos:",
-        quantidade
+        inseridos
     )
 
 
