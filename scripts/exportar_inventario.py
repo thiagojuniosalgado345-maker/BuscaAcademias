@@ -61,3 +61,5 @@ with Path("correspondencia-nome-fantasia.csv").open("w",newline="",encoding="utf
             "status_revisao":c.get("status_revisao") or ""
         })
 print("CNPJs cruzados com nomes fantasia:",len(candidatos_por_cnpj))
+
+# Auditoria final de parceiros Wellhub/TotalPass apos lote 56 registros.
