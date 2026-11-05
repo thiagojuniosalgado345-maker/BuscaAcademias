@@ -23,11 +23,111 @@
       "MACHADO",
       "100"
     ],
-    "fonte_e_observacao": "Telefone conferido em ficha comercial da unidade Studio 360 no endereço Avenida José Corrêa Machado, 100, Montes Claros. Fonte: pesquisa de estabelecimento local.",
+    "fonte_e_observacao": "Telefone conferido em ficha comercial da unidade Studio 360 no endereço Avenida José Corrêa Machado, 100, Montes Claros. Fonte: pesquisa de estabelecimento local. | Perfil individual oficial Wellhub 360 Studio Fitness confirma Av. José Corrêa Machado, 100, modalidades, horários, Instagram e estrutura. Endereço e telefone do catálogo Studio 360 coincidem com o perfil; parceiro mapeado pela correspondência exata da unidade.",
     "campos": {
       "telefone": {
         "modo": "preencher",
         "valor": "38992219259"
+      },
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor": "https://wellhub.com/pt-br/search/partners/360-studio-fitness-jardim-sao-luiz-montes-claros/",
+        "valor_anterior": "#"
+      },
+      "horarios": {
+        "modo": "substituir_se_igual",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "22:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ]
+        },
+        "valor_anterior": {
+          "0": null,
+          "1": {
+            "abre": "06:00",
+            "fecha": "21:00"
+          },
+          "2": {
+            "abre": "06:00",
+            "fecha": "21:00"
+          },
+          "3": {
+            "abre": "06:00",
+            "fecha": "21:00"
+          },
+          "4": {
+            "abre": "06:00",
+            "fecha": "21:00"
+          },
+          "5": {
+            "abre": "06:00",
+            "fecha": "21:00"
+          },
+          "6": null
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Musculação",
+          "Fisiculturismo",
+          "Treino de força"
+        ]
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/360.studiofitness"
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "ar_condicionado": true,
+          "armarios": true,
+          "cafeteria": true,
+          "acessibilidade": true,
+          "personal_trainer": true,
+          "vestiario": true
+        }
+      }
+    },
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
       }
     }
   },
@@ -2982,5 +3082,338 @@
         "valor": true
       }
     }
+  },
+  {
+    "id": 41,
+    "nome": "ACADEMIA ATLHETICA MORADA DO SOL",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "MESTRA FININHA",
+      "2845"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/academia-alpha-morada-do-sol-centro-montes-claros/"
+      },
+      "instagram": {
+        "modo": "preencher",
+        "valor": "https://instagram.com/alphagymmoradadosol"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            }
+          ],
+          "1": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "05:00",
+              "fecha": "23:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "12:00"
+            },
+            {
+              "abre": "15:00",
+              "fecha": "19:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Musculação",
+          "Aulas especiais",
+          "Fisiculturismo",
+          "Treino de força",
+          "Treino híbrido"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "itens_higiene_pessoal": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil oficial Wellhub Academia Alpha Morada do Sol confirma Av. Mestra Fininha, 2845, mesmo endereço do cadastro empresarial Academia Atlhetica Morada do Sol. Diretórios locais também associam Alpha Gym Morada do Sol a esse endereço; nome comercial da plataforma difere da razão social. Telefone da plataforma diverge do telefone cadastral e foi preservado.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 58,
+    "nome": "ACADEMIA NADO LIVRE LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "JOAO F PIMENTA",
+      "32"
+    ],
+    "campos": {
+      "telefone": {
+        "modo": "preencher",
+        "valor": "3832216880"
+      },
+      "site": {
+        "modo": "preencher",
+        "valor": "https://eunadolivre.com.br/"
+      },
+      "detalhes_url": {
+        "modo": "preencher",
+        "valor": "https://wellhub.com/pt-br/search/partners/4c035efd-3f81-43d5-8edd-348520953ec0/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "07:00",
+              "fecha": "21:00"
+            }
+          ],
+          "6": []
+        }
+      },
+      "modalidades": {
+        "modo": "preencher",
+        "valor": [
+          "Natação",
+          "Natação para adultos"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "chuveiro": true,
+          "estacionamento": true,
+          "vestiario": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Academia Nado Livre confirma parceria e telefone (38) 3221-6880, coincidente com ficha comercial Cylex; o perfil Wellhub informa Rua João F. Pimenta, 378, enquanto CNPJ/Solutudo e Cylex apontam nº 32. Mantido o endereço cadastral nº 32 e documentada a divergência para confirmação direta.",
+    "parcerias": {
+      "aceita_wellhub": {
+        "valor_anterior": null,
+        "valor": true
+      }
+    }
+  },
+  {
+    "id": 142,
+    "nome": "LIFE SKULL LTDA",
+    "cidade": "montes-claros",
+    "endereco_contem": [
+      "AGAPITO DOS ANJOS",
+      "543"
+    ],
+    "campos": {
+      "detalhes_url": {
+        "modo": "substituir_se_igual",
+        "valor": "https://wellhub.com/pt-br/search/partners/9e128585-f867-4191-94d4-1a80ef993546/",
+        "valor_anterior": "https://wellhub.com/pt-br/search/mg/montes-claros/cross-training/"
+      },
+      "horarios": {
+        "modo": "preencher",
+        "valor": {
+          "0": [],
+          "1": [
+            {
+              "abre": "06:00",
+              "fecha": "07:00"
+            },
+            {
+              "abre": "07:01",
+              "fecha": "08:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "17:00"
+            },
+            {
+              "abre": "18:00",
+              "fecha": "19:00"
+            },
+            {
+              "abre": "19:01",
+              "fecha": "20:00"
+            }
+          ],
+          "2": [
+            {
+              "abre": "06:00",
+              "fecha": "07:00"
+            },
+            {
+              "abre": "07:01",
+              "fecha": "08:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "17:00"
+            },
+            {
+              "abre": "18:00",
+              "fecha": "19:00"
+            },
+            {
+              "abre": "19:02",
+              "fecha": "20:00"
+            }
+          ],
+          "3": [
+            {
+              "abre": "06:00",
+              "fecha": "07:00"
+            },
+            {
+              "abre": "07:01",
+              "fecha": "08:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "17:00"
+            },
+            {
+              "abre": "18:00",
+              "fecha": "19:00"
+            },
+            {
+              "abre": "19:01",
+              "fecha": "20:00"
+            }
+          ],
+          "4": [
+            {
+              "abre": "06:00",
+              "fecha": "07:00"
+            },
+            {
+              "abre": "07:01",
+              "fecha": "08:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "17:00"
+            },
+            {
+              "abre": "18:00",
+              "fecha": "19:00"
+            },
+            {
+              "abre": "19:01",
+              "fecha": "20:00"
+            }
+          ],
+          "5": [
+            {
+              "abre": "06:00",
+              "fecha": "07:00"
+            },
+            {
+              "abre": "07:01",
+              "fecha": "08:00"
+            },
+            {
+              "abre": "16:00",
+              "fecha": "17:00"
+            },
+            {
+              "abre": "18:00",
+              "fecha": "19:00"
+            },
+            {
+              "abre": "19:02",
+              "fecha": "20:00"
+            }
+          ],
+          "6": [
+            {
+              "abre": "08:00",
+              "fecha": "09:00"
+            }
+          ]
+        }
+      },
+      "modalidades": {
+        "modo": "adicionar_lista",
+        "valor": [
+          "Musculação"
+        ]
+      },
+      "estrutura": {
+        "modo": "preencher",
+        "valor": {
+          "armarios": true,
+          "chuveiro": true,
+          "vestiario": true,
+          "wifi": true
+        }
+      }
+    },
+    "fonte_e_observacao": "Perfil individual oficial Wellhub Life Skull confirma endereço Rua Agapito dos Anjos, 543, horários por sessão, musculação, treino híbrido e comodidades. O registro já estava marcado como parceiro Wellhub; o link genérico será substituído pelo perfil individual. Telefone oficial difere do telefone empresarial e foi preservado.",
+    "parcerias": {}
   }
 ]
